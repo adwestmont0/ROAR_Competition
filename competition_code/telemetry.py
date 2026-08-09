@@ -88,6 +88,7 @@ class RaceTelemetry:
         status: str,
         elapsed_time: float,
         control_timestep: float,
+        terminal_event: Optional[Dict[str, Any]] = None,
     ) -> str:
         os.makedirs(self.output_dir, exist_ok=False)
         samples_path = os.path.join(self.output_dir, "ticks.csv")
@@ -108,6 +109,8 @@ class RaceTelemetry:
             "maximum_collision_impulse": self.max_collision_impulse,
             "samples_file": "ticks.csv",
         }
+        if terminal_event is not None:
+            summary.update(terminal_event)
         summary_path = os.path.join(self.output_dir, "summary.json")
         with open(summary_path, "w") as outfile:
             json.dump(summary, outfile, indent=2)

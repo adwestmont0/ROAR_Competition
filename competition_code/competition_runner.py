@@ -211,10 +211,36 @@ async def evaluate_solution(
         collision_impulse_norm = np.linalg.norm(collision_sensor.get_last_observation().impulse_normal)
         if collision_impulse_norm > 100.0:
             telemetry.record_collision(collision_impulse_norm)
-            # vehicle.close()
             print(f"major collision of tensity {collision_impulse_norm}")
-            # return None
-            await rule.respawn()
+            collision_location = location_sensor.get_last_gym_observation()
+            collision_velocity = velocity_sensor.get_last_gym_observation()
+            elapsed_time = current_time - start_time
+            telemetry_path = telemetry.write(
+                "collision",
+                elapsed_time,
+                world.control_timestep,
+                terminal_event={
+                    "terminal_tick": telemetry_tick,
+                    "official_waypoint_index": rule.furthest_waypoints_index,
+                    "custom_waypoint_index": int(
+                        getattr(solution, "current_waypoint_idx", -1)
+                    ),
+                    "section": int(getattr(solution, "current_section", -1)),
+                    "lap": int(getattr(solution, "lapNum", -1)),
+                    "location": [float(value) for value in collision_location],
+                    "speed_kmh": float(np.linalg.norm(collision_velocity) * 3.6),
+                    "collision_impulse": float(collision_impulse_norm),
+                },
+            )
+            print(f"Telemetry saved to {telemetry_path}")
+            vehicle.close()
+            if enable_visualization:
+                viewer.close()
+            return {
+                "status": "collision",
+                "elapsed_time": elapsed_time,
+                "telemetry_path": telemetry_path,
+            }
         
         if rule.lap_finished():
             break
@@ -251,7 +277,9 @@ async def evaluate_solution(
         viewer.close()
     
     return {
+        "status": "finished",
         "elapsed_time" : end_time - start_time,
+        "telemetry_path": telemetry_path,
     }
 
 async def main():
@@ -268,7 +296,15 @@ async def main():
         enable_visualization=True
     )
     if evaluation_result is not None:
-        print("Solution finished in {} seconds".format(evaluation_result["elapsed_time"]))
+        if evaluation_result["status"] == "finished":
+            print("Solution finished in {} seconds".format(evaluation_result["elapsed_time"]))
+        else:
+            print(
+                "Solution terminated on {} after {} seconds".format(
+                    evaluation_result["status"],
+                    evaluation_result["elapsed_time"],
+                )
+            )
     else:
         print("Solution failed to finish in time")
 
