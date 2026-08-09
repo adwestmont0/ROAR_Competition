@@ -1,0 +1,11 @@
+{
+  "throttle.section_mu.3": {
+    "file": "competition_code/ThrottleController.py",
+    "baseline_text": "            3: 3.4,\n",
+    "replacement_template": "            3: {value},\n",
+    "type": "float",
+    "minimum": 0.1,
+    "maximum": 10.0,
+    "required_matches": 1
+  }
+}

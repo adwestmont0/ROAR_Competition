@@ -154,6 +154,7 @@ cython_debug/
 
 # ROAR competition run instrumentation
 competition_code/telemetry/runs/
+experiment_results/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
