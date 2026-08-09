@@ -2,11 +2,13 @@ import roar_py_interface
 import roar_py_carla
 from submission import RoarCompetitionSolution
 from infrastructure import RoarCompetitionAgentWrapper, ManualControlViewer
+from telemetry import RaceTelemetry
 from typing import List, Type, Optional, Dict, Any
 import carla
 import numpy as np
 import gymnasium as gym
 import asyncio
+import os
 
 class RoarCompetitionRule:
     def __init__(
@@ -115,6 +117,9 @@ async def evaluate_solution(
     max_seconds = 12000,
     enable_visualization : bool = False,
 ) -> Optional[Dict[str, Any]]:
+    telemetry = RaceTelemetry(
+        os.path.join(os.path.dirname(__file__), "telemetry")
+    )
     if enable_visualization:
         viewer = ManualControlViewer()
     
@@ -181,12 +186,19 @@ async def evaluate_solution(
     current_time = start_time
     await vehicle.receive_observation()
     await solution.initialize()
+    telemetry_tick = 0
 
     
     while True:
         # terminate if time out
         current_time = world.last_tick_elapsed_seconds
         if current_time - start_time > max_seconds:
+            telemetry_path = telemetry.write(
+                "timeout",
+                current_time - start_time,
+                world.control_timestep,
+            )
+            print(f"Telemetry saved to {telemetry_path}")
             vehicle.close()
             return None
         
@@ -198,6 +210,7 @@ async def evaluate_solution(
         # terminate if there is major collision
         collision_impulse_norm = np.linalg.norm(collision_sensor.get_last_observation().impulse_normal)
         if collision_impulse_norm > 100.0:
+            telemetry.record_collision(collision_impulse_norm)
             # vehicle.close()
             print(f"major collision of tensity {collision_impulse_norm}")
             # return None
@@ -211,11 +224,28 @@ async def evaluate_solution(
                 vehicle.close()
                 return None
 
-        await solution.step()
+        control = await solution.step()
+        telemetry_tick += 1
+        telemetry.record_tick(
+            telemetry_tick,
+            current_time - start_time,
+            location_sensor.get_last_gym_observation(),
+            velocity_sensor.get_last_gym_observation(),
+            control,
+            rule.furthest_waypoints_index,
+            solution,
+            collision_impulse_norm,
+        )
         await world.step()
     
     print("end of the loop")
     end_time = world.last_tick_elapsed_seconds
+    telemetry_path = telemetry.write(
+        "finished",
+        end_time - start_time,
+        world.control_timestep,
+    )
+    print(f"Telemetry saved to {telemetry_path}")
     vehicle.close()
     if enable_visualization:
         viewer.close()
