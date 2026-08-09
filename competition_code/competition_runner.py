@@ -225,7 +225,7 @@ async def evaluate_solution(
     }
 
 async def main():
-    carla_client = carla.Client('127.0.0.1', 2000)
+    carla_client = carla.Client('172.31.86.36', 2000)
     carla_client.set_timeout(5.0)
     roar_py_instance = roar_py_carla.RoarPyCarlaInstance(carla_client)
     world = roar_py_instance.world
