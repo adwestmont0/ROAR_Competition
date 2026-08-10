@@ -14,6 +14,7 @@ from .core import (
     run_plan,
 )
 from .evaluation import dry_run_candidates, evaluate_candidates
+from .reliability import dry_run_reliability, run_reliability_campaign
 from experiments.search.adapter import run_search
 
 
@@ -42,6 +43,18 @@ def print_human_reports(results: Dict[str, Any], root: Path) -> None:
         print(path.read_text(encoding="utf-8"), file=sys.stderr)
 
 
+def print_human_report(result: Dict[str, Any], root: Path) -> None:
+    path_value = result.get("human_report_path")
+    if not path_value:
+        return
+    path = root / path_value
+    if path.exists():
+        print("\n" + "=" * 72, file=sys.stderr)
+        print("Human report: " + path_value, file=sys.stderr)
+        print("=" * 72, file=sys.stderr)
+        print(path.read_text(encoding="utf-8"), file=sys.stderr)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="ROAR controlled experiment harness")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -61,6 +74,12 @@ def main() -> int:
     search.add_argument("--dry-run", action="store_true")
     search.add_argument("--no-resume", action="store_true")
     search.add_argument("--json-only", action="store_true")
+
+    reliability = subparsers.add_parser("reliability")
+    reliability.add_argument("config", type=Path)
+    reliability.add_argument("--dry-run", action="store_true")
+    reliability.add_argument("--no-resume", action="store_true")
+    reliability.add_argument("--json-only", action="store_true")
 
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
@@ -128,6 +147,18 @@ def main() -> int:
         sys.stdout.flush()
         if not args.dry_run and not args.json_only:
             print_human_reports({"candidate_results": results.get("candidate_results", [])}, root)
+    elif args.command == "reliability":
+        if args.dry_run:
+            print_results(dry_run_reliability(config, registry, root))
+        else:
+            result = run_reliability_campaign(
+                config, registry, root, not args.no_resume,
+                progress_callback=lambda message: print(message, file=sys.stderr, flush=True),
+            )
+            print_results(result)
+            sys.stdout.flush()
+            if not args.json_only:
+                print_human_report(result, root)
     elif args.command == "dry-run":
         print_results(dry_run(config, registry, root))
     elif args.command == "run":

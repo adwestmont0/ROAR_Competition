@@ -20,6 +20,12 @@ from experiments.harness.evaluation import summarize_measurements
 from experiments.harness.evaluation import CandidateEvaluator, _acceptance, evaluation_lock, render_candidate_report
 from experiments.search.adapter import propose
 from experiments.harness.cli import print_human_reports
+from experiments.harness.reliability import (
+    campaign_schedule,
+    reliability_decision,
+    render_reliability_report,
+    wilson_interval,
+)
 
 
 class HarnessTests(unittest.TestCase):
@@ -323,6 +329,32 @@ class HarnessTests(unittest.TestCase):
                     root,
                 )
             self.assertIn("Plain English result", stderr.getvalue())
+
+    def test_reliability_schedule_is_interleaved(self):
+        self.assertEqual(
+            campaign_schedule(3),
+            ["warm", "forced_clean", "warm", "forced_clean", "warm", "forced_clean"],
+        )
+
+    def test_reliability_decision_detects_material_clean_start_effect(self):
+        warm = {
+            "controller_measurements": 10,
+            "completion_rate": 0.6,
+            "outcome_counts": {"finished": 6, "collision": 4},
+        }
+        forced = {
+            "controller_measurements": 10,
+            "completion_rate": 0.9,
+            "outcome_counts": {"finished": 9, "collision": 1},
+        }
+        decision = reliability_decision(warm, forced, 8, 0.2)
+        self.assertEqual(decision["conclusion"], "simulator_state_factor_supported")
+        self.assertAlmostEqual(decision["forced_clean_minus_warm_completion_rate"], 0.3)
+
+    def test_wilson_interval_contains_observed_rate(self):
+        interval = wilson_interval(7, 10)
+        self.assertLessEqual(interval[0], 0.7)
+        self.assertGreaterEqual(interval[1], 0.7)
 
     @patch("experiments.harness.core.preflight")
     @patch("experiments.harness.core.run_aws_command")

@@ -101,6 +101,27 @@ The adapter proposes candidates, calls the stable evaluator, and ranks only
 accepted results by control-adjusted time. It contains no Bayesian or adaptive
 optimizer logic.
 
+### Baseline clean-start reliability campaign
+
+The reliability runner compares the identical pinned baseline in an interleaved
+`warm, forced_clean` schedule. Forced-clean attempts invoke the configured SSM
+restart before launching the client. Infrastructure failures are excluded from
+controller rates, progress is checkpointed after every logical attempt, and an
+exclusive lock covers the campaign.
+
+```bash
+python -m experiments.harness.cli reliability \
+  experiments/configs/baseline_clean_start_ab.json --dry-run
+
+python -m experiments.harness.cli reliability \
+  experiments/configs/baseline_clean_start_ab.json
+```
+
+The JSON and Markdown reports compare completion/collision rates, Wilson
+intervals, finished timing, and forced-clean minus warm completion rate against
+the configured material-effect threshold. Repeating the command resumes an
+interrupted campaign or prints a completed result without rerunning CARLA.
+
 Run only one configuration by copying its ID from dry-run output:
 
 ```bash
