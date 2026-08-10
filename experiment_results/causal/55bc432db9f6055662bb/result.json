@@ -1,0 +1,1174 @@
+{
+  "arrival_analysis": {
+    "baseline": {
+      "maximum_speed_kmh": 173.08075365339008,
+      "mean_speed_kmh": 172.47688870176978,
+      "median_speed_kmh": 172.59504318237305,
+      "minimum_speed_kmh": 170.29771859305245,
+      "runs": 35,
+      "traversals": 105
+    },
+    "custom_waypoint_window": [
+      1402,
+      1409
+    ],
+    "restricted": {
+      "maximum_speed_kmh": 173.10433502197267,
+      "mean_speed_kmh": 172.4889375959124,
+      "median_speed_kmh": 172.7735288347517,
+      "minimum_speed_kmh": 170.78735569545202,
+      "runs": 5,
+      "traversals": 15
+    },
+    "restricted_minus_baseline_mean_kmh": 0.012048894142623112,
+    "restricted_zone_collisions": 0
+  },
+  "attempt_ids": [
+    "20260810T052131.850496Z-d9ea48d0",
+    "20260810T052503.595820Z-e2887cff",
+    "20260810T052835.002453Z-517cd8ca",
+    "20260810T053207.041035Z-b2f08869",
+    "20260810T053542.226460Z-06839293",
+    "20260810T053917.553557Z-8f6e1493",
+    "20260810T054252.118244Z-11c0e786",
+    "20260810T054627.277207Z-580f0e1e",
+    "20260810T055001.834736Z-5d7bc445",
+    "20260810T055338.992554Z-f2dbd87d"
+  ],
+  "baseline_commit": "fa7ff6f872d409936248146e43e849f791b655c3",
+  "campaign_complete": true,
+  "campaign_key": "55bc432db9f6055662bb",
+  "cohorts": {
+    "control": {
+      "collision_rate": 0.0,
+      "completion_rate": 1.0,
+      "controller_measurements": 5,
+      "finished_elapsed_seconds": {
+        "count": 5,
+        "maximum": 322.0000000000404,
+        "mean": 321.8600000000404,
+        "median": 321.90000000004034,
+        "minimum": 321.70000000004035,
+        "stdev": 0.12942179105545312
+      },
+      "measurement_attempt_ids": [
+        "20260810T052131.850496Z-d9ea48d0",
+        "20260810T052835.002453Z-517cd8ca",
+        "20260810T053542.226460Z-06839293",
+        "20260810T054252.118244Z-11c0e786",
+        "20260810T055001.834736Z-5d7bc445"
+      ],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {
+        "finished": 5
+      },
+      "penalized_objective_seconds": {
+        "count": 5,
+        "maximum": 322.0000000000404,
+        "mean": 321.8600000000404,
+        "median": 321.90000000004034,
+        "minimum": 321.70000000004035,
+        "stdev": 0.12942179105545312
+      },
+      "scheduled_repetitions": 5,
+      "section_elapsed_seconds": {
+        "0": {
+          "count": 5,
+          "maximum": 47.400000000000006,
+          "mean": 47.39000000000001,
+          "median": 47.400000000000006,
+          "minimum": 47.35,
+          "stdev": 0.022360679774999805
+        },
+        "1": {
+          "count": 5,
+          "maximum": 38.050000000000004,
+          "mean": 37.96,
+          "median": 37.95,
+          "minimum": 37.85,
+          "stdev": 0.08944271909999345
+        },
+        "2": {
+          "count": 5,
+          "maximum": 25.0,
+          "mean": 24.96,
+          "median": 24.950000000000003,
+          "minimum": 24.950000000000003,
+          "stdev": 0.022360679774996627
+        },
+        "3": {
+          "count": 5,
+          "maximum": 50.0,
+          "mean": 49.84,
+          "median": 49.800000000000004,
+          "minimum": 49.75,
+          "stdev": 0.09617692030835587
+        },
+        "4": {
+          "count": 5,
+          "maximum": 17.2,
+          "mean": 17.14,
+          "median": 17.150000000000002,
+          "minimum": 17.1,
+          "stdev": 0.0418330013267031
+        },
+        "5": {
+          "count": 5,
+          "maximum": 25.3,
+          "mean": 25.240000000000002,
+          "median": 25.200000000000003,
+          "minimum": 25.200000000000003,
+          "stdev": 0.05477225575051545
+        },
+        "6": {
+          "count": 5,
+          "maximum": 37.550000000000004,
+          "mean": 37.52,
+          "median": 37.5,
+          "minimum": 37.5,
+          "stdev": 0.02738612787526064
+        },
+        "7": {
+          "count": 5,
+          "maximum": 8.700000000000001,
+          "mean": 8.700000000000001,
+          "median": 8.700000000000001,
+          "minimum": 8.700000000000001,
+          "stdev": 0.0
+        },
+        "8": {
+          "count": 5,
+          "maximum": 42.75,
+          "mean": 42.7,
+          "median": 42.7,
+          "minimum": 42.650000000000006,
+          "stdev": 0.04999999999999716
+        },
+        "9": {
+          "count": 5,
+          "maximum": 30.5,
+          "mean": 30.41,
+          "median": 30.400000000000002,
+          "minimum": 30.35,
+          "stdev": 0.05477225575051593
+        }
+      },
+      "terminal_failures": []
+    },
+    "restricted": {
+      "collision_rate": 0.0,
+      "completion_rate": 1.0,
+      "controller_measurements": 5,
+      "finished_elapsed_seconds": {
+        "count": 5,
+        "maximum": 322.2500000000405,
+        "mean": 322.05000000004037,
+        "median": 322.0500000000403,
+        "minimum": 321.90000000004034,
+        "stdev": 0.1541103500742871
+      },
+      "measurement_attempt_ids": [
+        "20260810T052503.595820Z-e2887cff",
+        "20260810T053207.041035Z-b2f08869",
+        "20260810T053917.553557Z-8f6e1493",
+        "20260810T054627.277207Z-580f0e1e",
+        "20260810T055338.992554Z-f2dbd87d"
+      ],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {
+        "finished": 5
+      },
+      "penalized_objective_seconds": {
+        "count": 5,
+        "maximum": 322.2500000000405,
+        "mean": 322.05000000004037,
+        "median": 322.0500000000403,
+        "minimum": 321.90000000004034,
+        "stdev": 0.1541103500742871
+      },
+      "scheduled_repetitions": 5,
+      "section_elapsed_seconds": {
+        "0": {
+          "count": 5,
+          "maximum": 47.45,
+          "mean": 47.410000000000004,
+          "median": 47.400000000000006,
+          "minimum": 47.400000000000006,
+          "stdev": 0.022360679774996627
+        },
+        "1": {
+          "count": 5,
+          "maximum": 38.0,
+          "mean": 37.86,
+          "median": 37.85,
+          "minimum": 37.75,
+          "stdev": 0.09617692030835587
+        },
+        "2": {
+          "count": 5,
+          "maximum": 25.0,
+          "mean": 24.96,
+          "median": 24.950000000000003,
+          "minimum": 24.950000000000003,
+          "stdev": 0.022360679774996627
+        },
+        "3": {
+          "count": 5,
+          "maximum": 49.800000000000004,
+          "mean": 49.730000000000004,
+          "median": 49.75,
+          "minimum": 49.6,
+          "stdev": 0.08366600265340852
+        },
+        "4": {
+          "count": 5,
+          "maximum": 17.1,
+          "mean": 17.1,
+          "median": 17.1,
+          "minimum": 17.1,
+          "stdev": 0.0
+        },
+        "5": {
+          "count": 5,
+          "maximum": 25.3,
+          "mean": 25.240000000000002,
+          "median": 25.200000000000003,
+          "minimum": 25.200000000000003,
+          "stdev": 0.05477225575051545
+        },
+        "6": {
+          "count": 5,
+          "maximum": 37.65,
+          "mean": 37.59,
+          "median": 37.6,
+          "minimum": 37.5,
+          "stdev": 0.06519202405202523
+        },
+        "7": {
+          "count": 5,
+          "maximum": 9.0,
+          "mean": 8.950000000000001,
+          "median": 8.950000000000001,
+          "minimum": 8.9,
+          "stdev": 0.04999999999999982
+        },
+        "8": {
+          "count": 5,
+          "maximum": 42.85,
+          "mean": 42.77,
+          "median": 42.75,
+          "minimum": 42.7,
+          "stdev": 0.05700877125495708
+        },
+        "9": {
+          "count": 5,
+          "maximum": 30.450000000000003,
+          "mean": 30.44,
+          "median": 30.450000000000003,
+          "minimum": 30.400000000000002,
+          "stdev": 0.022360679774998216
+        }
+      },
+      "terminal_failures": []
+    }
+  },
+  "completed_utc": "2026-08-10T05:57:06.629591+00:00",
+  "event_type": "upstream_speed_causal_campaign",
+  "experiment_name": "wp1799-single-brake-tick-causal",
+  "focused_event_analysis": {
+    "actual_minus_offline_predicted_gain_seconds": -0.2044128868480688,
+    "actual_total_race_gain_seconds": -0.18999999999999773,
+    "cohort_measurements_available": {
+      "control": true,
+      "restricted": true
+    },
+    "cohort_measurements_complete": {
+      "control": true,
+      "restricted": true
+    },
+    "cohorts": {
+      "control": {
+        "aggregate": {
+          "braking_onset_waypoint": 1780.6666666666667,
+          "braking_release_waypoint": 1804.5333333333333,
+          "collision_rate": 0.0,
+          "downstream_speed_kmh": {
+            "1849": 173.2151169433594,
+            "2000": 189.63324142456054,
+            "2200": 242.7208854675293
+          },
+          "entry_speed_kmh": 256.3308856201172,
+          "exit_speed_kmh": 221.6195901489258,
+          "minimum_speed_kmh": 173.43875701904298,
+          "section_time_seconds": 12.506666666666666,
+          "throttle_reapplication_waypoint": 1804.5333333333333,
+          "total_brake_ticks": 15.0,
+          "total_race_time_seconds": 321.8600000000404
+        },
+        "attempts": 5,
+        "outcomes": {
+          "collision_rate": 0.0,
+          "completion_rate": 1.0,
+          "controller_measurements": 5,
+          "finished_elapsed_seconds": {
+            "count": 5,
+            "maximum": 322.0000000000404,
+            "mean": 321.8600000000404,
+            "median": 321.90000000004034,
+            "minimum": 321.70000000004035,
+            "stdev": 0.12942179105545312
+          },
+          "measurement_attempt_ids": [
+            "20260810T052131.850496Z-d9ea48d0",
+            "20260810T052835.002453Z-517cd8ca",
+            "20260810T053542.226460Z-06839293",
+            "20260810T054252.118244Z-11c0e786",
+            "20260810T055001.834736Z-5d7bc445"
+          ],
+          "missing_due_to_infrastructure": 0,
+          "outcome_counts": {
+            "finished": 5
+          },
+          "penalized_objective_seconds": {
+            "count": 5,
+            "maximum": 322.0000000000404,
+            "mean": 321.8600000000404,
+            "median": 321.90000000004034,
+            "minimum": 321.70000000004035,
+            "stdev": 0.12942179105545312
+          },
+          "scheduled_repetitions": 5,
+          "section_elapsed_seconds": {
+            "0": {
+              "count": 5,
+              "maximum": 47.400000000000006,
+              "mean": 47.39000000000001,
+              "median": 47.400000000000006,
+              "minimum": 47.35,
+              "stdev": 0.022360679774999805
+            },
+            "1": {
+              "count": 5,
+              "maximum": 38.050000000000004,
+              "mean": 37.96,
+              "median": 37.95,
+              "minimum": 37.85,
+              "stdev": 0.08944271909999345
+            },
+            "2": {
+              "count": 5,
+              "maximum": 25.0,
+              "mean": 24.96,
+              "median": 24.950000000000003,
+              "minimum": 24.950000000000003,
+              "stdev": 0.022360679774996627
+            },
+            "3": {
+              "count": 5,
+              "maximum": 50.0,
+              "mean": 49.84,
+              "median": 49.800000000000004,
+              "minimum": 49.75,
+              "stdev": 0.09617692030835587
+            },
+            "4": {
+              "count": 5,
+              "maximum": 17.2,
+              "mean": 17.14,
+              "median": 17.150000000000002,
+              "minimum": 17.1,
+              "stdev": 0.0418330013267031
+            },
+            "5": {
+              "count": 5,
+              "maximum": 25.3,
+              "mean": 25.240000000000002,
+              "median": 25.200000000000003,
+              "minimum": 25.200000000000003,
+              "stdev": 0.05477225575051545
+            },
+            "6": {
+              "count": 5,
+              "maximum": 37.550000000000004,
+              "mean": 37.52,
+              "median": 37.5,
+              "minimum": 37.5,
+              "stdev": 0.02738612787526064
+            },
+            "7": {
+              "count": 5,
+              "maximum": 8.700000000000001,
+              "mean": 8.700000000000001,
+              "median": 8.700000000000001,
+              "minimum": 8.700000000000001,
+              "stdev": 0.0
+            },
+            "8": {
+              "count": 5,
+              "maximum": 42.75,
+              "mean": 42.7,
+              "median": 42.7,
+              "minimum": 42.650000000000006,
+              "stdev": 0.04999999999999716
+            },
+            "9": {
+              "count": 5,
+              "maximum": 30.5,
+              "mean": 30.41,
+              "median": 30.400000000000002,
+              "minimum": 30.35,
+              "stdev": 0.05477225575051593
+            }
+          },
+          "terminal_failures": []
+        },
+        "per_traversal": [
+          {
+            "attempt_id": "20260810T052131.850496Z-d9ea48d0",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.10343139648438,
+              "2000": 189.5795528411865,
+              "2200": 242.59517211914064
+            },
+            "entry_speed_kmh": 256.3589630126953,
+            "exit_speed_kmh": 221.58505096435547,
+            "lap": 1,
+            "minimum_speed_kmh": 173.09514770507812,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052131.850496Z-d9ea48d0",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.11044891357423,
+              "2000": 189.57942924499514,
+              "2200": 242.59484252929687
+            },
+            "entry_speed_kmh": 256.3586334228516,
+            "exit_speed_kmh": 221.58477630615235,
+            "lap": 2,
+            "minimum_speed_kmh": 173.10216522216797,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052131.850496Z-d9ea48d0",
+            "braking_onset_waypoint": 1780,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.97764511108397,
+              "2000": 190.0044284820557,
+              "2200": 242.91372985839845
+            },
+            "entry_speed_kmh": 256.2514343261719,
+            "exit_speed_kmh": 222.2656265258789,
+            "lap": 3,
+            "minimum_speed_kmh": 174.39105377197265,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052835.002453Z-517cd8ca",
+            "braking_onset_waypoint": 1780,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.3050792694092,
+              "2000": 189.72809143066408,
+              "2200": 242.86997680664064
+            },
+            "entry_speed_kmh": 256.3253448486328,
+            "exit_speed_kmh": 221.57878875732422,
+            "lap": 1,
+            "minimum_speed_kmh": 173.74104766845704,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052835.002453Z-517cd8ca",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.15468330383302,
+              "2000": 189.57110366821288,
+              "2200": 242.74719772338867
+            },
+            "entry_speed_kmh": 256.3322387695313,
+            "exit_speed_kmh": 221.56500091552735,
+            "lap": 2,
+            "minimum_speed_kmh": 173.58896942138674,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052835.002453Z-517cd8ca",
+            "braking_onset_waypoint": 1780,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.29474182128908,
+              "2000": 189.54136505126954,
+              "2200": 242.88592529296875
+            },
+            "entry_speed_kmh": 256.326498413086,
+            "exit_speed_kmh": 221.58124694824218,
+            "lap": 3,
+            "minimum_speed_kmh": 173.7317642211914,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053542.226460Z-06839293",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.11565093994142,
+              "2000": 189.5612537384033,
+              "2200": 242.58203430175783
+            },
+            "entry_speed_kmh": 256.36017150878905,
+            "exit_speed_kmh": 221.5858612060547,
+            "lap": 1,
+            "minimum_speed_kmh": 173.1075210571289,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053542.226460Z-06839293",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.00848274230958,
+              "2000": 189.56004524230957,
+              "2200": 242.73914337158203
+            },
+            "entry_speed_kmh": 256.3359741210938,
+            "exit_speed_kmh": 221.56549530029298,
+            "lap": 2,
+            "minimum_speed_kmh": 173.42683868408204,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053542.226460Z-06839293",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.05735748291016,
+              "2000": 189.56372566223146,
+              "2200": 242.58396606445314
+            },
+            "entry_speed_kmh": 256.2547576904297,
+            "exit_speed_kmh": 221.49729766845704,
+            "lap": 3,
+            "minimum_speed_kmh": 173.04927978515624,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T054252.118244Z-11c0e786",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.04063629150392,
+              "2000": 189.55805740356445,
+              "2200": 242.73880004882812
+            },
+            "entry_speed_kmh": 256.3580291748047,
+            "exit_speed_kmh": 221.5847351074219,
+            "lap": 1,
+            "minimum_speed_kmh": 173.03163299560546,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T054252.118244Z-11c0e786",
+            "braking_onset_waypoint": 1780,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.2425121307373,
+              "2000": 189.54760665893554,
+              "2200": 242.72972259521484
+            },
+            "entry_speed_kmh": 256.32872314453124,
+            "exit_speed_kmh": 221.58728942871093,
+            "lap": 2,
+            "minimum_speed_kmh": 173.67876892089845,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T054252.118244Z-11c0e786",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.14603157043456,
+              "2000": 189.5712890625,
+              "2200": 242.7474105834961
+            },
+            "entry_speed_kmh": 256.3476470947266,
+            "exit_speed_kmh": 221.57762145996094,
+            "lap": 3,
+            "minimum_speed_kmh": 173.58060607910156,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T055001.834736Z-5d7bc445",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.09337066650392,
+              "2000": 189.5748390197754,
+              "2200": 242.5916748046875
+            },
+            "entry_speed_kmh": 256.36033630371094,
+            "exit_speed_kmh": 221.58609466552736,
+            "lap": 1,
+            "minimum_speed_kmh": 173.0850814819336,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T055001.834736Z-5d7bc445",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1805,
+            "downstream_speed_kmh": {
+              "1849": 173.04415191650392,
+              "2000": 189.5959499359131,
+              "2200": 242.60798950195314
+            },
+            "entry_speed_kmh": 256.3490478515625,
+            "exit_speed_kmh": 221.57696228027345,
+            "lap": 2,
+            "minimum_speed_kmh": 173.03595886230468,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1805,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T055001.834736Z-5d7bc445",
+            "braking_onset_waypoint": 1780,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 173.53253059387208,
+              "2000": 189.9618839263916,
+              "2200": 242.8856964111328
+            },
+            "entry_speed_kmh": 256.31548461914065,
+            "exit_speed_kmh": 221.57200469970704,
+            "lap": 3,
+            "minimum_speed_kmh": 173.9355194091797,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 15
+          }
+        ],
+        "traversals": 15
+      },
+      "restricted": {
+        "aggregate": {
+          "braking_onset_waypoint": 1781.9333333333334,
+          "braking_release_waypoint": 1805.2666666666667,
+          "collision_rate": 0.0,
+          "downstream_speed_kmh": {
+            "1849": 170.06286026000978,
+            "2000": 188.51448989868163,
+            "2200": 242.0645538330078
+          },
+          "entry_speed_kmh": 256.3446459960938,
+          "exit_speed_kmh": 221.85993713378906,
+          "minimum_speed_kmh": 169.7784265136719,
+          "section_time_seconds": 12.530000000000001,
+          "throttle_reapplication_waypoint": 1805.2666666666667,
+          "total_brake_ticks": 14.733333333333333,
+          "total_race_time_seconds": 322.05000000004037
+        },
+        "attempts": 5,
+        "outcomes": {
+          "collision_rate": 0.0,
+          "completion_rate": 1.0,
+          "controller_measurements": 5,
+          "finished_elapsed_seconds": {
+            "count": 5,
+            "maximum": 322.2500000000405,
+            "mean": 322.05000000004037,
+            "median": 322.0500000000403,
+            "minimum": 321.90000000004034,
+            "stdev": 0.1541103500742871
+          },
+          "measurement_attempt_ids": [
+            "20260810T052503.595820Z-e2887cff",
+            "20260810T053207.041035Z-b2f08869",
+            "20260810T053917.553557Z-8f6e1493",
+            "20260810T054627.277207Z-580f0e1e",
+            "20260810T055338.992554Z-f2dbd87d"
+          ],
+          "missing_due_to_infrastructure": 0,
+          "outcome_counts": {
+            "finished": 5
+          },
+          "penalized_objective_seconds": {
+            "count": 5,
+            "maximum": 322.2500000000405,
+            "mean": 322.05000000004037,
+            "median": 322.0500000000403,
+            "minimum": 321.90000000004034,
+            "stdev": 0.1541103500742871
+          },
+          "scheduled_repetitions": 5,
+          "section_elapsed_seconds": {
+            "0": {
+              "count": 5,
+              "maximum": 47.45,
+              "mean": 47.410000000000004,
+              "median": 47.400000000000006,
+              "minimum": 47.400000000000006,
+              "stdev": 0.022360679774996627
+            },
+            "1": {
+              "count": 5,
+              "maximum": 38.0,
+              "mean": 37.86,
+              "median": 37.85,
+              "minimum": 37.75,
+              "stdev": 0.09617692030835587
+            },
+            "2": {
+              "count": 5,
+              "maximum": 25.0,
+              "mean": 24.96,
+              "median": 24.950000000000003,
+              "minimum": 24.950000000000003,
+              "stdev": 0.022360679774996627
+            },
+            "3": {
+              "count": 5,
+              "maximum": 49.800000000000004,
+              "mean": 49.730000000000004,
+              "median": 49.75,
+              "minimum": 49.6,
+              "stdev": 0.08366600265340852
+            },
+            "4": {
+              "count": 5,
+              "maximum": 17.1,
+              "mean": 17.1,
+              "median": 17.1,
+              "minimum": 17.1,
+              "stdev": 0.0
+            },
+            "5": {
+              "count": 5,
+              "maximum": 25.3,
+              "mean": 25.240000000000002,
+              "median": 25.200000000000003,
+              "minimum": 25.200000000000003,
+              "stdev": 0.05477225575051545
+            },
+            "6": {
+              "count": 5,
+              "maximum": 37.65,
+              "mean": 37.59,
+              "median": 37.6,
+              "minimum": 37.5,
+              "stdev": 0.06519202405202523
+            },
+            "7": {
+              "count": 5,
+              "maximum": 9.0,
+              "mean": 8.950000000000001,
+              "median": 8.950000000000001,
+              "minimum": 8.9,
+              "stdev": 0.04999999999999982
+            },
+            "8": {
+              "count": 5,
+              "maximum": 42.85,
+              "mean": 42.77,
+              "median": 42.75,
+              "minimum": 42.7,
+              "stdev": 0.05700877125495708
+            },
+            "9": {
+              "count": 5,
+              "maximum": 30.450000000000003,
+              "mean": 30.44,
+              "median": 30.450000000000003,
+              "minimum": 30.400000000000002,
+              "stdev": 0.022360679774998216
+            }
+          },
+          "terminal_failures": []
+        },
+        "per_traversal": [
+          {
+            "attempt_id": "20260810T052503.595820Z-e2887cff",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.16171646118164,
+              "2000": 187.87248001098632,
+              "2200": 241.68291320800782
+            },
+            "entry_speed_kmh": 256.3573425292969,
+            "exit_speed_kmh": 222.34530487060547,
+            "lap": 1,
+            "minimum_speed_kmh": 167.67062072753907,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052503.595820Z-e2887cff",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.21450920104982,
+              "2000": 188.0023349761963,
+              "2200": 241.78085632324218
+            },
+            "entry_speed_kmh": 256.3587158203125,
+            "exit_speed_kmh": 222.34893035888672,
+            "lap": 2,
+            "minimum_speed_kmh": 167.72769470214845,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T052503.595820Z-e2887cff",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.1547607421875,
+              "2000": 187.8687343597412,
+              "2200": 241.67991943359374
+            },
+            "entry_speed_kmh": 256.35613403320315,
+            "exit_speed_kmh": 222.34428863525392,
+            "lap": 3,
+            "minimum_speed_kmh": 167.66353454589844,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053207.041035Z-b2f08869",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1804,
+            "downstream_speed_kmh": {
+              "1849": 174.7020217895508,
+              "2000": 190.00203895568848,
+              "2200": 242.90841979980468
+            },
+            "entry_speed_kmh": 256.2821411132813,
+            "exit_speed_kmh": 223.07954864501954,
+            "lap": 1,
+            "minimum_speed_kmh": 175.1300765991211,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1804,
+            "total_brake_ticks": 14
+          },
+          {
+            "attempt_id": "20260810T053207.041035Z-b2f08869",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.64605903625488,
+              "2000": 188.33689613342284,
+              "2200": 242.02854309082034
+            },
+            "entry_speed_kmh": 256.34860839843753,
+            "exit_speed_kmh": 222.34038848876955,
+            "lap": 2,
+            "minimum_speed_kmh": 168.16372833251953,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053207.041035Z-b2f08869",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.3995876312256,
+              "2000": 187.96548957824706,
+              "2200": 241.7525390625
+            },
+            "entry_speed_kmh": 256.32910766601566,
+            "exit_speed_kmh": 222.3205581665039,
+            "lap": 3,
+            "minimum_speed_kmh": 167.90620880126954,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053917.553557Z-8f6e1493",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.1181625366211,
+              "2000": 187.84417991638185,
+              "2200": 241.66167297363282
+            },
+            "entry_speed_kmh": 256.3584686279297,
+            "exit_speed_kmh": 222.34595031738283,
+            "lap": 1,
+            "minimum_speed_kmh": 167.62605743408204,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T053917.553557Z-8f6e1493",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1803,
+            "downstream_speed_kmh": {
+              "1849": 175.31467094421387,
+              "2000": 190.04953079223634,
+              "2200": 242.9396209716797
+            },
+            "entry_speed_kmh": 256.2624481201172,
+            "exit_speed_kmh": 219.6344009399414,
+            "lap": 2,
+            "minimum_speed_kmh": 174.89435119628908,
+            "section": 6,
+            "section_time_seconds": 12.5,
+            "throttle_reapplication_waypoint": 1803,
+            "total_brake_ticks": 14
+          },
+          {
+            "attempt_id": "20260810T053917.553557Z-8f6e1493",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1803,
+            "downstream_speed_kmh": {
+              "1849": 175.15666351318362,
+              "2000": 190.03678665161135,
+              "2200": 242.93076782226564
+            },
+            "entry_speed_kmh": 256.3797546386719,
+            "exit_speed_kmh": 219.72056121826174,
+            "lap": 3,
+            "minimum_speed_kmh": 174.73561248779296,
+            "section": 6,
+            "section_time_seconds": 12.450000000000001,
+            "throttle_reapplication_waypoint": 1803,
+            "total_brake_ticks": 14
+          },
+          {
+            "attempt_id": "20260810T054627.277207Z-580f0e1e",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.13664016723635,
+              "2000": 187.853600692749,
+              "2200": 241.66888732910158
+            },
+            "entry_speed_kmh": 256.3577819824219,
+            "exit_speed_kmh": 222.34530487060547,
+            "lap": 1,
+            "minimum_speed_kmh": 167.64488525390627,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T054627.277207Z-580f0e1e",
+            "braking_onset_waypoint": 1783,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.13965797424316,
+              "2000": 187.92387542724612,
+              "2200": 241.72283935546875
+            },
+            "entry_speed_kmh": 256.3454498291016,
+            "exit_speed_kmh": 222.33473052978516,
+            "lap": 2,
+            "minimum_speed_kmh": 168.62783203125,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T054627.277207Z-580f0e1e",
+            "braking_onset_waypoint": 1781,
+            "braking_release_waypoint": 1803,
+            "downstream_speed_kmh": {
+              "1849": 175.15071716308594,
+              "2000": 190.0372226715088,
+              "2200": 242.93099670410157
+            },
+            "entry_speed_kmh": 256.38035888671874,
+            "exit_speed_kmh": 219.72093200683594,
+            "lap": 3,
+            "minimum_speed_kmh": 174.72959747314454,
+            "section": 6,
+            "section_time_seconds": 12.450000000000001,
+            "throttle_reapplication_waypoint": 1803,
+            "total_brake_ticks": 14
+          },
+          {
+            "attempt_id": "20260810T055338.992554Z-f2dbd87d",
+            "braking_onset_waypoint": 1783,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.13688392639162,
+              "2000": 187.8660461425781,
+              "2200": 241.6783447265625
+            },
+            "entry_speed_kmh": 256.3610778808594,
+            "exit_speed_kmh": 222.3490951538086,
+            "lap": 1,
+            "minimum_speed_kmh": 167.64500885009767,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T055338.992554Z-f2dbd87d",
+            "braking_onset_waypoint": 1782,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.46526527404785,
+              "2000": 188.1275791168213,
+              "2200": 241.87263793945314
+            },
+            "entry_speed_kmh": 256.33880310058595,
+            "exit_speed_kmh": 222.32927856445312,
+            "lap": 2,
+            "minimum_speed_kmh": 167.97745513916016,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          },
+          {
+            "attempt_id": "20260810T055338.992554Z-f2dbd87d",
+            "braking_onset_waypoint": 1783,
+            "braking_release_waypoint": 1806,
+            "downstream_speed_kmh": {
+              "1849": 168.04558753967285,
+              "2000": 187.93055305480956,
+              "2200": 241.7293487548828
+            },
+            "entry_speed_kmh": 256.35349731445314,
+            "exit_speed_kmh": 222.33978424072265,
+            "lap": 3,
+            "minimum_speed_kmh": 168.5337341308594,
+            "section": 6,
+            "section_time_seconds": 12.55,
+            "throttle_reapplication_waypoint": 1806,
+            "total_brake_ticks": 15
+          }
+        ],
+        "traversals": 15
+      }
+    },
+    "complete": true,
+    "expected_measurements_per_cohort": 5,
+    "incomplete_cohorts": [],
+    "missing_cohorts": [],
+    "offline_comparison_note": "Local linearization of the 1.817 s full-envelope opportunity at the observed intervention-exit speed delta.",
+    "offline_predicted_gain_for_observed_exit_delta_seconds": 0.01441288684807106,
+    "restricted_minus_control": {
+      "braking_onset_waypoint": 1.2666666666666515,
+      "braking_release_waypoint": 0.7333333333333485,
+      "collision_rate": 0.0,
+      "downstream_speed_kmh": {
+        "1849": -3.1522566833496057,
+        "2000": -1.1187515258789062,
+        "2200": -0.6563316345215071
+      },
+      "entry_speed_kmh": 0.013760375976573869,
+      "exit_speed_kmh": 0.24034698486326533,
+      "minimum_speed_kmh": -3.6603305053710926,
+      "section_time_seconds": 0.023333333333335204,
+      "throttle_reapplication_waypoint": 0.7333333333333485,
+      "total_brake_ticks": -0.2666666666666675,
+      "total_race_time_seconds": 0.18999999999999773
+    },
+    "specification": {
+      "downstream_tolerance_waypoints": 2,
+      "downstream_waypoints": [
+        1849,
+        2000,
+        2200
+      ],
+      "intervention_window": [
+        1779,
+        1803
+      ],
+      "minimum_speed_window": [
+        1779,
+        1849
+      ],
+      "offline_full_delta_kmh": 30.3,
+      "offline_full_gain_seconds": 1.817
+    },
+    "status": "complete"
+  },
+  "human_report_path": "experiment_results/causal/55bc432db9f6055662bb/report.md",
+  "parameters": {
+    "control": {},
+    "restricted": {
+      "causal.wp1779_1803_suppress_brake_ticks": 1
+    }
+  },
+  "pending_schedule_indices": [],
+  "result_path": "experiment_results/causal/55bc432db9f6055662bb/result.json",
+  "schedule": [
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted"
+  ],
+  "schema_version": 2
+}
