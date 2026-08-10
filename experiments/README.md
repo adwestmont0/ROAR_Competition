@@ -158,3 +158,24 @@ Known-good baseline runs can be inserted at the start, end, and after every N
 primary experiments with the `controls` block. Sweep execution can stop after
 configured consecutive collisions, infrastructure failures, controller hangs,
 or any failed known-good control.
+
+## Offline velocity planning
+
+The empirical v1 analyzer remains available as a safety/reference layer:
+
+```bash
+python -m experiments.harness.cli velocity-profile
+```
+
+The physics-informed v2 analyzer uniformly resamples the closed custom racing
+line, estimates speed-dependent acceleration and braking envelopes from verified
+baseline telemetry, calibrates a lateral-acceleration limit, solves periodic
+backward/forward velocity passes, and overlays collision-derived stability caps:
+
+```bash
+python -m experiments.harness.cli velocity-profile-v2
+```
+
+Both commands are offline-only. Their JSON and Markdown products are written to
+separate `experiment_results/analysis/velocity_profile*` directories so v1 and
+v2 remain directly comparable. Neither command edits or applies controller code.

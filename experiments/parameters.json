@@ -1,4 +1,11 @@
 {
+  "causal.wp1240_1295_throttle_cap_percent": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 100,
+    "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+    "replacement_template": "        if 1240 <= self.current_waypoint_idx <= 1295:\n            throttle = min(throttle, {value} / 100.0)\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+    "type": "int", "minimum": 0, "maximum": 100, "required_matches": 1
+  },
   "throttle.section_mu.1": {
     "file": "competition_code/ThrottleController.py",
     "baseline_value": 3.0,

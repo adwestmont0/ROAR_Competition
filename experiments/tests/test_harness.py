@@ -2,6 +2,7 @@ import io
 import json
 import tempfile
 import unittest
+import numpy as np
 from pathlib import Path
 from subprocess import CompletedProcess
 from unittest.mock import patch
@@ -26,9 +27,37 @@ from experiments.harness.reliability import (
     render_reliability_report,
     wilson_interval,
 )
+from experiments.harness.causal import causal_schedule
+from experiments.analysis.velocity_profile_v2 import _solve_closed
 
 
 class HarnessTests(unittest.TestCase):
+    def test_closed_velocity_solver_enforces_forward_and_backward_limits(self):
+        limit = np.array([100.0, 300.0, 300.0, 80.0])
+        curvature = np.zeros(4)
+        envelope = {
+            "speed_centers_kmh": np.array([0.0, 300.0]),
+            "acceleration_low_lateral_mps2": np.array([2.0, 2.0]),
+            "acceleration_high_lateral_mps2": np.array([2.0, 2.0]),
+            "deceleration_mps2": np.array([4.0, 4.0]),
+        }
+        solved, iterations, error = _solve_closed(limit, curvature, 10.0, envelope)
+        self.assertGreater(iterations, 0)
+        self.assertLess(error, 0.0011)
+        self.assertTrue(np.all(solved <= limit + 1e-8))
+        velocity = solved / 3.6
+        for index in range(4):
+            following = (index + 1) % 4
+            self.assertLessEqual(velocity[following] ** 2, velocity[index] ** 2 + 2 * 2.0 * 10.0 + 1e-6)
+            self.assertLessEqual(velocity[index] ** 2, velocity[following] ** 2 + 2 * 4.0 * 10.0 + 1e-6)
+
+    def test_causal_schedule_interleaves_forced_clean_cohorts(self):
+        self.assertEqual(
+            causal_schedule(3),
+            ["control", "restricted", "control", "restricted", "control", "restricted"],
+        )
+        self.assertEqual(causal_schedule(3, include_controls=False), ["restricted"] * 3)
+
     def base_config(self):
         return {
             "name": "test",

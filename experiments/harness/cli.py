@@ -15,7 +15,10 @@ from .core import (
 )
 from .evaluation import dry_run_candidates, evaluate_candidates
 from .reliability import dry_run_reliability, run_reliability_campaign
+from .causal import dry_run_causal, run_causal_campaign
 from experiments.search.adapter import run_search
+from experiments.analysis.velocity_profile import analyze as analyze_velocity_profile
+from experiments.analysis.velocity_profile_v2 import analyze as analyze_velocity_profile_v2
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -81,6 +84,24 @@ def main() -> int:
     reliability.add_argument("--no-resume", action="store_true")
     reliability.add_argument("--json-only", action="store_true")
 
+    causal = subparsers.add_parser("causal")
+    causal.add_argument("config", type=Path)
+    causal.add_argument("--dry-run", action="store_true")
+    causal.add_argument("--no-resume", action="store_true")
+    causal.add_argument("--json-only", action="store_true")
+
+    profile = subparsers.add_parser("velocity-profile")
+    profile.add_argument("--results-dir", default="experiment_results")
+    profile.add_argument("--bin-m", type=float, default=20.0)
+    profile.add_argument("--interval-m", type=float, default=100.0)
+    profile.add_argument("--json-only", action="store_true")
+
+    profile_v2 = subparsers.add_parser("velocity-profile-v2")
+    profile_v2.add_argument("--results-dir", default="experiment_results")
+    profile_v2.add_argument("--spacing-m", type=float, default=5.0)
+    profile_v2.add_argument("--interval-m", type=float, default=100.0)
+    profile_v2.add_argument("--json-only", action="store_true")
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -131,6 +152,20 @@ def main() -> int:
             return 1
         return 0
 
+    if args.command == "velocity-profile":
+        result = analyze_velocity_profile(root, args.results_dir, args.bin_m, args.interval_m)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "velocity-profile-v2":
+        result = analyze_velocity_profile_v2(root, args.results_dir, args.spacing_m, args.interval_m)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
     root, config, registry = load_inputs(args.config)
     if args.command == "evaluate":
         if args.dry_run:
@@ -152,6 +187,18 @@ def main() -> int:
             print_results(dry_run_reliability(config, registry, root))
         else:
             result = run_reliability_campaign(
+                config, registry, root, not args.no_resume,
+                progress_callback=lambda message: print(message, file=sys.stderr, flush=True),
+            )
+            print_results(result)
+            sys.stdout.flush()
+            if not args.json_only:
+                print_human_report(result, root)
+    elif args.command == "causal":
+        if args.dry_run:
+            print_results(dry_run_causal(config, registry, root))
+        else:
+            result = run_causal_campaign(
                 config, registry, root, not args.no_resume,
                 progress_callback=lambda message: print(message, file=sys.stderr, flush=True),
             )
