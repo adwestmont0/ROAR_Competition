@@ -29,9 +29,35 @@ from experiments.harness.reliability import (
 )
 from experiments.harness.causal import causal_schedule
 from experiments.analysis.velocity_profile_v2 import _solve_closed
+from experiments.analysis.counterfactual_opportunity import CAUSES, _gain_attribution
 
 
 class HarnessTests(unittest.TestCase):
+    def test_counterfactual_cause_vocabulary_is_stable(self):
+        self.assertEqual(
+            CAUSES,
+            {
+                "target-speed limitation", "braking onset", "braking magnitude",
+                "braking release", "throttle onset", "acceleration capability",
+                "preceding-corner exit speed", "racing-line/curvature limitation",
+                "unsupported model extrapolation",
+            },
+        )
+
+    def test_counterfactual_gain_separates_carry_in_from_acceleration(self):
+        profile = [
+            {"baseline_median_speed_kmh": 100.0, "stability_capped_planned_speed_kmh": 110.0},
+            {"baseline_median_speed_kmh": 105.0, "stability_capped_planned_speed_kmh": 120.0},
+        ]
+        attribution = _gain_attribution([0, 1], {0, 1}, profile, 5.0)
+        self.assertGreater(attribution["initial_velocity_advantage_seconds"], 0.0)
+        self.assertGreater(attribution["continued_acceleration_difference_seconds"], 0.0)
+        self.assertAlmostEqual(
+            attribution["total_gain_seconds"],
+            attribution["initial_velocity_advantage_seconds"]
+            + attribution["continued_acceleration_difference_seconds"],
+        )
+
     def test_closed_velocity_solver_enforces_forward_and_backward_limits(self):
         limit = np.array([100.0, 300.0, 300.0, 80.0])
         curvature = np.zeros(4)

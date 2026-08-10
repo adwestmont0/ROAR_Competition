@@ -19,6 +19,7 @@ from .causal import dry_run_causal, run_causal_campaign
 from experiments.search.adapter import run_search
 from experiments.analysis.velocity_profile import analyze as analyze_velocity_profile
 from experiments.analysis.velocity_profile_v2 import analyze as analyze_velocity_profile_v2
+from experiments.analysis.counterfactual_opportunity import analyze as analyze_counterfactual
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -102,6 +103,11 @@ def main() -> int:
     profile_v2.add_argument("--interval-m", type=float, default=100.0)
     profile_v2.add_argument("--json-only", action="store_true")
 
+    counterfactual = subparsers.add_parser("counterfactual-opportunity")
+    counterfactual.add_argument("--results-dir", default="experiment_results")
+    counterfactual.add_argument("--extension-m", type=float, default=300.0)
+    counterfactual.add_argument("--json-only", action="store_true")
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -161,6 +167,13 @@ def main() -> int:
 
     if args.command == "velocity-profile-v2":
         result = analyze_velocity_profile_v2(root, args.results_dir, args.spacing_m, args.interval_m)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "counterfactual-opportunity":
+        result = analyze_counterfactual(root, args.results_dir, args.extension_m)
         print_results(result)
         if not args.json_only:
             print_human_report(result, root)

@@ -179,3 +179,14 @@ python -m experiments.harness.cli velocity-profile-v2
 Both commands are offline-only. Their JSON and Markdown products are written to
 separate `experiment_results/analysis/velocity_profile*` directories so v1 and
 v2 remain directly comparable. Neither command edits or applies controller code.
+
+Interpret the support-qualified v2 regions as causal intervention points with
+300 m of upstream/downstream context:
+
+```bash
+python -m experiments.harness.cli counterfactual-opportunity
+```
+
+This offline report replays the winner's target-speed geometry, compares measured
+and required longitudinal state, separates initial-velocity from continued-
+acceleration gains, and merges regions that share the same upstream event.
