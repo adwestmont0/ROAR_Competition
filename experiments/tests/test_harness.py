@@ -27,12 +27,71 @@ from experiments.harness.reliability import (
     render_reliability_report,
     wilson_interval,
 )
-from experiments.harness.causal import causal_schedule
+from experiments.harness.causal import causal_schedule, _compare_focused_cohorts
 from experiments.analysis.velocity_profile_v2 import _solve_closed
 from experiments.analysis.counterfactual_opportunity import CAUSES, _gain_attribution
 
 
 class HarnessTests(unittest.TestCase):
+    def test_focused_causal_aggregation_handles_all_cohort_availability_states(self):
+        specification = {
+            "downstream_waypoints": [1849, 2000, 2200],
+            "offline_full_delta_kmh": 30.3,
+            "offline_full_gain_seconds": 1.817,
+        }
+        fields = (
+            "entry_speed_kmh", "exit_speed_kmh", "minimum_speed_kmh",
+            "braking_onset_waypoint", "braking_release_waypoint", "total_brake_ticks",
+            "throttle_reapplication_waypoint", "section_time_seconds",
+            "total_race_time_seconds", "collision_rate",
+        )
+
+        def summary(attempts, offset=0.0):
+            aggregate = {
+                field: (None if not attempts else 100.0 + offset)
+                for field in fields
+            }
+            aggregate["downstream_speed_kmh"] = {
+                str(waypoint): (None if not attempts else 150.0 + offset)
+                for waypoint in specification["downstream_waypoints"]
+            }
+            return {"attempts": attempts, "aggregate": aggregate}
+
+        cases = (
+            ("no valid measurements", 0, 0, ["control", "restricted"]),
+            ("control only", 1, 0, ["restricted"]),
+            ("treatment only", 0, 1, ["control"]),
+            ("both cohorts present", 1, 1, []),
+        )
+        for name, controls, treatments, missing in cases:
+            with self.subTest(name=name):
+                result = _compare_focused_cohorts(
+                    {
+                        "control": summary(controls),
+                        "restricted": summary(treatments, 4.0),
+                    },
+                    specification,
+                    expected_measurements_per_cohort=1,
+                )
+                self.assertEqual(result["missing_cohorts"], missing)
+                self.assertEqual(result["complete"], not missing)
+                expected_delta = 4.0 if not missing else None
+                self.assertEqual(
+                    result["restricted_minus_control"]["exit_speed_kmh"],
+                    expected_delta,
+                )
+                self.assertEqual(
+                    result["restricted_minus_control"]["downstream_speed_kmh"]["1849"],
+                    expected_delta,
+                )
+                if missing:
+                    self.assertIsNone(result["actual_total_race_gain_seconds"])
+                    self.assertIsNone(result["offline_predicted_gain_for_observed_exit_delta_seconds"])
+                    self.assertIsNone(result["actual_minus_offline_predicted_gain_seconds"])
+                else:
+                    self.assertIsNotNone(result["actual_total_race_gain_seconds"])
+                    self.assertIsNotNone(result["offline_predicted_gain_for_observed_exit_delta_seconds"])
+
     def test_counterfactual_cause_vocabulary_is_stable(self):
         self.assertEqual(
             CAUSES,

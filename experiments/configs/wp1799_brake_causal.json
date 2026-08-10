@@ -1,0 +1,42 @@
+{
+  "name": "wp1799-single-brake-tick-causal",
+  "baseline_commit": "fa7ff6f",
+  "results_dir": "experiment_results",
+  "carla": {
+    "host": "172.31.86.36",
+    "port": 2000,
+    "timeout_seconds": 10,
+    "expected_map": "Carla/Maps/Monza"
+  },
+  "execution": {
+    "client_timeout_seconds": 600,
+    "max_infra_retries": 2
+  },
+  "recovery": {
+    "provider": "aws_ssm",
+    "region": "us-east-1",
+    "instance_id": "i-045f5f07dd2aa5ad8",
+    "document_name": "AWS-RunPowerShellScript",
+    "restart_command": "& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'",
+    "command_timeout_seconds": 240,
+    "readiness_timeout_seconds": 240,
+    "readiness_poll_seconds": 5
+  },
+  "causal": {
+    "repetitions": 5,
+    "include_controls": true,
+    "control_parameters": {},
+    "candidate_parameters": {
+      "causal.wp1779_1803_suppress_brake_ticks": 1
+    },
+    "failure_penalty_seconds": 600,
+    "event_analysis": {
+      "intervention_window": [1779, 1803],
+      "minimum_speed_window": [1779, 1849],
+      "downstream_waypoints": [1849, 2000, 2200],
+      "downstream_tolerance_waypoints": 2,
+      "offline_full_delta_kmh": 30.3,
+      "offline_full_gain_seconds": 1.817
+    }
+  }
+}

@@ -1,4 +1,11 @@
 {
+  "causal.wp1779_1803_suppress_brake_ticks": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 0,
+    "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+    "replacement_template": "        if not 1779 <= self.current_waypoint_idx <= 1803:\n            self._wp1799_suppressed_brake_ticks = 0\n        elif (\n            brake > 0\n            and getattr(self, \"_wp1799_suppressed_brake_ticks\", 0) < {value}\n        ):\n            throttle = 0.0\n            brake = 0.0\n            gear = max(1, int(current_speed_kmh / 60))\n            self._wp1799_suppressed_brake_ticks = (\n                getattr(self, \"_wp1799_suppressed_brake_ticks\", 0) + 1\n            )\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+    "type": "int", "minimum": 0, "maximum": 3, "required_matches": 1
+  },
   "causal.wp1240_1295_throttle_cap_percent": {
     "file": "competition_code/submission.py",
     "baseline_value": 100,

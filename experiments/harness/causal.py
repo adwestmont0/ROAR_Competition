@@ -60,11 +60,12 @@ def dry_run_causal(config: Dict[str, Any], registry: Dict[str, Any], root: Path)
 def _write_report(path: Path, result: Dict[str, Any]) -> None:
     control = result["cohorts"]["control"]
     restricted = result["cohorts"]["restricted"]
+    title = result.get("experiment_name", "causal campaign").replace("-", " ").title().replace("Wp", "WP")
     lines = [
-        "# WP 1240–1295 upstream-speed causal validation", "",
+        "# %s" % title, "",
         "Every measurement used a forced-clean CARLA start.", "",
     ]
-    for label, summary in (("Baseline control", control), ("Restricted throttle", restricted)):
+    for label, summary in (("Baseline control", control), ("Treatment", restricted)):
         elapsed = summary.get("finished_elapsed_seconds")
         lines += [
             "## " + label, "",
@@ -73,17 +74,59 @@ def _write_report(path: Path, result: Dict[str, Any]) -> None:
             "- Finished mean: %s" % ("unavailable" if elapsed is None else "%.3f s" % elapsed["mean"]), "",
         ]
     lines += ["This campaign tests causal stability, not lap-time acceptance. See result.json for the authoritative record.", ""]
+    focused = result.get("focused_event_analysis")
     arrival = result.get("arrival_analysis")
-    if arrival:
+    if arrival and not focused:
         baseline = arrival["baseline"]
         restricted_arrival = arrival["restricted"]
         lines += [
             "## Causal intermediate variable", "",
             "- Arrival window: custom WP %d–%d" % tuple(arrival["custom_waypoint_window"]),
-            "- Baseline traversals: %d; mean arrival speed: %.3f km/h" % (baseline["traversals"], baseline["mean_speed_kmh"]),
-            "- Restricted traversals: %d; mean arrival speed: %.3f km/h" % (restricted_arrival["traversals"], restricted_arrival["mean_speed_kmh"]),
-            "- Mean shift: %+.3f km/h" % arrival["restricted_minus_baseline_mean_kmh"],
+            "- Baseline traversals: %d; mean arrival speed: %s" % (baseline["traversals"], "unavailable" if baseline["mean_speed_kmh"] is None else "%.3f km/h" % baseline["mean_speed_kmh"]),
+            "- Restricted traversals: %d; mean arrival speed: %s" % (restricted_arrival["traversals"], "unavailable" if restricted_arrival["mean_speed_kmh"] is None else "%.3f km/h" % restricted_arrival["mean_speed_kmh"]),
+            "- Mean shift: %s" % ("unavailable" if arrival["restricted_minus_baseline_mean_kmh"] is None else "%+.3f km/h" % arrival["restricted_minus_baseline_mean_kmh"]),
             "- Restricted collisions in WP 1380–1420: %d" % arrival["restricted_zone_collisions"], "",
+        ]
+    if focused:
+        control = focused["cohorts"]["control"]["aggregate"]
+        treatment = focused["cohorts"]["restricted"]["aggregate"]
+        adjusted = focused["restricted_minus_control"]
+        labels = (
+            ("Entry speed (km/h)", "entry_speed_kmh"),
+            ("Exit speed (km/h)", "exit_speed_kmh"),
+            ("Minimum speed (km/h)", "minimum_speed_kmh"),
+            ("Brake onset (WP)", "braking_onset_waypoint"),
+            ("Brake release (WP)", "braking_release_waypoint"),
+            ("Brake ticks", "total_brake_ticks"),
+            ("Throttle reapplied (WP)", "throttle_reapplication_waypoint"),
+            ("Section time (s)", "section_time_seconds"),
+            ("Total race time (s)", "total_race_time_seconds"),
+            ("Collision rate", "collision_rate"),
+        )
+        lines += [
+            "## Focused braking-event measurements", "",
+            "Aggregation status: **%s**." % focused.get("status", "complete").upper(),
+            "Missing cohorts: %s." % (", ".join(focused.get("missing_cohorts", [])) or "none"), "",
+            "Incomplete cohorts: %s." % (", ".join(focused.get("incomplete_cohorts", [])) or "none"), "",
+            "| Metric | Control | Treatment | Treatment − control |", "|---|---:|---:|---:|",
+        ]
+        def display(value: Optional[float]) -> str:
+            return "unavailable" if value is None else "%.3f" % value
+        for label, field in labels:
+            lines.append("| %s | %s | %s | %s |" % (
+                label, display(control[field]), display(treatment[field]), display(adjusted[field]),
+            ))
+        for waypoint in focused["specification"]["downstream_waypoints"]:
+            key = str(waypoint)
+            lines.append("| Speed at WP %d (km/h) | %s | %s | %s |" % (
+                waypoint, display(control["downstream_speed_kmh"][key]),
+                display(treatment["downstream_speed_kmh"][key]),
+                display(adjusted["downstream_speed_kmh"][key]),
+            ))
+        lines += [
+            "", "- Actual total-race gain: %s" % display(focused["actual_total_race_gain_seconds"]),
+            "- Offline prediction at observed modest exit-speed delta: %s" % display(focused["offline_predicted_gain_for_observed_exit_delta_seconds"]),
+            "- Actual minus offline prediction: %s" % display(focused["actual_minus_offline_predicted_gain_seconds"]), "",
         ]
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
@@ -125,13 +168,195 @@ def _arrival_analysis(root: Path, results_root: Path, restricted: List[Optional[
         }
     baseline = summary(baseline_values, baseline_runs)
     treatment = summary(restricted_values, len(usable))
+    shift = None
+    if treatment["mean_speed_kmh"] is not None and baseline["mean_speed_kmh"] is not None:
+        shift = treatment["mean_speed_kmh"] - baseline["mean_speed_kmh"]
     return {
         "custom_waypoint_window": [1402, 1409], "baseline": baseline, "restricted": treatment,
-        "restricted_minus_baseline_mean_kmh": treatment["mean_speed_kmh"] - baseline["mean_speed_kmh"],
+        "restricted_minus_baseline_mean_kmh": shift,
         "restricted_zone_collisions": sum(
             item.get("outcome") == "collision" and 1380 <= int(item.get("custom_waypoint_index") or -1) <= 1420
             for item in usable
         ),
+    }
+
+
+def _mean_or_none(values: List[float]) -> Optional[float]:
+    return statistics.mean(values) if values else None
+
+
+def _focused_traversals(
+    root: Path, measurement: Dict[str, Any], specification: Dict[str, Any],
+) -> List[Dict[str, Any]]:
+    telemetry = measurement.get("telemetry_path")
+    if not telemetry:
+        return []
+    ticks_path = (root / telemetry).parent / "ticks.csv"
+    if not ticks_path.exists():
+        return []
+    rows = list(csv.DictReader(ticks_path.open(encoding="utf-8", newline="")))
+    intervention_low, intervention_high = map(int, specification["intervention_window"])
+    minimum_low, minimum_high = map(int, specification["minimum_speed_window"])
+    tolerance = int(specification.get("downstream_tolerance_waypoints", 2))
+    downstream = [int(value) for value in specification["downstream_waypoints"]]
+    traversals = []
+    for lap in sorted({int(row["lap"]) for row in rows}):
+        lap_rows = [row for row in rows if int(row["lap"]) == lap]
+        intervention = [
+            row for row in lap_rows
+            if intervention_low <= int(row["custom_waypoint_index"]) <= intervention_high
+        ]
+        minimum_window = [
+            row for row in lap_rows
+            if minimum_low <= int(row["custom_waypoint_index"]) <= minimum_high
+        ]
+        if not intervention or not minimum_window:
+            continue
+        braking = [row for row in minimum_window if float(row["brake"]) > .5]
+        onset_tick = int(braking[0]["tick"]) if braking else None
+        after_onset = [
+            row for row in minimum_window
+            if onset_tick is not None and int(row["tick"]) > onset_tick
+        ]
+        release = next((row for row in after_onset if float(row["brake"]) <= .5), None)
+        throttle = next(
+            (row for row in after_onset if float(row["brake"]) <= .5 and float(row["throttle"]) >= .5),
+            None,
+        )
+        section = int(statistics.mode(int(row["section"]) for row in intervention))
+        timestep = float(measurement.get("control_timestep_seconds") or .05)
+        speeds = {}
+        for waypoint in downstream:
+            samples = [
+                float(row["speed_kmh"]) for row in lap_rows
+                if abs(int(row["custom_waypoint_index"]) - waypoint) <= tolerance
+            ]
+            speeds[str(waypoint)] = _mean_or_none(samples)
+        traversals.append({
+            "attempt_id": measurement["attempt_id"], "lap": lap,
+            "entry_speed_kmh": float(intervention[0]["speed_kmh"]),
+            "exit_speed_kmh": float(intervention[-1]["speed_kmh"]),
+            "minimum_speed_kmh": min(float(row["speed_kmh"]) for row in minimum_window),
+            "braking_onset_waypoint": None if not braking else int(braking[0]["custom_waypoint_index"]),
+            "braking_release_waypoint": None if release is None else int(release["custom_waypoint_index"]),
+            "total_brake_ticks": len(braking),
+            "throttle_reapplication_waypoint": None if throttle is None else int(throttle["custom_waypoint_index"]),
+            "downstream_speed_kmh": speeds, "section": section,
+            "section_time_seconds": sum(int(row["section"]) == section for row in lap_rows) * timestep,
+        })
+    return traversals
+
+
+def _focused_summary(
+    root: Path, records: List[Dict[str, Any]], specification: Dict[str, Any], penalty: float,
+) -> Dict[str, Any]:
+    measurements = [record.get("measurement") for record in records if record.get("measurement")]
+    traversals = [
+        traversal for measurement in measurements
+        for traversal in _focused_traversals(root, measurement, specification)
+    ]
+    fields = (
+        "entry_speed_kmh", "exit_speed_kmh", "minimum_speed_kmh",
+        "braking_onset_waypoint", "braking_release_waypoint", "total_brake_ticks",
+        "throttle_reapplication_waypoint", "section_time_seconds",
+    )
+    aggregate = {
+        field: _mean_or_none([float(item[field]) for item in traversals if item[field] is not None])
+        for field in fields
+    }
+    aggregate["downstream_speed_kmh"] = {
+        str(waypoint): _mean_or_none([
+            item["downstream_speed_kmh"][str(waypoint)] for item in traversals
+            if item["downstream_speed_kmh"][str(waypoint)] is not None
+        ]) for waypoint in specification["downstream_waypoints"]
+    }
+    aggregate["total_race_time_seconds"] = _mean_or_none([
+        float(item["elapsed_time_seconds"]) for item in measurements if item.get("outcome") == "finished"
+    ])
+    aggregate["collision_rate"] = (
+        sum(item.get("outcome") == "collision" for item in measurements) / len(measurements)
+        if measurements else None
+    )
+    return {
+        "attempts": len(measurements), "traversals": len(traversals),
+        "aggregate": aggregate, "per_traversal": traversals,
+        "outcomes": summarize_measurements(measurements, penalty, root),
+    }
+
+
+def _focused_event_analysis(
+    root: Path, records: List[Dict[str, Any]], specification: Dict[str, Any], penalty: float,
+    expected_measurements_per_cohort: int = 1,
+) -> Dict[str, Any]:
+    cohorts = {
+        cohort: _focused_summary(
+            root, [record for record in records if record["cohort"] == cohort],
+            specification, penalty,
+        ) for cohort in ("control", "restricted")
+    }
+    return _compare_focused_cohorts(
+        cohorts, specification, expected_measurements_per_cohort,
+    )
+
+
+def _compare_focused_cohorts(
+    cohorts: Dict[str, Dict[str, Any]], specification: Dict[str, Any],
+    expected_measurements_per_cohort: int = 1,
+) -> Dict[str, Any]:
+    control_summary, treatment_summary = cohorts["control"], cohorts["restricted"]
+    control, treatment = control_summary["aggregate"], treatment_summary["aggregate"]
+    availability = {
+        "control": int(control_summary.get("attempts", 0)) > 0,
+        "restricted": int(treatment_summary.get("attempts", 0)) > 0,
+    }
+    completeness = {
+        "control": int(control_summary.get("attempts", 0)) >= expected_measurements_per_cohort,
+        "restricted": int(treatment_summary.get("attempts", 0)) >= expected_measurements_per_cohort,
+    }
+    cross_cohort_available = all(completeness.values())
+    adjusted = {}
+    for field in (
+        "entry_speed_kmh", "exit_speed_kmh", "minimum_speed_kmh",
+        "braking_onset_waypoint", "braking_release_waypoint", "total_brake_ticks",
+        "throttle_reapplication_waypoint", "section_time_seconds", "total_race_time_seconds",
+        "collision_rate",
+    ):
+        adjusted[field] = (
+            None if not cross_cohort_available or control[field] is None or treatment[field] is None
+            else treatment[field] - control[field]
+        )
+    adjusted["downstream_speed_kmh"] = {
+        waypoint: (
+            None if not cross_cohort_available or control["downstream_speed_kmh"][waypoint] is None or treatment["downstream_speed_kmh"][waypoint] is None
+            else treatment["downstream_speed_kmh"][waypoint] - control["downstream_speed_kmh"][waypoint]
+        ) for waypoint in control["downstream_speed_kmh"]
+    }
+    actual_gain = None
+    if adjusted["total_race_time_seconds"] is not None:
+        actual_gain = -adjusted["total_race_time_seconds"]
+    modest_delta = adjusted["exit_speed_kmh"]
+    offline_gain = None
+    if modest_delta is not None:
+        offline_gain = (
+            float(specification["offline_full_gain_seconds"])
+            * modest_delta / float(specification["offline_full_delta_kmh"])
+        )
+    return {
+        "specification": specification, "cohorts": cohorts,
+        "status": "complete" if all(completeness.values()) else "incomplete",
+        "complete": all(completeness.values()),
+        "cohort_measurements_available": availability,
+        "cohort_measurements_complete": completeness,
+        "missing_cohorts": [name for name, available in availability.items() if not available],
+        "incomplete_cohorts": [name for name, complete in completeness.items() if not complete],
+        "expected_measurements_per_cohort": expected_measurements_per_cohort,
+        "restricted_minus_control": adjusted,
+        "actual_total_race_gain_seconds": actual_gain,
+        "offline_predicted_gain_for_observed_exit_delta_seconds": offline_gain,
+        "actual_minus_offline_predicted_gain_seconds": (
+            None if actual_gain is None or offline_gain is None else actual_gain - offline_gain
+        ),
+        "offline_comparison_note": "Local linearization of the 1.817 s full-envelope opportunity at the observed intervention-exit speed delta.",
     }
 
 
@@ -212,6 +437,13 @@ def run_causal_campaign(
                 any(int(r["schedule_index"]) == i and r.get("measurement") is not None for r in progress["records"])
                 for i in range(len(schedule))
             ),
+            "pending_schedule_indices": [
+                i for i in range(len(schedule))
+                if not any(
+                    int(record["schedule_index"]) == i and record.get("measurement") is not None
+                    for record in progress["records"]
+                )
+            ],
             "attempt_ids": [a for r in progress["records"] for a in r.get("attempt_ids", [])],
             "result_path": str(result_path.relative_to(root)), "human_report_path": str(report_path.relative_to(root)),
             "completed_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -220,5 +452,10 @@ def run_causal_campaign(
             root, results_root,
             [r.get("measurement") for r in progress["records"] if r["cohort"] == "restricted"],
         )
+        if causal.get("event_analysis"):
+            result["focused_event_analysis"] = _focused_event_analysis(
+                root, progress["records"], causal["event_analysis"], penalty,
+                int(causal.get("repetitions", 5)),
+            )
         write_json(result_path, result); _write_report(report_path, result); append_jsonl(results_root / "ledger.jsonl", result)
         return result
