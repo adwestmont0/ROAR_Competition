@@ -1,3 +1,4 @@
+import io
 import json
 import tempfile
 import unittest
@@ -15,6 +16,10 @@ from experiments.harness.core import (
     should_stop,
     update_counters,
 )
+from experiments.harness.evaluation import summarize_measurements
+from experiments.harness.evaluation import CandidateEvaluator, _acceptance, evaluation_lock, render_candidate_report
+from experiments.search.adapter import propose
+from experiments.harness.cli import print_human_reports
 
 
 class HarnessTests(unittest.TestCase):
@@ -137,6 +142,187 @@ class HarnessTests(unittest.TestCase):
         )
         self.assertEqual([item["outcome"] for item in attempts], ["infra_error", "finished"])
         self.assertIsNone(stop_reason)
+
+    def test_candidate_summary_excludes_infrastructure_and_penalizes_collision(self):
+        measurements = [
+            {
+                "attempt_id": "finished",
+                "outcome": "finished",
+                "elapsed_time_seconds": 320.0,
+                "telemetry_path": None,
+            },
+            {
+                "attempt_id": "collision",
+                "outcome": "collision",
+                "elapsed_time_seconds": 40.0,
+                "telemetry_path": None,
+            },
+            None,
+        ]
+        summary = summarize_measurements(measurements, 600.0, Path("."))
+        self.assertEqual(summary["controller_measurements"], 2)
+        self.assertEqual(summary["missing_due_to_infrastructure"], 1)
+        self.assertEqual(summary["completion_rate"], 0.5)
+        self.assertEqual(summary["penalized_objective_seconds"]["mean"], 460.0)
+
+    def test_acceptance_rejects_collision_rate(self):
+        candidate = {
+            "controller_measurements": 2,
+            "completion_rate": 0.5,
+            "collision_rate": 0.5,
+        }
+        empty_control = {
+            "controller_measurements": 0,
+            "completion_rate": None,
+            "finished_elapsed_seconds": None,
+        }
+        status, checks = _acceptance(
+            candidate,
+            empty_control,
+            empty_control,
+            {"before": 0, "after": 0},
+            {
+                "min_controller_measurements": 2,
+                "min_completion_rate": 0.5,
+                "max_collision_rate": 0.0,
+                "require_all_controls_finished": False,
+                "max_control_drift_seconds": None,
+                "max_control_adjusted_delta_seconds": None,
+            },
+            None,
+        )
+        self.assertEqual(status, "rejected")
+        collision_check = next(item for item in checks if item["name"] == "maximum_collision_rate")
+        self.assertFalse(collision_check["passed"])
+
+    def test_failed_control_makes_evaluation_inconclusive(self):
+        candidate = {
+            "controller_measurements": 3,
+            "completion_rate": 1.0,
+            "collision_rate": 0.0,
+        }
+        failed_control = {
+            "controller_measurements": 1,
+            "completion_rate": 0.0,
+            "finished_elapsed_seconds": None,
+        }
+        good_control = {
+            "controller_measurements": 1,
+            "completion_rate": 1.0,
+            "finished_elapsed_seconds": {"mean": 321.8},
+        }
+        status, _ = _acceptance(
+            candidate,
+            failed_control,
+            good_control,
+            {"before": 1, "after": 1},
+            {
+                "min_controller_measurements": 3,
+                "min_completion_rate": 1.0,
+                "max_collision_rate": 0.0,
+                "require_all_controls_finished": True,
+                "max_control_drift_seconds": 1.0,
+                "max_control_adjusted_delta_seconds": None,
+            },
+            -100.0,
+        )
+        self.assertEqual(status, "inconclusive")
+
+    def test_evaluation_lock_excludes_second_process_owner(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            results = Path(temporary)
+            with evaluation_lock(results):
+                with self.assertRaisesRegex(RuntimeError, "holds the lock"):
+                    with evaluation_lock(results):
+                        pass
+
+    def test_halton_search_is_deterministic_and_multi_parameter(self):
+        config = {
+            "search": {
+                "mode": "halton",
+                "samples": 2,
+                "space": {
+                    "a": {"minimum": 0, "maximum": 1, "precision": 3},
+                    "b": {"minimum": 10, "maximum": 20, "precision": 3},
+                },
+            }
+        }
+        registry = {"a": {}, "b": {}}
+        first = propose(config, registry)
+        second = propose(config, registry)
+        self.assertEqual(first, second)
+        self.assertEqual(set(first[0]), {"a", "b"})
+
+    @patch("experiments.harness.evaluation.git_output", return_value="full-commit")
+    @patch("experiments.harness.evaluation._evaluation_key", return_value="known-key")
+    def test_completed_candidate_is_resumed_without_execution(self, _key, _git):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            summary_path = root / "results" / "candidate_summaries" / "known-key.json"
+            summary_path.parent.mkdir(parents=True)
+            summary_path.write_text(
+                json.dumps({
+                    "status": "accepted",
+                    "evaluation_key": "known-key",
+                    "parameters": {},
+                }),
+                encoding="utf-8",
+            )
+            summary_path.with_suffix(".md").write_text("existing report", encoding="utf-8")
+            evaluator = CandidateEvaluator(
+                {
+                    "name": "test",
+                    "baseline_commit": "short",
+                    "results_dir": "results",
+                },
+                {},
+                root,
+            )
+            result = evaluator.evaluate({}, 1, {"before": 0, "after": 0})
+            self.assertTrue(result["resume"]["skipped_completed"])
+
+    def test_human_report_suppresses_invalid_control_delta(self):
+        result = {
+            "candidate_name": "baseline",
+            "experiment_id": "baseline-id",
+            "status": "inconclusive",
+            "parameters": {},
+            "controls_valid": False,
+            "candidate": {
+                "controller_measurements": 1, "scheduled_repetitions": 1,
+                "completion_rate": 1.0, "collision_rate": 0.0,
+                "finished_elapsed_seconds": {
+                    "mean": 321.8, "median": 321.8, "minimum": 321.8,
+                    "maximum": 321.8, "stdev": 0.0,
+                },
+                "terminal_failures": [],
+            },
+            "controls": {
+                "before": {"finished_elapsed_seconds": None},
+                "after": {"finished_elapsed_seconds": {"mean": 321.8}},
+            },
+            "objective": {
+                "control_adjusted_delta_seconds": None,
+                "section_control_adjusted_delta_seconds": {},
+            },
+            "acceptance_checks": [],
+        }
+        report = render_candidate_report(result)
+        self.assertIn("INCONCLUSIVE", report)
+        self.assertIn("unavailable because controls were invalid", report)
+
+    def test_cli_prints_saved_human_report_to_stderr(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            report = root / "results" / "candidate.md"
+            report.parent.mkdir(parents=True)
+            report.write_text("Plain English result", encoding="utf-8")
+            with patch("sys.stderr", new_callable=io.StringIO) as stderr:
+                print_human_reports(
+                    {"candidate_results": [{"human_report_path": "results/candidate.md"}]},
+                    root,
+                )
+            self.assertIn("Plain English result", stderr.getvalue())
 
     @patch("experiments.harness.core.preflight")
     @patch("experiments.harness.core.run_aws_command")

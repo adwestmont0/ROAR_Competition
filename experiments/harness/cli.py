@@ -13,6 +13,8 @@ from .core import (
     repo_root,
     run_plan,
 )
+from .evaluation import dry_run_candidates, evaluate_candidates
+from experiments.search.adapter import run_search
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -26,6 +28,20 @@ def print_results(results: Any) -> None:
     print(json.dumps(results, indent=2, sort_keys=True))
 
 
+def print_human_reports(results: Dict[str, Any], root: Path) -> None:
+    for candidate in results.get("candidate_results", []):
+        report_path = candidate.get("human_report_path")
+        if not report_path:
+            continue
+        path = root / report_path
+        if not path.exists():
+            continue
+        print("\n" + "=" * 72, file=sys.stderr)
+        print("Human report: " + report_path, file=sys.stderr)
+        print("=" * 72, file=sys.stderr)
+        print(path.read_text(encoding="utf-8"), file=sys.stderr)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="ROAR controlled experiment harness")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -33,6 +49,18 @@ def main() -> int:
     for command in ("dry-run", "run"):
         child = subparsers.add_parser(command)
         child.add_argument("config", type=Path)
+
+    evaluate = subparsers.add_parser("evaluate")
+    evaluate.add_argument("config", type=Path)
+    evaluate.add_argument("--dry-run", action="store_true")
+    evaluate.add_argument("--no-resume", action="store_true")
+    evaluate.add_argument("--json-only", action="store_true")
+
+    search = subparsers.add_parser("search")
+    search.add_argument("config", type=Path)
+    search.add_argument("--dry-run", action="store_true")
+    search.add_argument("--no-resume", action="store_true")
+    search.add_argument("--json-only", action="store_true")
 
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
@@ -85,7 +113,22 @@ def main() -> int:
         return 0
 
     root, config, registry = load_inputs(args.config)
-    if args.command == "dry-run":
+    if args.command == "evaluate":
+        if args.dry_run:
+            print_results(dry_run_candidates(config, registry, root))
+        else:
+            results = evaluate_candidates(config, registry, root, resume=not args.no_resume)
+            print_results(results)
+            sys.stdout.flush()
+            if not args.json_only:
+                print_human_reports(results, root)
+    elif args.command == "search":
+        results = run_search(config, registry, root, args.dry_run, not args.no_resume)
+        print_results(results)
+        sys.stdout.flush()
+        if not args.dry_run and not args.json_only:
+            print_human_reports({"candidate_results": results.get("candidate_results", [])}, root)
+    elif args.command == "dry-run":
         print_results(dry_run(config, registry, root))
     elif args.command == "run":
         print_results(run_plan(config, registry, root))

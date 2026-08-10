@@ -1,0 +1,23 @@
+{
+  "name": "multi-mu-halton-search",
+  "baseline_commit": "fa7ff6f",
+  "results_dir": "experiment_results",
+  "carla": {"host": "172.31.86.36", "port": 2000, "timeout_seconds": 10, "expected_map": "Carla/Maps/Monza"},
+  "execution": {"client_timeout_seconds": 600, "max_infra_retries": 2},
+  "recovery": {
+    "provider": "aws_ssm", "region": "us-east-1", "instance_id": "i-045f5f07dd2aa5ad8",
+    "document_name": "AWS-RunPowerShellScript", "restart_command": "& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'",
+    "command_timeout_seconds": 240, "readiness_timeout_seconds": 240, "readiness_poll_seconds": 5
+  },
+  "evaluation": {
+    "repetitions": 2, "controls": {"before": 1, "after": 1}, "failure_penalty_seconds": 600,
+    "acceptance": {"min_controller_measurements": 2, "min_completion_rate": 1.0, "max_collision_rate": 0.0, "require_all_controls_finished": true, "max_control_drift_seconds": 1.0}
+  },
+  "search": {
+    "mode": "halton", "samples": 4, "halton_start_index": 1,
+    "space": {
+      "throttle.section_mu.3": {"minimum": 3.4, "maximum": 3.7, "precision": 2},
+      "throttle.section_mu.4": {"minimum": 2.95, "maximum": 3.2, "precision": 2}
+    }
+  }
+}

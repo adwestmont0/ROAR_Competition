@@ -1,0 +1,44 @@
+{
+  "name": "section3-mu-candidates",
+  "baseline_commit": "fa7ff6f",
+  "results_dir": "experiment_results",
+  "carla": {
+    "host": "172.31.86.36",
+    "port": 2000,
+    "timeout_seconds": 10,
+    "expected_map": "Carla/Maps/Monza"
+  },
+  "execution": {
+    "client_timeout_seconds": 600,
+    "max_infra_retries": 2
+  },
+  "recovery": {
+    "provider": "aws_ssm",
+    "region": "us-east-1",
+    "instance_id": "i-045f5f07dd2aa5ad8",
+    "document_name": "AWS-RunPowerShellScript",
+    "restart_command": "& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'",
+    "command_timeout_seconds": 240,
+    "readiness_timeout_seconds": 240,
+    "readiness_poll_seconds": 5
+  },
+  "evaluation": {
+    "repetitions": 3,
+    "control_repetitions": 1,
+    "failure_penalty_seconds": 600
+  },
+  "candidates": [
+    {
+      "name": "trusted-baseline",
+      "parameters": {
+        "throttle.section_mu.3": 3.4
+      }
+    },
+    {
+      "name": "higher-mu-probe",
+      "parameters": {
+        "throttle.section_mu.3": 3.5
+      }
+    }
+  ]
+}
