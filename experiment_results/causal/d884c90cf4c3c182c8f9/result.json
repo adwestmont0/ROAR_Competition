@@ -1,0 +1,304 @@
+{
+  "arrival_analysis": {
+    "baseline": {
+      "maximum_speed_kmh": 173.07036764962334,
+      "mean_speed_kmh": 172.43736864362444,
+      "median_speed_kmh": 172.68385293143137,
+      "minimum_speed_kmh": 170.22916390555247,
+      "runs": 5,
+      "traversals": 15
+    },
+    "comparison_basis": "campaign_control",
+    "custom_waypoint_window": [
+      1402,
+      1409
+    ],
+    "restricted": {
+      "maximum_speed_kmh": 173.0965072631836,
+      "mean_speed_kmh": 172.71229189191547,
+      "median_speed_kmh": 172.75933685302735,
+      "minimum_speed_kmh": 172.36556723458426,
+      "runs": 5,
+      "traversals": 15
+    },
+    "restricted_minus_baseline_mean_kmh": 0.27492324829103154,
+    "restricted_zone_collisions": 0
+  },
+  "attempt_ids": [
+    "20260811T033935.124897Z-4997cc99",
+    "20260811T034304.696233Z-395d6853",
+    "20260811T034637.652975Z-0411e20f",
+    "20260811T035009.256133Z-24b243d7",
+    "20260811T035340.985149Z-dd34d595",
+    "20260811T035710.657688Z-84497d86",
+    "20260811T040044.950805Z-cf1514af",
+    "20260811T040419.627005Z-30ed0c3a",
+    "20260811T040752.906317Z-4f5eddf4",
+    "20260811T041128.530490Z-7920d997"
+  ],
+  "baseline_commit": "05312b5ac9231d037f9b5adbc89962ab09c170fe",
+  "campaign_complete": true,
+  "campaign_key": "d884c90cf4c3c182c8f9",
+  "campaign_mode": "causal_treatment",
+  "cohorts": {
+    "control": {
+      "collision_rate": 0.0,
+      "completion_rate": 1.0,
+      "controller_measurements": 5,
+      "finished_elapsed_seconds": {
+        "count": 5,
+        "maximum": 321.90000000004034,
+        "mean": 321.7100000000403,
+        "median": 321.65000000004045,
+        "minimum": 321.60000000004027,
+        "stdev": 0.1193733638631413
+      },
+      "measurement_attempt_ids": [
+        "20260811T033935.124897Z-4997cc99",
+        "20260811T034637.652975Z-0411e20f",
+        "20260811T035340.985149Z-dd34d595",
+        "20260811T040044.950805Z-cf1514af",
+        "20260811T040752.906317Z-4f5eddf4"
+      ],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {
+        "finished": 5
+      },
+      "penalized_objective_seconds": {
+        "count": 5,
+        "maximum": 321.90000000004034,
+        "mean": 321.7100000000403,
+        "median": 321.65000000004045,
+        "minimum": 321.60000000004027,
+        "stdev": 0.1193733638631413
+      },
+      "scheduled_repetitions": 5,
+      "section_elapsed_seconds": {
+        "0": {
+          "count": 5,
+          "maximum": 47.45,
+          "mean": 47.370000000000005,
+          "median": 47.35,
+          "minimum": 47.35,
+          "stdev": 0.04472135954999643
+        },
+        "1": {
+          "count": 5,
+          "maximum": 38.050000000000004,
+          "mean": 37.940000000000005,
+          "median": 37.95,
+          "minimum": 37.85,
+          "stdev": 0.08944271909999225
+        },
+        "2": {
+          "count": 5,
+          "maximum": 24.950000000000003,
+          "mean": 24.94,
+          "median": 24.950000000000003,
+          "minimum": 24.900000000000002,
+          "stdev": 0.022360679774998216
+        },
+        "3": {
+          "count": 5,
+          "maximum": 49.85,
+          "mean": 49.82,
+          "median": 49.800000000000004,
+          "minimum": 49.800000000000004,
+          "stdev": 0.02738612787525675
+        },
+        "4": {
+          "count": 5,
+          "maximum": 17.1,
+          "mean": 17.1,
+          "median": 17.1,
+          "minimum": 17.1,
+          "stdev": 0.0
+        },
+        "5": {
+          "count": 5,
+          "maximum": 25.35,
+          "mean": 25.250000000000004,
+          "median": 25.200000000000003,
+          "minimum": 25.200000000000003,
+          "stdev": 0.07071067811865388
+        },
+        "6": {
+          "count": 5,
+          "maximum": 37.5,
+          "mean": 37.46,
+          "median": 37.45,
+          "minimum": 37.45,
+          "stdev": 0.022360679774996627
+        },
+        "7": {
+          "count": 5,
+          "maximum": 8.8,
+          "mean": 8.76,
+          "median": 8.75,
+          "minimum": 8.700000000000001,
+          "stdev": 0.041833001326703735
+        },
+        "8": {
+          "count": 5,
+          "maximum": 42.7,
+          "mean": 42.660000000000004,
+          "median": 42.650000000000006,
+          "minimum": 42.6,
+          "stdev": 0.04183300132670394
+        },
+        "9": {
+          "count": 5,
+          "maximum": 30.450000000000003,
+          "mean": 30.410000000000004,
+          "median": 30.400000000000002,
+          "minimum": 30.400000000000002,
+          "stdev": 0.022360679774998216
+        }
+      },
+      "terminal_failures": []
+    },
+    "restricted": {
+      "collision_rate": 0.0,
+      "completion_rate": 1.0,
+      "controller_measurements": 5,
+      "finished_elapsed_seconds": {
+        "count": 5,
+        "maximum": 321.90000000004034,
+        "mean": 321.74000000004025,
+        "median": 321.75000000004025,
+        "minimum": 321.5500000000402,
+        "stdev": 0.12942179105550142
+      },
+      "measurement_attempt_ids": [
+        "20260811T034304.696233Z-395d6853",
+        "20260811T035009.256133Z-24b243d7",
+        "20260811T035710.657688Z-84497d86",
+        "20260811T040419.627005Z-30ed0c3a",
+        "20260811T041128.530490Z-7920d997"
+      ],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {
+        "finished": 5
+      },
+      "penalized_objective_seconds": {
+        "count": 5,
+        "maximum": 321.90000000004034,
+        "mean": 321.74000000004025,
+        "median": 321.75000000004025,
+        "minimum": 321.5500000000402,
+        "stdev": 0.12942179105550142
+      },
+      "scheduled_repetitions": 5,
+      "section_elapsed_seconds": {
+        "0": {
+          "count": 5,
+          "maximum": 47.400000000000006,
+          "mean": 47.400000000000006,
+          "median": 47.400000000000006,
+          "minimum": 47.400000000000006,
+          "stdev": 0.0
+        },
+        "1": {
+          "count": 5,
+          "maximum": 38.050000000000004,
+          "mean": 37.94,
+          "median": 37.9,
+          "minimum": 37.9,
+          "stdev": 0.06519202405202905
+        },
+        "2": {
+          "count": 5,
+          "maximum": 25.0,
+          "mean": 24.96,
+          "median": 24.950000000000003,
+          "minimum": 24.950000000000003,
+          "stdev": 0.022360679774996627
+        },
+        "3": {
+          "count": 5,
+          "maximum": 49.85,
+          "mean": 49.800000000000004,
+          "median": 49.800000000000004,
+          "minimum": 49.75,
+          "stdev": 0.05000000000000071
+        },
+        "4": {
+          "count": 5,
+          "maximum": 17.150000000000002,
+          "mean": 17.130000000000003,
+          "median": 17.150000000000002,
+          "minimum": 17.1,
+          "stdev": 0.027386127875258695
+        },
+        "5": {
+          "count": 5,
+          "maximum": 25.200000000000003,
+          "mean": 25.200000000000003,
+          "median": 25.200000000000003,
+          "minimum": 25.200000000000003,
+          "stdev": 0.0
+        },
+        "6": {
+          "count": 5,
+          "maximum": 37.5,
+          "mean": 37.480000000000004,
+          "median": 37.5,
+          "minimum": 37.45,
+          "stdev": 0.02738612787525675
+        },
+        "7": {
+          "count": 5,
+          "maximum": 8.75,
+          "mean": 8.72,
+          "median": 8.700000000000001,
+          "minimum": 8.700000000000001,
+          "stdev": 0.027386127875257724
+        },
+        "8": {
+          "count": 5,
+          "maximum": 42.75,
+          "mean": 42.72,
+          "median": 42.75,
+          "minimum": 42.650000000000006,
+          "stdev": 0.04472135954999325
+        },
+        "9": {
+          "count": 5,
+          "maximum": 30.400000000000002,
+          "mean": 30.39,
+          "median": 30.400000000000002,
+          "minimum": 30.35,
+          "stdev": 0.022360679774998216
+        }
+      },
+      "terminal_failures": []
+    }
+  },
+  "completed_utc": "2026-08-11T04:14:51.639990+00:00",
+  "event_type": "upstream_speed_causal_campaign",
+  "experiment_name": "shadow-h1-execution-ab",
+  "human_report_path": "experiment_results/causal/d884c90cf4c3c182c8f9/report.md",
+  "parameters": {
+    "control": {
+      "shadow.longitudinal_mode": 0
+    },
+    "restricted": {
+      "shadow.longitudinal_mode": 1
+    }
+  },
+  "pending_schedule_indices": [],
+  "result_path": "experiment_results/causal/d884c90cf4c3c182c8f9/result.json",
+  "schedule": [
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted",
+    "control",
+    "restricted"
+  ],
+  "schema_version": 2
+}

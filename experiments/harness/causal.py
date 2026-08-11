@@ -107,23 +107,34 @@ def _write_report(path: Path, result: Dict[str, Any]) -> None:
     if arrival and not focused:
         baseline = arrival["baseline"]
         restricted_arrival = arrival["restricted"]
+        contemporaneous_control = arrival.get("comparison_basis") == "campaign_control"
         lines += [
             "## %s" % (
                 "Baseline equivalence check" if baseline_validation else "Causal intermediate variable"
             ), "",
             "- Arrival window: custom WP %d–%d" % tuple(arrival["custom_waypoint_window"]),
-            "- Baseline traversals: %d; mean arrival speed: %s" % (baseline["traversals"], "unavailable" if baseline["mean_speed_kmh"] is None else "%.3f km/h" % baseline["mean_speed_kmh"]),
             "- %s traversals: %d; mean arrival speed: %s" % (
-                "Validation" if baseline_validation else "Restricted",
+                "Control" if contemporaneous_control else "Baseline",
+                baseline["traversals"],
+                "unavailable" if baseline["mean_speed_kmh"] is None else "%.3f km/h" % baseline["mean_speed_kmh"],
+            ),
+            "- %s traversals: %d; mean arrival speed: %s" % (
+                "Validation" if baseline_validation else (
+                    "Treatment" if contemporaneous_control else "Restricted"
+                ),
                 restricted_arrival["traversals"],
                 "unavailable" if restricted_arrival["mean_speed_kmh"] is None else "%.3f km/h" % restricted_arrival["mean_speed_kmh"],
             ),
             "- %s mean shift: %s" % (
-                "Validation-minus-reference" if baseline_validation else "Restricted-minus-baseline",
+                "Validation-minus-reference" if baseline_validation else (
+                    "Treatment-minus-control" if contemporaneous_control else "Restricted-minus-baseline"
+                ),
                 "unavailable" if arrival["restricted_minus_baseline_mean_kmh"] is None else "%+.3f km/h" % arrival["restricted_minus_baseline_mean_kmh"],
             ),
             "- %s collisions in WP 1380–1420: %d" % (
-                "Validation" if baseline_validation else "Restricted",
+                "Validation" if baseline_validation else (
+                    "Treatment" if contemporaneous_control else "Restricted"
+                ),
                 arrival["restricted_zone_collisions"],
             ), "",
         ]
@@ -185,17 +196,31 @@ def _arrival_values(root: Path, measurement: Dict[str, Any], low: int = 1402, hi
     return [statistics.mean(values) for values in by_lap.values() if values]
 
 
-def _arrival_analysis(root: Path, results_root: Path, restricted: List[Optional[Dict[str, Any]]]) -> Dict[str, Any]:
-    ledger = load_ledger(results_root / "ledger.jsonl")
-    attempts = {item["attempt_id"]: item for item in ledger if item.get("attempt_id") and item.get("outcome")}
+def _arrival_analysis(
+    root: Path,
+    results_root: Path,
+    restricted: List[Optional[Dict[str, Any]]],
+    control: Optional[List[Optional[Dict[str, Any]]]] = None,
+) -> Dict[str, Any]:
+    usable_control = [item for item in (control or []) if item is not None]
     baseline_values: List[float] = []
     baseline_runs = 0
-    for item in attempts.values():
-        diff_value = item.get("source_diff_path")
-        diff = root / diff_value if diff_value else None
-        if item.get("outcome") == "finished" and diff is not None and diff.exists() and not diff.read_text(encoding="utf-8").strip():
-            baseline_runs += 1
-            baseline_values.extend(_arrival_values(root, item))
+    comparison_basis = "historical_baseline"
+    if usable_control:
+        comparison_basis = "campaign_control"
+        baseline_runs = len(usable_control)
+        baseline_values = [
+            value for item in usable_control for value in _arrival_values(root, item)
+        ]
+    else:
+        ledger = load_ledger(results_root / "ledger.jsonl")
+        attempts = {item["attempt_id"]: item for item in ledger if item.get("attempt_id") and item.get("outcome")}
+        for item in attempts.values():
+            diff_value = item.get("source_diff_path")
+            diff = root / diff_value if diff_value else None
+            if item.get("outcome") == "finished" and diff is not None and diff.exists() and not diff.read_text(encoding="utf-8").strip():
+                baseline_runs += 1
+                baseline_values.extend(_arrival_values(root, item))
     usable = [item for item in restricted if item is not None]
     restricted_values = [value for item in usable for value in _arrival_values(root, item)]
     def summary(values: List[float], runs: int) -> Dict[str, Any]:
@@ -212,7 +237,9 @@ def _arrival_analysis(root: Path, results_root: Path, restricted: List[Optional[
     if treatment["mean_speed_kmh"] is not None and baseline["mean_speed_kmh"] is not None:
         shift = treatment["mean_speed_kmh"] - baseline["mean_speed_kmh"]
     return {
-        "custom_waypoint_window": [1402, 1409], "baseline": baseline, "restricted": treatment,
+        "custom_waypoint_window": [1402, 1409],
+        "comparison_basis": comparison_basis,
+        "baseline": baseline, "restricted": treatment,
         "restricted_minus_baseline_mean_kmh": shift,
         "restricted_zone_collisions": sum(
             item.get("outcome") == "collision" and 1380 <= int(item.get("custom_waypoint_index") or -1) <= 1420
@@ -420,11 +447,12 @@ def run_causal_campaign(
     with evaluation_lock(results_root):
         if resume and result_path.exists() and read_json(result_path).get("campaign_complete"):
             result = read_json(result_path)
-            if "arrival_analysis" not in result and progress_path.exists():
+            if progress_path.exists():
                 saved_progress = read_json(progress_path)
                 result["arrival_analysis"] = _arrival_analysis(
                     root, results_root,
                     [r.get("measurement") for r in saved_progress["records"] if r["cohort"] == "restricted"],
+                    [r.get("measurement") for r in saved_progress["records"] if r["cohort"] == "control"],
                 )
             result["campaign_mode"] = _campaign_mode(result)
             write_json(result_path, result)
@@ -493,6 +521,7 @@ def run_causal_campaign(
         result["arrival_analysis"] = _arrival_analysis(
             root, results_root,
             [r.get("measurement") for r in progress["records"] if r["cohort"] == "restricted"],
+            [r.get("measurement") for r in progress["records"] if r["cohort"] == "control"],
         )
         if causal.get("event_analysis"):
             result["focused_event_analysis"] = _focused_event_analysis(

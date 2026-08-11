@@ -193,6 +193,39 @@ class HarnessTests(unittest.TestCase):
         }
         self.assertEqual(_campaign_mode(result), "causal_treatment")
 
+    def test_causal_report_labels_contemporaneous_arrival_control(self):
+        summary = {
+            "completion_rate": 1.0,
+            "collision_rate": 0.0,
+            "finished_elapsed_seconds": {"mean": 321.7},
+        }
+        arrival_summary = {
+            "runs": 1, "traversals": 3, "mean_speed_kmh": 172.5,
+        }
+        result = {
+            "experiment_name": "shadow-ab",
+            "schedule": ["control", "restricted"],
+            "parameters": {
+                "control": {"shadow.longitudinal_mode": 0},
+                "restricted": {"shadow.longitudinal_mode": 1},
+            },
+            "cohorts": {"control": summary, "restricted": summary},
+            "arrival_analysis": {
+                "comparison_basis": "campaign_control",
+                "custom_waypoint_window": [1402, 1409],
+                "baseline": arrival_summary,
+                "restricted": arrival_summary,
+                "restricted_minus_baseline_mean_kmh": 0.0,
+                "restricted_zone_collisions": 0,
+            },
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            report_path = Path(temporary) / "report.md"
+            _write_report(report_path, result)
+            report = report_path.read_text(encoding="utf-8")
+        self.assertIn("Control traversals", report)
+        self.assertIn("Treatment-minus-control mean shift", report)
+
     def base_config(self):
         return {
             "name": "test",
