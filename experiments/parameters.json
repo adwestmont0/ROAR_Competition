@@ -1,4 +1,11 @@
 {
+  "shadow.terminal_tail_mode": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 1,
+    "baseline_text": "TERMINAL_TAIL_SHADOW_MODE = 1\n",
+    "replacement_template": "TERMINAL_TAIL_SHADOW_MODE = {value}\n",
+    "type": "int", "minimum": 0, "maximum": 1, "required_matches": 1
+  },
   "shadow.longitudinal_mode": {
     "file": "competition_code/submission.py",
     "baseline_value": 1,

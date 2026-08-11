@@ -1,0 +1,15 @@
+{
+  "name": "terminal-tail-fresh-10",
+  "baseline_commit": "HEAD",
+  "results_dir": "experiment_results",
+  "carla": {"host":"172.31.86.36","port":2000,"timeout_seconds":10,"expected_map":"Carla/Maps/Monza"},
+  "execution": {"client_timeout_seconds":600,"max_infra_retries":2},
+  "recovery": {"provider":"aws_ssm","region":"us-east-1","instance_id":"i-045f5f07dd2aa5ad8","document_name":"AWS-RunPowerShellScript","restart_command":"& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'","command_timeout_seconds":240,"readiness_timeout_seconds":240,"readiness_poll_seconds":5},
+  "causal": {
+    "repetitions":10,
+    "include_controls":false,
+    "control_parameters":{},
+    "candidate_parameters":{"shadow.terminal_tail_mode":1},
+    "failure_penalty_seconds":600
+  }
+}

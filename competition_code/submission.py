@@ -21,6 +21,7 @@ import atexit
 useDebug = True
 useDebugPrinting = False
 SHADOW_LONGITUDINAL_MODE = 1
+TERMINAL_TAIL_SHADOW_MODE = 1
 debugData = {}
 
 
@@ -258,6 +259,13 @@ Brake: {control['brake']:.3f} \n\
 Steer: {control['steer']:.10f} \n"
                 )
 
+        winner_control_snapshot = {
+            key: float(np.asarray(control[key]).reshape(-1)[0])
+            for key in ("throttle", "brake", "steer")
+        }
+        winner_debug_snapshot = dict(
+            self.throttle_controller.last_longitudinal_debug or {}
+        )
         await self.vehicle.apply_action(control)
 
         # Shadow-only predictive control runs after dispatching the validated
@@ -269,7 +277,19 @@ Steer: {control['steer']:.10f} \n"
                     current_speed_kmh,
                     control,
                     self.current_waypoint_idx,
+                    terminal_tail_enabled=TERMINAL_TAIL_SHADOW_MODE == 1,
                 )
+                terminal_tail = self.last_shadow_debug.get("terminal_tail")
+                if terminal_tail is not None:
+                    invariants = terminal_tail.setdefault("invariants", {})
+                    invariants["winner_control_unchanged"] = winner_control_snapshot == {
+                        key: float(np.asarray(control[key]).reshape(-1)[0])
+                        for key in ("throttle", "brake", "steer")
+                    }
+                    invariants["winner_longitudinal_debug_unchanged"] = (
+                        winner_debug_snapshot
+                        == dict(self.throttle_controller.last_longitudinal_debug or {})
+                    )
             except Exception as error:
                 self.last_shadow_debug = unavailable_shadow(error)
         return control

@@ -20,6 +20,13 @@ from experiments.search.adapter import run_search
 from experiments.analysis.velocity_profile import analyze as analyze_velocity_profile
 from experiments.analysis.velocity_profile_v2 import analyze as analyze_velocity_profile_v2
 from experiments.analysis.counterfactual_opportunity import analyze as analyze_counterfactual
+from experiments.analysis.shadow_disagreement import analyze as analyze_shadow_disagreement
+from experiments.analysis.shadow_calibration import analyze as analyze_shadow_calibration
+from experiments.analysis.residual_deceleration import analyze as analyze_residual_deceleration
+from experiments.analysis.terminal_release import analyze as analyze_terminal_release
+from experiments.analysis.terminal_prediction_v2 import analyze as analyze_terminal_prediction_v2
+from experiments.analysis.terminal_tail_bridge import analyze as analyze_terminal_tail_bridge
+from experiments.analysis.terminal_live_validation import analyze as analyze_terminal_live_validation
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -108,6 +115,34 @@ def main() -> int:
     counterfactual.add_argument("--extension-m", type=float, default=300.0)
     counterfactual.add_argument("--json-only", action="store_true")
 
+    disagreement = subparsers.add_parser("shadow-disagreement")
+    disagreement.add_argument("--results-dir", default="experiment_results")
+    disagreement.add_argument("--json-only", action="store_true")
+
+    calibration = subparsers.add_parser("shadow-calibration")
+    calibration.add_argument("--results-dir", default="experiment_results")
+    calibration.add_argument("--json-only", action="store_true")
+
+    residual = subparsers.add_parser("residual-deceleration")
+    residual.add_argument("--results-dir", default="experiment_results")
+    residual.add_argument("--json-only", action="store_true")
+
+    terminal = subparsers.add_parser("terminal-release")
+    terminal.add_argument("--results-dir", default="experiment_results")
+    terminal.add_argument("--json-only", action="store_true")
+
+    terminal_v2 = subparsers.add_parser("terminal-prediction-v2")
+    terminal_v2.add_argument("--results-dir", default="experiment_results")
+    terminal_v2.add_argument("--json-only", action="store_true")
+
+    tail_bridge = subparsers.add_parser("terminal-tail-bridge")
+    tail_bridge.add_argument("--results-dir", default="experiment_results")
+    tail_bridge.add_argument("--json-only", action="store_true")
+
+    live_validation = subparsers.add_parser("terminal-live-validation")
+    live_validation.add_argument("--results-dir", default="experiment_results")
+    live_validation.add_argument("--tolerance", type=float, default=1e-9)
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -177,6 +212,52 @@ def main() -> int:
         print_results(result)
         if not args.json_only:
             print_human_report(result, root)
+        return 0
+
+    if args.command == "shadow-disagreement":
+        result = analyze_shadow_disagreement(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "shadow-calibration":
+        result = analyze_shadow_calibration(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "residual-deceleration":
+        result = analyze_residual_deceleration(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "terminal-release":
+        result = analyze_terminal_release(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "terminal-prediction-v2":
+        result = analyze_terminal_prediction_v2(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "terminal-tail-bridge":
+        result = analyze_terminal_tail_bridge(root, args.results_dir)
+        print_results(result)
+        if not args.json_only:
+            print_human_report(result, root)
+        return 0
+
+    if args.command == "terminal-live-validation":
+        print_results(analyze_terminal_live_validation(root,args.results_dir,args.tolerance))
         return 0
 
     root, config, registry = load_inputs(args.config)

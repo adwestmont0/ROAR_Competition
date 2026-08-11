@@ -74,6 +74,33 @@ class RaceTelemetry:
         "shadow_confidence",
         "shadow_support",
         "shadow_error",
+        "terminal_tail_status",
+        "terminal_tail_reason_code",
+        "terminal_tail_eligible",
+        "terminal_tail_original_h1_reason",
+        "terminal_tail_prior_h1_brake_requests",
+        "terminal_tail_current_acceleration_mps2",
+        "terminal_tail_mean_recent_acceleration_mps2",
+        "terminal_tail_steer",
+        "terminal_tail_steer_change",
+        "terminal_tail_residual_guard_trace_json",
+        "terminal_tail_terminal_profile_index",
+        "terminal_tail_terminal_custom_waypoint_index",
+        "terminal_tail_terminal_target_speed_kmh",
+        "terminal_tail_terminal_distance_m",
+        "terminal_tail_terminal_horizon_ticks",
+        "terminal_tail_direct_prediction_horizon_ticks",
+        "terminal_tail_predicted_speed_at_direct_horizon_kmh",
+        "terminal_tail_direct_uncertainty_kmh",
+        "terminal_tail_direct_predictions_json",
+        "terminal_tail_tail_path",
+        "terminal_tail_tail_segment",
+        "terminal_tail_tail_credit_kmh",
+        "terminal_tail_tail_uncertainty_kmh",
+        "terminal_tail_terminal_speed_upper_bound_kmh",
+        "terminal_tail_terminal_safety_margin_kmh",
+        "terminal_tail_invariants_json",
+        "terminal_tail_all_invariants_pass",
     ]
 
     def __init__(self, output_root: str) -> None:
@@ -118,6 +145,8 @@ class RaceTelemetry:
             throttle_controller, "last_longitudinal_debug", {}
         ) or {}
         shadow = getattr(solution, "last_shadow_debug", {}) or {}
+        terminal_tail = shadow.get("terminal_tail", {}) or {}
+        terminal_invariants = terminal_tail.get("invariants", {}) or {}
         self.samples.append(
             {
                 "tick": tick,
@@ -185,6 +214,33 @@ class RaceTelemetry:
                 "shadow_confidence": shadow.get("confidence"),
                 "shadow_support": shadow.get("support"),
                 "shadow_error": shadow.get("error"),
+                "terminal_tail_status": terminal_tail.get("status"),
+                "terminal_tail_reason_code": terminal_tail.get("reason_code"),
+                "terminal_tail_eligible": terminal_tail.get("eligible"),
+                "terminal_tail_original_h1_reason": terminal_tail.get("original_h1_reason"),
+                "terminal_tail_prior_h1_brake_requests": terminal_tail.get("prior_h1_brake_requests"),
+                "terminal_tail_current_acceleration_mps2": terminal_tail.get("current_acceleration_mps2"),
+                "terminal_tail_mean_recent_acceleration_mps2": terminal_tail.get("mean_recent_acceleration_mps2"),
+                "terminal_tail_steer": terminal_tail.get("steer"),
+                "terminal_tail_steer_change": terminal_tail.get("steer_change"),
+                "terminal_tail_residual_guard_trace_json": json.dumps(terminal_tail.get("residual_guard_trace"),sort_keys=True) if terminal_tail.get("residual_guard_trace") is not None else None,
+                "terminal_tail_terminal_profile_index": terminal_tail.get("terminal_profile_index"),
+                "terminal_tail_terminal_custom_waypoint_index": terminal_tail.get("terminal_custom_waypoint_index"),
+                "terminal_tail_terminal_target_speed_kmh": terminal_tail.get("terminal_target_speed_kmh"),
+                "terminal_tail_terminal_distance_m": terminal_tail.get("terminal_distance_m"),
+                "terminal_tail_terminal_horizon_ticks": terminal_tail.get("terminal_horizon_ticks"),
+                "terminal_tail_direct_prediction_horizon_ticks": terminal_tail.get("direct_prediction_horizon_ticks"),
+                "terminal_tail_predicted_speed_at_direct_horizon_kmh": terminal_tail.get("predicted_speed_at_direct_horizon_kmh"),
+                "terminal_tail_direct_uncertainty_kmh": terminal_tail.get("direct_uncertainty_kmh"),
+                "terminal_tail_direct_predictions_json": json.dumps(terminal_tail.get("direct_predictions_kmh"),sort_keys=True) if terminal_tail.get("direct_predictions_kmh") is not None else None,
+                "terminal_tail_tail_path": terminal_tail.get("tail_path"),
+                "terminal_tail_tail_segment": terminal_tail.get("tail_segment"),
+                "terminal_tail_tail_credit_kmh": terminal_tail.get("tail_credit_kmh"),
+                "terminal_tail_tail_uncertainty_kmh": terminal_tail.get("tail_uncertainty_kmh"),
+                "terminal_tail_terminal_speed_upper_bound_kmh": terminal_tail.get("terminal_speed_upper_bound_kmh"),
+                "terminal_tail_terminal_safety_margin_kmh": terminal_tail.get("terminal_safety_margin_kmh"),
+                "terminal_tail_invariants_json": json.dumps(terminal_invariants,sort_keys=True) if terminal_invariants else None,
+                "terminal_tail_all_invariants_pass": all(terminal_invariants.values()) if terminal_invariants else None,
             }
         )
 

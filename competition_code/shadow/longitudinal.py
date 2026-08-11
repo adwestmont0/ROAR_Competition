@@ -1,8 +1,11 @@
 import json
 import os
+import hashlib
+from collections import deque
 from typing import Any, Dict, Optional
 
 import numpy as np
+from .terminal_policy import evaluate_terminal_tail, smooth_profile
 
 
 class ShadowLongitudinalPlanner:
@@ -24,6 +27,19 @@ class ShadowLongitudinalPlanner:
         self.confidence = [str(point["confidence"]) for point in points]
         self.support = np.asarray([point["support"] for point in points], dtype=int)
         self.last_index: Optional[int] = None
+        self.terminal_acceleration_history = deque(maxlen=3)
+        self.terminal_previous_speed_kmh: Optional[float] = None
+        self.terminal_previous_steer: Optional[float] = None
+        self.terminal_h1_brake_requests = 0
+        self.terminal_h1_gap_ticks = 99
+        self.profile_identity_sha256 = self._profile_checksum()
+        terminal_targets=self.speed.tolist()
+        self.terminal_profile = {"target_speed_kmh":terminal_targets,"smoothed_target_speed_kmh":smooth_profile(terminal_targets),"ds_m":self.ds.tolist()}
+
+    def _profile_checksum(self) -> str:
+        digest=hashlib.sha256()
+        for value in (self.xy,self.s,self.ds,self.speed,self.acceleration,self.deceleration):digest.update(np.asarray(value).tobytes())
+        return digest.hexdigest()
 
     @classmethod
     def from_file(cls, path: str) -> "ShadowLongitudinalPlanner":
@@ -79,6 +95,7 @@ class ShadowLongitudinalPlanner:
         speed_kmh: float,
         applied_control: Dict[str, Any],
         custom_waypoint_index: int,
+        terminal_tail_enabled: bool = False,
     ) -> Dict[str, Any]:
         index = self._nearest_index(location)
         following = (index + 1) % len(self.speed)
@@ -112,7 +129,7 @@ class ShadowLongitudinalPlanner:
         applied_throttle = float(np.asarray(applied_control.get("throttle", 0.0)).reshape(-1)[0])
         applied_brake = float(np.asarray(applied_control.get("brake", 0.0)).reshape(-1)[0])
         phase = self._phase(index)
-        return {
+        output = {
             "available": True,
             "profile_version": self.profile_version,
             "source_result_sha256": self.source_result_sha256,
@@ -137,6 +154,25 @@ class ShadowLongitudinalPlanner:
             "confidence": self.confidence[index],
             "support": int(self.support[index]),
         }
+        if terminal_tail_enabled:
+            control_snapshot={key:float(np.asarray(applied_control.get(key,0.0)).reshape(-1)[0]) for key in ("throttle","brake","steer")}
+            original_snapshot=dict(output);index_snapshot=self.last_index;profile_before=self._profile_checksum()
+            steer=control_snapshot["steer"]
+            acceleration=0.0 if self.terminal_previous_speed_kmh is None else ((float(speed_kmh)-self.terminal_previous_speed_kmh)/3.6)/.05
+            self.terminal_acceleration_history.append(acceleration)
+            mean_acceleration=float(sum(self.terminal_acceleration_history)/len(self.terminal_acceleration_history))
+            steer_change=0.0 if self.terminal_previous_steer is None else steer-self.terminal_previous_steer
+            reason=("profile_gradient" if required_acceleration < -.25 else "speed_error" if error>1.0 else "none")
+            prior=(0 if shadow_brake>0.01 and self.terminal_h1_gap_ticks>2 else self.terminal_h1_brake_requests)
+            opinion=evaluate_terminal_tail({"profile_index":index,"speed_kmh":float(speed_kmh),"current_acceleration_mps2":acceleration,"mean_recent_acceleration_mps2":mean_acceleration,"steer":steer,"steer_change":steer_change,"original_h1_brake":shadow_brake>0.01,"original_h1_reason":reason,"prior_h1_brake_requests":prior},self.terminal_profile)
+            if shadow_brake>0.01:
+                if self.terminal_h1_gap_ticks>2:self.terminal_h1_brake_requests=0
+                self.terminal_h1_brake_requests+=1;self.terminal_h1_gap_ticks=0
+            else:self.terminal_h1_gap_ticks+=1
+            self.terminal_previous_speed_kmh=float(speed_kmh);self.terminal_previous_steer=steer
+            invariants={"applied_control_unchanged":control_snapshot=={key:float(np.asarray(applied_control.get(key,0.0)).reshape(-1)[0]) for key in ("throttle","brake","steer")},"original_h1_output_unchanged":original_snapshot==output,"original_h1_index_unchanged":index_snapshot==self.last_index,"profile_unchanged":profile_before==self._profile_checksum()==self.profile_identity_sha256}
+            output["terminal_tail"]={**opinion,"current_acceleration_mps2":acceleration,"mean_recent_acceleration_mps2":mean_acceleration,"steer":steer,"steer_change":steer_change,"original_h1_reason":reason,"prior_h1_brake_requests":prior,"invariants":invariants}
+        return output
 
 
 def unavailable_shadow(error: Exception) -> Dict[str, Any]:
