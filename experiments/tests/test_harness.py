@@ -27,7 +27,12 @@ from experiments.harness.reliability import (
     render_reliability_report,
     wilson_interval,
 )
-from experiments.harness.causal import causal_schedule, _compare_focused_cohorts
+from experiments.harness.causal import (
+    _campaign_mode,
+    _compare_focused_cohorts,
+    _write_report,
+    causal_schedule,
+)
 from experiments.analysis.velocity_profile_v2 import _solve_closed
 from experiments.analysis.counterfactual_opportunity import CAUSES, _gain_attribution
 
@@ -142,6 +147,51 @@ class HarnessTests(unittest.TestCase):
             ["control", "restricted", "control", "restricted", "control", "restricted"],
         )
         self.assertEqual(causal_schedule(3, include_controls=False), ["restricted"] * 3)
+
+    def test_empty_single_cohort_campaign_is_reported_as_baseline_validation(self):
+        unavailable = {
+            "completion_rate": None,
+            "collision_rate": None,
+            "finished_elapsed_seconds": None,
+        }
+        measured = {
+            "completion_rate": 1.0,
+            "collision_rate": 0.0,
+            "finished_elapsed_seconds": {"mean": 321.76},
+        }
+        result = {
+            "experiment_name": "instrumented-baseline-validation",
+            "schedule": ["restricted"] * 5,
+            "parameters": {"control": {}, "restricted": {}},
+            "cohorts": {"control": unavailable, "restricted": measured},
+            "arrival_analysis": {
+                "custom_waypoint_window": [1402, 1409],
+                "baseline": {"traversals": 120, "mean_speed_kmh": 172.471},
+                "restricted": {"traversals": 15, "mean_speed_kmh": 172.430},
+                "restricted_minus_baseline_mean_kmh": -0.041,
+                "restricted_zone_collisions": 0,
+            },
+        }
+        self.assertEqual(_campaign_mode(result), "baseline_validation")
+        with tempfile.TemporaryDirectory() as temporary:
+            report_path = Path(temporary) / "report.md"
+            _write_report(report_path, result)
+            report = report_path.read_text(encoding="utf-8")
+        self.assertIn("## Instrumented baseline", report)
+        self.assertIn("## Baseline equivalence check", report)
+        self.assertIn("unchanged baseline behavior", report)
+        self.assertNotIn("## Treatment", report)
+        self.assertNotIn("## Baseline control", report)
+
+    def test_parameterized_single_cohort_remains_causal_treatment(self):
+        result = {
+            "schedule": ["restricted"],
+            "parameters": {
+                "control": {},
+                "restricted": {"throttle.section_mu.3": 3.5},
+            },
+        }
+        self.assertEqual(_campaign_mode(result), "causal_treatment")
 
     def base_config(self):
         return {

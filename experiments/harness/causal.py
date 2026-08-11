@@ -16,6 +16,21 @@ from .evaluation import CONTROLLER_OUTCOMES, evaluation_lock, summarize_measurem
 SCHEMA_VERSION = 2
 
 
+def _campaign_mode(result: Dict[str, Any]) -> str:
+    """Return the semantic mode without changing legacy cohort storage keys."""
+    if result.get("campaign_mode"):
+        return str(result["campaign_mode"])
+    schedule = result.get("schedule", [])
+    parameters = result.get("parameters", {})
+    if (
+        schedule
+        and set(schedule) == {"restricted"}
+        and parameters.get("restricted", {}) == parameters.get("control", {})
+    ):
+        return "baseline_validation"
+    return "causal_treatment"
+
+
 def causal_schedule(repetitions: int, include_controls: bool = True) -> List[str]:
     if repetitions < 1:
         raise ValueError("causal repetitions must be positive")
@@ -60,12 +75,18 @@ def dry_run_causal(config: Dict[str, Any], registry: Dict[str, Any], root: Path)
 def _write_report(path: Path, result: Dict[str, Any]) -> None:
     control = result["cohorts"]["control"]
     restricted = result["cohorts"]["restricted"]
+    baseline_validation = _campaign_mode(result) == "baseline_validation"
     title = result.get("experiment_name", "causal campaign").replace("-", " ").title().replace("Wp", "WP")
     lines = [
         "# %s" % title, "",
         "Every measurement used a forced-clean CARLA start.", "",
     ]
-    for label, summary in (("Baseline control", control), ("Treatment", restricted)):
+    report_cohorts = (
+        (("Instrumented baseline", restricted),)
+        if baseline_validation
+        else (("Baseline control", control), ("Treatment", restricted))
+    )
+    for label, summary in report_cohorts:
         elapsed = summary.get("finished_elapsed_seconds")
         lines += [
             "## " + label, "",
@@ -73,19 +94,38 @@ def _write_report(path: Path, result: Dict[str, Any]) -> None:
             "- Collision rate: %s" % ("unavailable" if summary["collision_rate"] is None else "%.1f%%" % (100 * summary["collision_rate"])),
             "- Finished mean: %s" % ("unavailable" if elapsed is None else "%.3f s" % elapsed["mean"]), "",
         ]
-    lines += ["This campaign tests causal stability, not lap-time acceptance. See result.json for the authoritative record.", ""]
+    lines += [
+        (
+            "This campaign validates unchanged baseline behavior with instrumentation enabled. "
+            "See result.json for the authoritative record."
+            if baseline_validation
+            else "This campaign tests causal stability, not lap-time acceptance. See result.json for the authoritative record."
+        ), "",
+    ]
     focused = result.get("focused_event_analysis")
     arrival = result.get("arrival_analysis")
     if arrival and not focused:
         baseline = arrival["baseline"]
         restricted_arrival = arrival["restricted"]
         lines += [
-            "## Causal intermediate variable", "",
+            "## %s" % (
+                "Baseline equivalence check" if baseline_validation else "Causal intermediate variable"
+            ), "",
             "- Arrival window: custom WP %d–%d" % tuple(arrival["custom_waypoint_window"]),
             "- Baseline traversals: %d; mean arrival speed: %s" % (baseline["traversals"], "unavailable" if baseline["mean_speed_kmh"] is None else "%.3f km/h" % baseline["mean_speed_kmh"]),
-            "- Restricted traversals: %d; mean arrival speed: %s" % (restricted_arrival["traversals"], "unavailable" if restricted_arrival["mean_speed_kmh"] is None else "%.3f km/h" % restricted_arrival["mean_speed_kmh"]),
-            "- Mean shift: %s" % ("unavailable" if arrival["restricted_minus_baseline_mean_kmh"] is None else "%+.3f km/h" % arrival["restricted_minus_baseline_mean_kmh"]),
-            "- Restricted collisions in WP 1380–1420: %d" % arrival["restricted_zone_collisions"], "",
+            "- %s traversals: %d; mean arrival speed: %s" % (
+                "Validation" if baseline_validation else "Restricted",
+                restricted_arrival["traversals"],
+                "unavailable" if restricted_arrival["mean_speed_kmh"] is None else "%.3f km/h" % restricted_arrival["mean_speed_kmh"],
+            ),
+            "- %s mean shift: %s" % (
+                "Validation-minus-reference" if baseline_validation else "Restricted-minus-baseline",
+                "unavailable" if arrival["restricted_minus_baseline_mean_kmh"] is None else "%+.3f km/h" % arrival["restricted_minus_baseline_mean_kmh"],
+            ),
+            "- %s collisions in WP 1380–1420: %d" % (
+                "Validation" if baseline_validation else "Restricted",
+                arrival["restricted_zone_collisions"],
+            ), "",
         ]
     if focused:
         control = focused["cohorts"]["control"]["aggregate"]
@@ -386,8 +426,9 @@ def run_causal_campaign(
                     root, results_root,
                     [r.get("measurement") for r in saved_progress["records"] if r["cohort"] == "restricted"],
                 )
-                write_json(result_path, result)
-                _write_report(report_path, result)
+            result["campaign_mode"] = _campaign_mode(result)
+            write_json(result_path, result)
+            _write_report(report_path, result)
             result["resume"] = {"skipped_completed": True}; return result
         progress = read_json(progress_path) if resume and progress_path.exists() else {
             "schema_version": SCHEMA_VERSION, "campaign_key": key, "schedule": schedule,
@@ -448,6 +489,7 @@ def run_causal_campaign(
             "result_path": str(result_path.relative_to(root)), "human_report_path": str(report_path.relative_to(root)),
             "completed_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         }
+        result["campaign_mode"] = _campaign_mode(result)
         result["arrival_analysis"] = _arrival_analysis(
             root, results_root,
             [r.get("measurement") for r in progress["records"] if r["cohort"] == "restricted"],
