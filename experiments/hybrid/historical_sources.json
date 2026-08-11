@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-08-11T02:48:52Z",
+  "sources": [
+    {
+      "id": "summer_2024_winner",
+      "repository": "https://github.com/DerekChen1/ROARCompetition",
+      "commit": "99ded3d8e92c92cb2f601ac265324f2eb01c200e",
+      "reported_result_seconds": 325.6,
+      "features": ["custom_racing_line", "pure_pursuit", "curvature_speed_control"],
+      "relationship_to_current": "Current LateralController.py has the same SHA-256 as this source."
+    },
+    {
+      "id": "fall_2025_winner",
+      "repository": "https://github.com/MightyMark3/ROAR_1_S25",
+      "commit": "78d07a58b31456421f92b368b93d204c7c2d731e",
+      "features": ["left_foot_braking", "precomputed_turn_experiment", "curvature_speed_control"],
+      "relationship_to_current": "Distinct longitudinal actuation: retains throttle while braking near release."
+    },
+    {
+      "id": "spring_2026_third",
+      "repository": "https://github.com/MightyMark3/ROAR_1_S26",
+      "commit": "3bd555fcb7d412b1e39656813cd63786a558534c",
+      "features": ["distance_weighted_preview", "left_foot_braking"],
+      "relationship_to_current": "Distinct lateral target construction and longitudinal actuation."
+    },
+    {
+      "id": "spring_2026_winner_pure_pursuit",
+      "repository": "https://github.com/advaybansal/roar_feb",
+      "commit": "27d965dac8c97add9a8758532d210bd32604f88f",
+      "reported_result_seconds": 320.4,
+      "features": ["expanded_section_mu", "aggressive_post_brake_recovery", "pure_pursuit"],
+      "relationship_to_current": "Newer direct descendant with a reported 1.4-second improvement."
+    },
+    {
+      "id": "spring_2026_winner_stanley_experiment",
+      "repository": "https://github.com/CodeWizard17/ROAR_stuff",
+      "commit": "326da7ed63897818d38192b98366389fb0b2db5c",
+      "reported_result_seconds": 348.9,
+      "features": ["stanley", "physics_speed_profile", "minimum_curvature_line"],
+      "relationship_to_current": "Negative control: precise tracking lost pure-pursuit corner cutting and was slower."
+    }
+  ],
+  "licensing_note": "No LICENSE or COPYING file was found at the audited repository roots. Reimplement published concepts independently; do not vendor source code."
+}
