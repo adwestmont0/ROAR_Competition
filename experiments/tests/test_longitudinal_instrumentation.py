@@ -58,6 +58,15 @@ class LongitudinalInstrumentationTests(unittest.TestCase):
             "current_waypoint_idx": 1803,
             "current_section": 4,
             "lapNum": 1,
+            "last_shadow_debug": {
+                "available": True,
+                "target_speed_kmh": 220.0,
+                "phase": "braking",
+                "command": "brake",
+                "throttle": 0.0,
+                "brake": 0.25,
+                "active_constraint": "empirical_stability",
+            },
         })()
         telemetry = RaceTelemetry("unused")
         common = dict(
@@ -79,6 +88,10 @@ class LongitudinalInstrumentationTests(unittest.TestCase):
         self.assertEqual(first["controller_raw_brake"], 1)
         self.assertEqual(first["controller_decision_branch"], "brake_initiate")
         self.assertEqual(first["controller_recommended_speed_kmh"], 218.4)
+        self.assertTrue(first["shadow_available"])
+        self.assertEqual(first["shadow_target_speed_kmh"], 220.0)
+        self.assertEqual(first["shadow_command"], "brake")
+        self.assertEqual(first["shadow_active_constraint"], "empirical_stability")
         self.assertEqual(first["steer_change"], 0.0)
         self.assertAlmostEqual(second["steer_change"], 0.05)
 

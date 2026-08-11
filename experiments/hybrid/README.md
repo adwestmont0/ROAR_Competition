@@ -57,6 +57,13 @@ distance, and shadow throttle/brake. Applied control remains the validated
 baseline. Compare event timing against successful telemetry and collision
 boundaries.
 
+Implementation status: the runtime planner lives in
+`competition_code/shadow/longitudinal.py`. Its compact profile is exported from
+velocity-profile v2 by `experiments/hybrid/export_shadow_profile.py` and records
+the source result's SHA-256. `submission.py` invokes it only after constructing
+the final validated control dictionary; the shadow result is stored separately
+for telemetry and is never passed to `vehicle.apply_action()`.
+
 ### H2: release-phase actuator
 
 Apply simultaneous throttle and brake only in one support-qualified event and

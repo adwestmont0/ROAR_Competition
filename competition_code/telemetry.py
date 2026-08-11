@@ -51,6 +51,29 @@ class RaceTelemetry:
         "controller_current_waypoint_index",
         "controller_lookahead_waypoint_index",
         "controller_lookahead_count",
+        "shadow_available",
+        "shadow_profile_version",
+        "shadow_profile_source_sha256",
+        "shadow_profile_index",
+        "shadow_profile_s_m",
+        "shadow_profile_distance_error_m",
+        "shadow_target_speed_kmh",
+        "shadow_speed_error_kmh",
+        "shadow_phase",
+        "shadow_command",
+        "shadow_required_acceleration_mps2",
+        "shadow_acceleration_limit_mps2",
+        "shadow_deceleration_limit_mps2",
+        "shadow_distance_to_braking_m",
+        "shadow_distance_to_release_m",
+        "shadow_throttle",
+        "shadow_brake",
+        "shadow_throttle_delta",
+        "shadow_brake_delta",
+        "shadow_active_constraint",
+        "shadow_confidence",
+        "shadow_support",
+        "shadow_error",
     ]
 
     def __init__(self, output_root: str) -> None:
@@ -94,6 +117,7 @@ class RaceTelemetry:
         longitudinal = getattr(
             throttle_controller, "last_longitudinal_debug", {}
         ) or {}
+        shadow = getattr(solution, "last_shadow_debug", {}) or {}
         self.samples.append(
             {
                 "tick": tick,
@@ -138,6 +162,29 @@ class RaceTelemetry:
                 "controller_current_waypoint_index": longitudinal.get("current_waypoint_index"),
                 "controller_lookahead_waypoint_index": longitudinal.get("lookahead_waypoint_index"),
                 "controller_lookahead_count": longitudinal.get("lookahead_count"),
+                "shadow_available": shadow.get("available"),
+                "shadow_profile_version": shadow.get("profile_version"),
+                "shadow_profile_source_sha256": shadow.get("source_result_sha256"),
+                "shadow_profile_index": shadow.get("profile_index"),
+                "shadow_profile_s_m": shadow.get("profile_s_m"),
+                "shadow_profile_distance_error_m": shadow.get("profile_distance_error_m"),
+                "shadow_target_speed_kmh": shadow.get("target_speed_kmh"),
+                "shadow_speed_error_kmh": shadow.get("speed_error_kmh"),
+                "shadow_phase": shadow.get("phase"),
+                "shadow_command": shadow.get("command"),
+                "shadow_required_acceleration_mps2": shadow.get("required_acceleration_mps2"),
+                "shadow_acceleration_limit_mps2": shadow.get("acceleration_limit_mps2"),
+                "shadow_deceleration_limit_mps2": shadow.get("deceleration_limit_mps2"),
+                "shadow_distance_to_braking_m": shadow.get("distance_to_braking_m"),
+                "shadow_distance_to_release_m": shadow.get("distance_to_release_m"),
+                "shadow_throttle": shadow.get("throttle"),
+                "shadow_brake": shadow.get("brake"),
+                "shadow_throttle_delta": shadow.get("throttle_delta"),
+                "shadow_brake_delta": shadow.get("brake_delta"),
+                "shadow_active_constraint": shadow.get("active_constraint"),
+                "shadow_confidence": shadow.get("confidence"),
+                "shadow_support": shadow.get("support"),
+                "shadow_error": shadow.get("error"),
             }
         )
 

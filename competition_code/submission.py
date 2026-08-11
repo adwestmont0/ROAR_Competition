@@ -13,6 +13,7 @@ import numpy as np
 import roar_py_interface
 from LateralController import LatController
 from ThrottleController import ThrottleController
+from shadow.longitudinal import ShadowLongitudinalPlanner, unavailable_shadow
 import atexit
 
 # from scipy.interpolate import interp1d
@@ -82,6 +83,12 @@ class RoarCompetitionSolution:
         self.collision_sensor = collision_sensor
         self.lat_controller = LatController()
         self.throttle_controller = ThrottleController()
+        self.last_shadow_debug: Dict[str, object] = {}
+        try:
+            self.shadow_longitudinal_planner = ShadowLongitudinalPlanner.load_default()
+        except Exception as error:
+            self.shadow_longitudinal_planner = None
+            self.last_shadow_debug = unavailable_shadow(error)
         self.section_indeces = []
         self.num_ticks = 0
         self.section_start_ticks = 0
@@ -216,6 +223,19 @@ class RoarCompetitionSolution:
             "reverse": 0,
             "target_gear": gear,  # Gears do not appear to have an impact on speed
         }
+
+        # Shadow-only predictive control. Its result is recorded by telemetry but
+        # never merged into the control dictionary applied to the vehicle.
+        if self.shadow_longitudinal_planner is not None:
+            try:
+                self.last_shadow_debug = self.shadow_longitudinal_planner.observe(
+                    vehicle_location,
+                    current_speed_kmh,
+                    control,
+                    self.current_waypoint_idx,
+                )
+            except Exception as error:
+                self.last_shadow_debug = unavailable_shadow(error)
         
         if useDebug:
             debugData[self.num_ticks] = {}
