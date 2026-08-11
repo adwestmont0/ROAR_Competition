@@ -14,6 +14,7 @@ if str(COMPETITION_CODE) not in sys.path:
 
 from shadow.longitudinal import ShadowLongitudinalPlanner
 from experiments.hybrid.export_shadow_profile import export_profile
+from experiments.harness.core import apply_parameters
 
 
 def point(x, speed, acceleration=2.0, deceleration=10.0, constraint="acceleration"):
@@ -27,6 +28,30 @@ def point(x, speed, acceleration=2.0, deceleration=10.0, constraint="acceleratio
 
 
 class ShadowLongitudinalPlannerTests(unittest.TestCase):
+    def test_submission_dispatches_control_before_shadow_observation(self):
+        source = (COMPETITION_CODE / "submission.py").read_text(encoding="utf-8")
+        dispatch = source.index("await self.vehicle.apply_action(control)")
+        observation = source.index(
+            "self.last_shadow_debug = self.shadow_longitudinal_planner.observe("
+        )
+        self.assertLess(dispatch, observation)
+
+    def test_registry_can_disable_shadow_with_exact_match(self):
+        registry = json.loads((ROOT / "experiments" / "parameters.json").read_text())
+        with tempfile.TemporaryDirectory() as temporary:
+            checkout = Path(temporary)
+            target = checkout / "competition_code" / "submission.py"
+            target.parent.mkdir(parents=True)
+            target.write_text("SHADOW_LONGITUDINAL_MODE = 1\n", encoding="utf-8")
+            diff = apply_parameters(
+                checkout, {"shadow.longitudinal_mode": 0}, registry
+            )
+            self.assertEqual(
+                target.read_text(encoding="utf-8"),
+                "SHADOW_LONGITUDINAL_MODE = 0\n",
+            )
+            self.assertIn("+SHADOW_LONGITUDINAL_MODE = 0", diff)
+
     def test_observe_is_shadow_only_and_does_not_mutate_applied_control(self):
         planner = ShadowLongitudinalPlanner({
             "schema_version": 1,

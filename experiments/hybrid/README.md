@@ -61,8 +61,9 @@ Implementation status: the runtime planner lives in
 `competition_code/shadow/longitudinal.py`. Its compact profile is exported from
 velocity-profile v2 by `experiments/hybrid/export_shadow_profile.py` and records
 the source result's SHA-256. `submission.py` invokes it only after constructing
-the final validated control dictionary; the shadow result is stored separately
-for telemetry and is never passed to `vehicle.apply_action()`.
+the final validated control dictionary. The validated action is dispatched
+before shadow evaluation begins; the shadow result is stored separately for
+telemetry and is never passed to `vehicle.apply_action()`.
 
 ### H2: release-phase actuator
 

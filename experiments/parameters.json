@@ -1,4 +1,11 @@
 {
+  "shadow.longitudinal_mode": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 1,
+    "baseline_text": "SHADOW_LONGITUDINAL_MODE = 1\n",
+    "replacement_template": "SHADOW_LONGITUDINAL_MODE = {value}\n",
+    "type": "int", "minimum": 0, "maximum": 1, "required_matches": 1
+  },
   "causal.wp1779_1803_suppress_brake_ticks": {
     "file": "competition_code/submission.py",
     "baseline_value": 0,
