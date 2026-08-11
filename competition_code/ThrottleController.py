@@ -26,6 +26,7 @@ class ThrottleController:
         self.tick_counter = 0
         self.previous_speed = 1.0
         self.brake_ticks = 0
+        self.last_longitudinal_debug = {}
 
         # for testing how fast the car stops
         self.brake_test_counter = 0
@@ -55,6 +56,11 @@ class ThrottleController:
         if self.brake_ticks > 0 and brake > 0:
             self.brake_ticks -= 1
 
+        if self.last_longitudinal_debug:
+            self.last_longitudinal_debug["brake_ticks_after_run"] = self.brake_ticks
+            self.last_longitudinal_debug["raw_throttle"] = throttle
+            self.last_longitudinal_debug["raw_brake"] = brake
+
         # throttle = 0.05 * (100 - current_speed)
         return throttle, brake, gear
 
@@ -78,15 +84,19 @@ class ThrottleController:
         mid_distance = self.target_distance[self.mid_index]
         far_distance = self.target_distance[self.far_index]
         speed_data = []
+        constraint_debug = []
         speed_data.append(
             self.speed_for_turn(close_distance, target_speed1, current_speed)
         )
+        constraint_debug.append(("close", r1, target_speed1, close_distance))
         speed_data.append(
             self.speed_for_turn(mid_distance, target_speed2, current_speed)
         )
+        constraint_debug.append(("mid", r2, target_speed2, mid_distance))
         speed_data.append(
             self.speed_for_turn(far_distance, target_speed3, current_speed)
         )
+        constraint_debug.append(("far", r3, target_speed3, far_distance))
 
         if current_speed > 100:
             # at high speed use larger spacing between points to look further ahead and detect wide turns.
@@ -102,6 +112,7 @@ class ThrottleController:
                 speed_data.append(
                     self.speed_for_turn(close_distance, target_speed4, current_speed)
                 )
+                constraint_debug.append(("wide-mid", r4, target_speed4, close_distance))
 
             r5 = self.get_radius(
                 [
@@ -114,8 +125,43 @@ class ThrottleController:
             speed_data.append(
                 self.speed_for_turn(close_distance, target_speed5, current_speed)
             )
+            constraint_debug.append(("wide-far", r5, target_speed5, close_distance))
 
         update = self.select_speed(speed_data)
+        selected_index = next(
+            index for index, candidate in enumerate(speed_data) if candidate is update
+        )
+        constraint_name, radius, target_speed, target_distance = constraint_debug[
+            selected_index
+        ]
+        speed_change = round(current_speed - self.previous_speed, 3)
+        true_percent_change_per_tick = round(
+            2.4 / (current_speed + 0.001), 5
+        )
+        percent_speed_change = (current_speed - self.previous_speed) / (
+            self.previous_speed + 0.0001
+        )
+        speed_ratio = current_speed / update.recommended_speed_now
+        brake_ticks_before = self.brake_ticks
+        self.last_longitudinal_debug = {
+            "decision_branch": self._debug_decision_branch(update),
+            "selected_constraint": constraint_name,
+            "selected_constraint_index": selected_index,
+            "selected_radius_m": radius,
+            "selected_target_speed_kmh": target_speed,
+            "selected_target_distance_m": target_distance,
+            "recommended_speed_kmh": update.recommended_speed_now,
+            "speed_error_kmh": current_speed - update.recommended_speed_now,
+            "speed_ratio": speed_ratio,
+            "previous_speed_kmh": self.previous_speed,
+            "speed_change_kmh": speed_change,
+            "percent_speed_change": percent_speed_change,
+            "brake_threshold_ratio": 1 + true_percent_change_per_tick,
+            "true_percent_change_per_tick": true_percent_change_per_tick,
+            "brake_ticks_before": brake_ticks_before,
+            "section_mu": self._debug_section_mu(current_section),
+            "brake_threshold_multiplier": 1.0,
+        }
 
         self.print_speed(
             " -- SPEED: ",
@@ -127,8 +173,54 @@ class ThrottleController:
         )
 
         throttle, brake = self.speed_data_to_throttle_and_brake(update)
+        self.last_longitudinal_debug["brake_ticks_after_decision"] = self.brake_ticks
         self.dprint("--- throt " + str(throttle) + " brake " + str(brake) + "---")
         return throttle, brake
+
+    @staticmethod
+    def _debug_section_mu(current_section: int) -> float:
+        return {
+            1: 3.00,
+            2: 3.35,
+            3: 3.4,
+            4: 2.95,
+            6: 3.3,
+            7: 2.75,
+            8: 2.75,
+            9: 2.1,
+        }.get(current_section, 2.75)
+
+    def _debug_decision_branch(self, speed_data: SpeedData) -> str:
+        """Mirror the existing branch predicates without changing controller state."""
+        percent_of_max = speed_data.current_speed / speed_data.recommended_speed_now
+        true_percent_change_per_tick = round(
+            2.4 / (speed_data.current_speed + 0.001), 5
+        )
+        percent_speed_change = (
+            speed_data.current_speed - self.previous_speed
+        ) / (self.previous_speed + 0.0001)
+        speed_change = round(speed_data.current_speed - self.previous_speed, 3)
+        if percent_of_max > 1:
+            if percent_of_max > 1 + true_percent_change_per_tick:
+                if self.brake_ticks > 0:
+                    return "brake_counter"
+                if self.brake_ticks <= 0 and speed_change < 2.5:
+                    return "brake_initiate"
+                return "throttle_early1"
+            if speed_change >= 2.5:
+                return "throttle_early2"
+            if percent_of_max > 1.02 or percent_speed_change > (
+                -true_percent_change_per_tick / 2
+            ):
+                return "throttle_down"
+            return "throttle_maintain_over"
+        if speed_change >= 2.5:
+            return "throttle_full_speed_drop"
+        if percent_of_max < 0.9:
+            return "throttle_full"
+        if percent_of_max < 0.98 or true_percent_change_per_tick < -0.01:
+            return "throttle_up"
+        return "throttle_maintain"
 
     def speed_data_to_throttle_and_brake(self, speed_data: SpeedData):
         """

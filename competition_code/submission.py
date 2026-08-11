@@ -180,6 +180,15 @@ class RoarCompetitionSolution:
             self.current_section,
         )
 
+        if self.throttle_controller.last_longitudinal_debug:
+            self.throttle_controller.last_longitudinal_debug.update(
+                {
+                    "current_waypoint_index": self.current_waypoint_idx,
+                    "lookahead_waypoint_index": nextWaypointIndex,
+                    "lookahead_count": self.get_lookahead_value(current_speed_kmh),
+                }
+            )
+
         steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)
         
         if self.current_section == 2:
