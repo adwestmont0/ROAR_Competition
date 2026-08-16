@@ -28,6 +28,7 @@ from experiments.analysis.terminal_prediction_v2 import analyze as analyze_termi
 from experiments.analysis.terminal_tail_bridge import analyze as analyze_terminal_tail_bridge
 from experiments.analysis.terminal_live_validation import analyze as analyze_terminal_live_validation
 from experiments.analysis.wp1774_release_margin import analyze as analyze_wp1774_release_margin
+from experiments.analysis.long_horizon_residual import analyze as analyze_long_horizon_residual
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -149,6 +150,9 @@ def main() -> int:
     wp1774.add_argument("--results-dir", default="experiment_results")
     wp1774.add_argument("--experiment-name", default="terminal-tail-fresh-10")
 
+    long_residual = subparsers.add_parser("long-horizon-residual")
+    long_residual.add_argument("--results-dir", default="experiment_results")
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -268,6 +272,12 @@ def main() -> int:
 
     if args.command == "wp1774-release-margin":
         result=analyze_wp1774_release_margin(root,args.results_dir,args.experiment_name)
+        print_results(result)
+        print_human_report(result,root)
+        return 0
+
+    if args.command == "long-horizon-residual":
+        result=analyze_long_horizon_residual(root,args.results_dir)
         print_results(result)
         print_human_report(result,root)
         return 0
