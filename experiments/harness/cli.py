@@ -27,6 +27,7 @@ from experiments.analysis.terminal_release import analyze as analyze_terminal_re
 from experiments.analysis.terminal_prediction_v2 import analyze as analyze_terminal_prediction_v2
 from experiments.analysis.terminal_tail_bridge import analyze as analyze_terminal_tail_bridge
 from experiments.analysis.terminal_live_validation import analyze as analyze_terminal_live_validation
+from experiments.analysis.wp1774_release_margin import analyze as analyze_wp1774_release_margin
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -144,6 +145,10 @@ def main() -> int:
     live_validation.add_argument("--tolerance", type=float, default=1e-9)
     live_validation.add_argument("--experiment-name")
 
+    wp1774 = subparsers.add_parser("wp1774-release-margin")
+    wp1774.add_argument("--results-dir", default="experiment_results")
+    wp1774.add_argument("--experiment-name", default="terminal-tail-fresh-10")
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -259,6 +264,12 @@ def main() -> int:
 
     if args.command == "terminal-live-validation":
         print_results(analyze_terminal_live_validation(root,args.results_dir,args.tolerance,args.experiment_name))
+        return 0
+
+    if args.command == "wp1774-release-margin":
+        result=analyze_wp1774_release_margin(root,args.results_dir,args.experiment_name)
+        print_results(result)
+        print_human_report(result,root)
         return 0
 
     root, config, registry = load_inputs(args.config)
