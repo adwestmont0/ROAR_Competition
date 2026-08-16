@@ -142,6 +142,7 @@ def main() -> int:
     live_validation = subparsers.add_parser("terminal-live-validation")
     live_validation.add_argument("--results-dir", default="experiment_results")
     live_validation.add_argument("--tolerance", type=float, default=1e-9)
+    live_validation.add_argument("--experiment-name")
 
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
@@ -257,7 +258,7 @@ def main() -> int:
         return 0
 
     if args.command == "terminal-live-validation":
-        print_results(analyze_terminal_live_validation(root,args.results_dir,args.tolerance))
+        print_results(analyze_terminal_live_validation(root,args.results_dir,args.tolerance,args.experiment_name))
         return 0
 
     root, config, registry = load_inputs(args.config)
