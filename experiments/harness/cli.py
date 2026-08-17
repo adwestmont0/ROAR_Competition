@@ -30,6 +30,7 @@ from experiments.analysis.terminal_live_validation import analyze as analyze_ter
 from experiments.analysis.wp1774_release_margin import analyze as analyze_wp1774_release_margin
 from experiments.analysis.long_horizon_residual import analyze as analyze_long_horizon_residual
 from experiments.analysis.residual_uncertainty import analyze as analyze_residual_uncertainty
+from experiments.analysis.residual_regimes import analyze as analyze_residual_regimes
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -156,6 +157,9 @@ def main() -> int:
 
     residual_uncertainty = subparsers.add_parser("residual-uncertainty")
     residual_uncertainty.add_argument("--results-dir", default="experiment_results")
+
+    residual_regimes = subparsers.add_parser("residual-regimes")
+    residual_regimes.add_argument("--results-dir", default="experiment_results")
 
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
@@ -288,6 +292,12 @@ def main() -> int:
 
     if args.command == "residual-uncertainty":
         result=analyze_residual_uncertainty(root,args.results_dir)
+        print_results(result)
+        print_human_report(result,root)
+        return 0
+
+    if args.command == "residual-regimes":
+        result=analyze_residual_regimes(root,args.results_dir)
         print_results(result)
         print_human_report(result,root)
         return 0
