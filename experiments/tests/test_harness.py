@@ -223,6 +223,30 @@ class HarnessTests(unittest.TestCase):
             [True, False, True, False, True],
         )
 
+    def test_explicit_matrix_is_bracketed_without_intermediate_controls(self):
+        config = self.base_config()
+        config.pop("sweep")
+        config["matrix"] = [{"a": 1}, {"a": 2}]
+        config["controls"]["every"] = 999
+        expanded = expand_config(config)
+        self.assertEqual(
+            expanded,
+            [
+                {"parameters": {}, "is_control": True},
+                {"parameters": {"a": 1}, "is_control": False},
+                {"parameters": {"a": 2}, "is_control": False},
+                {"parameters": {}, "is_control": True},
+            ],
+        )
+
+    def test_fixed_parameters_apply_to_treatments_and_controls(self):
+        config = self.base_config()
+        config["fixed_parameters"] = {"runtime.headless": 1}
+        expanded = expand_config(config)
+        self.assertTrue(all(
+            item["parameters"]["runtime.headless"] == 1 for item in expanded
+        ))
+
     def test_exact_parameter_substitution(self):
         registry = {
             "mu": {
@@ -244,6 +268,34 @@ class HarnessTests(unittest.TestCase):
             )
             self.assertIn("-mu = 3.4", diff)
             self.assertIn("+mu = 3.3", diff)
+
+    def test_one_parameter_can_apply_multiple_file_edits(self):
+        registry = {
+            "event": {
+                "type": "int", "minimum": 1, "maximum": 3,
+                "edits": [
+                    {
+                        "file": "controller.py",
+                        "baseline_text": "event = 0\n",
+                        "replacement_template": "event = {value}\n",
+                    },
+                    {
+                        "file": "telemetry.py",
+                        "baseline_text": "fields = []\n",
+                        "replacement_template": "fields = [{value}]\n",
+                    },
+                ],
+            }
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "controller.py").write_text("event = 0\n", encoding="utf-8")
+            (root / "telemetry.py").write_text("fields = []\n", encoding="utf-8")
+            diff = apply_parameters(root, {"event": 2}, registry)
+            self.assertEqual((root / "controller.py").read_text(), "event = 2\n")
+            self.assertEqual((root / "telemetry.py").read_text(), "fields = [2]\n")
+            self.assertIn("a/controller.py", diff)
+            self.assertIn("a/telemetry.py", diff)
 
     def test_stop_conditions(self):
         counters = {"collision": 2, "infra_error": 0, "controller_hang": 0}

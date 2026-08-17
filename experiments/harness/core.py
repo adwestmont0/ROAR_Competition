@@ -105,14 +105,19 @@ def validate_config(config: Dict[str, Any]) -> None:
     carla_config = config["carla"]
     if carla_config.get("expected_map") != "Carla/Maps/Monza":
         raise ValueError("carla.expected_map must be Carla/Maps/Monza")
-    if "sweep" not in config and "parameters" not in config:
-        raise ValueError("Config must contain sweep or parameters")
+    if not any(name in config for name in ("sweep", "parameters", "matrix")):
+        raise ValueError("Config must contain sweep, parameters, or matrix")
 
 
 def expand_config(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     validate_config(config)
     primary: List[Dict[str, Any]] = []
-    if "sweep" in config:
+    if "matrix" in config:
+        repetitions = int(config.get("repetitions", 1))
+        for parameters in config["matrix"]:
+            for _ in range(repetitions):
+                primary.append(dict(parameters))
+    elif "sweep" in config:
         sweep = config["sweep"]
         repetitions = int(sweep.get("repetitions", 1))
         for value in sweep["values"]:
@@ -123,11 +128,15 @@ def expand_config(config: Dict[str, Any]) -> List[Dict[str, Any]]:
         for _ in range(repetitions):
             primary.append(dict(config.get("parameters", {})))
 
+    fixed_parameters = dict(config.get("fixed_parameters", {}))
+    primary = [dict(fixed_parameters, **item) for item in primary]
     controls = config.get("controls", {})
     if not controls.get("enabled", False):
         return [{"parameters": item, "is_control": False} for item in primary]
 
-    control_parameters = dict(controls.get("parameters", {}))
+    control_parameters = dict(
+        fixed_parameters, **controls.get("parameters", {})
+    )
     every = max(1, int(controls.get("every", 1)))
     expanded: List[Dict[str, Any]] = []
     if controls.get("at_start", True):
@@ -188,28 +197,44 @@ def apply_parameters(
         if name not in registry:
             raise ValueError(f"Unregistered experiment parameter: {name}")
         specification = registry[name]
-        source_path = checkout / specification["file"]
-        before = source_path.read_text(encoding="utf-8")
-        baseline_text = specification["baseline_text"]
-        required_matches = int(specification.get("required_matches", 1))
-        matches = before.count(baseline_text)
-        if matches != required_matches:
-            raise ValueError(
-                f"{name}: expected {required_matches} exact baseline matches, found {matches}"
+        formatted_value = format_parameter_value(specification, value)
+        edits = specification.get("edits", [specification])
+        for edit in edits:
+            source_path = checkout / edit["file"]
+            if "copy_from" in edit:
+                if source_path.exists():
+                    raise ValueError(f"{name} ({edit['file']}): destination already exists")
+                source = Path(__file__).resolve().parents[2] / edit["copy_from"]
+                source_path.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+                diffs.extend(
+                    difflib.unified_diff(
+                        [], source_path.read_text(encoding="utf-8").splitlines(keepends=True),
+                        fromfile=f"a/{edit['file']}", tofile=f"b/{edit['file']}",
+                    )
+                )
+                continue
+            before = source_path.read_text(encoding="utf-8")
+            baseline_text = edit["baseline_text"]
+            required_matches = int(edit.get("required_matches", 1))
+            matches = before.count(baseline_text)
+            if matches != required_matches:
+                raise ValueError(
+                    f"{name} ({edit['file']}): expected {required_matches} exact "
+                    f"baseline matches, found {matches}"
+                )
+            rendered = edit["replacement_template"].replace(
+                "{value}", formatted_value
             )
-        rendered = specification["replacement_template"].format(
-            value=format_parameter_value(specification, value)
-        )
-        after = before.replace(baseline_text, rendered, required_matches)
-        source_path.write_text(after, encoding="utf-8")
-        diffs.extend(
-            difflib.unified_diff(
-                before.splitlines(keepends=True),
-                after.splitlines(keepends=True),
-                fromfile=f"a/{specification['file']}",
-                tofile=f"b/{specification['file']}",
+            after = before.replace(baseline_text, rendered, required_matches)
+            source_path.write_text(after, encoding="utf-8")
+            diffs.extend(
+                difflib.unified_diff(
+                    before.splitlines(keepends=True),
+                    after.splitlines(keepends=True),
+                    fromfile=f"a/{edit['file']}",
+                    tofile=f"b/{edit['file']}",
+                )
             )
-        )
     return "".join(diffs)
 
 

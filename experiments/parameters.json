@@ -1,4 +1,100 @@
 {
+  "qualifying_brake.two_event_combination": {
+    "type": "int", "minimum": 1, "maximum": 1,
+    "edits": [
+      {
+        "file": "competition_code/qualifying_brake_combination.py",
+        "copy_from": "experiments/qualifying_brake_combination.py"
+      },
+      {
+        "file": "competition_code/submission.py",
+        "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "replacement_template": "        from qualifying_brake_combination import apply_combined_brake_override\n        throttle, brake, gear = apply_combined_brake_override(\n            self, throttle, brake, gear, current_speed_kmh\n        )\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "        \"controller_lookahead_count\",\n",
+        "replacement_template": "        \"controller_lookahead_count\",\n        \"override_selected_event\",\n        \"override_onset_delay_ticks\",\n        \"override_release_early_ticks\",\n        \"override_raw_winner_brake\",\n        \"override_applied_brake\",\n        \"override_tick_suppressed\",\n        \"override_suppression_reason\",\n        \"override_brake_ordinal\",\n        \"override_event_state\",\n        \"override_brake_rerequest\",\n        \"override_released_ticks_before_rerequest\",\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n",
+        "replacement_template": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n                \"override_selected_event\": longitudinal.get(\"override_selected_event\"),\n                \"override_onset_delay_ticks\": longitudinal.get(\"override_onset_delay_ticks\"),\n                \"override_release_early_ticks\": longitudinal.get(\"override_release_early_ticks\"),\n                \"override_raw_winner_brake\": longitudinal.get(\"override_raw_winner_brake\"),\n                \"override_applied_brake\": longitudinal.get(\"override_applied_brake\"),\n                \"override_tick_suppressed\": longitudinal.get(\"override_tick_suppressed\"),\n                \"override_suppression_reason\": longitudinal.get(\"override_suppression_reason\"),\n                \"override_brake_ordinal\": longitudinal.get(\"override_brake_ordinal\"),\n                \"override_event_state\": longitudinal.get(\"override_event_state\"),\n                \"override_brake_rerequest\": longitudinal.get(\"override_brake_rerequest\"),\n                \"override_released_ticks_before_rerequest\": longitudinal.get(\"override_released_ticks_before_rerequest\"),\n",
+        "required_matches": 1
+      }
+    ]
+  },
+  "qualifying_brake.wp794_lap3_final_tick": {
+    "type": "int", "minimum": 1, "maximum": 1,
+    "edits": [
+      {
+        "file": "competition_code/qualifying_brake_wp794_lap3.py",
+        "copy_from": "experiments/qualifying_brake_wp794_lap3.py"
+      },
+      {
+        "file": "competition_code/submission.py",
+        "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "replacement_template": "        from qualifying_brake_wp794_lap3 import apply_wp794_lap3_override\n        throttle, brake, gear = apply_wp794_lap3_override(\n            self, throttle, brake, gear, current_speed_kmh\n        )\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "required_matches": 1
+      }
+    ]
+  },
+  "runtime.low_bandwidth_sensor_mode": {
+    "type": "int", "minimum": 1, "maximum": 1,
+    "edits": [
+      {
+        "file": "competition_code/competition_runner.py",
+        "baseline_text": "        image_width=1024,\n        image_height=768\n",
+        "replacement_template": "        image_width=128,\n        image_height=96\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/competition_runner.py",
+        "baseline_text": "        enable_visualization=True\n",
+        "replacement_template": "        enable_visualization=False\n",
+        "required_matches": 1
+      }
+    ]
+  },
+  "qualifying_brake.event": {
+    "type": "int", "minimum": 1, "maximum": 3,
+    "edits": [
+      {
+        "file": "competition_code/submission.py",
+        "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "replacement_template": "        qualifying_events = {\n            1: (2475, 2585, 41),\n            2: (1210, 1300, 24),\n            3: (1760, 1825, 15),\n        }\n        qualifying_event_id = {value}\n        qualifying_low, qualifying_high, qualifying_baseline_ticks = (\n            qualifying_events[qualifying_event_id]\n        )\n        qualifying_in_event = (\n            qualifying_low <= self.current_waypoint_idx <= qualifying_high\n        )\n        if not qualifying_in_event:\n            self._qualifying_brake_ordinal = 0\n            self._qualifying_last_release_suppression_tick = None\n            qualifying_event_state = \"outside\"\n        else:\n            qualifying_event_state = \"armed\"\n\n        qualifying_raw_brake = float(brake)\n        qualifying_suppressed = False\n        qualifying_suppression_reason = \"\"\n        qualifying_rerequest = False\n        qualifying_released_ticks_before_rerequest = None\n        if qualifying_in_event and qualifying_raw_brake > 0:\n            self._qualifying_brake_ordinal = (\n                getattr(self, \"_qualifying_brake_ordinal\", 0) + 1\n            )\n            qualifying_ordinal = self._qualifying_brake_ordinal\n            qualifying_last_suppression = getattr(\n                self, \"_qualifying_last_release_suppression_tick\", None\n            )\n            if qualifying_last_suppression is not None:\n                qualifying_rerequest = True\n                qualifying_released_ticks_before_rerequest = max(\n                    0, self.num_ticks - qualifying_last_suppression - 1\n                )\n            if qualifying_ordinal <= self._qualifying_onset_delay_ticks:\n                qualifying_suppressed = True\n                qualifying_suppression_reason = \"onset-delay\"\n                qualifying_event_state = \"onset-delay-suppressed\"\n            elif (\n                qualifying_baseline_ticks - self._qualifying_release_early_ticks\n                < qualifying_ordinal <= qualifying_baseline_ticks\n            ):\n                qualifying_suppressed = True\n                qualifying_suppression_reason = \"early-release\"\n                qualifying_event_state = \"early-release-suppressed\"\n                if qualifying_rerequest:\n                    if qualifying_released_ticks_before_rerequest == 0:\n                        qualifying_event_state += \"-rerequest-immediate\"\n                    else:\n                        qualifying_event_state += \"-rerequest-delayed\"\n                self._qualifying_last_release_suppression_tick = self.num_ticks\n            elif qualifying_rerequest:\n                qualifying_event_state = (\n                    \"brake-rerequest-immediate\"\n                    if qualifying_released_ticks_before_rerequest == 0\n                    else \"brake-rerequest-delayed\"\n                )\n            else:\n                qualifying_event_state = \"braking\"\n            if qualifying_suppressed:\n                throttle = 0.0\n                brake = 0.0\n                gear = max(1, int(current_speed_kmh / 60))\n        elif qualifying_in_event:\n            qualifying_ordinal = getattr(self, \"_qualifying_brake_ordinal\", 0)\n            if getattr(self, \"_qualifying_last_release_suppression_tick\", None) is not None:\n                qualifying_event_state = \"released\"\n        else:\n            qualifying_ordinal = 0\n\n        if self.throttle_controller.last_longitudinal_debug:\n            self.throttle_controller.last_longitudinal_debug.update(\n                {\n                    \"override_selected_event\": qualifying_event_id,\n                    \"override_onset_delay_ticks\": self._qualifying_onset_delay_ticks,\n                    \"override_release_early_ticks\": self._qualifying_release_early_ticks,\n                    \"override_raw_winner_brake\": qualifying_raw_brake,\n                    \"override_applied_brake\": float(brake),\n                    \"override_tick_suppressed\": qualifying_suppressed,\n                    \"override_suppression_reason\": qualifying_suppression_reason,\n                    \"override_brake_ordinal\": qualifying_ordinal,\n                    \"override_event_state\": qualifying_event_state,\n                    \"override_brake_rerequest\": qualifying_rerequest,\n                    \"override_released_ticks_before_rerequest\": qualifying_released_ticks_before_rerequest,\n                }\n            )\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "        \"controller_lookahead_count\",\n",
+        "replacement_template": "        \"controller_lookahead_count\",\n        \"override_selected_event\",\n        \"override_onset_delay_ticks\",\n        \"override_release_early_ticks\",\n        \"override_raw_winner_brake\",\n        \"override_applied_brake\",\n        \"override_tick_suppressed\",\n        \"override_suppression_reason\",\n        \"override_brake_ordinal\",\n        \"override_event_state\",\n        \"override_brake_rerequest\",\n        \"override_released_ticks_before_rerequest\",\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n",
+        "replacement_template": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n                \"override_selected_event\": longitudinal.get(\"override_selected_event\"),\n                \"override_onset_delay_ticks\": longitudinal.get(\"override_onset_delay_ticks\"),\n                \"override_release_early_ticks\": longitudinal.get(\"override_release_early_ticks\"),\n                \"override_raw_winner_brake\": longitudinal.get(\"override_raw_winner_brake\"),\n                \"override_applied_brake\": longitudinal.get(\"override_applied_brake\"),\n                \"override_tick_suppressed\": longitudinal.get(\"override_tick_suppressed\"),\n                \"override_suppression_reason\": longitudinal.get(\"override_suppression_reason\"),\n                \"override_brake_ordinal\": longitudinal.get(\"override_brake_ordinal\"),\n                \"override_event_state\": longitudinal.get(\"override_event_state\"),\n                \"override_brake_rerequest\": longitudinal.get(\"override_brake_rerequest\"),\n                \"override_released_ticks_before_rerequest\": longitudinal.get(\"override_released_ticks_before_rerequest\"),\n",
+        "required_matches": 1
+      }
+    ]
+  },
+  "qualifying_brake.onset_delay_ticks": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 0,
+    "baseline_text": "        self.num_ticks = 0\n",
+    "replacement_template": "        self.num_ticks = 0\n        self._qualifying_onset_delay_ticks = {value}\n",
+    "type": "int", "minimum": 0, "maximum": 4, "required_matches": 1
+  },
+  "qualifying_brake.release_early_ticks": {
+    "file": "competition_code/submission.py",
+    "baseline_value": 0,
+    "baseline_text": "        self.section_start_ticks = 0\n",
+    "replacement_template": "        self.section_start_ticks = 0\n        self._qualifying_release_early_ticks = {value}\n",
+    "type": "int", "minimum": 0, "maximum": 4, "required_matches": 1
+  },
   "causal.wp1779_1803_suppress_brake_ticks": {
     "file": "competition_code/submission.py",
     "baseline_value": 0,

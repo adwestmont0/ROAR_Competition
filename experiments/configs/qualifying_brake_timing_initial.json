@@ -1,0 +1,52 @@
+{
+  "name": "qualifying-brake-timing-initial",
+  "baseline_commit": "ee30402",
+  "results_dir": "experiment_results",
+  "carla": {
+    "host": "172.31.86.36",
+    "port": 2000,
+    "timeout_seconds": 10,
+    "expected_map": "Carla/Maps/Monza"
+  },
+  "execution": {
+    "client_timeout_seconds": 600,
+    "max_infra_retries": 2
+  },
+  "fixed_parameters": {
+    "runtime.low_bandwidth_sensor_mode": 1
+  },
+  "recovery": {
+    "provider": "aws_ssm",
+    "region": "us-east-1",
+    "instance_id": "i-045f5f07dd2aa5ad8",
+    "document_name": "AWS-RunPowerShellScript",
+    "restart_command": "& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'",
+    "command_timeout_seconds": 240,
+    "readiness_timeout_seconds": 240,
+    "readiness_poll_seconds": 5
+  },
+  "matrix": [
+    {"qualifying_brake.event": 1, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 1, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 2},
+    {"qualifying_brake.event": 1, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 1, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 2},
+    {"qualifying_brake.event": 2, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 2, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 2},
+    {"qualifying_brake.event": 2, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 2, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 2},
+    {"qualifying_brake.event": 3, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 3, "qualifying_brake.onset_delay_ticks": 0, "qualifying_brake.release_early_ticks": 2},
+    {"qualifying_brake.event": 3, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 1},
+    {"qualifying_brake.event": 3, "qualifying_brake.onset_delay_ticks": 1, "qualifying_brake.release_early_ticks": 2}
+  ],
+  "controls": {
+    "enabled": true,
+    "every": 999,
+    "at_start": true,
+    "at_end": true,
+    "parameters": {}
+  },
+  "stop_conditions": {
+    "stop_on_control_failure": true
+  }
+}

@@ -20,6 +20,7 @@ from experiments.search.adapter import run_search
 from experiments.analysis.velocity_profile import analyze as analyze_velocity_profile
 from experiments.analysis.velocity_profile_v2 import analyze as analyze_velocity_profile_v2
 from experiments.analysis.counterfactual_opportunity import analyze as analyze_counterfactual
+from experiments.analysis.braking_timing import analyze as analyze_braking_timing
 
 
 def load_inputs(config_path: Path) -> tuple:
@@ -108,6 +109,9 @@ def main() -> int:
     counterfactual.add_argument("--extension-m", type=float, default=300.0)
     counterfactual.add_argument("--json-only", action="store_true")
 
+    braking_report = subparsers.add_parser("braking-report")
+    braking_report.add_argument("config", type=Path)
+
     run_one = subparsers.add_parser("run-one")
     run_one.add_argument("config", type=Path)
     run_one.add_argument("--experiment-id", required=True)
@@ -177,6 +181,10 @@ def main() -> int:
         print_results(result)
         if not args.json_only:
             print_human_report(result, root)
+        return 0
+
+    if args.command == "braking-report":
+        print_results(analyze_braking_timing(root, args.config.resolve()))
         return 0
 
     root, config, registry = load_inputs(args.config)
