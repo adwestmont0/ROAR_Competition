@@ -1,0 +1,3468 @@
+{
+  "controls": [
+    {
+      "aggregate": {
+        "applied_brake_ticks": 41.666666666666664,
+        "downstream": {
+          "100": {
+            "speed_kmh": 97.8909782409668,
+            "time_from_entry_seconds": 6.066666666667473,
+            "time_from_release_seconds": 3.716666666667161
+          },
+          "200": {
+            "speed_kmh": 133.13171310424806,
+            "time_from_entry_seconds": 9.100000000000776,
+            "time_from_release_seconds": 6.7500000000005755
+          },
+          "25": {
+            "speed_kmh": 92.96882629394531,
+            "time_from_entry_seconds": 3.150000000000418,
+            "time_from_release_seconds": 0.8000000000001061
+          },
+          "50": {
+            "speed_kmh": 94.87581253051758,
+            "time_from_entry_seconds": 4.200000000000557,
+            "time_from_release_seconds": 1.8500000000002454
+          }
+        },
+        "entry_speed_kmh": 257.5357360839844,
+        "local_time_to_next_brake_seconds": 24.200000000003236,
+        "minimum_speed_kmh": 89.86509475708009,
+        "raw_winner_brake_ticks": 41.666666666666664,
+        "release_speed_kmh": 122.55137329101562,
+        "release_waypoint": 2562.0,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T063401.185171Z-71b66028",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.6000000000405,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 42,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.64890823364259,
+              "time_from_entry_seconds": 6.049999999999656,
+              "time_from_release_seconds": 3.6999999999997897,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 132.98494262695314,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 93.85526733398437,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.78189849853516,
+              "time_from_entry_seconds": 4.199999999999761,
+              "time_from_release_seconds": 1.8499999999998948,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.20000000000097,
+          "minimum_speed_kmh": 91.04043273925781,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 121.76176300048829,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 42,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.84554290771484,
+              "time_from_entry_seconds": 6.050000000001376,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.278483581543,
+              "time_from_entry_seconds": 9.100000000002069,
+              "time_from_release_seconds": 6.750000000001535,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 93.26466293334961,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.79364700317383,
+              "time_from_entry_seconds": 4.200000000000955,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.200000000005502,
+          "minimum_speed_kmh": 90.6704200744629,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 121.74811248779297,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 41,
+          "downstream": {
+            "100": {
+              "speed_kmh": 98.17848358154298,
+              "time_from_entry_seconds": 6.100000000001387,
+              "time_from_release_seconds": 3.7500000000008527,
+              "waypoint": 2611
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 91.78654861450195,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 93.05189208984375,
+              "time_from_entry_seconds": 4.200000000000955,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.5362854003906,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 87.88443145751954,
+          "raw_winner_brake_ticks": 41,
+          "release_speed_kmh": 124.14424438476563,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 24.333333333333332,
+        "downstream": {
+          "100": {
+            "speed_kmh": 159.39111328125,
+            "time_from_entry_seconds": 3.850000000000511,
+            "time_from_release_seconds": 2.300000000000305
+          },
+          "200": {
+            "speed_kmh": 168.4843276977539,
+            "time_from_entry_seconds": 6.000000000000796,
+            "time_from_release_seconds": 4.45000000000059
+          },
+          "25": {
+            "speed_kmh": 152.8282653808594,
+            "time_from_entry_seconds": 2.1666666666669414,
+            "time_from_release_seconds": 0.6166666666667359
+          },
+          "50": {
+            "speed_kmh": 148.57088470458984,
+            "time_from_entry_seconds": 2.700000000000358,
+            "time_from_release_seconds": 1.1500000000001525
+          }
+        },
+        "entry_speed_kmh": 254.75745849609376,
+        "local_time_to_next_brake_seconds": 20.400000000002706,
+        "minimum_speed_kmh": 148.49752349853517,
+        "raw_winner_brake_ticks": 24.333333333333332,
+        "release_speed_kmh": 175.89391479492187,
+        "release_waypoint": 1275.6666666666667,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 1.5500000000002057,
+        "throttle_reapplication_waypoint": 1275.6666666666667,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T063401.185171Z-71b66028",
+      "collision_impulse": null,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 321.6000000000405,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.28670654296874,
+              "time_from_entry_seconds": 3.849999999999781,
+              "time_from_release_seconds": 2.2999999999998693,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.3298553466797,
+              "time_from_entry_seconds": 5.999999999999659,
+              "time_from_release_seconds": 4.449999999999747,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 150.6105697631836,
+              "time_from_entry_seconds": 2.2999999999998693,
+              "time_from_release_seconds": 0.7499999999999574,
+              "waypoint": 1294
+            },
+            "50": {
+              "speed_kmh": 148.3396957397461,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.1499999999999346,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.74268188476563,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 20.39999999999884,
+          "minimum_speed_kmh": 148.27383270263672,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 175.9255828857422,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.549999999999912,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 25,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.30410614013672,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1323
+            },
+            "200": {
+              "speed_kmh": 168.34478302001955,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1371
+            },
+            "25": {
+              "speed_kmh": 153.58403320312502,
+              "time_from_entry_seconds": 2.1000000000004775,
+              "time_from_release_seconds": 0.5500000000001251,
+              "waypoint": 1288
+            },
+            "50": {
+              "speed_kmh": 148.64166870117188,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1300
+            }
+          },
+          "entry_speed_kmh": 254.70889892578126,
+          "entry_waypoint": 1231,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 20.45000000000465,
+          "minimum_speed_kmh": 148.54735107421877,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 175.73999633789063,
+          "release_waypoint": 1275,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1275,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.58252716064453,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.7783447265625,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 154.29019317626953,
+              "time_from_entry_seconds": 2.1000000000004775,
+              "time_from_release_seconds": 0.5500000000001251,
+              "waypoint": 1289
+            },
+            "50": {
+              "speed_kmh": 148.73128967285157,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.82079467773437,
+          "entry_waypoint": 1232,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 20.350000000004627,
+          "minimum_speed_kmh": 148.67138671875,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 176.01616516113282,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 14.666666666666666,
+        "downstream": {
+          "100": {
+            "speed_kmh": 172.26027832031252,
+            "time_from_entry_seconds": 2.6500000000003467,
+            "time_from_release_seconds": 1.9166666666669177
+          },
+          "200": {
+            "speed_kmh": 160.03494415283203,
+            "time_from_entry_seconds": 4.866666666667309,
+            "time_from_release_seconds": 4.13333333333388
+          },
+          "25": {
+            "speed_kmh": 196.9516571044922,
+            "time_from_entry_seconds": 1.1833333333334888,
+            "time_from_release_seconds": 0.4500000000000597
+          },
+          "50": {
+            "speed_kmh": 187.5476531982422,
+            "time_from_entry_seconds": 1.6500000000002142,
+            "time_from_release_seconds": 0.9166666666667851
+          }
+        },
+        "entry_speed_kmh": 256.3737854003906,
+        "local_time_to_next_brake_seconds": 25.25000000000335,
+        "minimum_speed_kmh": 189.56542510986327,
+        "raw_winner_brake_ticks": 14.666666666666666,
+        "release_speed_kmh": 219.5556838989258,
+        "release_waypoint": 1804.0,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 0.733333333333429,
+        "throttle_reapplication_waypoint": 1804.0,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T063401.185171Z-71b66028",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 321.6000000000405,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 15,
+          "downstream": {
+            "100": {
+              "speed_kmh": 169.79620056152345,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.9499999999998892,
+              "waypoint": 1853
+            },
+            "200": {
+              "speed_kmh": 160.22017364501954,
+              "time_from_entry_seconds": 4.8999999999997215,
+              "time_from_release_seconds": 4.149999999999764,
+              "waypoint": 1901
+            },
+            "25": {
+              "speed_kmh": 195.3757095336914,
+              "time_from_entry_seconds": 1.1999999999999318,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1817
+            },
+            "50": {
+              "speed_kmh": 185.2517807006836,
+              "time_from_entry_seconds": 1.6999999999999034,
+              "time_from_release_seconds": 0.949999999999946,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.3747283935547,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.249999999998565,
+          "minimum_speed_kmh": 188.2711944580078,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 218.13148498535156,
+          "release_waypoint": 1805,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7499999999999574,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 15,
+          "downstream": {
+            "100": {
+              "speed_kmh": 169.70495910644533,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 160.19688262939454,
+              "time_from_entry_seconds": 4.900000000001114,
+              "time_from_release_seconds": 4.150000000000944,
+              "waypoint": 1901
+            },
+            "25": {
+              "speed_kmh": 195.3687469482422,
+              "time_from_entry_seconds": 1.2000000000002728,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1817
+            },
+            "50": {
+              "speed_kmh": 185.91494293212892,
+              "time_from_entry_seconds": 1.6500000000003752,
+              "time_from_release_seconds": 0.9000000000002046,
+              "waypoint": 1829
+            }
+          },
+          "entry_speed_kmh": 256.37217407226564,
+          "entry_waypoint": 1781,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 188.25519561767578,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 218.12795562744142,
+          "release_waypoint": 1805,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7500000000001705,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 177.27967529296876,
+              "time_from_entry_seconds": 2.55000000000058,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 1850
+            },
+            "200": {
+              "speed_kmh": 159.68777618408203,
+              "time_from_entry_seconds": 4.800000000001091,
+              "time_from_release_seconds": 4.100000000000932,
+              "waypoint": 1898
+            },
+            "25": {
+              "speed_kmh": 200.110514831543,
+              "time_from_entry_seconds": 1.1500000000002615,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1814
+            },
+            "50": {
+              "speed_kmh": 191.47623596191406,
+              "time_from_entry_seconds": 1.6000000000003638,
+              "time_from_release_seconds": 0.9000000000002046,
+              "waypoint": 1826
+            }
+          },
+          "entry_speed_kmh": 256.37445373535155,
+          "entry_waypoint": 1779,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 192.16988525390624,
+          "raw_winner_brake_ticks": 14,
+          "release_speed_kmh": 222.4076110839844,
+          "release_waypoint": 1802,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7000000000001592,
+          "throttle_reapplication_waypoint": 1802,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 41.666666666666664,
+        "downstream": {
+          "100": {
+            "speed_kmh": 97.84479446411133,
+            "time_from_entry_seconds": 6.066666666667473,
+            "time_from_release_seconds": 3.716666666667161
+          },
+          "200": {
+            "speed_kmh": 133.3435501098633,
+            "time_from_entry_seconds": 9.125000000000782,
+            "time_from_release_seconds": 6.775000000000581
+          },
+          "25": {
+            "speed_kmh": 92.93913803100587,
+            "time_from_entry_seconds": 3.150000000000418,
+            "time_from_release_seconds": 0.8000000000001061
+          },
+          "50": {
+            "speed_kmh": 94.78330307006836,
+            "time_from_entry_seconds": 4.200000000000557,
+            "time_from_release_seconds": 1.8500000000002454
+          }
+        },
+        "entry_speed_kmh": 257.5354339599609,
+        "local_time_to_next_brake_seconds": 24.200000000002973,
+        "minimum_speed_kmh": 89.83523025512696,
+        "raw_winner_brake_ticks": 41.666666666666664,
+        "release_speed_kmh": 122.4191162109375,
+        "release_waypoint": 2562.0,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T065713.616495Z-64aa786f",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.7500000000401,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 42,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.65309677124024,
+              "time_from_entry_seconds": 6.049999999999656,
+              "time_from_release_seconds": 3.6999999999997897,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 132.9886917114258,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 93.87085418701172,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.79538421630859,
+              "time_from_entry_seconds": 4.199999999999761,
+              "time_from_release_seconds": 1.8499999999998948,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.5354339599609,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.200000000000443,
+          "minimum_speed_kmh": 91.05700836181641,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 121.76317749023438,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 41,
+          "downstream": {
+            "100": {
+              "speed_kmh": 98.23420486450196,
+              "time_from_entry_seconds": 6.100000000001387,
+              "time_from_release_seconds": 3.7500000000008527,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.6984085083008,
+              "time_from_entry_seconds": 9.15000000000208,
+              "time_from_release_seconds": 6.800000000001546,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 91.09618148803712,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 92.77628631591797,
+              "time_from_entry_seconds": 4.200000000000955,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53540649414066,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.200000000005502,
+          "minimum_speed_kmh": 87.41319351196289,
+          "raw_winner_brake_ticks": 41,
+          "release_speed_kmh": 123.73290252685547,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 42,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.6470817565918,
+              "time_from_entry_seconds": 6.050000000001376,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2611
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 93.85037841796876,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.77823867797852,
+              "time_from_entry_seconds": 4.200000000000955,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 91.03548889160156,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 121.76126861572266,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 24.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 159.32890777587892,
+            "time_from_entry_seconds": 3.850000000000511,
+            "time_from_release_seconds": 2.300000000000305
+          },
+          "200": {
+            "speed_kmh": 168.3657669067383,
+            "time_from_entry_seconds": 6.000000000000796,
+            "time_from_release_seconds": 4.45000000000059
+          },
+          "25": {
+            "speed_kmh": 151.80406951904297,
+            "time_from_entry_seconds": 2.2333333333336234,
+            "time_from_release_seconds": 0.6833333333334176
+          },
+          "50": {
+            "speed_kmh": 148.40565032958986,
+            "time_from_entry_seconds": 2.700000000000358,
+            "time_from_release_seconds": 1.1500000000001525
+          }
+        },
+        "entry_speed_kmh": 254.74206848144533,
+        "local_time_to_next_brake_seconds": 20.400000000002706,
+        "minimum_speed_kmh": 148.34326171875,
+        "raw_winner_brake_ticks": 24.0,
+        "release_speed_kmh": 175.93460083007812,
+        "release_waypoint": 1276.0,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 1.5500000000002057,
+        "throttle_reapplication_waypoint": 1276.0,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T065713.616495Z-64aa786f",
+      "collision_impulse": null,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 321.7500000000401,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.2887390136719,
+              "time_from_entry_seconds": 3.849999999999781,
+              "time_from_release_seconds": 2.2999999999998693,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.3317092895508,
+              "time_from_entry_seconds": 5.999999999999659,
+              "time_from_release_seconds": 4.449999999999747,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 150.61199798583985,
+              "time_from_entry_seconds": 2.2999999999998693,
+              "time_from_release_seconds": 0.7499999999999574,
+              "waypoint": 1294
+            },
+            "50": {
+              "speed_kmh": 148.34194793701172,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.1499999999999346,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.74243469238283,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 20.39999999999884,
+          "minimum_speed_kmh": 148.27601623535156,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 175.9255554199219,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.549999999999912,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.40652618408203,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.4262466430664,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 154.18428497314454,
+              "time_from_entry_seconds": 2.1000000000004775,
+              "time_from_release_seconds": 0.5500000000001251,
+              "waypoint": 1289
+            },
+            "50": {
+              "speed_kmh": 148.53133850097657,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.72433471679688,
+          "entry_waypoint": 1232,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 20.40000000000464,
+          "minimum_speed_kmh": 148.47600860595705,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 175.93972778320312,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.2914581298828,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.33934478759767,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 150.61592559814454,
+              "time_from_entry_seconds": 2.300000000000523,
+              "time_from_release_seconds": 0.7500000000001705,
+              "waypoint": 1294
+            },
+            "50": {
+              "speed_kmh": 148.34366455078126,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.75943603515626,
+          "entry_waypoint": 1232,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 20.40000000000464,
+          "minimum_speed_kmh": 148.27776031494142,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 175.9385192871094,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 15.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 169.8833267211914,
+            "time_from_entry_seconds": 2.700000000000358,
+            "time_from_release_seconds": 1.9500000000002586
+          },
+          "200": {
+            "speed_kmh": 160.17908935546876,
+            "time_from_entry_seconds": 4.916666666667321,
+            "time_from_release_seconds": 4.166666666667221
+          },
+          "25": {
+            "speed_kmh": 195.40506591796876,
+            "time_from_entry_seconds": 1.2000000000001592,
+            "time_from_release_seconds": 0.4500000000000597
+          },
+          "50": {
+            "speed_kmh": 185.30760955810547,
+            "time_from_entry_seconds": 1.7000000000002256,
+            "time_from_release_seconds": 0.950000000000126
+          }
+        },
+        "entry_speed_kmh": 256.3740875244141,
+        "local_time_to_next_brake_seconds": 25.25000000000335,
+        "minimum_speed_kmh": 188.32217559814453,
+        "raw_winner_brake_ticks": 15.0,
+        "release_speed_kmh": 218.1293151855469,
+        "release_waypoint": 1805.0,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.0,
+        "throttle_reapplication_seconds_from_entry": 0.7500000000000995,
+        "throttle_reapplication_waypoint": 1805.0,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T065713.616495Z-64aa786f",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 321.7500000000401,
+      "is_control": true,
+      "outcome": "finished",
+      "parameters": {
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 15,
+          "downstream": {
+            "100": {
+              "speed_kmh": 169.75799560546875,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.9499999999998892,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 160.20594635009766,
+              "time_from_entry_seconds": 4.8999999999997215,
+              "time_from_release_seconds": 4.149999999999764,
+              "waypoint": 1901
+            },
+            "25": {
+              "speed_kmh": 195.38150482177736,
+              "time_from_entry_seconds": 1.1999999999999318,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1817
+            },
+            "50": {
+              "speed_kmh": 185.24582061767578,
+              "time_from_entry_seconds": 1.6999999999999034,
+              "time_from_release_seconds": 0.949999999999946,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.3781341552735,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.249999999998565,
+          "minimum_speed_kmh": 188.27230682373047,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 218.1373489379883,
+          "release_waypoint": 1805,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7499999999999574,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 15,
+          "downstream": {
+            "100": {
+              "speed_kmh": 170.10433959960938,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1853
+            },
+            "200": {
+              "speed_kmh": 160.11260375976562,
+              "time_from_entry_seconds": 4.9500000000011255,
+              "time_from_release_seconds": 4.200000000000955,
+              "waypoint": 1901
+            },
+            "25": {
+              "speed_kmh": 195.45840911865236,
+              "time_from_entry_seconds": 1.2000000000002728,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1817
+            },
+            "50": {
+              "speed_kmh": 185.42874298095703,
+              "time_from_entry_seconds": 1.7000000000003865,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1829
+            }
+          },
+          "entry_speed_kmh": 256.36887817382814,
+          "entry_waypoint": 1781,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 188.42523651123048,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 218.1187957763672,
+          "release_waypoint": 1805,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7500000000001705,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 15,
+          "downstream": {
+            "100": {
+              "speed_kmh": 169.7876449584961,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1853
+            },
+            "200": {
+              "speed_kmh": 160.21871795654297,
+              "time_from_entry_seconds": 4.900000000001114,
+              "time_from_release_seconds": 4.150000000000944,
+              "waypoint": 1901
+            },
+            "25": {
+              "speed_kmh": 195.37528381347656,
+              "time_from_entry_seconds": 1.2000000000002728,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1817
+            },
+            "50": {
+              "speed_kmh": 185.2482650756836,
+              "time_from_entry_seconds": 1.7000000000003865,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.37525024414066,
+          "entry_waypoint": 1781,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 188.26898345947265,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 218.13180084228517,
+          "release_waypoint": 1805,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7500000000001705,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        }
+      ]
+    }
+  ],
+  "experiment_name": "qualifying-brake-timing-initial",
+  "schema_version": 1,
+  "treatments": [
+    {
+      "aggregate": {
+        "applied_brake_ticks": 40.333333333333336,
+        "downstream": {
+          "100": {
+            "speed_kmh": 97.59888610839845,
+            "time_from_entry_seconds": 6.0166666666674615,
+            "time_from_release_seconds": 3.700000000000491
+          },
+          "200": {
+            "speed_kmh": 133.06231384277345,
+            "time_from_entry_seconds": 9.07500000000077,
+            "time_from_release_seconds": 6.7500000000005755
+          },
+          "25": {
+            "speed_kmh": 94.85460205078125,
+            "time_from_entry_seconds": 3.083333333333736,
+            "time_from_release_seconds": 0.7666666666667652
+          },
+          "50": {
+            "speed_kmh": 94.70115509033204,
+            "time_from_entry_seconds": 4.11666666666721,
+            "time_from_release_seconds": 1.8000000000002387
+          }
+        },
+        "entry_speed_kmh": 257.53538818359374,
+        "local_time_to_next_brake_seconds": 24.175000000002903,
+        "minimum_speed_kmh": 89.98580017089844,
+        "raw_winner_brake_ticks": 41.333333333333336,
+        "release_speed_kmh": 125.51424407958984,
+        "release_waypoint": 2561.3333333333335,
+        "rerequest_released_tick_gaps": [
+          0
+        ],
+        "suppressed_brake_ticks": 1.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T063741.944059Z-eb65a699",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.6000000000399,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 1,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 41,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.92397842407227,
+              "time_from_entry_seconds": 6.049999999999656,
+              "time_from_release_seconds": 3.6999999999997897,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.40735321044923,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 94.5276237487793,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 96.35263137817383,
+              "time_from_entry_seconds": 4.149999999999764,
+              "time_from_release_seconds": 1.7999999999998977,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.150000000000304,
+          "minimum_speed_kmh": 91.67543563842774,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 121.99424743652344,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2148,
+              "suppressed_tick": 2147
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.4350456237793,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2610
+            },
+            "200": {
+              "speed_kmh": 132.71727447509767,
+              "time_from_entry_seconds": 9.050000000002058,
+              "time_from_release_seconds": 6.750000000001535,
+              "waypoint": 1
+            },
+            "25": {
+              "speed_kmh": 95.01540298461914,
+              "time_from_entry_seconds": 3.0500000000006935,
+              "time_from_release_seconds": 0.7500000000001705,
+              "waypoint": 2573
+            },
+            "50": {
+              "speed_kmh": 93.87086791992188,
+              "time_from_entry_seconds": 4.100000000000932,
+              "time_from_release_seconds": 1.8000000000004093,
+              "waypoint": 2586
+            }
+          },
+          "entry_speed_kmh": 257.5353515625,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.200000000005502,
+          "minimum_speed_kmh": 89.13608322143556,
+          "raw_winner_brake_ticks": 41,
+          "release_speed_kmh": 127.2740707397461,
+          "release_waypoint": 2561,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.43763427734375,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2610
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 95.02077941894531,
+              "time_from_entry_seconds": 3.0500000000006935,
+              "time_from_release_seconds": 0.7500000000001705,
+              "waypoint": 2573
+            },
+            "50": {
+              "speed_kmh": 93.8799659729004,
+              "time_from_entry_seconds": 4.100000000000932,
+              "time_from_release_seconds": 1.8000000000004093,
+              "waypoint": 2586
+            }
+          },
+          "entry_speed_kmh": 257.5353515625,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 89.14588165283203,
+          "raw_winner_brake_ticks": 41,
+          "release_speed_kmh": 127.2744140625,
+          "release_waypoint": 2561,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 39.666666666666664,
+        "downstream": {
+          "100": {
+            "speed_kmh": 96.5953125,
+            "time_from_entry_seconds": 5.950000000000784,
+            "time_from_release_seconds": 3.633333333333814
+          },
+          "200": {
+            "speed_kmh": 132.00602645874022,
+            "time_from_entry_seconds": 9.000000000000753,
+            "time_from_release_seconds": 6.700000000000564
+          },
+          "25": {
+            "speed_kmh": 96.925341796875,
+            "time_from_entry_seconds": 3.1000000000004064,
+            "time_from_release_seconds": 0.7833333333334357
+          },
+          "50": {
+            "speed_kmh": 96.56274948120118,
+            "time_from_entry_seconds": 4.083333333333869,
+            "time_from_release_seconds": 1.7666666666668978
+          }
+        },
+        "entry_speed_kmh": 257.53569946289065,
+        "local_time_to_next_brake_seconds": 24.150000000002947,
+        "minimum_speed_kmh": 92.32539825439453,
+        "raw_winner_brake_ticks": 41.666666666666664,
+        "release_speed_kmh": 125.46615600585938,
+        "release_waypoint": 2561.3333333333335,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 2.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T063928.287957Z-93332402",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.40000000004,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 1,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.06086502075196,
+              "time_from_entry_seconds": 5.999999999999659,
+              "time_from_release_seconds": 3.6499999999997925,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.03054962158203,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 96.46634674072266,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 97.16697235107422,
+              "time_from_entry_seconds": 4.149999999999764,
+              "time_from_release_seconds": 1.7999999999998977,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.150000000000404,
+          "minimum_speed_kmh": 93.0974235534668,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 122.54988098144531,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2147,
+              "suppressed_tick": 2146
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2148,
+              "suppressed_tick": 2147
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 39,
+          "downstream": {
+            "100": {
+              "speed_kmh": 95.65819244384765,
+              "time_from_entry_seconds": 5.85000000000133,
+              "time_from_release_seconds": 3.6000000000008185,
+              "waypoint": 2609
+            },
+            "200": {
+              "speed_kmh": 130.98150329589845,
+              "time_from_entry_seconds": 8.900000000002024,
+              "time_from_release_seconds": 6.650000000001512,
+              "waypoint": 0
+            },
+            "25": {
+              "speed_kmh": 97.81983489990235,
+              "time_from_entry_seconds": 3.000000000000682,
+              "time_from_release_seconds": 0.7500000000001705,
+              "waypoint": 2572
+            },
+            "50": {
+              "speed_kmh": 95.33201522827149,
+              "time_from_entry_seconds": 3.950000000000898,
+              "time_from_release_seconds": 1.7000000000003865,
+              "waypoint": 2584
+            }
+          },
+          "entry_speed_kmh": 257.5362854003906,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.15000000000549,
+          "minimum_speed_kmh": 90.7564910888672,
+          "raw_winner_brake_ticks": 41,
+          "release_speed_kmh": 131.29630279541016,
+          "release_waypoint": 2560,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 4248,
+              "suppressed_tick": 4247
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.06688003540039,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 3.65000000000083,
+              "waypoint": 2611
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 96.48984375,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 97.18926086425782,
+              "time_from_entry_seconds": 4.150000000000944,
+              "time_from_release_seconds": 1.8000000000004093,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.5353515625,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 93.12228012084961,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 122.55228424072266,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 6346,
+              "suppressed_tick": 6345
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 6347,
+              "suppressed_tick": 6346
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 40.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 97.88450775146485,
+            "time_from_entry_seconds": 6.050000000000803,
+            "time_from_release_seconds": 3.700000000000491
+          },
+          "200": {
+            "speed_kmh": 133.35474243164063,
+            "time_from_entry_seconds": 9.100000000000776,
+            "time_from_release_seconds": 6.7500000000005755
+          },
+          "25": {
+            "speed_kmh": 94.01048583984375,
+            "time_from_entry_seconds": 3.150000000000418,
+            "time_from_release_seconds": 0.8000000000001061
+          },
+          "50": {
+            "speed_kmh": 95.99626693725585,
+            "time_from_entry_seconds": 4.15000000000055,
+            "time_from_release_seconds": 1.8000000000002387
+          }
+        },
+        "entry_speed_kmh": 257.535726928711,
+        "local_time_to_next_brake_seconds": 24.150000000002933,
+        "minimum_speed_kmh": 91.07427291870118,
+        "raw_winner_brake_ticks": 42.0,
+        "release_speed_kmh": 122.56206665039063,
+        "release_waypoint": 2562.0,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 2.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064114.878225Z-882938ce",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.3500000000399,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 1,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.83051910400391,
+              "time_from_entry_seconds": 6.049999999999656,
+              "time_from_release_seconds": 3.6999999999997897,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.3430419921875,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 93.67667083740234,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.761669921875,
+              "time_from_entry_seconds": 4.149999999999764,
+              "time_from_release_seconds": 1.7999999999998977,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53546142578125,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.150000000000375,
+          "minimum_speed_kmh": 90.74924011230469,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 122.52245635986328,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2148,
+              "suppressed_tick": 2147
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.8506446838379,
+              "time_from_entry_seconds": 6.050000000001376,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.36644287109377,
+              "time_from_entry_seconds": 9.100000000002069,
+              "time_from_release_seconds": 6.750000000001535,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 94.53709945678712,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 96.23449401855468,
+              "time_from_entry_seconds": 4.150000000000944,
+              "time_from_release_seconds": 1.8000000000004093,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53631286621095,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.15000000000549,
+          "minimum_speed_kmh": 91.53656158447266,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 122.59918212890625,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 4246,
+              "suppressed_tick": 4245
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 40,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.97235946655273,
+              "time_from_entry_seconds": 6.050000000001376,
+              "time_from_release_seconds": 3.7000000000008413,
+              "waypoint": 2611
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 93.8176872253418,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 95.9926368713379,
+              "time_from_entry_seconds": 4.150000000000944,
+              "time_from_release_seconds": 1.8000000000004093,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53540649414066,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 90.93701705932618,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 122.56456146240235,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 6346,
+              "suppressed_tick": 6345
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 39.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 97.0540786743164,
+            "time_from_entry_seconds": 6.000000000000796,
+            "time_from_release_seconds": 3.650000000000484
+          },
+          "200": {
+            "speed_kmh": 132.9894676208496,
+            "time_from_entry_seconds": 9.100000000000776,
+            "time_from_release_seconds": 6.7500000000005755
+          },
+          "25": {
+            "speed_kmh": 96.09898910522462,
+            "time_from_entry_seconds": 3.150000000000418,
+            "time_from_release_seconds": 0.8000000000001061
+          },
+          "50": {
+            "speed_kmh": 96.81678771972656,
+            "time_from_entry_seconds": 4.100000000000544,
+            "time_from_release_seconds": 1.750000000000232
+          }
+        },
+        "entry_speed_kmh": 257.5357360839844,
+        "local_time_to_next_brake_seconds": 24.20000000000295,
+        "minimum_speed_kmh": 92.61728897094727,
+        "raw_winner_brake_ticks": 42.0,
+        "release_speed_kmh": 123.11312713623047,
+        "release_waypoint": 2562.0,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 3.0,
+        "throttle_reapplication_seconds_from_entry": 2.350000000000312,
+        "throttle_reapplication_waypoint": 2562.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064300.756983Z-9aa3c387",
+      "collision_impulse": null,
+      "event_id": 1,
+      "event_name": "WP2501-2561",
+      "full_lap_time_seconds": 321.45000000003995,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 1,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 39,
+          "downstream": {
+            "100": {
+              "speed_kmh": 96.9481590270996,
+              "time_from_entry_seconds": 5.999999999999659,
+              "time_from_release_seconds": 3.6499999999997925,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 132.9668426513672,
+              "time_from_entry_seconds": 9.099999999999483,
+              "time_from_release_seconds": 6.749999999999616,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 96.41242446899415,
+              "time_from_entry_seconds": 3.149999999999821,
+              "time_from_release_seconds": 0.7999999999999545,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 96.96865539550781,
+              "time_from_entry_seconds": 4.099999999999767,
+              "time_from_release_seconds": 1.7499999999999005,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53540649414066,
+          "entry_waypoint": 2500,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 24.2000000000004,
+          "minimum_speed_kmh": 92.86961517333985,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 123.1438980102539,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3499999999998664,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2148,
+              "suppressed_tick": 2147
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 2149,
+              "suppressed_tick": 2148
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 39,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.00214309692383,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 3.65000000000083,
+              "waypoint": 2611
+            },
+            "200": {
+              "speed_kmh": 133.01209259033203,
+              "time_from_entry_seconds": 9.100000000002069,
+              "time_from_release_seconds": 6.750000000001535,
+              "waypoint": 2
+            },
+            "25": {
+              "speed_kmh": 96.51358108520508,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 97.09464797973634,
+              "time_from_entry_seconds": 4.100000000000932,
+              "time_from_release_seconds": 1.750000000000398,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.53631286621095,
+          "entry_waypoint": 2500,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 24.200000000005502,
+          "minimum_speed_kmh": 92.99934997558594,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 123.15039367675782,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 4247,
+              "suppressed_tick": 4246
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 4248,
+              "suppressed_tick": 4247
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 39,
+          "downstream": {
+            "100": {
+              "speed_kmh": 97.21193389892578,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 3.65000000000083,
+              "waypoint": 2611
+            },
+            "200": null,
+            "25": {
+              "speed_kmh": 95.37096176147462,
+              "time_from_entry_seconds": 3.1500000000007162,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 2574
+            },
+            "50": {
+              "speed_kmh": 96.38705978393556,
+              "time_from_entry_seconds": 4.100000000000932,
+              "time_from_release_seconds": 1.750000000000398,
+              "waypoint": 2587
+            }
+          },
+          "entry_speed_kmh": 257.5354888916016,
+          "entry_waypoint": 2500,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 91.98290176391602,
+          "raw_winner_brake_ticks": 42,
+          "release_speed_kmh": 123.04508972167969,
+          "release_waypoint": 2562,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 2.3500000000005343,
+          "throttle_reapplication_waypoint": 2562,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 6347,
+              "suppressed_tick": 6346
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 6348,
+              "suppressed_tick": 6347
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 23.333333333333332,
+        "downstream": {
+          "100": {
+            "speed_kmh": 159.3032409667969,
+            "time_from_entry_seconds": 3.7666666666671724,
+            "time_from_release_seconds": 2.283333333333639
+          },
+          "200": {
+            "speed_kmh": 168.7490478515625,
+            "time_from_entry_seconds": 5.933333333334123,
+            "time_from_release_seconds": 4.45000000000059
+          },
+          "25": {
+            "speed_kmh": 155.94515533447267,
+            "time_from_entry_seconds": 2.083333333333622,
+            "time_from_release_seconds": 0.600000000000089
+          },
+          "50": {
+            "speed_kmh": 149.50277709960938,
+            "time_from_entry_seconds": 2.6000000000003496,
+            "time_from_release_seconds": 1.1166666666668164
+          }
+        },
+        "entry_speed_kmh": 254.74858703613282,
+        "local_time_to_next_brake_seconds": 20.333333333336032,
+        "minimum_speed_kmh": 149.36014251708986,
+        "raw_winner_brake_ticks": 24.333333333333332,
+        "release_speed_kmh": 180.02698974609376,
+        "release_waypoint": 1274.6666666666667,
+        "rerequest_released_tick_gaps": [
+          0
+        ],
+        "suppressed_brake_ticks": 1.0,
+        "throttle_reapplication_seconds_from_entry": 1.4833333333335332,
+        "throttle_reapplication_waypoint": 1274.6666666666667,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064447.113622Z-0912529d",
+      "collision_impulse": null,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 321.40000000003994,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 2,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 23,
+          "downstream": {
+            "100": {
+              "speed_kmh": 158.76390838623047,
+              "time_from_entry_seconds": 3.6999999999997897,
+              "time_from_release_seconds": 2.249999999999872,
+              "waypoint": 1322
+            },
+            "200": {
+              "speed_kmh": 168.54667053222656,
+              "time_from_entry_seconds": 5.899999999999665,
+              "time_from_release_seconds": 4.449999999999747,
+              "waypoint": 1370
+            },
+            "25": {
+              "speed_kmh": 158.68482055664063,
+              "time_from_entry_seconds": 1.9499999999998892,
+              "time_from_release_seconds": 0.4999999999999716,
+              "waypoint": 1286
+            },
+            "50": {
+              "speed_kmh": 149.64910125732422,
+              "time_from_entry_seconds": 2.549999999999855,
+              "time_from_release_seconds": 1.0999999999999375,
+              "waypoint": 1298
+            }
+          },
+          "entry_speed_kmh": 254.74243469238283,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 20.299999999998846,
+          "minimum_speed_kmh": 149.4575408935547,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 182.05489654541017,
+          "release_waypoint": 1274,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.4499999999999176,
+          "throttle_reapplication_waypoint": 1274,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 24,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.50593872070314,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.82178192138673,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 150.29669036865235,
+              "time_from_entry_seconds": 2.3500000000005343,
+              "time_from_release_seconds": 0.8000000000001819,
+              "waypoint": 1294
+            },
+            "50": {
+              "speed_kmh": 148.7605407714844,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.77547607421874,
+          "entry_waypoint": 1231,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 20.350000000004627,
+          "minimum_speed_kmh": 148.69775390625,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 175.96038208007812,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3317,
+              "suppressed_tick": 3316
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 23,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.63987579345704,
+              "time_from_entry_seconds": 3.7500000000008527,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1322
+            },
+            "200": {
+              "speed_kmh": 168.87869110107422,
+              "time_from_entry_seconds": 5.9000000000013415,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1370
+            },
+            "25": {
+              "speed_kmh": 158.853955078125,
+              "time_from_entry_seconds": 1.9500000000004434,
+              "time_from_release_seconds": 0.5000000000001137,
+              "waypoint": 1286
+            },
+            "50": {
+              "speed_kmh": 150.09868927001955,
+              "time_from_entry_seconds": 2.55000000000058,
+              "time_from_release_seconds": 1.1000000000002501,
+              "waypoint": 1298
+            }
+          },
+          "entry_speed_kmh": 254.72785034179688,
+          "entry_waypoint": 1232,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 20.350000000004627,
+          "minimum_speed_kmh": 149.92513275146484,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 182.06569061279296,
+          "release_waypoint": 1274,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.4500000000003297,
+          "throttle_reapplication_waypoint": 1274,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 22.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 159.1816635131836,
+            "time_from_entry_seconds": 3.6499999999997925,
+            "time_from_release_seconds": 2.249999999999872
+          },
+          "200": {
+            "speed_kmh": 168.8753402709961,
+            "time_from_entry_seconds": 5.8499999999996675,
+            "time_from_release_seconds": 4.449999999999747
+          },
+          "25": {
+            "speed_kmh": 161.02696838378907,
+            "time_from_entry_seconds": 1.899999999999892,
+            "time_from_release_seconds": 0.4999999999999716
+          },
+          "50": {
+            "speed_kmh": 151.36614074707032,
+            "time_from_entry_seconds": 2.4499999999998607,
+            "time_from_release_seconds": 1.0499999999999403
+          }
+        },
+        "entry_speed_kmh": 254.742626953125,
+        "local_time_to_next_brake_seconds": null,
+        "minimum_speed_kmh": 150.57118377685546,
+        "raw_winner_brake_ticks": 24.0,
+        "release_speed_kmh": 185.14080505371095,
+        "release_waypoint": 1273.0,
+        "rerequest_released_tick_gaps": [
+          1
+        ],
+        "suppressed_brake_ticks": 2.0,
+        "throttle_reapplication_seconds_from_entry": 1.4499999999999176,
+        "throttle_reapplication_waypoint": 1274.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064633.968397Z-a87aeff1",
+      "collision_impulse": 1274.7539677334348,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 66.99999999999805,
+      "is_control": false,
+      "outcome": "collision",
+      "parameters": {
+        "qualifying_brake.event": 2,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": [
+        -78.75013732910156,
+        -117.47357177734375,
+        0.0016323471209034324
+      ],
+      "terminal_waypoint": 1409,
+      "traversals": [
+        {
+          "applied_brake_ticks": 22,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.1816635131836,
+              "time_from_entry_seconds": 3.6499999999997925,
+              "time_from_release_seconds": 2.249999999999872,
+              "waypoint": 1321
+            },
+            "200": {
+              "speed_kmh": 168.8753402709961,
+              "time_from_entry_seconds": 5.8499999999996675,
+              "time_from_release_seconds": 4.449999999999747,
+              "waypoint": 1370
+            },
+            "25": {
+              "speed_kmh": 161.02696838378907,
+              "time_from_entry_seconds": 1.899999999999892,
+              "time_from_release_seconds": 0.4999999999999716,
+              "waypoint": 1285
+            },
+            "50": {
+              "speed_kmh": 151.36614074707032,
+              "time_from_entry_seconds": 2.4499999999998607,
+              "time_from_release_seconds": 1.0499999999999403,
+              "waypoint": 1297
+            }
+          },
+          "entry_speed_kmh": 254.742626953125,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 150.57118377685546,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 185.14080505371095,
+          "release_waypoint": 1273,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.4499999999999176,
+          "throttle_reapplication_waypoint": 1274,
+          "winner_rerequests": [
+            {
+              "immediate": false,
+              "released_ticks_between": 1,
+              "requested_again_tick": 1219,
+              "suppressed_tick": 1217
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 22.666666666666668,
+        "downstream": {
+          "100": {
+            "speed_kmh": 159.11102142333985,
+            "time_from_entry_seconds": 3.8000000000004994,
+            "time_from_release_seconds": 2.2833333333336348
+          },
+          "200": {
+            "speed_kmh": 168.42583923339845,
+            "time_from_entry_seconds": 5.966666666667455,
+            "time_from_release_seconds": 4.45000000000059
+          },
+          "25": {
+            "speed_kmh": 155.00538940429686,
+            "time_from_entry_seconds": 2.1000000000002643,
+            "time_from_release_seconds": 0.5833333333333997
+          },
+          "50": {
+            "speed_kmh": 148.8713150024414,
+            "time_from_entry_seconds": 2.6500000000003467,
+            "time_from_release_seconds": 1.133333333333482
+          }
+        },
+        "entry_speed_kmh": 254.7121307373047,
+        "local_time_to_next_brake_seconds": 20.366666666669364,
+        "minimum_speed_kmh": 148.764404296875,
+        "raw_winner_brake_ticks": 24.666666666666668,
+        "release_speed_kmh": 178.65606994628905,
+        "release_waypoint": 1275.3333333333333,
+        "rerequest_released_tick_gaps": [
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 2.0,
+        "throttle_reapplication_seconds_from_entry": 1.5166666666668647,
+        "throttle_reapplication_waypoint": 1275.3333333333333,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064710.314328Z-e35233c0",
+      "collision_impulse": null,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 321.65000000004005,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 2,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 23,
+          "downstream": {
+            "100": {
+              "speed_kmh": 158.60602111816408,
+              "time_from_entry_seconds": 3.849999999999781,
+              "time_from_release_seconds": 2.2999999999998693,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 167.73914794921876,
+              "time_from_entry_seconds": 5.999999999999659,
+              "time_from_release_seconds": 4.449999999999747,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 151.04012145996094,
+              "time_from_entry_seconds": 2.249999999999872,
+              "time_from_release_seconds": 0.6999999999999602,
+              "waypoint": 1293
+            },
+            "50": {
+              "speed_kmh": 147.5666015625,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.1499999999999346,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.74243469238283,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 20.39999999999884,
+          "minimum_speed_kmh": 147.5276824951172,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 176.57605590820313,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.549999999999912,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1219,
+              "suppressed_tick": 1218
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 22,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.25984497070314,
+              "time_from_entry_seconds": 3.7000000000008413,
+              "time_from_release_seconds": 2.2500000000005116,
+              "waypoint": 1322
+            },
+            "200": {
+              "speed_kmh": 169.04977569580078,
+              "time_from_entry_seconds": 5.9000000000013415,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1370
+            },
+            "25": {
+              "speed_kmh": 159.48198852539062,
+              "time_from_entry_seconds": 1.9500000000004434,
+              "time_from_release_seconds": 0.5000000000001137,
+              "waypoint": 1286
+            },
+            "50": {
+              "speed_kmh": 150.38077697753906,
+              "time_from_entry_seconds": 2.55000000000058,
+              "time_from_release_seconds": 1.1000000000002501,
+              "waypoint": 1298
+            }
+          },
+          "entry_speed_kmh": 254.70203247070313,
+          "entry_waypoint": 1232,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 20.300000000004616,
+          "minimum_speed_kmh": 150.14056091308595,
+          "raw_winner_brake_ticks": 24,
+          "release_speed_kmh": 182.7859130859375,
+          "release_waypoint": 1274,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.4500000000003297,
+          "throttle_reapplication_waypoint": 1274,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 23,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.46719818115236,
+              "time_from_entry_seconds": 3.8500000000008754,
+              "time_from_release_seconds": 2.300000000000523,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 168.48859405517578,
+              "time_from_entry_seconds": 6.000000000001364,
+              "time_from_release_seconds": 4.450000000001012,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 154.49405822753906,
+              "time_from_entry_seconds": 2.1000000000004775,
+              "time_from_release_seconds": 0.5500000000001251,
+              "waypoint": 1289
+            },
+            "50": {
+              "speed_kmh": 148.66656646728515,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.69192504882812,
+          "entry_waypoint": 1231,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 20.40000000000464,
+          "minimum_speed_kmh": 148.62496948242188,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 176.60624084472656,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 5422,
+              "suppressed_tick": 5421
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 22.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 160.27487869262694,
+            "time_from_entry_seconds": 3.800000000000324,
+            "time_from_release_seconds": 2.250000000000192
+          },
+          "200": {
+            "speed_kmh": 169.47732238769532,
+            "time_from_entry_seconds": 5.950000000000507,
+            "time_from_release_seconds": 4.400000000000375
+          },
+          "25": {
+            "speed_kmh": 155.12402114868163,
+            "time_from_entry_seconds": 2.150000000000176,
+            "time_from_release_seconds": 0.600000000000044
+          },
+          "50": {
+            "speed_kmh": 150.16660537719727,
+            "time_from_entry_seconds": 2.70000000000023,
+            "time_from_release_seconds": 1.150000000000098
+          }
+        },
+        "entry_speed_kmh": 254.71847076416014,
+        "local_time_to_next_brake_seconds": 20.299999999998846,
+        "minimum_speed_kmh": 150.15634002685547,
+        "raw_winner_brake_ticks": 25.0,
+        "release_speed_kmh": 177.1002136230469,
+        "release_waypoint": 1276.0,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 3.0,
+        "throttle_reapplication_seconds_from_entry": 1.5500000000001322,
+        "throttle_reapplication_waypoint": 1276.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T064857.461734Z-a459ec49",
+      "collision_impulse": 1692.7142056739085,
+      "event_id": 2,
+      "event_name": "WP1232-1276",
+      "full_lap_time_seconds": 172.05000000000604,
+      "is_control": false,
+      "outcome": "collision",
+      "parameters": {
+        "qualifying_brake.event": 2,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": [
+        -78.6926498413086,
+        -116.74603271484375,
+        0.002015189966186881
+      ],
+      "terminal_waypoint": 1408,
+      "traversals": [
+        {
+          "applied_brake_ticks": 22,
+          "downstream": {
+            "100": {
+              "speed_kmh": 159.92682495117188,
+              "time_from_entry_seconds": 3.799999999999784,
+              "time_from_release_seconds": 2.249999999999872,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 169.07621154785156,
+              "time_from_entry_seconds": 5.949999999999662,
+              "time_from_release_seconds": 4.39999999999975,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 153.90182647705078,
+              "time_from_entry_seconds": 2.199999999999875,
+              "time_from_release_seconds": 0.649999999999963,
+              "waypoint": 1292
+            },
+            "50": {
+              "speed_kmh": 149.6828842163086,
+              "time_from_entry_seconds": 2.6999999999998465,
+              "time_from_release_seconds": 1.1499999999999346,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.74254455566407,
+          "entry_waypoint": 1232,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 20.299999999998846,
+          "minimum_speed_kmh": 149.67005767822266,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 177.0834457397461,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.549999999999912,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1218,
+              "suppressed_tick": 1217
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1219,
+              "suppressed_tick": 1218
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 22,
+          "downstream": {
+            "100": {
+              "speed_kmh": 160.62293243408203,
+              "time_from_entry_seconds": 3.800000000000864,
+              "time_from_release_seconds": 2.2500000000005116,
+              "waypoint": 1324
+            },
+            "200": {
+              "speed_kmh": 169.87843322753906,
+              "time_from_entry_seconds": 5.950000000001353,
+              "time_from_release_seconds": 4.4000000000010004,
+              "waypoint": 1372
+            },
+            "25": {
+              "speed_kmh": 156.3462158203125,
+              "time_from_entry_seconds": 2.1000000000004775,
+              "time_from_release_seconds": 0.5500000000001251,
+              "waypoint": 1289
+            },
+            "50": {
+              "speed_kmh": 150.65032653808595,
+              "time_from_entry_seconds": 2.700000000000614,
+              "time_from_release_seconds": 1.1500000000002615,
+              "waypoint": 1301
+            }
+          },
+          "entry_speed_kmh": 254.69439697265625,
+          "entry_waypoint": 1231,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": null,
+          "minimum_speed_kmh": 150.6426223754883,
+          "raw_winner_brake_ticks": 25,
+          "release_speed_kmh": 177.11698150634766,
+          "release_waypoint": 1276,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 1.5500000000003524,
+          "throttle_reapplication_waypoint": 1276,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3319,
+              "suppressed_tick": 3318
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3320,
+              "suppressed_tick": 3319
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 14.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 174.07940826416018,
+            "time_from_entry_seconds": 2.5833333333336745,
+            "time_from_release_seconds": 1.8833333333335815
+          },
+          "200": {
+            "speed_kmh": 160.06973876953126,
+            "time_from_entry_seconds": 4.8333333333339725,
+            "time_from_release_seconds": 4.13333333333388
+          },
+          "25": {
+            "speed_kmh": 198.64569854736328,
+            "time_from_entry_seconds": 1.1500000000001525,
+            "time_from_release_seconds": 0.4500000000000597
+          },
+          "50": {
+            "speed_kmh": 189.07821807861328,
+            "time_from_entry_seconds": 1.6000000000002121,
+            "time_from_release_seconds": 0.9000000000001194
+          }
+        },
+        "entry_speed_kmh": 256.3607116699219,
+        "local_time_to_next_brake_seconds": 25.233333333336684,
+        "minimum_speed_kmh": 190.3513366699219,
+        "raw_winner_brake_ticks": 14.666666666666666,
+        "release_speed_kmh": 221.85491180419922,
+        "release_waypoint": 1802.6666666666667,
+        "rerequest_released_tick_gaps": [],
+        "suppressed_brake_ticks": 0.6666666666666666,
+        "throttle_reapplication_seconds_from_entry": 0.733333333333429,
+        "throttle_reapplication_waypoint": 1803.6666666666667,
+        "winner_rerequested_after_suppression": false
+      },
+      "attempt_id": "20260817T065002.478771Z-9a84c7ef",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 321.7500000000401,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 3,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 172.0627624511719,
+              "time_from_entry_seconds": 2.599999999999852,
+              "time_from_release_seconds": 1.899999999999892,
+              "waypoint": 1851
+            },
+            "200": {
+              "speed_kmh": 160.3249282836914,
+              "time_from_entry_seconds": 4.849999999999724,
+              "time_from_release_seconds": 4.149999999999764,
+              "waypoint": 1899
+            },
+            "25": {
+              "speed_kmh": 197.8655548095703,
+              "time_from_entry_seconds": 1.1499999999999346,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1816
+            },
+            "50": {
+              "speed_kmh": 187.68375549316406,
+              "time_from_entry_seconds": 1.599999999999909,
+              "time_from_release_seconds": 0.8999999999999488,
+              "waypoint": 1827
+            }
+          },
+          "entry_speed_kmh": 256.37486572265624,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.199999999998568,
+          "minimum_speed_kmh": 189.27007141113282,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 221.58500976562502,
+          "release_waypoint": 1803,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7499999999999574,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 177.48800354003907,
+              "time_from_entry_seconds": 2.55000000000058,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 1850
+            },
+            "200": {
+              "speed_kmh": 159.5953811645508,
+              "time_from_entry_seconds": 4.800000000001091,
+              "time_from_release_seconds": 4.100000000000932,
+              "waypoint": 1898
+            },
+            "25": {
+              "speed_kmh": 200.1445724487305,
+              "time_from_entry_seconds": 1.1500000000002615,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1814
+            },
+            "50": {
+              "speed_kmh": 191.6021255493164,
+              "time_from_entry_seconds": 1.6000000000003638,
+              "time_from_release_seconds": 0.9000000000002046,
+              "waypoint": 1826
+            }
+          },
+          "entry_speed_kmh": 256.36582946777344,
+          "entry_waypoint": 1779,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 192.2947723388672,
+          "raw_winner_brake_ticks": 14,
+          "release_speed_kmh": 222.4011703491211,
+          "release_waypoint": 1802,
+          "suppressed_brake_ticks": 0,
+          "suppression_reasons": [],
+          "throttle_reapplication_seconds_from_entry": 0.7000000000001592,
+          "throttle_reapplication_waypoint": 1802,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 172.68745880126954,
+              "time_from_entry_seconds": 2.600000000000591,
+              "time_from_release_seconds": 1.900000000000432,
+              "waypoint": 1851
+            },
+            "200": {
+              "speed_kmh": 160.28890686035157,
+              "time_from_entry_seconds": 4.850000000001103,
+              "time_from_release_seconds": 4.150000000000944,
+              "waypoint": 1899
+            },
+            "25": {
+              "speed_kmh": 197.92696838378907,
+              "time_from_entry_seconds": 1.1500000000002615,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1815
+            },
+            "50": {
+              "speed_kmh": 187.9487731933594,
+              "time_from_entry_seconds": 1.6000000000003638,
+              "time_from_release_seconds": 0.9000000000002046,
+              "waypoint": 1827
+            }
+          },
+          "entry_speed_kmh": 256.34143981933596,
+          "entry_waypoint": 1780,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 189.48916625976562,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 221.57855529785158,
+          "release_waypoint": 1803,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7500000000001705,
+          "throttle_reapplication_waypoint": 1804,
+          "winner_rerequests": []
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 13.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 175.45756988525392,
+            "time_from_entry_seconds": 2.5333333333336676,
+            "time_from_release_seconds": 1.8833333333335815
+          },
+          "200": {
+            "speed_kmh": 159.80472106933595,
+            "time_from_entry_seconds": 4.766666666667295,
+            "time_from_release_seconds": 4.11666666666721
+          },
+          "25": {
+            "speed_kmh": 201.62465057373046,
+            "time_from_entry_seconds": 1.0833333333334754,
+            "time_from_release_seconds": 0.43333333333338925
+          },
+          "50": {
+            "speed_kmh": 190.9007995605469,
+            "time_from_entry_seconds": 1.533333333333535,
+            "time_from_release_seconds": 0.8833333333334489
+          }
+        },
+        "entry_speed_kmh": 256.3746826171875,
+        "local_time_to_next_brake_seconds": 25.21666666667001,
+        "minimum_speed_kmh": 191.1984832763672,
+        "raw_winner_brake_ticks": 14.666666666666666,
+        "release_speed_kmh": 225.30663299560547,
+        "release_waypoint": 1801.3333333333333,
+        "rerequest_released_tick_gaps": [
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 1.6666666666666667,
+        "throttle_reapplication_seconds_from_entry": 0.733333333333429,
+        "throttle_reapplication_waypoint": 1804.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T065149.923069Z-2e7a2968",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 321.70000000004006,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 3,
+        "qualifying_brake.onset_delay_ticks": 0,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 13,
+          "downstream": {
+            "100": {
+              "speed_kmh": 173.70203247070313,
+              "time_from_entry_seconds": 2.549999999999855,
+              "time_from_release_seconds": 1.899999999999892,
+              "waypoint": 1850
+            },
+            "200": {
+              "speed_kmh": 160.22899017333984,
+              "time_from_entry_seconds": 4.799999999999727,
+              "time_from_release_seconds": 4.149999999999764,
+              "waypoint": 1899
+            },
+            "25": {
+              "speed_kmh": 200.35215911865234,
+              "time_from_entry_seconds": 1.0999999999999375,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1814
+            },
+            "50": {
+              "speed_kmh": 189.3952880859375,
+              "time_from_entry_seconds": 1.549999999999912,
+              "time_from_release_seconds": 0.8999999999999488,
+              "waypoint": 1826
+            }
+          },
+          "entry_speed_kmh": 256.37486572265624,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.199999999998568,
+          "minimum_speed_kmh": 190.2045135498047,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 225.0375183105469,
+          "release_waypoint": 1802,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7499999999999574,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1611,
+              "suppressed_tick": 1610
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 13,
+          "downstream": {
+            "100": {
+              "speed_kmh": 178.94008026123046,
+              "time_from_entry_seconds": 2.5000000000005684,
+              "time_from_release_seconds": 1.8500000000004206,
+              "waypoint": 1849
+            },
+            "200": {
+              "speed_kmh": 158.94974212646486,
+              "time_from_entry_seconds": 4.700000000001069,
+              "time_from_release_seconds": 4.050000000000921,
+              "waypoint": 1896
+            },
+            "25": {
+              "speed_kmh": 204.1671340942383,
+              "time_from_entry_seconds": 1.0500000000002387,
+              "time_from_release_seconds": 0.40000000000009095,
+              "waypoint": 1812
+            },
+            "50": {
+              "speed_kmh": 193.9010971069336,
+              "time_from_entry_seconds": 1.500000000000341,
+              "time_from_release_seconds": 0.8500000000001933,
+              "waypoint": 1824
+            }
+          },
+          "entry_speed_kmh": 256.3736572265625,
+          "entry_waypoint": 1779,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 193.17682342529298,
+          "raw_winner_brake_ticks": 14,
+          "release_speed_kmh": 225.8440383911133,
+          "release_waypoint": 1800,
+          "suppressed_brake_ticks": 1,
+          "suppression_reasons": [
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7000000000001592,
+          "throttle_reapplication_waypoint": 1802,
+          "winner_rerequests": []
+        },
+        {
+          "applied_brake_ticks": 13,
+          "downstream": {
+            "100": {
+              "speed_kmh": 173.73059692382813,
+              "time_from_entry_seconds": 2.55000000000058,
+              "time_from_release_seconds": 1.900000000000432,
+              "waypoint": 1850
+            },
+            "200": {
+              "speed_kmh": 160.23543090820314,
+              "time_from_entry_seconds": 4.800000000001091,
+              "time_from_release_seconds": 4.150000000000944,
+              "waypoint": 1899
+            },
+            "25": {
+              "speed_kmh": 200.3546585083008,
+              "time_from_entry_seconds": 1.1000000000002501,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1814
+            },
+            "50": {
+              "speed_kmh": 189.40601348876953,
+              "time_from_entry_seconds": 1.5500000000003524,
+              "time_from_release_seconds": 0.9000000000002046,
+              "waypoint": 1826
+            }
+          },
+          "entry_speed_kmh": 256.3755249023438,
+          "entry_waypoint": 1781,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.20000000000573,
+          "minimum_speed_kmh": 190.2141128540039,
+          "raw_winner_brake_ticks": 15,
+          "release_speed_kmh": 225.03834228515626,
+          "release_waypoint": 1802,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7500000000001705,
+          "throttle_reapplication_waypoint": 1805,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 5815,
+              "suppressed_tick": 5814
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 14.0,
+        "downstream": {
+          "100": {
+            "speed_kmh": 165.53417358398437,
+            "time_from_entry_seconds": 2.7500000000003646,
+            "time_from_release_seconds": 1.9500000000002586
+          },
+          "200": {
+            "speed_kmh": 158.69839324951172,
+            "time_from_entry_seconds": 5.0500000000006695,
+            "time_from_release_seconds": 4.250000000000564
+          },
+          "25": {
+            "speed_kmh": 194.73247375488282,
+            "time_from_entry_seconds": 1.2500000000001659,
+            "time_from_release_seconds": 0.4500000000000597
+          },
+          "50": {
+            "speed_kmh": 183.45757141113282,
+            "time_from_entry_seconds": 1.7333333333335663,
+            "time_from_release_seconds": 0.9333333333334602
+          }
+        },
+        "entry_speed_kmh": 256.3146881103516,
+        "local_time_to_next_brake_seconds": 25.383333333336697,
+        "minimum_speed_kmh": 187.17728118896486,
+        "raw_winner_brake_ticks": 16.0,
+        "release_speed_kmh": 215.85017852783204,
+        "release_waypoint": 1806.0,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 2.0,
+        "throttle_reapplication_seconds_from_entry": 0.8000000000001061,
+        "throttle_reapplication_waypoint": 1806.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T065337.176330Z-ff24bffa",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 322.4000000000402,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 3,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 1,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 164.89771270751953,
+              "time_from_entry_seconds": 2.7499999999998437,
+              "time_from_release_seconds": 1.9499999999998892,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 158.40685272216797,
+              "time_from_entry_seconds": 5.049999999999713,
+              "time_from_release_seconds": 4.249999999999758,
+              "waypoint": 1902
+            },
+            "25": {
+              "speed_kmh": 194.4797607421875,
+              "time_from_entry_seconds": 1.249999999999929,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1818
+            },
+            "50": {
+              "speed_kmh": 183.52356262207033,
+              "time_from_entry_seconds": 1.6999999999999034,
+              "time_from_release_seconds": 0.8999999999999488,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.35509033203124,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.399999999998556,
+          "minimum_speed_kmh": 187.18328704833985,
+          "raw_winner_brake_ticks": 16,
+          "release_speed_kmh": 215.60938110351563,
+          "release_waypoint": 1806,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.7999999999999545,
+          "throttle_reapplication_waypoint": 1806,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1613,
+              "suppressed_tick": 1612
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 165.27376098632814,
+              "time_from_entry_seconds": 2.7500000000006253,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 158.51342010498047,
+              "time_from_entry_seconds": 5.050000000001148,
+              "time_from_release_seconds": 4.250000000000966,
+              "waypoint": 1902
+            },
+            "25": {
+              "speed_kmh": 194.5546875,
+              "time_from_entry_seconds": 1.2500000000002842,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1818
+            },
+            "50": {
+              "speed_kmh": 182.99862213134767,
+              "time_from_entry_seconds": 1.750000000000398,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.339682006836,
+          "entry_waypoint": 1780,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.400000000005775,
+          "minimum_speed_kmh": 187.30382080078127,
+          "raw_winner_brake_ticks": 16,
+          "release_speed_kmh": 215.6346908569336,
+          "release_waypoint": 1806,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.8000000000001819,
+          "throttle_reapplication_waypoint": 1806,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3718,
+              "suppressed_tick": 3717
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 166.43104705810546,
+              "time_from_entry_seconds": 2.7500000000006253,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 159.17490692138674,
+              "time_from_entry_seconds": 5.050000000001148,
+              "time_from_release_seconds": 4.250000000000966,
+              "waypoint": 1902
+            },
+            "25": {
+              "speed_kmh": 195.16297302246093,
+              "time_from_entry_seconds": 1.2500000000002842,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1818
+            },
+            "50": {
+              "speed_kmh": 183.85052947998048,
+              "time_from_entry_seconds": 1.750000000000398,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1830
+            }
+          },
+          "entry_speed_kmh": 256.2492919921875,
+          "entry_waypoint": 1780,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.350000000005764,
+          "minimum_speed_kmh": 187.04473571777345,
+          "raw_winner_brake_ticks": 16,
+          "release_speed_kmh": 216.30646362304688,
+          "release_waypoint": 1806,
+          "suppressed_brake_ticks": 2,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.8000000000001819,
+          "throttle_reapplication_waypoint": 1806,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 5827,
+              "suppressed_tick": 5826
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "applied_brake_ticks": 13.666666666666666,
+        "downstream": {
+          "100": {
+            "speed_kmh": 164.42615203857423,
+            "time_from_entry_seconds": 2.8000000000003715,
+            "time_from_release_seconds": 1.966666666666929
+          },
+          "200": {
+            "speed_kmh": 158.6065155029297,
+            "time_from_entry_seconds": 5.083333333334006,
+            "time_from_release_seconds": 4.250000000000564
+          },
+          "25": {
+            "speed_kmh": 193.08452911376955,
+            "time_from_entry_seconds": 1.283333333333502,
+            "time_from_release_seconds": 0.4500000000000597
+          },
+          "50": {
+            "speed_kmh": 182.24078521728518,
+            "time_from_entry_seconds": 1.7666666666669026,
+            "time_from_release_seconds": 0.9333333333334602
+          }
+        },
+        "entry_speed_kmh": 256.3566192626953,
+        "local_time_to_next_brake_seconds": 25.383333333336694,
+        "minimum_speed_kmh": 187.02505187988282,
+        "raw_winner_brake_ticks": 16.666666666666668,
+        "release_speed_kmh": 213.99228515625,
+        "release_waypoint": 1807.0,
+        "rerequest_released_tick_gaps": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "suppressed_brake_ticks": 3.0,
+        "throttle_reapplication_seconds_from_entry": 0.8333333333334423,
+        "throttle_reapplication_waypoint": 1807.0,
+        "winner_rerequested_after_suppression": true
+      },
+      "attempt_id": "20260817T065525.394713Z-f911ba38",
+      "collision_impulse": null,
+      "event_id": 3,
+      "event_name": "WP1781-1804",
+      "full_lap_time_seconds": 322.20000000004023,
+      "is_control": false,
+      "outcome": "finished",
+      "parameters": {
+        "qualifying_brake.event": 3,
+        "qualifying_brake.onset_delay_ticks": 1,
+        "qualifying_brake.release_early_ticks": 2,
+        "runtime.low_bandwidth_sensor_mode": 1
+      },
+      "terminal_location": null,
+      "terminal_waypoint": null,
+      "traversals": [
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 162.8054626464844,
+              "time_from_entry_seconds": 2.799999999999841,
+              "time_from_release_seconds": 1.9499999999998892,
+              "waypoint": 1855
+            },
+            "200": {
+              "speed_kmh": 158.0553176879883,
+              "time_from_entry_seconds": 5.09999999999971,
+              "time_from_release_seconds": 4.249999999999758,
+              "waypoint": 1903
+            },
+            "25": {
+              "speed_kmh": 192.32254028320312,
+              "time_from_entry_seconds": 1.299999999999926,
+              "time_from_release_seconds": 0.4499999999999744,
+              "waypoint": 1819
+            },
+            "50": {
+              "speed_kmh": 181.409587097168,
+              "time_from_entry_seconds": 1.7499999999999005,
+              "time_from_release_seconds": 0.8999999999999488,
+              "waypoint": 1831
+            }
+          },
+          "entry_speed_kmh": 256.35509033203124,
+          "entry_waypoint": 1781,
+          "lap": 1,
+          "local_time_to_next_brake_seconds": 25.449999999998553,
+          "minimum_speed_kmh": 186.25142669677734,
+          "raw_winner_brake_ticks": 17,
+          "release_speed_kmh": 212.95033264160156,
+          "release_waypoint": 1807,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.8499999999999517,
+          "throttle_reapplication_waypoint": 1807,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1612,
+              "suppressed_tick": 1611
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 1613,
+              "suppressed_tick": 1612
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 13,
+          "downstream": {
+            "100": {
+              "speed_kmh": 168.91993103027343,
+              "time_from_entry_seconds": 2.7500000000006253,
+              "time_from_release_seconds": 1.9500000000004434,
+              "waypoint": 1854
+            },
+            "200": {
+              "speed_kmh": 159.94688873291017,
+              "time_from_entry_seconds": 5.000000000001137,
+              "time_from_release_seconds": 4.200000000000955,
+              "waypoint": 1902
+            },
+            "25": {
+              "speed_kmh": 194.62847442626955,
+              "time_from_entry_seconds": 1.2500000000002842,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1818
+            },
+            "50": {
+              "speed_kmh": 184.7861526489258,
+              "time_from_entry_seconds": 1.750000000000398,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1831
+            }
+          },
+          "entry_speed_kmh": 256.3416320800781,
+          "entry_waypoint": 1780,
+          "lap": 2,
+          "local_time_to_next_brake_seconds": 25.25000000000574,
+          "minimum_speed_kmh": 188.65338134765625,
+          "raw_winner_brake_ticks": 16,
+          "release_speed_kmh": 216.06069946289062,
+          "release_waypoint": 1806,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.8000000000001819,
+          "throttle_reapplication_waypoint": 1806,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3718,
+              "suppressed_tick": 3717
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 3719,
+              "suppressed_tick": 3718
+            }
+          ]
+        },
+        {
+          "applied_brake_ticks": 14,
+          "downstream": {
+            "100": {
+              "speed_kmh": 161.55306243896484,
+              "time_from_entry_seconds": 2.850000000000648,
+              "time_from_release_seconds": 2.0000000000004547,
+              "waypoint": 1856
+            },
+            "200": {
+              "speed_kmh": 157.81734008789064,
+              "time_from_entry_seconds": 5.150000000001171,
+              "time_from_release_seconds": 4.300000000000978,
+              "waypoint": 1904
+            },
+            "25": {
+              "speed_kmh": 192.30257263183594,
+              "time_from_entry_seconds": 1.3000000000002956,
+              "time_from_release_seconds": 0.4500000000001023,
+              "waypoint": 1820
+            },
+            "50": {
+              "speed_kmh": 180.52661590576173,
+              "time_from_entry_seconds": 1.8000000000004093,
+              "time_from_release_seconds": 0.950000000000216,
+              "waypoint": 1832
+            }
+          },
+          "entry_speed_kmh": 256.3731353759766,
+          "entry_waypoint": 1781,
+          "lap": 3,
+          "local_time_to_next_brake_seconds": 25.450000000005787,
+          "minimum_speed_kmh": 186.17034759521485,
+          "raw_winner_brake_ticks": 17,
+          "release_speed_kmh": 212.96582336425783,
+          "release_waypoint": 1808,
+          "suppressed_brake_ticks": 3,
+          "suppression_reasons": [
+            "onset-delay",
+            "early-release",
+            "early-release"
+          ],
+          "throttle_reapplication_seconds_from_entry": 0.8500000000001933,
+          "throttle_reapplication_waypoint": 1808,
+          "winner_rerequests": [
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 5821,
+              "suppressed_tick": 5820
+            },
+            {
+              "immediate": true,
+              "released_ticks_between": 0,
+              "requested_again_tick": 5822,
+              "suppressed_tick": 5821
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
