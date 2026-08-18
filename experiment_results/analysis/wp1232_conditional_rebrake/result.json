@@ -1,0 +1,59 @@
+{
+  "classification": "UNSTABLE",
+  "recommendation": "DROP",
+  "campaign_stopped_early": true,
+  "stop_reason": "two consecutive plausibly treatment-related collisions",
+  "control": {
+    "attempt_id": "20260818T060934.819123Z-98c55185",
+    "outcome": "finished",
+    "elapsed_time_seconds": 321.25000000007304,
+    "wp1781_14_ticks": 3,
+    "wp1781_traversals": 3
+  },
+  "treatments": [
+    {
+      "attempt_id": "20260818T061135.259293Z-79875a76",
+      "outcome": "collision",
+      "elapsed_time_seconds": 171.75000000000588,
+      "collision_lap": 2,
+      "collision_waypoint": 1403,
+      "collision_impulse": 4286.34092901198,
+      "conditional_trigger_lap": 2,
+      "conditional_trigger_waypoint": 1274,
+      "conditional_trigger_time_seconds": 165.85000000000454,
+      "seconds_trigger_to_collision": 5.90000000000134,
+      "distance_trigger_to_collision_m": 270.2719081307164,
+      "local_delta_seconds": {"25": 0.0, "50": 0.0, "100": 0.0, "200": -0.05},
+      "triggered_wp1781_regime": null
+    },
+    {
+      "attempt_id": "20260818T061245.370895Z-1e9426a4",
+      "outcome": "collision",
+      "elapsed_time_seconds": 171.75000000000588,
+      "collision_lap": 2,
+      "collision_waypoint": 1403,
+      "collision_impulse": 4282.74962827023,
+      "conditional_trigger_lap": 2,
+      "conditional_trigger_waypoint": 1274,
+      "conditional_trigger_time_seconds": 165.85000000000454,
+      "seconds_trigger_to_collision": 5.90000000000134,
+      "distance_trigger_to_collision_m": 270.2719081307164,
+      "local_delta_seconds": {"25": 0.0, "50": 0.0, "100": 0.0, "200": -0.05},
+      "triggered_wp1781_regime": null
+    }
+  ],
+  "aggregate": {
+    "triggered_traversals": 2,
+    "conditional_suppressions": 2,
+    "treatment_finishes": 0,
+    "treatment_attempts": 2,
+    "treatment_collisions": 2,
+    "mean_adjusted_full_run_delta_seconds": null,
+    "triggered_wp1781_14_tick_frequency": null,
+    "mean_local_delta_seconds": {"25": 0.0, "50": 0.0, "100": 0.0, "200": -0.05}
+  },
+  "excluded_infrastructure_events": {
+    "wrong_client_preflight_errors": 1,
+    "stale_synchronous_state_errors": 1
+  }
+}
