@@ -56,6 +56,33 @@
       }
     ]
   },
+  "qualifying_brake.wp2501_left_foot_percent": {
+    "type": "int", "minimum": 5, "maximum": 20,
+    "edits": [
+      {
+        "file": "competition_code/qualifying_brake_wp2501_left_foot.py",
+        "copy_from": "experiments/qualifying_brake_wp2501_left_foot.py"
+      },
+      {
+        "file": "competition_code/submission.py",
+        "baseline_text": "        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "replacement_template": "        from qualifying_brake_wp2501_left_foot import apply_wp2501_left_foot_braking\n        throttle, brake, gear = apply_wp2501_left_foot_braking(\n            self, throttle, brake, gear, {value} / 100.0\n        )\n\n        steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "        \"controller_lookahead_count\",\n",
+        "replacement_template": "        \"controller_lookahead_count\",\n        \"lfb_active\",\n        \"lfb_applied_throttle\",\n        \"lfb_preserved_brake\",\n        \"lfb_window_first_ordinal\",\n        \"lfb_window_last_ordinal\",\n",
+        "required_matches": 1
+      },
+      {
+        "file": "competition_code/telemetry.py",
+        "baseline_text": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n",
+        "replacement_template": "                \"controller_lookahead_count\": longitudinal.get(\"lookahead_count\"),\n                \"lfb_active\": longitudinal.get(\"lfb_active\", False),\n                \"lfb_applied_throttle\": longitudinal.get(\"lfb_applied_throttle\"),\n                \"lfb_preserved_brake\": longitudinal.get(\"lfb_preserved_brake\"),\n                \"lfb_window_first_ordinal\": longitudinal.get(\"lfb_window_first_ordinal\"),\n                \"lfb_window_last_ordinal\": longitudinal.get(\"lfb_window_last_ordinal\"),\n",
+        "required_matches": 1
+      }
+    ]
+  },
   "runtime.low_bandwidth_sensor_mode": {
     "type": "int", "minimum": 1, "maximum": 1,
     "edits": [

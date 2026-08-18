@@ -1,0 +1,1158 @@
+{
+  "campaign": "qualifying-brake-wp2501-left-foot-initial",
+  "controls": [
+    {
+      "attempt_id": "20260818T062739.175131Z-8f5b4d67",
+      "collision_waypoint": 1410,
+      "elapsed_time_seconds": 172.04999999984352,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.809112548846127,
+          "acceleration_before_release_mps2": -19.773330688494482,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5363403320313,
+          "first_full_throttle_seconds_from_onset": 2.3499999999978627,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999946795,
+              "speed_kmh": 95.6349494934082
+            },
+            "200": {
+              "seconds_from_onset": 8.899999999991905,
+              "speed_kmh": 130.93235321044924
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999972715,
+              "speed_kmh": 97.87827529907227
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999964075,
+              "speed_kmh": 95.49315719604492
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.9154769897461,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.29734649658204,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.149999999978036
+        }
+      ],
+      "is_control": true,
+      "outcome": "collision",
+      "started_utc": "2026-08-18T06:27:39.175299+00:00",
+      "throttle_percent": 0
+    },
+    {
+      "attempt_id": "20260818T063022.841838Z-8db9be20",
+      "collision_waypoint": null,
+      "elapsed_time_seconds": 321.35000000006556,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.801940917964185,
+          "acceleration_before_release_mps2": -19.766693115229913,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5352416992188,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.73333892822266
+            },
+            "200": {
+              "seconds_from_onset": 8.900000000002024,
+              "speed_kmh": 130.9033218383789
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.91065750122071
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.39938888549806
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.86289367675782,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.2970443725586,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.15000000000549
+        },
+        {
+          "acceleration_after_release_mps2": -19.819946289057963,
+          "acceleration_before_release_mps2": -19.781875610347065,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.53631286621095,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.52159118652344
+            },
+            "200": {
+              "seconds_from_onset": 8.900000000002024,
+              "speed_kmh": 130.86925048828127
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.74591064453125
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.11132049560547
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 90.55014724731446,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.2825698852539,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.200000000005502
+        },
+        {
+          "acceleration_after_release_mps2": -19.810867309565808,
+          "acceleration_before_release_mps2": -19.77432250976116,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.53631286621095,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.66322555541993
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.83492736816406
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.35914459228516
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 90.78575592041015,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.29762115478516,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "is_control": true,
+      "outcome": "finished",
+      "started_utc": "2026-08-18T06:30:22.842026+00:00",
+      "throttle_percent": 0
+    },
+    {
+      "attempt_id": "20260818T063329.806033Z-ebfe50b1",
+      "collision_waypoint": null,
+      "elapsed_time_seconds": 321.30000000003986,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.860534667969752,
+          "acceleration_before_release_mps2": -19.820785522462064,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.8527328491211
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.44370880126954
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 97.98386077880859
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999997755,
+              "speed_kmh": 94.91191864013672
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.41134185791016,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.87032470703124,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000233
+        },
+        {
+          "acceleration_after_release_mps2": -19.817428588862633,
+          "acceleration_before_release_mps2": -19.77981567382372,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.53631286621095,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.5276268005371
+            },
+            "200": {
+              "seconds_from_onset": 8.900000000002024,
+              "speed_kmh": 130.87556762695314
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.76924285888673
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.15179138183593
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 90.59412002563477,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.28469848632812,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.200000000005502
+        },
+        {
+          "acceleration_after_release_mps2": -16.655120849605574,
+          "acceleration_before_release_mps2": -16.657180786128993,
+          "applied_brake_ticks": 40,
+          "entry_speed_kmh": 257.5354339599609,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 6.000000000001364,
+              "speed_kmh": 97.06372146606445
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.1500000000007162,
+              "speed_kmh": 96.47950973510743
+            },
+            "50": {
+              "seconds_from_onset": 4.150000000000944,
+              "speed_kmh": 97.17887878417969
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 93.11103286743165,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 42,
+          "release_gear": 2,
+          "release_speed_kmh": 122.5512680053711,
+          "release_waypoint": 2562,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "is_control": true,
+      "outcome": "finished",
+      "started_utc": "2026-08-18T06:33:29.806181+00:00",
+      "throttle_percent": 0
+    },
+    {
+      "attempt_id": "20260818T063728.298685Z-d1aab7fe",
+      "collision_waypoint": null,
+      "elapsed_time_seconds": 321.30000000004,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.86083984375113,
+          "acceleration_before_release_mps2": -19.820785522462064,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.8531997680664
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.444010925293
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 97.98259735107422
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999997755,
+              "speed_kmh": 94.90990676879883
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.4090690612793,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.87026977539062,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000375
+        },
+        {
+          "acceleration_after_release_mps2": -19.817657470698666,
+          "acceleration_before_release_mps2": -19.77973937987838,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.53631286621095,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.52740707397462
+            },
+            "200": {
+              "seconds_from_onset": 8.900000000002024,
+              "speed_kmh": 130.87529296875002
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.76823348999024
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.15005416870117
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 90.59225921630859,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.2847122192383,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.200000000005502
+        },
+        {
+          "acceleration_after_release_mps2": -16.654663085933745,
+          "acceleration_before_release_mps2": -16.656875610347775,
+          "applied_brake_ticks": 40,
+          "entry_speed_kmh": 257.5354339599609,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 6.000000000001364,
+              "speed_kmh": 97.06563720703126
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.1500000000007162,
+              "speed_kmh": 96.4837875366211
+            },
+            "50": {
+              "seconds_from_onset": 4.150000000000944,
+              "speed_kmh": 97.18316345214843
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 93.11567459106446,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 42,
+          "release_gear": 2,
+          "release_speed_kmh": 122.55172119140626,
+          "release_waypoint": 2562,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "is_control": true,
+      "outcome": "finished",
+      "started_utc": "2026-08-18T06:37:28.298829+00:00",
+      "throttle_percent": 0
+    },
+    {
+      "attempt_id": "20260818T064039.111609Z-f04f55f4",
+      "collision_waypoint": null,
+      "elapsed_time_seconds": 321.50000000003996,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.80583190918086,
+          "acceleration_before_release_mps2": -19.76989746093856,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5363403320313,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.72069778442383
+            },
+            "200": {
+              "seconds_from_onset": 8.899999999999494,
+              "speed_kmh": 130.89096221923828
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 97.87517852783203
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999997755,
+              "speed_kmh": 95.33490600585938
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.79345321655273,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.29468231201173,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000347
+        },
+        {
+          "acceleration_after_release_mps2": -19.936752319331404,
+          "acceleration_before_release_mps2": -19.89959716796432,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.53540649414066,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.92895050048828
+            },
+            "200": {
+              "seconds_from_onset": 8.850000000002012,
+              "speed_kmh": 130.52823486328126
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.39167022705078
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.22973937988282
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 90.65055541992187,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 130.9203643798828,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.15000000000549
+        },
+        {
+          "acceleration_after_release_mps2": -19.834213256831458,
+          "acceleration_before_release_mps2": -19.798583984370467,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5527374267578,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.62164916992188
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 98.46454696655273
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.66302642822266
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 91.30940551757813,
+          "onset_waypoint": 2499,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.89336853027345,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "is_control": true,
+      "outcome": "finished",
+      "started_utc": "2026-08-18T06:40:39.111753+00:00",
+      "throttle_percent": 0
+    },
+    {
+      "attempt_id": "20260818T064439.366153Z-02743eb1",
+      "collision_waypoint": null,
+      "elapsed_time_seconds": 321.3000000000399,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.860305786134035,
+          "acceleration_before_release_mps2": -19.8204040527355,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55345153808594,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.85426406860351
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.44524688720705
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 97.98693008422852
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999997755,
+              "speed_kmh": 94.91776885986329
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.41739807128907,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.87065429687502,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000304
+        },
+        {
+          "acceleration_after_release_mps2": -19.841079711909426,
+          "acceleration_before_release_mps2": -19.804000854487686,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5534240722656,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.88711318969727
+            },
+            "200": {
+              "seconds_from_onset": 8.850000000002012,
+              "speed_kmh": 130.49854431152343
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 98.16234741210938
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.23882369995117
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 90.75730819702149,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.88707885742187,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.15000000000549
+        },
+        {
+          "acceleration_after_release_mps2": -19.817810058589274,
+          "acceleration_before_release_mps2": -19.78027343749547,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5353240966797,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.52611618041992
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 97.76392822265625
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.14283752441406
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 90.58455505371094,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [],
+          "overlap_throttle": null,
+          "overlap_ticks": 0,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.2836135864258,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "is_control": true,
+      "outcome": "finished",
+      "started_utc": "2026-08-18T06:44:39.366300+00:00",
+      "throttle_percent": 0
+    }
+  ],
+  "infrastructure_errors_excluded": 6,
+  "treatments": [
+    {
+      "acceleration_after_release_delta_mps2": 0.16036987304397243,
+      "acceleration_before_release_delta_mps2": 0.15735626220430987,
+      "adjusted_lap_delta_seconds": null,
+      "attempt_id": "20260818T063213.155447Z-90be1a16",
+      "collision_waypoint": 1410,
+      "control_mean_applied_brake_ticks": 39.166666666666664,
+      "elapsed_time_seconds": 171.95000000000596,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.670867919922994,
+          "acceleration_before_release_mps2": -19.636383056641677,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.7361541748047
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.3755111694336
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 98.34995956420899
+            },
+            "50": {
+              "seconds_from_onset": 3.9499999999997755,
+              "speed_kmh": 95.17151184082032
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 90.76601486206054,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.05,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.97193450927736,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000304
+        }
+      ],
+      "first_full_throttle_delta_seconds": -3.339550858072471e-13,
+      "horizon_speed_deltas_kmh": {
+        "100": -0.05688171386718466,
+        "200": -0.298004150390625,
+        "25": 0.40270042419433594,
+        "50": 0.01585807800292116
+      },
+      "horizon_time_deltas_seconds": {
+        "100": -8.313350008393172e-13,
+        "200": -0.025000000001263345,
+        "25": -4.263256414560601e-13,
+        "50": -5.613287612504791e-13
+      },
+      "is_control": false,
+      "local_segment_delta_seconds": -2.5579538487363607e-12,
+      "mean_applied_brake_ticks": 39,
+      "mean_overlap_ticks": 5,
+      "mean_raw_brake_ticks": 41,
+      "minimum_speed_delta_kmh": 0.12889709472655397,
+      "nearby_control_attempts": [
+        "20260818T063022.841838Z-8db9be20",
+        "20260818T063329.806033Z-ebfe50b1"
+      ],
+      "nearby_control_lap_time_seconds": 321.3250000000527,
+      "outcome": "collision",
+      "release_acceleration_after_mps2": -19.670867919922994,
+      "release_acceleration_before_mps2": -19.636383056641677,
+      "release_speed_delta_kmh": 0.3882499694824446,
+      "started_utc": "2026-08-18T06:32:13.155596+00:00",
+      "throttle_percent": 5
+    },
+    {
+      "acceleration_after_release_delta_mps2": -0.6763839721678337,
+      "acceleration_before_release_delta_mps2": -0.6791559855141109,
+      "adjusted_lap_delta_seconds": -0.15000000000009095,
+      "attempt_id": "20260818T063530.822424Z-fe5c85a3",
+      "collision_waypoint": null,
+      "control_mean_applied_brake_ticks": 39.333333333333336,
+      "elapsed_time_seconds": 321.1500000000398,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.473190307618264,
+          "acceleration_before_release_mps2": -19.44961547851673,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.69687118530274
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.3183135986328
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 98.7169921875
+            },
+            "50": {
+              "seconds_from_onset": 3.8999999999997783,
+              "speed_kmh": 95.04003295898438
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 91.18972320556641,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.1,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 132.07049560546875,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000276
+        },
+        {
+          "acceleration_after_release_mps2": -19.468078613276887,
+          "acceleration_before_release_mps2": -19.44519042968314,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55345153808594,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.70035247802734
+            },
+            "200": {
+              "seconds_from_onset": 8.850000000002012,
+              "speed_kmh": 130.3433349609375
+            },
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 98.91378479003906
+            },
+            "50": {
+              "seconds_from_onset": 3.9000000000008868,
+              "speed_kmh": 95.18847885131837
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 91.42867584228516,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.1,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 132.0749038696289,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.15000000000549
+        },
+        {
+          "acceleration_after_release_mps2": -19.4210052490191,
+          "acceleration_before_release_mps2": -19.40025329589396,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.5362854003906,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.85000000000133,
+              "speed_kmh": 95.65992965698243
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.000000000000682,
+              "speed_kmh": 98.62039489746094
+            },
+            "50": {
+              "seconds_from_onset": 3.950000000000898,
+              "speed_kmh": 95.66193466186523
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 91.32903671264648,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.1,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 131.49148864746095,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "first_full_throttle_delta_seconds": 0.0,
+      "horizon_speed_deltas_kmh": {
+        "100": -0.4626697540283165,
+        "200": -0.3288208007812585,
+        "25": 1.3391853332519474,
+        "50": -0.45080337524413966
+      },
+      "horizon_time_deltas_seconds": {
+        "100": -0.05000000000001137,
+        "200": -0.025000000000005684,
+        "25": -0.05000000000001137,
+        "50": -0.100000000000018
+      },
+      "is_control": false,
+      "local_segment_delta_seconds": -0.025000000000019895,
+      "mean_applied_brake_ticks": 39,
+      "mean_overlap_ticks": 5,
+      "mean_raw_brake_ticks": 41,
+      "minimum_speed_delta_kmh": -0.05643768310546685,
+      "nearby_control_attempts": [
+        "20260818T063329.806033Z-ebfe50b1",
+        "20260818T063728.298685Z-d1aab7fe"
+      ],
+      "nearby_control_lap_time_seconds": 321.3000000000399,
+      "outcome": "finished",
+      "release_acceleration_after_mps2": -19.454091389971417,
+      "release_acceleration_before_mps2": -19.431686401364612,
+      "release_speed_delta_kmh": 3.3101303100586015,
+      "started_utc": "2026-08-18T06:35:30.822577+00:00",
+      "throttle_percent": 10
+    },
+    {
+      "acceleration_after_release_delta_mps2": 0.5652236938476811,
+      "acceleration_before_release_delta_mps2": 0.5337142944337181,
+      "adjusted_lap_delta_seconds": null,
+      "attempt_id": "20260818T063927.061690Z-6f3772d6",
+      "collision_waypoint": 1410,
+      "control_mean_applied_brake_ticks": 39.166666666666664,
+      "elapsed_time_seconds": 172.050000000006,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.268112182618314,
+          "acceleration_before_release_mps2": -19.261627197266595,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.50228271484376
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.1881530761719
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 99.2291473388672
+            },
+            "50": {
+              "seconds_from_onset": 3.8999999999997783,
+              "speed_kmh": 95.36282501220704
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 91.6734375,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.15,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 132.16563720703127,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.150000000000347
+        }
+      ],
+      "first_full_throttle_delta_seconds": 0.0,
+      "horizon_speed_deltas_kmh": {
+        "100": -0.284666061401353,
+        "200": -0.4793334960937443,
+        "25": 1.3002593994140739,
+        "50": 0.24041862487793253
+      },
+      "horizon_time_deltas_seconds": {
+        "100": 0.0,
+        "200": -0.02499999999999858,
+        "25": 0.0,
+        "50": -0.04999999999999716
+      },
+      "is_control": false,
+      "local_segment_delta_seconds": -1.4210854715202004e-14,
+      "mean_applied_brake_ticks": 39,
+      "mean_overlap_ticks": 5,
+      "mean_raw_brake_ticks": 41,
+      "minimum_speed_delta_kmh": 1.07217636108399,
+      "nearby_control_attempts": [
+        "20260818T063728.298685Z-d1aab7fe",
+        "20260818T064039.111609Z-f04f55f4"
+      ],
+      "nearby_control_lap_time_seconds": 321.40000000004,
+      "outcome": "collision",
+      "release_acceleration_after_mps2": -19.268112182618314,
+      "release_acceleration_before_mps2": -19.261627197266595,
+      "release_speed_delta_kmh": 0.5831611633300895,
+      "started_utc": "2026-08-18T06:39:27.061843+00:00",
+      "throttle_percent": 15
+    },
+    {
+      "acceleration_after_release_delta_mps2": 2.908185323078874,
+      "acceleration_before_release_delta_mps2": 2.776527404784593,
+      "adjusted_lap_delta_seconds": -5.684341886080802e-14,
+      "attempt_id": "20260818T064241.172564Z-7d241127",
+      "collision_waypoint": null,
+      "control_mean_applied_brake_ticks": 39,
+      "elapsed_time_seconds": 321.4000000000399,
+      "events": [
+        {
+          "acceleration_after_release_mps2": -19.05700683593855,
+          "acceleration_before_release_mps2": -19.073638916016773,
+          "applied_brake_ticks": 39,
+          "entry_speed_kmh": 257.55347900390626,
+          "first_full_throttle_seconds_from_onset": 2.3499999999998664,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.8499999999996675,
+              "speed_kmh": 95.34446411132812
+            },
+            "200": {
+              "seconds_from_onset": 8.849999999999497,
+              "speed_kmh": 130.09247589111328
+            },
+            "25": {
+              "seconds_from_onset": 2.9999999999998295,
+              "speed_kmh": 99.72783737182617
+            },
+            "50": {
+              "seconds_from_onset": 3.8999999999997783,
+              "speed_kmh": 95.64014739990235
+            }
+          },
+          "lap": 1,
+          "minimum_speed_kmh": 92.11459350585938,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.2,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 41,
+          "release_gear": 2,
+          "release_speed_kmh": 132.25628814697265,
+          "release_waypoint": 2560,
+          "time_to_next_brake_seconds": 24.200000000000273
+        },
+        {
+          "acceleration_after_release_mps2": -15.698776245113603,
+          "acceleration_before_release_mps2": -16.050643920894757,
+          "applied_brake_ticks": 40,
+          "entry_speed_kmh": 257.5535888671875,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2561,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 5.950000000001353,
+              "speed_kmh": 95.19608001708984
+            },
+            "200": {
+              "seconds_from_onset": 9.050000000002058,
+              "speed_kmh": 131.3378860473633
+            },
+            "25": {
+              "seconds_from_onset": 3.0500000000006935,
+              "speed_kmh": 100.24898071289063
+            },
+            "50": {
+              "seconds_from_onset": 4.050000000000921,
+              "speed_kmh": 97.41132202148438
+            }
+          },
+          "lap": 2,
+          "minimum_speed_kmh": 93.96448516845703,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.2,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 42,
+          "release_gear": 2,
+          "release_speed_kmh": 123.99043579101563,
+          "release_waypoint": 2561,
+          "time_to_next_brake_seconds": 24.250000000005514
+        },
+        {
+          "acceleration_after_release_mps2": -16.067657470699455,
+          "acceleration_before_release_mps2": -15.982513427730693,
+          "applied_brake_ticks": 40,
+          "entry_speed_kmh": 257.53540649414066,
+          "first_full_throttle_seconds_from_onset": 2.3500000000005343,
+          "first_full_throttle_waypoint": 2562,
+          "horizons": {
+            "100": {
+              "seconds_from_onset": 6.000000000001364,
+              "speed_kmh": 96.57945785522462
+            },
+            "200": null,
+            "25": {
+              "seconds_from_onset": 3.1500000000007162,
+              "speed_kmh": 97.64733581542968
+            },
+            "50": {
+              "seconds_from_onset": 4.100000000000932,
+              "speed_kmh": 97.41869659423828
+            }
+          },
+          "lap": 3,
+          "minimum_speed_kmh": 93.70158233642579,
+          "onset_waypoint": 2500,
+          "overlap_ordinals": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "overlap_throttle": 0.2,
+          "overlap_ticks": 5,
+          "raw_brake_ticks": 42,
+          "release_gear": 2,
+          "release_speed_kmh": 123.37064208984376,
+          "release_waypoint": 2562,
+          "time_to_next_brake_seconds": null
+        }
+      ],
+      "first_full_throttle_delta_seconds": 0.0,
+      "horizon_speed_deltas_kmh": {
+        "100": -0.04979782104491903,
+        "200": 0.12443389892578693,
+        "25": 1.2672843933105422,
+        "50": 1.5688716888427716
+      },
+      "horizon_time_deltas_seconds": {
+        "100": 0.08333333333335229,
+        "200": 0.08750000000002345,
+        "25": 0.06666666666668182,
+        "50": 0.06666666666668657
+      },
+      "is_control": false,
+      "local_segment_delta_seconds": 0.07499999999998508,
+      "mean_applied_brake_ticks": 39.666666666666664,
+      "mean_overlap_ticks": 5,
+      "mean_raw_brake_ticks": 41.666666666666664,
+      "minimum_speed_delta_kmh": 2.5081077575683537,
+      "nearby_control_attempts": [
+        "20260818T064039.111609Z-f04f55f4",
+        "20260818T064439.366153Z-02743eb1"
+      ],
+      "nearby_control_lap_time_seconds": 321.40000000003994,
+      "outcome": "finished",
+      "release_acceleration_after_mps2": -16.94114685058387,
+      "release_acceleration_before_mps2": -17.03559875488074,
+      "release_speed_delta_kmh": -4.985838317871104,
+      "started_utc": "2026-08-18T06:42:41.172715+00:00",
+      "throttle_percent": 20
+    }
+  ],
+  "window": {
+    "applied_ticks": 5,
+    "first_ordinal": 35,
+    "last_ordinal": 39
+  }
+}
