@@ -13,19 +13,16 @@
 
 ## WP794 status
 
-`experiments/configs/qualifying_brake_wp794_lap3_validation.json` is prepared and dry-run verified. Its control is the known-good two-event combination; treatment adds only the lap-3 WP794 sixth/raw-final-brake-tick omission.
+The clean rerun completed on 2026-08-18. Four treatments finished at 321.250/321.200/321.200/321.200 s; one treatment collided near WP1410 before lap-3 WP794. Mean completed adjusted delta was -0.100 s, with -0.138/-0.088 s at +100/+200 m. Every completed treatment suppressed exactly the sixth raw WP794 request and produced no re-request. **Keep as a qualifying candidate**, with campaign reliability recorded as 4/5.
 
-The campaign was stopped at user request on 2026-08-17. Completed usable attempts:
-
-- control `20260817T083122.325857Z-8c032674`: 321.400 s
-- treatment `20260817T083310.938591Z-351a3e2a`: 321.300 s
-
-The following treatment was interrupted and is not a result: `20260817T083457.515642Z-47860190`. No WP794 keep/drop conclusion is justified.
+Report: `experiment_results/analysis/qualifying_brake_wp794_lap3_validation_rerun2/report.md`.
 
 ## Resume
 
-1. Re-run the complete WP794 interleaved configuration from the start; do not combine the partial sample with the new five-treatment decision set.
-2. If WP794 validates, retain only as a candidate; do not extend its boundary.
-3. Then run offline natural brake-regime mining across the seven documented zones, including the WP1781 natural-versus-direct comparison.
+Natural-regime mining is complete. WP1781 15→14 is the strongest transition: it is winner-selected through an upstream waypoint/lookahead phase change and retains about 0.10–0.13 s through +100/+200 m. Direct WP1781 suppression did not reproduce that state.
 
-Raw telemetry and the append-only ledger remain under ignored `experiment_results/` on this worktree. Compact completed campaign reports and analysis outputs are force-tracked. No natural brake-regime mining has been performed yet.
+Next recommended experiment: a one-tick-earlier throttle-reapplication A/B immediately after the existing WP1232 omitted final tick, measuring whether WP1781 naturally selects 14 ticks. Do not modify WP1781 directly.
+
+Report: `experiment_results/analysis/natural_brake_regimes/report.md`.
+
+Raw telemetry and the append-only ledger remain under ignored `experiment_results/` on this worktree. Compact completed campaign reports and analysis outputs should be force-tracked when committing this phase.

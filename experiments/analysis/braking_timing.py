@@ -13,6 +13,7 @@ EVENTS = {
     1: {"name": "WP2501-2561", "window": (2475, 2585), "next_window": (370, 450)},
     2: {"name": "WP1232-1276", "window": (1210, 1300), "next_window": (1760, 1825)},
     3: {"name": "WP1781-1804", "window": (1760, 1825), "next_window": (2475, 2585)},
+    4: {"name": "WP794-801", "window": (780, 820), "next_window": (1210, 1300)},
 }
 HORIZONS_M = (25, 50, 100, 200)
 
@@ -133,6 +134,8 @@ def _traversal(
             })
     return {
         "lap": int(lap),
+        "brake_onset_tick": int(rows[start_index]["tick"]),
+        "brake_onset_waypoint": int(rows[start_index]["custom_waypoint_index"]),
         "event_entry_sim_time_seconds": float(rows[start_index]["sim_time_seconds"]),
         "entry_waypoint": int(rows[start_index]["custom_waypoint_index"]),
         "entry_speed_kmh": float(rows[start_index]["speed_kmh"]),
@@ -142,6 +145,10 @@ def _traversal(
         "suppressed_brake_ticks": len(suppressed_indices),
         "suppression_reasons": [rows[index].get("override_suppression_reason") for index in suppressed_indices],
         "release_waypoint": release_wp,
+        "release_seconds_from_entry": (
+            float(rows[release_index]["sim_time_seconds"])
+            - float(rows[start_index]["sim_time_seconds"])
+        ),
         "release_speed_kmh": float(rows[release_index]["speed_kmh"]),
         "throttle_reapplication_waypoint": (
             None if throttle_index is None else int(rows[throttle_index]["custom_waypoint_index"])
@@ -196,9 +203,10 @@ def _attempt(root: Path, item: Dict[str, Any], event_id: int, steps: np.ndarray)
 
 def _aggregate(traversals: List[Dict[str, Any]]) -> Dict[str, Any]:
     fields = (
-        "event_entry_sim_time_seconds", "entry_speed_kmh", "minimum_speed_kmh", "raw_winner_brake_ticks",
+        "brake_onset_tick", "brake_onset_waypoint", "event_entry_sim_time_seconds",
+        "entry_speed_kmh", "minimum_speed_kmh", "raw_winner_brake_ticks",
         "applied_brake_ticks", "suppressed_brake_ticks", "release_waypoint",
-        "release_speed_kmh", "throttle_reapplication_waypoint",
+        "release_speed_kmh", "release_seconds_from_entry", "throttle_reapplication_waypoint",
         "throttle_reapplication_seconds_from_entry", "local_time_to_next_brake_seconds",
     )
     result = {field: _mean([row.get(field) for row in traversals]) for field in fields}
@@ -235,7 +243,7 @@ def analyze(root: Path, config_path: Path) -> Dict[str, Any]:
         parameters = item.get("parameters", {})
         selected = parameters.get("qualifying_brake.event")
         combined = parameters.get("qualifying_brake.two_event_combination")
-        event_ids = (1, 2) if combined else (EVENTS if selected is None else (int(selected),))
+        event_ids = (1, 2, 4) if combined else (EVENTS if selected is None else (int(selected),))
         for event_id in event_ids:
             measured = _attempt(root, item, event_id, steps)
             measured["aggregate"] = _aggregate(measured["traversals"])
