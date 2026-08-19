@@ -1,10 +1,10 @@
 {
   "campaign_key": "7d72b126d3dc82b9cefd",
-  "command_id": "9019caf7-7c7b-483b-8e22-c031bca7f68d",
+  "command_id": "385a6fef-4125-4e9f-b91a-3d8a51f49b8e",
   "command_response_code": 0,
   "command_status": "Success",
   "command_stderr": "",
-  "command_stdout": "Stopping scheduled task...\r\nStopping Monza CARLA processes...\r\nStopping PID 7468: D:\\Monza\\CarlaUE4\\Binaries\\Win64\\CarlaUE4.exe\r\nStopping PID 7544: D:\\Monza\\CarlaUE4.exe\r\nStarting scheduled task...\r\n{\"Status\":\"started\",\"Port\":2000,\"Listening\":true,\"ProcessIds\":[4552,2300],\"TaskState\":\"Running\"}\r\n",
+  "command_stdout": "Stopping scheduled task...\r\nStopping Monza CARLA processes...\r\nStopping PID 2536: D:\\Monza\\CarlaUE4\\Binaries\\Win64\\CarlaUE4.exe\r\nStopping PID 7668: D:\\Monza\\CarlaUE4.exe\r\nStarting scheduled task...\r\n{\"Status\":\"started\",\"Port\":2000,\"Listening\":true,\"ProcessIds\":[4376,4964],\"TaskState\":\"Running\"}\r\n",
   "event_type": "infrastructure_recovery",
   "experiment_name": "qualifying-brake-final-submission-validation",
   "instance_id": "i-045f5f07dd2aa5ad8",
@@ -13,7 +13,7 @@
     "client_version": "0.9.12",
     "expected_map": "Carla/Maps/Monza",
     "host": "172.31.86.36",
-    "latency_seconds": 0.06418834700070875,
+    "latency_seconds": 0.053256197000337124,
     "map": "Carla/Maps/Monza",
     "ok": true,
     "port": 2000,
@@ -24,8 +24,8 @@
   "readiness_attempts": 1,
   "reason": "causal_forced_clean",
   "region": "us-east-1",
-  "schedule_index": 0,
-  "started_utc": "2026-08-19T08:32:11.576853+00:00",
+  "schedule_index": 2,
+  "started_utc": "2026-08-19T08:35:55.109052+00:00",
   "success": true,
-  "wall_time_seconds": 8.590951737999603
+  "wall_time_seconds": 13.505118994999975
 }

@@ -1,0 +1,211 @@
+{
+  "arrival_analysis": {
+    "baseline": {
+      "maximum_speed_kmh": null,
+      "mean_speed_kmh": null,
+      "median_speed_kmh": null,
+      "minimum_speed_kmh": null,
+      "runs": 0,
+      "traversals": 0
+    },
+    "custom_waypoint_window": [
+      1402,
+      1409
+    ],
+    "restricted": {
+      "maximum_speed_kmh": 173.55497458321707,
+      "mean_speed_kmh": 173.21996556496134,
+      "median_speed_kmh": 173.3596180507115,
+      "minimum_speed_kmh": 171.86946781703406,
+      "runs": 5,
+      "traversals": 14
+    },
+    "restricted_minus_baseline_mean_kmh": null,
+    "restricted_zone_collisions": 1
+  },
+  "attempt_ids": [
+    "20260819T083220.172719Z-f951a57e",
+    "20260819T083409.847015Z-3a8e7382",
+    "20260819T083608.618818Z-9949010f",
+    "20260819T083724.363657Z-a0205136",
+    "20260819T083913.595550Z-9e920874"
+  ],
+  "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+  "campaign_complete": true,
+  "campaign_key": "7d72b126d3dc82b9cefd",
+  "campaign_mode": "baseline_validation",
+  "cohorts": {
+    "control": {
+      "collision_rate": null,
+      "completion_rate": null,
+      "controller_measurements": 0,
+      "finished_elapsed_seconds": null,
+      "measurement_attempt_ids": [],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {},
+      "penalized_objective_seconds": null,
+      "scheduled_repetitions": 0,
+      "section_elapsed_seconds": {},
+      "terminal_failures": []
+    },
+    "restricted": {
+      "collision_rate": 0.2,
+      "completion_rate": 0.8,
+      "controller_measurements": 5,
+      "finished_elapsed_seconds": {
+        "count": 4,
+        "maximum": 321.3000000000399,
+        "mean": 321.20000000003984,
+        "median": 321.17500000003986,
+        "minimum": 321.1500000000398,
+        "stdev": 0.07071067811868423
+      },
+      "measurement_attempt_ids": [
+        "20260819T083220.172719Z-f951a57e",
+        "20260819T083409.847015Z-3a8e7382",
+        "20260819T083608.618818Z-9949010f",
+        "20260819T083724.363657Z-a0205136",
+        "20260819T083913.595550Z-9e920874"
+      ],
+      "missing_due_to_infrastructure": 0,
+      "outcome_counts": {
+        "collision": 1,
+        "finished": 4
+      },
+      "penalized_objective_seconds": {
+        "count": 5,
+        "maximum": 600.0,
+        "mean": 376.96000000003187,
+        "median": 321.20000000003984,
+        "minimum": 321.1500000000398,
+        "stdev": 124.68316546348811
+      },
+      "scheduled_repetitions": 5,
+      "section_elapsed_seconds": {
+        "0": {
+          "count": 4,
+          "maximum": 47.550000000000004,
+          "mean": 47.5125,
+          "median": 47.525000000000006,
+          "minimum": 47.45,
+          "stdev": 0.04787135538781789
+        },
+        "1": {
+          "count": 4,
+          "maximum": 38.050000000000004,
+          "mean": 37.875,
+          "median": 37.825,
+          "minimum": 37.800000000000004,
+          "stdev": 0.11902380714238103
+        },
+        "2": {
+          "count": 4,
+          "maximum": 25.0,
+          "mean": 24.950000000000003,
+          "median": 24.950000000000003,
+          "minimum": 24.900000000000002,
+          "stdev": 0.04082482904638543
+        },
+        "3": {
+          "count": 4,
+          "maximum": 49.75,
+          "mean": 49.7125,
+          "median": 49.75,
+          "minimum": 49.6,
+          "stdev": 0.07499999999999929
+        },
+        "4": {
+          "count": 4,
+          "maximum": 17.1,
+          "mean": 17.1,
+          "median": 17.1,
+          "minimum": 17.1,
+          "stdev": 0.0
+        },
+        "5": {
+          "count": 4,
+          "maximum": 25.150000000000002,
+          "mean": 25.075000000000003,
+          "median": 25.05,
+          "minimum": 25.05,
+          "stdev": 0.05000000000000071
+        },
+        "6": {
+          "count": 4,
+          "maximum": 37.4,
+          "mean": 37.375,
+          "median": 37.375,
+          "minimum": 37.35,
+          "stdev": 0.028867513459479646
+        },
+        "7": {
+          "count": 4,
+          "maximum": 8.85,
+          "mean": 8.8375,
+          "median": 8.85,
+          "minimum": 8.8,
+          "stdev": 0.024999999999999467
+        },
+        "8": {
+          "count": 4,
+          "maximum": 42.650000000000006,
+          "mean": 42.612500000000004,
+          "median": 42.6,
+          "minimum": 42.6,
+          "stdev": 0.02500000000000213
+        },
+        "9": {
+          "count": 4,
+          "maximum": 30.150000000000002,
+          "mean": 30.150000000000002,
+          "median": 30.150000000000002,
+          "minimum": 30.150000000000002,
+          "stdev": 0.0
+        }
+      },
+      "terminal_failures": [
+        {
+          "attempt_id": "20260819T083608.618818Z-9949010f",
+          "collision_impulse": 392.56563257677294,
+          "custom_waypoint_index": 1410,
+          "elapsed_time_seconds": 172.10000000000625,
+          "official_waypoint_index": 4271,
+          "outcome": "collision",
+          "terminal_location": [
+            -79.08662414550781,
+            -120.9312744140625,
+            0.0016444014618173242
+          ]
+        }
+      ]
+    }
+  },
+  "completed_utc": "2026-08-19T08:40:54.701099+00:00",
+  "event_type": "upstream_speed_causal_campaign",
+  "experiment_name": "qualifying-brake-final-submission-validation",
+  "human_report_path": "experiment_results/causal/7d72b126d3dc82b9cefd/report.md",
+  "parameters": {
+    "control": {
+      "qualifying_brake.two_event_combination": 1,
+      "qualifying_brake.wp2501_left_foot_percent": 10,
+      "qualifying_brake.wp794_lap3_final_tick": 1,
+      "runtime.low_bandwidth_sensor_mode": 1
+    },
+    "restricted": {
+      "qualifying_brake.two_event_combination": 1,
+      "qualifying_brake.wp2501_left_foot_percent": 10,
+      "qualifying_brake.wp794_lap3_final_tick": 1,
+      "runtime.low_bandwidth_sensor_mode": 1
+    }
+  },
+  "pending_schedule_indices": [],
+  "result_path": "experiment_results/causal/7d72b126d3dc82b9cefd/result.json",
+  "schedule": [
+    "restricted",
+    "restricted",
+    "restricted",
+    "restricted",
+    "restricted"
+  ],
+  "schema_version": 2
+}

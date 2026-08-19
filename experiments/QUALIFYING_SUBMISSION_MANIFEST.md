@@ -23,16 +23,20 @@ python3 -m experiments.harness.cli dry-run \
   experiments/configs/qualifying_brake_known_good.json
 ```
 
-Run/resume the five forced-clean final campaign:
+Run or inspect the completed five-run forced-clean final campaign:
 
 ```bash
-python3 -m experiments.harness.cli causal \
+/home/ec2-user/venvs/roar/bin/python -m experiments.harness.cli causal \
   experiments/configs/qualifying_brake_final_validation.json
 ```
 
-The 2026-08-19 attempt was infrastructure-blocked before any vehicle run:
-CARLA's port was listening after SSM restart, but `get_sensor_token` failed for
-all 48 readiness probes. This is not a controller reliability observation.
+Final result: 4/5 finishes, one lap-2 WP1410 collision, completed mean
+321.200 s, median 321.175 s, sample SD 0.071 s, range 321.150-321.300 s. The
+WP1410 location is a known baseline failure region. All frozen interventions
+were verified from telemetry in every completed run.
+
+Do not use system `python3` for CARLA. It imports client 0.9.15, which is
+incompatible with this 0.9.12-dirty server and fails at `get_sensor_token`.
 
 ## Files required in the submitted controller bundle
 

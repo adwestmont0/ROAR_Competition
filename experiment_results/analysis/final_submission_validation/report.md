@@ -16,30 +16,37 @@ Resolved experiment ID:
   lap-3 WP794 final-tick suppression, and WP2501 0.10 throttle overlap on the
   final five applied brake ticks. No rejected Spring parameter was enabled.
 
-## Online validation status
+## Online validation result
 
-No controller-valid attempt ran. The first AWS SSM restart completed
-successfully, stopped and restarted the Windows CARLA processes, and reported
-port 2000 listening. CARLA then failed all 48 readiness probes over 249.2 s
-with `rpc::rpc_error during call in function get_sensor_token`. The harness
-recorded `carla_readiness_timeout` and no attempt ID.
+The campaign completed using the known-compatible environment:
+`/home/ec2-user/venvs/roar/bin/python`, CARLA client 0.9.12, and CARLA server
+0.9.12-dirty. Every attempt used an independent successful SSM CARLA restart.
 
-The second forced-clean cycle showed the same readiness pattern and was
-manually stopped before its timeout. This avoids misclassifying infrastructure
-failure as controller unreliability.
+| Run | Outcome | Time / terminal point |
+|---:|---|---:|
+| 1 | finished | 321.150 s |
+| 2 | finished | 321.150 s |
+| 3 | collision | 172.100 s, lap 2 WP1410 |
+| 4 | finished | 321.200 s |
+| 5 | finished | 321.300 s |
 
-Checkpoint/provenance:
+Completion was 4/5 (80%) with one collision. Completed mean was 321.200 s,
+median 321.175 s, sample SD 0.071 s, and range 321.150-321.300 s. The collision
+was in the repeatedly observed WP1409-1410 baseline failure region.
+
+All completed runs applied exactly one WP1232 suppression, two WP2501
+suppressions, and five WP2501 0.10 throttle/brake-overlap ticks per lap. Each
+also applied exactly one lap-3 WP794 suppression. Brake remained 1.0 on every
+WP2501 overlap tick. The collision run applied the expected lap-1 behavior and
+lap-2 WP1232 suppression before terminating; it had not yet reached lap-2
+WP2501 or lap-3 WP794.
+
+Authoritative provenance and result:
 `experiment_results/causal/7d72b126d3dc82b9cefd/`.
 
-## Required follow-up
+## Environment correction
 
-Restore CARLA sensor RPC readiness, then resume:
-
-```bash
-python3 -m experiments.harness.cli causal \
-  experiments/configs/qualifying_brake_final_validation.json
-```
-
-The checkpoint correctly remains at schedule index 0. Submission reliability
-is therefore not newly established by this gate; the prior validated component
-campaigns remain the current evidence.
+The initial failed readiness attempt used system `/usr/bin/python3` with CARLA
+client 0.9.15 against the custom 0.9.12-dirty server. That mismatch caused
+`get_sensor_token` failures. It was not a server or controller failure. All
+CARLA commands must use the ROAR virtual environment above.

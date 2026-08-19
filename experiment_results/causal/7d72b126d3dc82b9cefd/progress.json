@@ -1,14 +1,459 @@
 {
   "campaign_key": "7d72b126d3dc82b9cefd",
-  "next_schedule_index": 0,
+  "next_schedule_index": 5,
   "records": [
     {
-      "attempt_ids": [],
+      "attempt_ids": [
+        "20260819T083220.172719Z-f951a57e"
+      ],
       "cohort": "restricted",
-      "infrastructure_error": "carla_readiness_timeout",
-      "measurement": null,
+      "measurement": {
+        "attempt_id": "20260819T083220.172719Z-f951a57e",
+        "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+        "collision_impulse": null,
+        "control_timestep_seconds": 0.05,
+        "custom_waypoint_index": null,
+        "elapsed_time_seconds": 321.1500000000398,
+        "experiment_id": "qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771",
+        "experiment_name": "qualifying-brake-final-submission-validation",
+        "is_control": false,
+        "official_waypoint_index": null,
+        "outcome": "finished",
+        "parameters": {
+          "qualifying_brake.two_event_combination": 1,
+          "qualifying_brake.wp2501_left_foot_percent": 10,
+          "qualifying_brake.wp794_lap3_final_tick": 1,
+          "runtime.low_bandwidth_sensor_mode": 1
+        },
+        "provenance": {
+          "aws": {
+            "caller_identity": {
+              "Account": "564798346532",
+              "Arn": "arn:aws:sts::564798346532:assumed-role/ROAR-Carla-SSM-OrchestratorPolicy/i-018eb6fd9b9ad73a5",
+              "UserId": "AROAYHAE22USDJDN23LFF:i-018eb6fd9b9ad73a5"
+            },
+            "cli_version": "aws-cli/2.33.15 Python/3.9.25 Linux/6.18.39-79.141.amzn2023.x86_64 source/x86_64.amzn.2023",
+            "region": "us-east-1"
+          },
+          "carla_python": {
+            "module": "carla",
+            "path": "/home/ec2-user/venvs/roar/lib/python3.8/site-packages/carla/__init__.py",
+            "version": "0.9.12"
+          },
+          "carla_server": {
+            "client_version": "0.9.12",
+            "expected_map": "Carla/Maps/Monza",
+            "host": "172.31.86.36",
+            "latency_seconds": 0.055036998999639763,
+            "map": "Carla/Maps/Monza",
+            "ok": true,
+            "port": 2000,
+            "server_version": "0.9.12-dirty",
+            "synchronous_mode": false,
+            "world_fixed_delta_seconds": null
+          },
+          "python": {
+            "executable": "/home/ec2-user/venvs/roar/bin/python",
+            "platform": "Linux-6.18.39-79.141.amzn2023.x86_64-x86_64-with-glibc2.34",
+            "version": "3.8.20 (default, Aug  9 2026, 00:19:31) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]"
+          },
+          "repo": {
+            "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+            "harness_commit": "12574bed859a692798c87aa5a38738061af74cbe",
+            "harness_dirty": true,
+            "harness_status": [
+              "M experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json"
+            ]
+          },
+          "roar_py": {
+            "module": "roar_py_interface",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_core/roar_py_interface/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": null
+          },
+          "roar_py_carla": {
+            "module": "roar_py_carla",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_carla/roar_py_carla/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": "0.1.1"
+          }
+        },
+        "source_diff_path": "experiment_results/runs/20260819T083220.172719Z-f951a57e/source.diff",
+        "started_utc": "2026-08-19T08:32:20.172855+00:00",
+        "stderr_path": "experiment_results/runs/20260819T083220.172719Z-f951a57e/stderr.log",
+        "stdout_path": "experiment_results/runs/20260819T083220.172719Z-f951a57e/stdout.log",
+        "telemetry_path": "experiment_results/runs/20260819T083220.172719Z-f951a57e/telemetry/summary.json",
+        "terminal_location": null,
+        "terminal_tick": null,
+        "wall_time_seconds": 101.14199980499961
+      },
       "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json",
-      "schedule_index": 0
+      "schedule_index": 0,
+      "stop_reason": null
+    },
+    {
+      "attempt_ids": [
+        "20260819T083409.847015Z-3a8e7382"
+      ],
+      "cohort": "restricted",
+      "measurement": {
+        "attempt_id": "20260819T083409.847015Z-3a8e7382",
+        "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+        "collision_impulse": null,
+        "control_timestep_seconds": 0.05,
+        "custom_waypoint_index": null,
+        "elapsed_time_seconds": 321.1500000000399,
+        "experiment_id": "qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771",
+        "experiment_name": "qualifying-brake-final-submission-validation",
+        "is_control": false,
+        "official_waypoint_index": null,
+        "outcome": "finished",
+        "parameters": {
+          "qualifying_brake.two_event_combination": 1,
+          "qualifying_brake.wp2501_left_foot_percent": 10,
+          "qualifying_brake.wp794_lap3_final_tick": 1,
+          "runtime.low_bandwidth_sensor_mode": 1
+        },
+        "provenance": {
+          "aws": {
+            "caller_identity": {
+              "Account": "564798346532",
+              "Arn": "arn:aws:sts::564798346532:assumed-role/ROAR-Carla-SSM-OrchestratorPolicy/i-018eb6fd9b9ad73a5",
+              "UserId": "AROAYHAE22USDJDN23LFF:i-018eb6fd9b9ad73a5"
+            },
+            "cli_version": "aws-cli/2.33.15 Python/3.9.25 Linux/6.18.39-79.141.amzn2023.x86_64 source/x86_64.amzn.2023",
+            "region": "us-east-1"
+          },
+          "carla_python": {
+            "module": "carla",
+            "path": "/home/ec2-user/venvs/roar/lib/python3.8/site-packages/carla/__init__.py",
+            "version": "0.9.12"
+          },
+          "carla_server": {
+            "client_version": "0.9.12",
+            "expected_map": "Carla/Maps/Monza",
+            "host": "172.31.86.36",
+            "latency_seconds": 0.0494122599993716,
+            "map": "Carla/Maps/Monza",
+            "ok": true,
+            "port": 2000,
+            "server_version": "0.9.12-dirty",
+            "synchronous_mode": false,
+            "world_fixed_delta_seconds": null
+          },
+          "python": {
+            "executable": "/home/ec2-user/venvs/roar/bin/python",
+            "platform": "Linux-6.18.39-79.141.amzn2023.x86_64-x86_64-with-glibc2.34",
+            "version": "3.8.20 (default, Aug  9 2026, 00:19:31) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]"
+          },
+          "repo": {
+            "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+            "harness_commit": "12574bed859a692798c87aa5a38738061af74cbe",
+            "harness_dirty": true,
+            "harness_status": [
+              "M experiment_results/causal/7d72b126d3dc82b9cefd/progress.json",
+              " M experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json"
+            ]
+          },
+          "roar_py": {
+            "module": "roar_py_interface",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_core/roar_py_interface/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": null
+          },
+          "roar_py_carla": {
+            "module": "roar_py_carla",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_carla/roar_py_carla/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": "0.1.1"
+          }
+        },
+        "source_diff_path": "experiment_results/runs/20260819T083409.847015Z-3a8e7382/source.diff",
+        "started_utc": "2026-08-19T08:34:09.847162+00:00",
+        "stderr_path": "experiment_results/runs/20260819T083409.847015Z-3a8e7382/stderr.log",
+        "stdout_path": "experiment_results/runs/20260819T083409.847015Z-3a8e7382/stdout.log",
+        "telemetry_path": "experiment_results/runs/20260819T083409.847015Z-3a8e7382/telemetry/summary.json",
+        "terminal_location": null,
+        "terminal_tick": null,
+        "wall_time_seconds": 105.2546922040001
+      },
+      "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/001.json",
+      "schedule_index": 1,
+      "stop_reason": null
+    },
+    {
+      "attempt_ids": [
+        "20260819T083608.618818Z-9949010f"
+      ],
+      "cohort": "restricted",
+      "measurement": {
+        "attempt_id": "20260819T083608.618818Z-9949010f",
+        "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+        "collision_impulse": 392.56563257677294,
+        "control_timestep_seconds": 0.05,
+        "custom_waypoint_index": 1410,
+        "elapsed_time_seconds": 172.10000000000625,
+        "experiment_id": "qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771",
+        "experiment_name": "qualifying-brake-final-submission-validation",
+        "is_control": false,
+        "official_waypoint_index": 4271,
+        "outcome": "collision",
+        "parameters": {
+          "qualifying_brake.two_event_combination": 1,
+          "qualifying_brake.wp2501_left_foot_percent": 10,
+          "qualifying_brake.wp794_lap3_final_tick": 1,
+          "runtime.low_bandwidth_sensor_mode": 1
+        },
+        "provenance": {
+          "aws": {
+            "caller_identity": {
+              "Account": "564798346532",
+              "Arn": "arn:aws:sts::564798346532:assumed-role/ROAR-Carla-SSM-OrchestratorPolicy/i-018eb6fd9b9ad73a5",
+              "UserId": "AROAYHAE22USDJDN23LFF:i-018eb6fd9b9ad73a5"
+            },
+            "cli_version": "aws-cli/2.33.15 Python/3.9.25 Linux/6.18.39-79.141.amzn2023.x86_64 source/x86_64.amzn.2023",
+            "region": "us-east-1"
+          },
+          "carla_python": {
+            "module": "carla",
+            "path": "/home/ec2-user/venvs/roar/lib/python3.8/site-packages/carla/__init__.py",
+            "version": "0.9.12"
+          },
+          "carla_server": {
+            "client_version": "0.9.12",
+            "expected_map": "Carla/Maps/Monza",
+            "host": "172.31.86.36",
+            "latency_seconds": 0.04432556699975976,
+            "map": "Carla/Maps/Monza",
+            "ok": true,
+            "port": 2000,
+            "server_version": "0.9.12-dirty",
+            "synchronous_mode": false,
+            "world_fixed_delta_seconds": null
+          },
+          "python": {
+            "executable": "/home/ec2-user/venvs/roar/bin/python",
+            "platform": "Linux-6.18.39-79.141.amzn2023.x86_64-x86_64-with-glibc2.34",
+            "version": "3.8.20 (default, Aug  9 2026, 00:19:31) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]"
+          },
+          "repo": {
+            "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+            "harness_commit": "12574bed859a692798c87aa5a38738061af74cbe",
+            "harness_dirty": true,
+            "harness_status": [
+              "M experiment_results/causal/7d72b126d3dc82b9cefd/progress.json",
+              " M experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json"
+            ]
+          },
+          "roar_py": {
+            "module": "roar_py_interface",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_core/roar_py_interface/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": null
+          },
+          "roar_py_carla": {
+            "module": "roar_py_carla",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_carla/roar_py_carla/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": "0.1.1"
+          }
+        },
+        "source_diff_path": "experiment_results/runs/20260819T083608.618818Z-9949010f/source.diff",
+        "started_utc": "2026-08-19T08:36:08.618959+00:00",
+        "stderr_path": "experiment_results/runs/20260819T083608.618818Z-9949010f/stderr.log",
+        "stdout_path": "experiment_results/runs/20260819T083608.618818Z-9949010f/stdout.log",
+        "telemetry_path": "experiment_results/runs/20260819T083608.618818Z-9949010f/telemetry/summary.json",
+        "terminal_location": [
+          -79.08662414550781,
+          -120.9312744140625,
+          0.0016444014618173242
+        ],
+        "terminal_tick": 3442,
+        "wall_time_seconds": 58.62967827900047
+      },
+      "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/002.json",
+      "schedule_index": 2,
+      "stop_reason": null
+    },
+    {
+      "attempt_ids": [
+        "20260819T083724.363657Z-a0205136"
+      ],
+      "cohort": "restricted",
+      "measurement": {
+        "attempt_id": "20260819T083724.363657Z-a0205136",
+        "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+        "collision_impulse": null,
+        "control_timestep_seconds": 0.05,
+        "custom_waypoint_index": null,
+        "elapsed_time_seconds": 321.20000000003984,
+        "experiment_id": "qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771",
+        "experiment_name": "qualifying-brake-final-submission-validation",
+        "is_control": false,
+        "official_waypoint_index": null,
+        "outcome": "finished",
+        "parameters": {
+          "qualifying_brake.two_event_combination": 1,
+          "qualifying_brake.wp2501_left_foot_percent": 10,
+          "qualifying_brake.wp794_lap3_final_tick": 1,
+          "runtime.low_bandwidth_sensor_mode": 1
+        },
+        "provenance": {
+          "aws": {
+            "caller_identity": {
+              "Account": "564798346532",
+              "Arn": "arn:aws:sts::564798346532:assumed-role/ROAR-Carla-SSM-OrchestratorPolicy/i-018eb6fd9b9ad73a5",
+              "UserId": "AROAYHAE22USDJDN23LFF:i-018eb6fd9b9ad73a5"
+            },
+            "cli_version": "aws-cli/2.33.15 Python/3.9.25 Linux/6.18.39-79.141.amzn2023.x86_64 source/x86_64.amzn.2023",
+            "region": "us-east-1"
+          },
+          "carla_python": {
+            "module": "carla",
+            "path": "/home/ec2-user/venvs/roar/lib/python3.8/site-packages/carla/__init__.py",
+            "version": "0.9.12"
+          },
+          "carla_server": {
+            "client_version": "0.9.12",
+            "expected_map": "Carla/Maps/Monza",
+            "host": "172.31.86.36",
+            "latency_seconds": 0.044326989999717625,
+            "map": "Carla/Maps/Monza",
+            "ok": true,
+            "port": 2000,
+            "server_version": "0.9.12-dirty",
+            "synchronous_mode": false,
+            "world_fixed_delta_seconds": null
+          },
+          "python": {
+            "executable": "/home/ec2-user/venvs/roar/bin/python",
+            "platform": "Linux-6.18.39-79.141.amzn2023.x86_64-x86_64-with-glibc2.34",
+            "version": "3.8.20 (default, Aug  9 2026, 00:19:31) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]"
+          },
+          "repo": {
+            "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+            "harness_commit": "12574bed859a692798c87aa5a38738061af74cbe",
+            "harness_dirty": true,
+            "harness_status": [
+              "M experiment_results/causal/7d72b126d3dc82b9cefd/progress.json",
+              " M experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json"
+            ]
+          },
+          "roar_py": {
+            "module": "roar_py_interface",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_core/roar_py_interface/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": null
+          },
+          "roar_py_carla": {
+            "module": "roar_py_carla",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_carla/roar_py_carla/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": "0.1.1"
+          }
+        },
+        "source_diff_path": "experiment_results/runs/20260819T083724.363657Z-a0205136/source.diff",
+        "started_utc": "2026-08-19T08:37:24.363794+00:00",
+        "stderr_path": "experiment_results/runs/20260819T083724.363657Z-a0205136/stderr.log",
+        "stdout_path": "experiment_results/runs/20260819T083724.363657Z-a0205136/stdout.log",
+        "telemetry_path": "experiment_results/runs/20260819T083724.363657Z-a0205136/telemetry/summary.json",
+        "terminal_location": null,
+        "terminal_tick": null,
+        "wall_time_seconds": 100.66174455000055
+      },
+      "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/003.json",
+      "schedule_index": 3,
+      "stop_reason": null
+    },
+    {
+      "attempt_ids": [
+        "20260819T083913.595550Z-9e920874"
+      ],
+      "cohort": "restricted",
+      "measurement": {
+        "attempt_id": "20260819T083913.595550Z-9e920874",
+        "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+        "collision_impulse": null,
+        "control_timestep_seconds": 0.05,
+        "custom_waypoint_index": null,
+        "elapsed_time_seconds": 321.3000000000399,
+        "experiment_id": "qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771",
+        "experiment_name": "qualifying-brake-final-submission-validation",
+        "is_control": false,
+        "official_waypoint_index": null,
+        "outcome": "finished",
+        "parameters": {
+          "qualifying_brake.two_event_combination": 1,
+          "qualifying_brake.wp2501_left_foot_percent": 10,
+          "qualifying_brake.wp794_lap3_final_tick": 1,
+          "runtime.low_bandwidth_sensor_mode": 1
+        },
+        "provenance": {
+          "aws": {
+            "caller_identity": {
+              "Account": "564798346532",
+              "Arn": "arn:aws:sts::564798346532:assumed-role/ROAR-Carla-SSM-OrchestratorPolicy/i-018eb6fd9b9ad73a5",
+              "UserId": "AROAYHAE22USDJDN23LFF:i-018eb6fd9b9ad73a5"
+            },
+            "cli_version": "aws-cli/2.33.15 Python/3.9.25 Linux/6.18.39-79.141.amzn2023.x86_64 source/x86_64.amzn.2023",
+            "region": "us-east-1"
+          },
+          "carla_python": {
+            "module": "carla",
+            "path": "/home/ec2-user/venvs/roar/lib/python3.8/site-packages/carla/__init__.py",
+            "version": "0.9.12"
+          },
+          "carla_server": {
+            "client_version": "0.9.12",
+            "expected_map": "Carla/Maps/Monza",
+            "host": "172.31.86.36",
+            "latency_seconds": 0.050989569000194024,
+            "map": "Carla/Maps/Monza",
+            "ok": true,
+            "port": 2000,
+            "server_version": "0.9.12-dirty",
+            "synchronous_mode": false,
+            "world_fixed_delta_seconds": null
+          },
+          "python": {
+            "executable": "/home/ec2-user/venvs/roar/bin/python",
+            "platform": "Linux-6.18.39-79.141.amzn2023.x86_64-x86_64-with-glibc2.34",
+            "version": "3.8.20 (default, Aug  9 2026, 00:19:31) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]"
+          },
+          "repo": {
+            "baseline_commit": "ee3040254d41c8e2d6fb501c8901ea94c34694d6",
+            "harness_commit": "12574bed859a692798c87aa5a38738061af74cbe",
+            "harness_dirty": true,
+            "harness_status": [
+              "M experiment_results/causal/7d72b126d3dc82b9cefd/progress.json",
+              " M experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json"
+            ]
+          },
+          "roar_py": {
+            "module": "roar_py_interface",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_core/roar_py_interface/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": null
+          },
+          "roar_py_carla": {
+            "module": "roar_py_carla",
+            "path": "/home/ec2-user/ROAR/ROAR_PY/roar_py_carla/roar_py_carla/__init__.py",
+            "repository_commit": "3cbb087ccc5198248815b57742a945e81ef55b64",
+            "version": "0.1.1"
+          }
+        },
+        "source_diff_path": "experiment_results/runs/20260819T083913.595550Z-9e920874/source.diff",
+        "started_utc": "2026-08-19T08:39:13.595688+00:00",
+        "stderr_path": "experiment_results/runs/20260819T083913.595550Z-9e920874/stderr.log",
+        "stdout_path": "experiment_results/runs/20260819T083913.595550Z-9e920874/stdout.log",
+        "telemetry_path": "experiment_results/runs/20260819T083913.595550Z-9e920874/telemetry/summary.json",
+        "terminal_location": null,
+        "terminal_tick": null,
+        "wall_time_seconds": 100.87674770300055
+      },
+      "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/004.json",
+      "schedule_index": 4,
+      "stop_reason": null
     }
   ],
   "schedule": [
