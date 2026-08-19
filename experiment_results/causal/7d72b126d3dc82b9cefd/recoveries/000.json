@@ -1,0 +1,28 @@
+{
+  "campaign_key": "7d72b126d3dc82b9cefd",
+  "command_id": "6d71b8d3-8a31-40c0-8a5d-1f5983d4f676",
+  "command_response_code": 0,
+  "command_status": "Success",
+  "command_stderr": "",
+  "command_stdout": "Stopping scheduled task...\r\nStopping Monza CARLA processes...\r\nStopping PID 772: D:\\Monza\\CarlaUE4\\Binaries\\Win64\\CarlaUE4.exe\r\nStopping PID 4504: D:\\Monza\\CarlaUE4.exe\r\nStarting scheduled task...\r\n{\"Status\":\"started\",\"Port\":2000,\"Listening\":true,\"ProcessIds\":[5824,1760],\"TaskState\":\"Running\"}\r\n",
+  "error": "carla_readiness_timeout",
+  "event_type": "infrastructure_recovery",
+  "experiment_name": "qualifying-brake-final-submission-validation",
+  "instance_id": "i-045f5f07dd2aa5ad8",
+  "last_readiness": {
+    "error": "RuntimeError: rpc::rpc_error during call in function get_sensor_token",
+    "expected_map": "Carla/Maps/Monza",
+    "host": "172.31.86.36",
+    "latency_seconds": 0.007420527999784099,
+    "ok": false,
+    "port": 2000
+  },
+  "provider": "aws_ssm",
+  "readiness_attempts": 48,
+  "reason": "causal_forced_clean",
+  "region": "us-east-1",
+  "schedule_index": 0,
+  "started_utc": "2026-08-19T08:03:47.994128+00:00",
+  "success": false,
+  "wall_time_seconds": 249.21548223900027
+}

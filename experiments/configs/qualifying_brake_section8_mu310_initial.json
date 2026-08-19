@@ -1,0 +1,46 @@
+{
+  "name": "qualifying-brake-section8-mu310-initial",
+  "baseline_commit": "ee30402",
+  "results_dir": "experiment_results",
+  "carla": {
+    "host": "172.31.86.36",
+    "port": 2000,
+    "timeout_seconds": 10,
+    "expected_map": "Carla/Maps/Monza"
+  },
+  "execution": {
+    "client_timeout_seconds": 600,
+    "max_infra_retries": 2
+  },
+  "fixed_parameters": {
+    "qualifying_brake.two_event_combination": 1,
+    "qualifying_brake.wp794_lap3_final_tick": 1,
+    "qualifying_brake.wp2501_left_foot_percent": 10,
+    "runtime.low_bandwidth_sensor_mode": 1
+  },
+  "recovery": {
+    "provider": "aws_ssm",
+    "region": "us-east-1",
+    "instance_id": "i-045f5f07dd2aa5ad8",
+    "document_name": "AWS-RunPowerShellScript",
+    "restart_command": "& 'D:\\Monza\\ROAR\\Restart-Carla.ps1'",
+    "command_timeout_seconds": 240,
+    "readiness_timeout_seconds": 240,
+    "readiness_poll_seconds": 5
+  },
+  "matrix": [
+    {"throttle.section_mu.8": 3.10},
+    {"throttle.section_mu.8": 3.10}
+  ],
+  "controls": {
+    "enabled": true,
+    "every": 1,
+    "at_start": true,
+    "at_end": true,
+    "parameters": {}
+  },
+  "stop_conditions": {
+    "stop_on_control_failure": false,
+    "consecutive_collisions": 2
+  }
+}

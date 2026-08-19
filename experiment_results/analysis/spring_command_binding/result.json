@@ -1,0 +1,840 @@
+{
+  "method": "fixed-trajectory sequential brake-counter replay",
+  "runs": 10,
+  "run_ids": [
+    "20260818T063530.822424Z-fe5c85a3",
+    "20260818T070904.964515Z-89553b85",
+    "20260818T071108.082912Z-eb0d8a30",
+    "20260818T071510.985769Z-50987091",
+    "20260818T071710.794473Z-4ce4acd1",
+    "20260818T072109.029370Z-4c725de0",
+    "20260819T070312.411652Z-b5384c64",
+    "20260819T070452.889926Z-5bceddb2",
+    "20260819T070737.218231Z-3aedfb81",
+    "20260819T070917.090338Z-36760b26"
+  ],
+  "ticks": 64228,
+  "results": [
+    {
+      "name": "s2_mu_3.40",
+      "category": "scalar",
+      "changed_applied_command_ticks": 46,
+      "changed_controller_state_ticks": 127,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 10,
+      "per_run": {
+        "20260818T063530.822424Z-fe5c85a3": 4,
+        "20260818T070904.964515Z-89553b85": 6,
+        "20260818T071108.082912Z-eb0d8a30": 4,
+        "20260818T071510.985769Z-50987091": 4,
+        "20260818T071710.794473Z-4ce4acd1": 6,
+        "20260818T072109.029370Z-4c725de0": 4,
+        "20260819T070312.411652Z-b5384c64": 5,
+        "20260819T070452.889926Z-5bceddb2": 4,
+        "20260819T070737.218231Z-3aedfb81": 5,
+        "20260819T070917.090338Z-36760b26": 4
+      },
+      "sections": {
+        "2": 46
+      },
+      "zones": {
+        "WP627": 46
+      },
+      "top_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 27
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 9
+        }
+      ],
+      "top_state_change_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 50
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 28
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 18
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 17
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 12
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 2
+        }
+      ],
+      "branch_transitions": [
+        {
+          "from": "brake_initiate",
+          "to": "throttle_maintain_over",
+          "ticks": 20
+        },
+        {
+          "from": "throttle_down",
+          "to": "throttle_maintain",
+          "ticks": 14
+        },
+        {
+          "from": "brake_initiate",
+          "to": "throttle_down",
+          "ticks": 12
+        }
+      ],
+      "constraint_reconstruction_error_kmh": {
+        "median": 0.0,
+        "p99": 5.684341886080802e-14,
+        "maximum": 19.054122743994412
+      }
+    },
+    {
+      "name": "s4_mu_3.05",
+      "category": "scalar",
+      "changed_applied_command_ticks": 67,
+      "changed_controller_state_ticks": 702,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 10,
+      "per_run": {
+        "20260818T063530.822424Z-fe5c85a3": 9,
+        "20260818T070904.964515Z-89553b85": 8,
+        "20260818T071108.082912Z-eb0d8a30": 6,
+        "20260818T071510.985769Z-50987091": 6,
+        "20260818T071710.794473Z-4ce4acd1": 8,
+        "20260818T072109.029370Z-4c725de0": 6,
+        "20260819T070312.411652Z-b5384c64": 6,
+        "20260819T070452.889926Z-5bceddb2": 6,
+        "20260819T070737.218231Z-3aedfb81": 6,
+        "20260819T070917.090338Z-36760b26": 6
+      },
+      "sections": {
+        "4": 67
+      },
+      "zones": {
+        "WP1232": 67
+      },
+      "top_clusters": [
+        {
+          "lap": 3,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 17
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 7
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 3
+        }
+      ],
+      "top_state_change_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 137
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 111
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 111
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 110
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 97
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 89
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 20
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 17
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1275,
+            1299
+          ],
+          "ticks": 10
+        }
+      ],
+      "branch_transitions": [
+        {
+          "from": "brake_initiate",
+          "to": "throttle_maintain_over",
+          "ticks": 36
+        },
+        {
+          "from": "brake_counter",
+          "to": "throttle_maintain",
+          "ticks": 22
+        },
+        {
+          "from": "brake_counter",
+          "to": "throttle_maintain_over",
+          "ticks": 6
+        },
+        {
+          "from": "brake_initiate",
+          "to": "throttle_down",
+          "ticks": 3
+        }
+      ],
+      "constraint_reconstruction_error_kmh": {
+        "median": 0.0,
+        "p99": 5.684341886080802e-14,
+        "maximum": 19.054122743994412
+      }
+    },
+    {
+      "name": "full_throttle_threshold_0.95",
+      "category": "scalar",
+      "changed_applied_command_ticks": 0,
+      "changed_controller_state_ticks": 1735,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 0,
+      "per_run": {},
+      "sections": {},
+      "zones": {},
+      "top_clusters": [],
+      "top_state_change_clusters": [
+        {
+          "lap": 3,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 149
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 147
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            600,
+            624
+          ],
+          "ticks": 139
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1825,
+            1849
+          ],
+          "ticks": 100
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1825,
+            1849
+          ],
+          "ticks": 95
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1825,
+            1849
+          ],
+          "ticks": 89
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            750,
+            774
+          ],
+          "ticks": 67
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            750,
+            774
+          ],
+          "ticks": 62
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            750,
+            774
+          ],
+          "ticks": 61
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            775,
+            799
+          ],
+          "ticks": 50
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1800,
+            1824
+          ],
+          "ticks": 50
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1800,
+            1824
+          ],
+          "ticks": 50
+        }
+      ],
+      "branch_transitions": [],
+      "constraint_reconstruction_error_kmh": null
+    },
+    {
+      "name": "throttle_up_multiplier_1.35",
+      "category": "scalar",
+      "changed_applied_command_ticks": 0,
+      "changed_controller_state_ticks": 0,
+      "changed_raw_magnitude_ticks": 2182,
+      "runs_affected": 0,
+      "per_run": {},
+      "sections": {},
+      "zones": {},
+      "top_clusters": [],
+      "top_state_change_clusters": [],
+      "branch_transitions": [],
+      "constraint_reconstruction_error_kmh": null
+    },
+    {
+      "name": "brake_initiation_multiplier_1.05",
+      "category": "scalar",
+      "changed_applied_command_ticks": 6,
+      "changed_controller_state_ticks": 6,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 3,
+      "per_run": {
+        "20260818T070904.964515Z-89553b85": 1,
+        "20260818T071710.794473Z-4ce4acd1": 1,
+        "20260819T070312.411652Z-b5384c64": 4
+      },
+      "sections": {
+        "2": 1,
+        "3": 3,
+        "9": 2
+      },
+      "zones": {
+        "WP794": 3,
+        "WP2501": 2,
+        "WP627": 1
+      },
+      "top_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            775,
+            799
+          ],
+          "ticks": 3
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            2525,
+            2549
+          ],
+          "ticks": 1
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 1
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            2525,
+            2549
+          ],
+          "ticks": 1
+        }
+      ],
+      "top_state_change_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            775,
+            799
+          ],
+          "ticks": 3
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            2525,
+            2549
+          ],
+          "ticks": 1
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 1
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            2525,
+            2549
+          ],
+          "ticks": 1
+        }
+      ],
+      "branch_transitions": [
+        {
+          "from": "brake_initiate",
+          "to": "throttle_down",
+          "ticks": 3
+        },
+        {
+          "from": "brake_initiate",
+          "to": "throttle_maintain_over",
+          "ticks": 3
+        }
+      ],
+      "constraint_reconstruction_error_kmh": null
+    },
+    {
+      "name": "max_speed_305",
+      "category": "scalar",
+      "changed_applied_command_ticks": 0,
+      "changed_controller_state_ticks": 0,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 0,
+      "per_run": {},
+      "sections": {},
+      "zones": {},
+      "top_clusters": [],
+      "top_state_change_clusters": [],
+      "branch_transitions": [],
+      "constraint_reconstruction_error_kmh": {
+        "median": 0.0,
+        "p99": 5.684341886080802e-14,
+        "maximum": 19.054122743994412
+      }
+    },
+    {
+      "name": "brake_counter_div3_cap8",
+      "category": "structural",
+      "changed_applied_command_ticks": 0,
+      "changed_controller_state_ticks": 3210,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 0,
+      "per_run": {},
+      "sections": {},
+      "zones": {},
+      "top_clusters": [],
+      "top_state_change_clusters": [
+        {
+          "lap": 1,
+          "waypoints": [
+            2500,
+            2524
+          ],
+          "ticks": 160
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            2500,
+            2524
+          ],
+          "ticks": 160
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            2500,
+            2524
+          ],
+          "ticks": 160
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            425,
+            449
+          ],
+          "ticks": 123
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            2525,
+            2549
+          ],
+          "ticks": 122
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 120
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 118
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            425,
+            449
+          ],
+          "ticks": 117
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            2550,
+            2574
+          ],
+          "ticks": 114
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 113
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1225,
+            1249
+          ],
+          "ticks": 111
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            400,
+            424
+          ],
+          "ticks": 110
+        }
+      ],
+      "branch_transitions": [],
+      "constraint_reconstruction_error_kmh": null
+    },
+    {
+      "name": "lighter_braking_branches",
+      "category": "structural",
+      "changed_applied_command_ticks": 230,
+      "changed_controller_state_ticks": 0,
+      "changed_raw_magnitude_ticks": 0,
+      "runs_affected": 10,
+      "per_run": {
+        "20260818T063530.822424Z-fe5c85a3": 24,
+        "20260818T070904.964515Z-89553b85": 23,
+        "20260818T071108.082912Z-eb0d8a30": 23,
+        "20260818T071510.985769Z-50987091": 24,
+        "20260818T071710.794473Z-4ce4acd1": 22,
+        "20260818T072109.029370Z-4c725de0": 22,
+        "20260819T070312.411652Z-b5384c64": 22,
+        "20260819T070452.889926Z-5bceddb2": 23,
+        "20260819T070737.218231Z-3aedfb81": 24,
+        "20260819T070917.090338Z-36760b26": 23
+      },
+      "sections": {
+        "1": 30,
+        "2": 65,
+        "3": 30,
+        "4": 27,
+        "6": 63,
+        "9": 15
+      },
+      "zones": {
+        "WP427": 29,
+        "WP627": 65,
+        "WP794": 30,
+        "WP1232": 27,
+        "WP1781": 63,
+        "WP2501": 15,
+        "WP391": 1
+      },
+      "top_clusters": [
+        {
+          "lap": 2,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 27
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 27
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1800,
+            1824
+          ],
+          "ticks": 20
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1800,
+            1824
+          ],
+          "ticks": 20
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            1800,
+            1824
+          ],
+          "ticks": 20
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            625,
+            649
+          ],
+          "ticks": 11
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            425,
+            449
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            800,
+            824
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 2,
+          "waypoints": [
+            1250,
+            1274
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 3,
+          "waypoints": [
+            425,
+            449
+          ],
+          "ticks": 10
+        },
+        {
+          "lap": 1,
+          "waypoints": [
+            425,
+            449
+          ],
+          "ticks": 9
+        }
+      ],
+      "top_state_change_clusters": [],
+      "branch_transitions": [
+        {
+          "from": "throttle_maintain_over",
+          "to": "throttle_maintain_over",
+          "ticks": 169
+        },
+        {
+          "from": "throttle_down",
+          "to": "throttle_down",
+          "ticks": 61
+        }
+      ],
+      "constraint_reconstruction_error_kmh": null
+    }
+  ],
+  "caveat": "Changed-command counts are first-order binding signals, not closed-loop lap-time predictions."
+}

@@ -163,7 +163,7 @@
     "baseline_value": 3.35,
     "baseline_text": "            2: 3.35,\n",
     "replacement_template": "            2: {value},\n",
-    "type": "float", "minimum": 0.1, "maximum": 10.0, "required_matches": 1
+    "type": "float", "minimum": 0.1, "maximum": 10.0, "required_matches": 2
   },
   "throttle.section_mu.3": {
     "file": "competition_code/ThrottleController.py",
@@ -198,7 +198,7 @@
     "baseline_value": 2.75,
     "baseline_text": "            8: 2.75,\n",
     "replacement_template": "            8: {value},\n",
-    "type": "float", "minimum": 0.1, "maximum": 10.0, "required_matches": 1
+    "type": "float", "minimum": 0.1, "maximum": 10.0, "required_matches": 2
   },
   "throttle.section_mu.9": {
     "file": "competition_code/ThrottleController.py",

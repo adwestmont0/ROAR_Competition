@@ -1,0 +1,23 @@
+{
+  "campaign_key": "7d72b126d3dc82b9cefd",
+  "next_schedule_index": 0,
+  "records": [
+    {
+      "attempt_ids": [],
+      "cohort": "restricted",
+      "infrastructure_error": "carla_readiness_timeout",
+      "measurement": null,
+      "recovery_path": "experiment_results/causal/7d72b126d3dc82b9cefd/recoveries/000.json",
+      "schedule_index": 0
+    }
+  ],
+  "schedule": [
+    "restricted",
+    "restricted",
+    "restricted",
+    "restricted",
+    "restricted"
+  ],
+  "schema_version": 2,
+  "started_utc": "2026-08-19T08:03:47.990029+00:00"
+}

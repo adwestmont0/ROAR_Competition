@@ -1,0 +1,14 @@
+{
+  "classification": "D_NEUTRAL_OFFLINE_GATE",
+  "carla_runs_performed": 0,
+  "current_section0_waypoint_interval": "2611-wrap-253",
+  "spring_section0_waypoint_interval": "2611-wrap-321",
+  "physically_identical_interval": false,
+  "comparable_finished_runs": 10,
+  "section0_ticks": 9507,
+  "raw_full_throttle_zero_brake_ticks": 9507,
+  "mu_active_selected_constraint_ticks": 3400,
+  "minimum_recommended_minus_current_speed_kmh": 80.68644,
+  "counterfactual_decision_predicate_flips": 0,
+  "promote": false
+}

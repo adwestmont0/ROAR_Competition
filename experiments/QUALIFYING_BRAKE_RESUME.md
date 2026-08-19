@@ -42,3 +42,24 @@ Next recommended experiment: a one-tick-earlier throttle-reapplication A/B immed
 Report: `experiment_results/analysis/natural_brake_regimes/report.md`.
 
 Raw telemetry and the append-only ledger remain under ignored `experiment_results/` on this worktree. Compact completed campaign reports and analysis outputs should be force-tracked when committing this phase.
+
+## Final freeze and validation gate (2026-08-19)
+
+- Frozen qualifying-controller commit: `fca8332` (`Promote validated WP2501 left-foot braking`).
+- Final validation config: `experiments/configs/qualifying_brake_final_validation.json`.
+- The dry run reproduced experiment ID
+  `qualifying_brake.two_event_combination=1__qualifying_brake.wp2501_left_foot_percent=10__qualifying_brake.wp794_lap3_final_tick=1__runtime.low_bandwidth_sensor_mode=1--a9af10edf771`,
+  identical to the known-good export.
+- Relevant harness/config tests: 34/34 passed; all controller sources compiled.
+- The five-run forced-clean campaign did not obtain a controller-valid attempt.
+  Its first restart succeeded at the Windows/port level, but 48 readiness probes
+  failed with `rpc::rpc_error during call in function get_sensor_token`; the
+  campaign was stopped during the second identical recovery cycle to avoid
+  repeating infrastructure timeouts.
+- Ignored provenance: `experiment_results/causal/7d72b126d3dc82b9cefd/`.
+- Resume the exact campaign after CARLA sensor RPC readiness is restored:
+  `python3 -m experiments.harness.cli causal experiments/configs/qualifying_brake_final_validation.json`.
+  The checkpoint will retry schedule index 0; no vehicle attempt has been counted.
+
+Submission contents and reproducibility instructions are in
+`experiments/QUALIFYING_SUBMISSION_MANIFEST.md`.

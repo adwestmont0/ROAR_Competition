@@ -1,0 +1,31 @@
+{
+  "campaign": "qualifying-brake-section2-mu340-initial",
+  "classification": "C_SPEED_TRADEOFF_ONLY",
+  "treatment_mu": 3.4,
+  "control_mu": 3.35,
+  "treatment_finishes": 1,
+  "treatment_attempts": 2,
+  "treatment_collisions": 1,
+  "control_finishes": 2,
+  "control_attempts": 3,
+  "control_collisions": 1,
+  "completed_treatment_raw_time_seconds": 321.25,
+  "completed_treatment_adjusted_delta_seconds": 0.075,
+  "wp627_control_regimes": {"5": 7, "4": 2, "3": 0},
+  "wp627_treatment_regimes": {"5": 0, "4": 5, "3": 0},
+  "mean_time_deltas_seconds": {
+    "plus_25m": 0.0,
+    "plus_50m": 0.0,
+    "plus_100m": -0.025,
+    "plus_200m": -0.010,
+    "wp794_entry": -0.020,
+    "wp794_exit": -0.020,
+    "wp1232_entry": -0.060
+  },
+  "mean_release_speed_delta_kmh": 1.81,
+  "mean_minimum_speed_delta_kmh": 0.56,
+  "mean_wp723_speed_delta_kmh": 0.21,
+  "wp794_favorable_phase_control": "2/9",
+  "wp794_favorable_phase_treatment": "1/5",
+  "promote": false
+}
