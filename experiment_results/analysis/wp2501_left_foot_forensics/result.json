@@ -1,0 +1,5019 @@
+{
+  "alignment": "interpolated monotonic official race-progress index",
+  "alternative_control_effects": {
+    "following": {
+      "maximum": -0.10000000000002274,
+      "mean": -0.15000000000001137,
+      "median": -0.14999999999997726,
+      "minimum": -0.20000000000004547,
+      "stddev": 0.03535533905933542
+    },
+    "midpoint": {
+      "maximum": -0.12499999999994316,
+      "mean": -0.14999999999998864,
+      "median": -0.14999999999997726,
+      "minimum": -0.17500000000001137,
+      "stddev": 0.025000000000019895
+    },
+    "nearest": {
+      "maximum": -0.0999999999999659,
+      "mean": -0.15000000000001137,
+      "median": -0.14999999999997726,
+      "minimum": -0.20000000000004547,
+      "stddev": 0.05000000000002558
+    },
+    "preceding": {
+      "maximum": -0.0999999999999659,
+      "mean": -0.15000000000001137,
+      "median": -0.1500000000000341,
+      "minimum": -0.20000000000004547,
+      "stddev": 0.03535533905935551
+    },
+    "time_interpolated": {
+      "maximum": -0.11642797119486659,
+      "mean": -0.15000166197637554,
+      "median": -0.14999999999997726,
+      "minimum": -0.18345580431764574,
+      "stddev": 0.033334351521105844
+    }
+  },
+  "campaign": "qualifying-brake-wp2501-left-foot-validation",
+  "grid_step_official_waypoints": 2,
+  "material_trace_changes": [
+    {
+      "change": -0.025999999999999662,
+      "end": 2724.0,
+      "repeatability": 0,
+      "samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start": 1760.0
+    },
+    {
+      "change": -0.03999999999999488,
+      "end": 2746.0,
+      "repeatability": 0,
+      "samples": [
+        1.4210854715202004e-14,
+        1.4210854715202004e-14,
+        1.4210854715202004e-14,
+        1.4210854715202004e-14,
+        1.4210854715202004e-14
+      ],
+      "start": 2736.0
+    },
+    {
+      "change": -0.03400000000000773,
+      "end": 3360.0,
+      "repeatability": 3,
+      "samples": [
+        0.0,
+        -0.05000000000001137,
+        -0.05000000000001137,
+        0.0,
+        -0.05000000000001137
+      ],
+      "start": 3350.0
+    },
+    {
+      "change": -0.029000000000006593,
+      "end": 3492.0,
+      "repeatability": 5,
+      "samples": [
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137
+      ],
+      "start": 3482.0
+    },
+    {
+      "change": -0.046000000000009325,
+      "end": 3694.0,
+      "repeatability": 4,
+      "samples": [
+        -0.07500000000001705,
+        -0.05000000000001137,
+        -0.025000000000005684,
+        -0.05000000000001137,
+        0.0
+      ],
+      "start": 3668.0
+    },
+    {
+      "change": 0.025000000000003415,
+      "end": 3710.0,
+      "repeatability": 3,
+      "samples": [
+        0.025000000000005684,
+        0.05000000000001137,
+        0.025000000000005684,
+        0.0,
+        0.0
+      ],
+      "start": 3694.0
+    },
+    {
+      "change": -0.03100000000000478,
+      "end": 3720.0,
+      "repeatability": 4,
+      "samples": [
+        -0.037499999999994316,
+        -0.037499999999994316,
+        -0.012500000000017053,
+        -0.012500000000017053,
+        0.0
+      ],
+      "start": 3710.0
+    },
+    {
+      "change": -0.03000000000000684,
+      "end": 5540.0,
+      "repeatability": 5,
+      "samples": [
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137,
+        -0.05000000000001137
+      ],
+      "start": 5530.0
+    },
+    {
+      "change": -0.03299999999999498,
+      "end": 8276.0,
+      "repeatability": 4,
+      "samples": [
+        -0.025000000000034106,
+        -0.025000000000034106,
+        -0.025000000000034106,
+        -0.025000000000034106,
+        0.0
+      ],
+      "start": 8254.0
+    }
+  ],
+  "regime_frequencies": {
+    "WP1232-1276:lap1": {
+      "control": {
+        "24/23:clean_release": 4
+      },
+      "treatment": {
+        "24/23:clean_release": 5
+      }
+    },
+    "WP1232-1276:lap2": {
+      "control": {
+        "24/23:clean_release": 3,
+        "25/24:re_brake": 1
+      },
+      "treatment": {
+        "24/23:clean_release": 5
+      }
+    },
+    "WP1232-1276:lap3": {
+      "control": {
+        "25/24:re_brake": 4
+      },
+      "treatment": {
+        "24/23:clean_release": 3,
+        "25/24:re_brake": 2
+      }
+    },
+    "WP1781-1804:lap1": {
+      "control": {
+        "14/14": 4
+      },
+      "treatment": {
+        "14/14": 5
+      }
+    },
+    "WP1781-1804:lap2": {
+      "control": {
+        "14/14": 4
+      },
+      "treatment": {
+        "14/14": 5
+      }
+    },
+    "WP1781-1804:lap3": {
+      "control": {
+        "14/14": 3,
+        "15/15": 1
+      },
+      "treatment": {
+        "14/14": 5
+      }
+    },
+    "WP2501-2561:lap1": {
+      "control": {
+        "41/39": 4
+      },
+      "treatment": {
+        "41/39": 5
+      }
+    },
+    "WP2501-2561:lap2": {
+      "control": {
+        "41/39": 4
+      },
+      "treatment": {
+        "41/39": 5
+      }
+    },
+    "WP2501-2561:lap3": {
+      "control": {
+        "41/39": 4
+      },
+      "treatment": {
+        "41/39": 5
+      }
+    },
+    "WP391-415:lap1": {
+      "control": {
+        "16/16": 4
+      },
+      "treatment": {
+        "16/16": 5
+      }
+    },
+    "WP391-415:lap2": {
+      "control": {
+        "16/16": 4
+      },
+      "treatment": {
+        "16/16": 2,
+        "17/17": 3
+      }
+    },
+    "WP391-415:lap3": {
+      "control": {
+        "16/16": 4
+      },
+      "treatment": {
+        "16/16": 3,
+        "17/17": 2
+      }
+    },
+    "WP427-441:lap1": {
+      "control": {
+        "11/11": 4
+      },
+      "treatment": {
+        "11/11": 5
+      }
+    },
+    "WP427-441:lap2": {
+      "control": {
+        "12/12": 4
+      },
+      "treatment": {
+        "12/12": 5
+      }
+    },
+    "WP427-441:lap3": {
+      "control": {
+        "12/12": 4
+      },
+      "treatment": {
+        "12/12": 5
+      }
+    },
+    "WP627-633:lap1": {
+      "control": {
+        "5/5": 4
+      },
+      "treatment": {
+        "4/4": 1,
+        "5/5": 4
+      }
+    },
+    "WP627-633:lap2": {
+      "control": {
+        "4/4": 4
+      },
+      "treatment": {
+        "4/4": 2,
+        "5/5": 3
+      }
+    },
+    "WP627-633:lap3": {
+      "control": {
+        "4/4": 3,
+        "5/5": 1
+      },
+      "treatment": {
+        "4/4": 3,
+        "5/5": 2
+      }
+    },
+    "WP794-801:lap1": {
+      "control": {
+        "6/6": 4
+      },
+      "treatment": {
+        "6/6": 5
+      }
+    },
+    "WP794-801:lap2": {
+      "control": {
+        "6/6": 4
+      },
+      "treatment": {
+        "6/6": 5
+      }
+    },
+    "WP794-801:lap3": {
+      "control": {
+        "6/5": 4
+      },
+      "treatment": {
+        "6/5": 5
+      }
+    }
+  },
+  "run_ids": {
+    "controls": [
+      "20260818T070701.875250Z-f2c524be",
+      "20260818T071308.560950Z-3e31c44a",
+      "20260818T071910.581127Z-259af7c5",
+      "20260818T072306.446357Z-61aad7c3"
+    ],
+    "treatments": [
+      "20260818T070904.964515Z-89553b85",
+      "20260818T071108.082912Z-eb0d8a30",
+      "20260818T071510.985769Z-50987091",
+      "20260818T071710.794473Z-4ce4acd1",
+      "20260818T072109.029370Z-4c725de0"
+    ]
+  },
+  "zone_samples": {
+    "WP1232-1276:lap1": [
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": 0.016666666666658614,
+        "cumulative_leaving": -7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.38225555419919033,
+          "exit_speed": 0.20703735351563068,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.22927093505859375,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 1284.0,
+          "entry_speed": 253.63289794921874,
+          "exit_progress": 1378.0,
+          "exit_speed": 182.26204376220704,
+          "first_full_throttle_progress": 1352.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 1,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.6857681274414,
+          "onset_progress": 1307.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 1352.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.94999999999881,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.00015106201169601263,
+          "exit_speed": 4.1198730457381316e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0014144897460823813,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 1285.0,
+          "entry_speed": 253.25079345703125,
+          "exit_progress": 1379.0,
+          "exit_speed": 182.05504760742187,
+          "first_full_throttle_progress": 1352.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 1,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.45508270263673,
+          "onset_progress": 1308.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 1352.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.94999999999881,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -7.105427357601002e-15,
+        "cumulative_leaving": -7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -6.866455078125e-05,
+          "exit_speed": -4.1198730457381316e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.00061798095703125,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 1285.0,
+          "entry_speed": 253.25049133300783,
+          "exit_progress": 1379.0,
+          "exit_speed": 182.05489654541017,
+          "first_full_throttle_progress": 1352.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 1,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.4575408935547,
+          "onset_progress": 1308.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 1352.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.94999999999881,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 9.613037107669697e-05,
+          "exit_speed": -1.3732910161934342e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0007965087890511313,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 1285.0,
+          "entry_speed": 253.2506561279297,
+          "exit_progress": 1379.0,
+          "exit_speed": 182.05492401123047,
+          "first_full_throttle_progress": 1352.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 1,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.4561264038086,
+          "onset_progress": 1308.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 1352.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.94999999999881,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -2.1316282072803006e-14,
+        "cumulative_leaving": -2.1316282072803006e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00010986328126705303,
+          "exit_speed": -6.866455066756316e-06,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.0004943847656306843,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 1285.0,
+          "entry_speed": 253.2504638671875,
+          "exit_progress": 1379.0,
+          "exit_speed": 182.0549514770508,
+          "first_full_throttle_progress": 1352.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 1,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.4571975708008,
+          "onset_progress": 1308.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 1352.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.94999999999881,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      }
+    ],
+    "WP1232-1276:lap2": [
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": -0.5,
+          "entry_speed": 0.446868896484375,
+          "exit_speed": 3.2927536010742244,
+          "first_full_throttle_waypoint": -0.5,
+          "lookahead_waypoint": 0.5,
+          "minimum_speed": -0.0738212585449105,
+          "onset_waypoint": 0.5,
+          "raw_ticks": -0.5,
+          "recommended_speed": -6.7212739049863615,
+          "release_waypoint": -0.5,
+          "segment_time": 0.0,
+          "target_speed": -6.210634460354527
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 4060.0,
+          "entry_speed": 253.71510314941406,
+          "exit_progress": 4154.0,
+          "exit_speed": 182.27447204589845,
+          "first_full_throttle_progress": 4127.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 2,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.32386474609376,
+          "onset_progress": 4083.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 4127.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": -0.5,
+          "entry_speed": 0.18300476074219318,
+          "exit_speed": 3.1704345703124943,
+          "first_full_throttle_waypoint": -0.5,
+          "lookahead_waypoint": 0.5,
+          "minimum_speed": -0.03501205444334232,
+          "onset_waypoint": 0.5,
+          "raw_ticks": -0.5,
+          "recommended_speed": -6.7212739049863615,
+          "release_waypoint": -0.5,
+          "segment_time": 0.0,
+          "target_speed": -6.210634460354527
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 4060.0,
+          "entry_speed": 253.45123901367188,
+          "exit_progress": 4154.0,
+          "exit_speed": 182.15215301513672,
+          "first_full_throttle_progress": 4127.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 2,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.36267395019533,
+          "onset_progress": 4083.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 4127.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.18362274169922443,
+          "exit_speed": 0.089813232421875,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.03396835327149006,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 4060.0,
+          "entry_speed": 253.45118408203126,
+          "exit_progress": 4154.0,
+          "exit_speed": 182.15229034423828,
+          "first_full_throttle_progress": 4127.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 2,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.3638412475586,
+          "onset_progress": 4083.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 4127.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -0.10000000000005116,
+        "cumulative_leaving": -0.10000000000005116,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.44776153564453125,
+          "exit_speed": 0.21218719482422443,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.07538681030274574,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 4060.0,
+          "entry_speed": 253.71532287597657,
+          "exit_progress": 4154.0,
+          "exit_speed": 182.27466430664063,
+          "first_full_throttle_progress": 4127.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 2,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.32242279052736,
+          "onset_progress": 4083.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 4127.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "24/23:clean_release",
+          "24/23:clean_release"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.20489501953125,
+          "exit_speed": 0.09957046508790768,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.08894805908204262,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 4060.0,
+          "entry_speed": 253.45096435546876,
+          "exit_progress": 4154.0,
+          "exit_speed": 182.152262878418,
+          "first_full_throttle_progress": 4127.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 2,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.3651321411133,
+          "onset_progress": 4083.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 4127.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      }
+    ],
+    "WP1232-1276:lap3": [
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "25/24:re_brake"
+        ],
+        "cumulative_entering": -0.18750000000005684,
+        "cumulative_leaving": -0.1750000000000682,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.004888916015630684,
+          "exit_speed": 0.006612396240228691,
+          "first_full_throttle_waypoint": 0.5,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.5678283691406136,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.5,
+          "segment_time": 0.025000000000005684,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 24,
+          "entry_progress": 6834.0,
+          "entry_speed": 253.47488708496095,
+          "exit_progress": 6928.0,
+          "exit_speed": 176.03728637695312,
+          "first_full_throttle_progress": 6904.0,
+          "first_full_throttle_waypoint": 1276,
+          "lap": 3,
+          "lookahead_waypoint": 1266.0,
+          "minimum_speed": 148.6739959716797,
+          "onset_progress": 6857.0,
+          "onset_waypoint": 1231,
+          "raw_ticks": 25,
+          "recommended_speed": 250.31031676717657,
+          "release_progress": 6904.0,
+          "release_waypoint": 1276,
+          "segment_time": 21.000000000004775,
+          "target_speed": 221.89725143136909,
+          "wp1232_behavior": "re_brake"
+        },
+        "treatment_regime": "25/24:re_brake"
+      },
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "25/24:re_brake"
+        ],
+        "cumulative_entering": -0.0875000000000341,
+        "cumulative_leaving": -0.125,
+        "deltas": {
+          "applied_ticks": -1.0,
+          "entry_speed": -0.10675964355471024,
+          "exit_speed": 6.095372772216791,
+          "first_full_throttle_waypoint": -1.5,
+          "lookahead_waypoint": 1.0,
+          "minimum_speed": 0.4522659301757983,
+          "onset_waypoint": 1.0,
+          "raw_ticks": -1.0,
+          "recommended_speed": -13.442547809972694,
+          "release_waypoint": -1.5,
+          "segment_time": -0.025000000000005684,
+          "target_speed": -12.421268920709025
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 6834.0,
+          "entry_speed": 253.37301635742188,
+          "exit_progress": 6929.0,
+          "exit_speed": 182.12604675292968,
+          "first_full_throttle_progress": 6902.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 3,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.6940902709961,
+          "onset_progress": 6857.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 6902.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "25/24:re_brake"
+        ],
+        "cumulative_entering": -0.10416666666668561,
+        "cumulative_leaving": -0.12499999999994316,
+        "deltas": {
+          "applied_ticks": -1.0,
+          "entry_speed": -0.05692291259768467,
+          "exit_speed": 6.131188201904308,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": 1.0,
+          "minimum_speed": 0.11832962036135086,
+          "onset_waypoint": 1.0,
+          "raw_ticks": -1.0,
+          "recommended_speed": -13.442547809972694,
+          "release_waypoint": -1.0,
+          "segment_time": 0.0,
+          "target_speed": -12.421268920709025
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 6834.0,
+          "entry_speed": 253.37568054199218,
+          "exit_progress": 6929.0,
+          "exit_speed": 182.12706298828127,
+          "first_full_throttle_progress": 6902.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 3,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.67393035888674,
+          "onset_progress": 6857.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 6902.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      },
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "25/24:re_brake"
+        ],
+        "cumulative_entering": -0.2041666666667652,
+        "cumulative_leaving": -0.1750000000000682,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.04151458740233238,
+          "exit_speed": 0.04135665893554119,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.8762626647949219,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 1.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 24,
+          "entry_progress": 6834.0,
+          "entry_speed": 253.4741180419922,
+          "exit_progress": 6928.0,
+          "exit_speed": 176.0372314453125,
+          "first_full_throttle_progress": 6904.0,
+          "first_full_throttle_waypoint": 1276,
+          "lap": 3,
+          "lookahead_waypoint": 1266.0,
+          "minimum_speed": 148.67933807373046,
+          "onset_progress": 6857.0,
+          "onset_waypoint": 1231,
+          "raw_ticks": 25,
+          "recommended_speed": 250.31031676717657,
+          "release_progress": 6904.0,
+          "release_waypoint": 1276,
+          "segment_time": 21.000000000004775,
+          "target_speed": 221.89725143136909,
+          "wp1232_behavior": "re_brake"
+        },
+        "treatment_regime": "25/24:re_brake"
+      },
+      {
+        "control_regimes": [
+          "25/24:re_brake",
+          "25/24:re_brake"
+        ],
+        "cumulative_entering": -0.13333333333332575,
+        "cumulative_leaving": -0.14999999999997726,
+        "deltas": {
+          "applied_ticks": -1.0,
+          "entry_speed": 0.03183288574217613,
+          "exit_speed": 6.16607666015625,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": 1.0,
+          "minimum_speed": 0.02890777587890625,
+          "onset_waypoint": 1.0,
+          "raw_ticks": -1.0,
+          "recommended_speed": -13.442547809972694,
+          "release_waypoint": -1.0,
+          "segment_time": 0.0,
+          "target_speed": -12.421268920709025
+        },
+        "treatment": {
+          "applied_ticks": 23,
+          "entry_progress": 6834.0,
+          "entry_speed": 253.37537841796876,
+          "exit_progress": 6929.0,
+          "exit_speed": 182.12689819335938,
+          "first_full_throttle_progress": 6902.0,
+          "first_full_throttle_waypoint": 1274,
+          "lap": 3,
+          "lookahead_waypoint": 1267.0,
+          "minimum_speed": 149.6298614501953,
+          "onset_progress": 6857.0,
+          "onset_waypoint": 1232,
+          "raw_ticks": 24,
+          "recommended_speed": 236.86776895720388,
+          "release_progress": 6902.0,
+          "release_waypoint": 1274,
+          "segment_time": 20.950000000004763,
+          "target_speed": 209.47598251066006,
+          "wp1232_behavior": "clean_release"
+        },
+        "treatment_regime": "24/23:clean_release"
+      }
+    ],
+    "WP1781-1804:lap1": [
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -1.4210854715202004e-14,
+        "cumulative_leaving": -1.4210854715202004e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0053558349609375,
+          "exit_speed": 0.0032066345214900593,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.0021217346191519937,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 1870.0,
+          "entry_speed": 255.8970703125,
+          "exit_progress": 1935.0,
+          "exit_speed": 222.42914428710938,
+          "first_full_throttle_progress": 1913.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 1,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26337890625,
+          "onset_progress": 1889.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 1913.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.799999999998533,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00010986328123863132,
+          "exit_speed": -6.179809568607197e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.0009819030761661907,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 1870.0,
+          "entry_speed": 255.89160461425783,
+          "exit_progress": 1935.0,
+          "exit_speed": 222.4258758544922,
+          "first_full_throttle_progress": 1913.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 1,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26223907470703,
+          "onset_progress": 1889.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 1913.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.799999999998533,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -1.4210854715202004e-14,
+        "cumulative_leaving": -1.4210854715202004e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 4.1198730457381316e-05,
+          "exit_speed": -2.0599365228690658e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0002677917480582437,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 1870.0,
+          "entry_speed": 255.8917694091797,
+          "exit_progress": 1935.0,
+          "exit_speed": 222.42595825195312,
+          "first_full_throttle_progress": 1913.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 1,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26094818115234,
+          "onset_progress": 1889.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 1913.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.799999999998533,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 1.3732910161934342e-05,
+          "exit_speed": 4.806518555255934e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.000267791748029822,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 1870.0,
+          "entry_speed": 255.8917419433594,
+          "exit_progress": 1935.0,
+          "exit_speed": 222.4260269165039,
+          "first_full_throttle_progress": 1913.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 1,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26148376464843,
+          "onset_progress": 1889.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 1913.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.799999999998533,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -2.842170943040401e-14,
+        "cumulative_leaving": -2.842170943040401e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 4.1198730457381316e-05,
+          "exit_speed": 0.0,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0003089904784872033,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 1870.0,
+          "entry_speed": 255.8917694091797,
+          "exit_progress": 1935.0,
+          "exit_speed": 222.42597198486328,
+          "first_full_throttle_progress": 1913.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 1,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26098937988283,
+          "onset_progress": 1889.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 1913.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.799999999998533,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      }
+    ],
+    "WP1781-1804:lap2": [
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.11250000000003979,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.004820251464849434,
+          "exit_speed": -0.0024581909179630657,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.041342926025379256,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.26522603601998185,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.24470335479591654
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 4645.0,
+          "entry_speed": 255.88446350097658,
+          "exit_progress": 4710.0,
+          "exit_speed": 222.42165985107422,
+          "first_full_throttle_progress": 4688.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 2,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.2575424194336,
+          "onset_progress": 4664.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 4688.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.11250000000003979,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.001139831542985803,
+          "exit_speed": -0.0007415771484318157,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.051779937744129256,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.26522603601998185,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.24470335479591654
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 4645.0,
+          "entry_speed": 255.88814392089844,
+          "exit_progress": 4710.0,
+          "exit_speed": 222.42337646484376,
+          "first_full_throttle_progress": 4688.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 2,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26797943115236,
+          "onset_progress": 4664.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 4688.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.002238464355485803,
+          "exit_speed": -0.001641082763654822,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.0007553100585653283,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 4645.0,
+          "entry_speed": 255.88825378417968,
+          "exit_progress": 4710.0,
+          "exit_speed": 222.42347259521486,
+          "first_full_throttle_progress": 4688.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 2,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.26759490966796,
+          "onset_progress": 4664.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 4688.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.10000000000005116,
+        "cumulative_leaving": -0.10000000000005116,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00611114501953125,
+          "exit_speed": -0.0035224914550724407,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.008761596679704553,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 4645.0,
+          "entry_speed": 255.88438110351564,
+          "exit_progress": 4710.0,
+          "exit_speed": 222.42159118652344,
+          "first_full_throttle_progress": 4688.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 2,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.2580780029297,
+          "onset_progress": 4664.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 4688.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.0032272338867471717,
+          "exit_speed": -0.0024787902831917563,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.004930114746088066,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 4645.0,
+          "entry_speed": 255.88839111328124,
+          "exit_progress": 4710.0,
+          "exit_speed": 222.42347259521486,
+          "first_full_throttle_progress": 4688.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 2,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.2669906616211,
+          "onset_progress": 4664.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 4688.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      }
+    ],
+    "WP1781-1804:lap3": [
+      {
+        "control_regimes": [
+          "15/15",
+          "14/14"
+        ],
+        "cumulative_entering": -0.17500000000001137,
+        "cumulative_leaving": -0.16250000000007958,
+        "deltas": {
+          "applied_ticks": -0.5,
+          "entry_speed": -0.0037490844726448813,
+          "exit_speed": 1.730545806884777,
+          "first_full_throttle_waypoint": -0.5,
+          "lookahead_waypoint": -0.5,
+          "minimum_speed": 1.5802871704101449,
+          "onset_waypoint": -0.5,
+          "raw_ticks": -0.5,
+          "recommended_speed": 0.8789280349550097,
+          "release_waypoint": -0.5,
+          "segment_time": 0.0,
+          "target_speed": 0.8110679578781514
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 7420.0,
+          "entry_speed": 255.88877563476564,
+          "exit_progress": 7485.0,
+          "exit_speed": 222.42247009277344,
+          "first_full_throttle_progress": 7463.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 3,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.16439208984374,
+          "onset_progress": 7439.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.2164661589006,
+          "release_progress": 7463.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 223.65625252222839,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "15/15",
+          "14/14"
+        ],
+        "cumulative_entering": -0.125,
+        "cumulative_leaving": -0.11250000000006821,
+        "deltas": {
+          "applied_ticks": -0.5,
+          "entry_speed": 0.00844573974609375,
+          "exit_speed": 1.7384010314941634,
+          "first_full_throttle_waypoint": -0.5,
+          "lookahead_waypoint": -0.5,
+          "minimum_speed": 1.6060913085937614,
+          "onset_waypoint": -0.5,
+          "raw_ticks": -0.5,
+          "recommended_speed": 0.8789280349550097,
+          "release_waypoint": -0.5,
+          "segment_time": 0.0,
+          "target_speed": 0.8110679578781514
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 7420.0,
+          "entry_speed": 255.90097045898438,
+          "exit_progress": 7485.0,
+          "exit_speed": 222.43032531738282,
+          "first_full_throttle_progress": 7463.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 3,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.19019622802736,
+          "onset_progress": 7439.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.2164661589006,
+          "release_progress": 7463.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 223.65625252222839,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.12499999999994316,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.007676696777338066,
+          "exit_speed": 0.0004119873046590783,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.01302566528320881,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 7420.0,
+          "entry_speed": 255.90335998535156,
+          "exit_progress": 7485.0,
+          "exit_speed": 222.43145141601562,
+          "first_full_throttle_progress": 7463.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 3,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.17984161376953,
+          "onset_progress": 7439.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.2164661589006,
+          "release_progress": 7463.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 223.65625252222839,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.17500000000001137,
+        "cumulative_leaving": -0.17500000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.005754089355463066,
+          "exit_speed": -0.008116149902349434,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.007875823974586638,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 7420.0,
+          "entry_speed": 255.88992919921876,
+          "exit_progress": 7486.0,
+          "exit_speed": 222.4229232788086,
+          "first_full_throttle_progress": 7463.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 3,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.15894012451173,
+          "onset_progress": 7439.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.2164661589006,
+          "release_progress": 7463.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 223.65625252222839,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      },
+      {
+        "control_regimes": [
+          "14/14",
+          "14/14"
+        ],
+        "cumulative_entering": -0.14999999999997726,
+        "cumulative_leaving": -0.12499999999994316,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.005094909667946013,
+          "exit_speed": -0.004476928710943184,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.08940811157228268,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.5304520720399637,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.48940670959180466
+        },
+        "treatment": {
+          "applied_ticks": 14,
+          "entry_progress": 7420.0,
+          "entry_speed": 255.89646606445314,
+          "exit_progress": 7485.0,
+          "exit_speed": 222.4284439086914,
+          "first_full_throttle_progress": 7463.0,
+          "first_full_throttle_waypoint": 1802,
+          "lap": 3,
+          "lookahead_waypoint": 1814.0,
+          "minimum_speed": 192.2569107055664,
+          "onset_progress": 7439.0,
+          "onset_waypoint": 1779,
+          "raw_ticks": 14,
+          "recommended_speed": 252.74691823094057,
+          "release_progress": 7463.0,
+          "release_waypoint": 1802,
+          "segment_time": 25.800000000005866,
+          "target_speed": 224.1456592318202,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "14/14"
+      }
+    ],
+    "WP2501-2561:lap1": [
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -1.4210854715202004e-14,
+        "cumulative_leaving": -1.4210854715202004e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 0.20033569335939205,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7829097747802649,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0005042345835306605,
+          "release_waypoint": 0.0,
+          "segment_time": 7.105427357601002e-15,
+          "target_speed": 0.00046595471241062114
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 2621.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 2737.0,
+          "exit_speed": 132.07064666748047,
+          "first_full_throttle_progress": 2710.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 1,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.19295043945313,
+          "onset_progress": 2646.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.14981748365946,
+          "release_progress": 2708.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.850000000000236,
+          "target_speed": 215.28448486955205,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 0.20061035156251705,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7871189117431499,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.011340033933436189,
+          "release_waypoint": 0.0,
+          "segment_time": -7.105427357601002e-15,
+          "target_speed": -0.01047914561186758
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 2621.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 2737.0,
+          "exit_speed": 132.0709213256836,
+          "first_full_throttle_progress": 2710.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 1,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.19715957641601,
+          "onset_progress": 2646.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.1379732151425,
+          "release_progress": 2708.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000022,
+          "target_speed": 215.27353976922777,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -1.4210854715202004e-14,
+        "cumulative_leaving": -1.4210854715202004e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 0.20014343261718182,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7791160583496008,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.0005042345835590822,
+          "release_waypoint": 0.0,
+          "segment_time": 3.552713678800501e-14,
+          "target_speed": -0.00046595471243904285
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 2621.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 2737.0,
+          "exit_speed": 132.07049560546875,
+          "first_full_throttle_progress": 2710.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 1,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.18972320556641,
+          "onset_progress": 2646.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.14880901449237,
+          "release_progress": 2708.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.850000000000264,
+          "target_speed": 215.2835529601272,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 2.7465820323868684e-05,
+          "exit_speed": 0.20044555664063068,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7821922302245952,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0005042345835306605,
+          "release_waypoint": 0.0,
+          "segment_time": -3.552713678800501e-14,
+          "target_speed": 0.00046595471241062114
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 2621.0,
+          "entry_speed": 257.52398071289065,
+          "exit_progress": 2737.0,
+          "exit_speed": 132.0707977294922,
+          "first_full_throttle_progress": 2710.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 1,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.1927993774414,
+          "onset_progress": 2646.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.14981748365946,
+          "release_progress": 2708.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.850000000000193,
+          "target_speed": 215.28448486955205,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -2.842170943040401e-14,
+        "cumulative_leaving": -2.842170943040401e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 0.20011596679688637,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7792018890380916,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.0005042345835590822,
+          "release_waypoint": 0.0,
+          "segment_time": 7.815970093361102e-14,
+          "target_speed": -0.00046595471243904285
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 2621.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 2737.0,
+          "exit_speed": 132.07049560546875,
+          "first_full_throttle_progress": 2710.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 1,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.18987426757813,
+          "onset_progress": 2646.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.14880901449237,
+          "release_progress": 2708.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.850000000000307,
+          "target_speed": 215.2835529601272,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      }
+    ],
+    "WP2501-2561:lap2": [
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00012359619137214395,
+          "exit_speed": 0.49064941406248863,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.637725448608407,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 3.0390655667359,
+          "release_waypoint": 0.0,
+          "segment_time": -0.025000000000005684,
+          "target_speed": 2.809951438178018
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 5396.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 5512.0,
+          "exit_speed": 132.07042694091797,
+          "first_full_throttle_progress": 5485.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 2,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.18609771728516,
+          "onset_progress": 5421.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.13393959803903,
+          "release_progress": 5483.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000565,
+          "target_speed": 215.269812362441,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00015106201169601263,
+          "exit_speed": 0.49313507080077557,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.8461635589599581,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 3.058224579171082,
+          "release_waypoint": 0.0,
+          "segment_time": -0.025000000000005684,
+          "target_speed": 2.827655978319058
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 5396.0,
+          "entry_speed": 257.52392578125,
+          "exit_progress": 5512.0,
+          "exit_speed": 132.07291259765626,
+          "first_full_throttle_progress": 5485.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 2,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.39453582763672,
+          "onset_progress": 5421.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.15309861047422,
+          "release_progress": 5483.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000565,
+          "target_speed": 215.28751690258204,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -5.493164064773737e-05,
+          "exit_speed": 0.20003356933594318,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.932495498657218,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.011846025525102277,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.010946718589991633
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 5396.0,
+          "entry_speed": 257.5238983154297,
+          "exit_progress": 5512.0,
+          "exit_speed": 132.0726791381836,
+          "first_full_throttle_progress": 5485.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 2,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.39084167480469,
+          "onset_progress": 5421.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.16494395792344,
+          "release_progress": 5483.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000565,
+          "target_speed": 215.29846297017974,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.10000000000005116,
+        "cumulative_leaving": -0.10000000000005116,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 0.197877502441429,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.7293514251708899,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.005297391769033766,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": -0.0048952053957407315
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 5396.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 5512.0,
+          "exit_speed": 132.07052307128907,
+          "first_full_throttle_progress": 5485.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 2,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.18769760131836,
+          "onset_progress": 5421.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.1478005406293,
+          "release_progress": 5483.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000565,
+          "target_speed": 215.282621046194,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -4.1198730514224735e-05,
+          "exit_speed": 0.20243682861328693,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.9818035125732507,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.009203333817168868,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.008504653030769305
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 5396.0,
+          "entry_speed": 257.52392578125,
+          "exit_progress": 5512.0,
+          "exit_speed": 132.0727752685547,
+          "first_full_throttle_progress": 5485.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 2,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.3926612854004,
+          "onset_progress": 5421.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.15209028363606,
+          "release_progress": 5483.0,
+          "release_waypoint": 2560,
+          "segment_time": 24.85000000000565,
+          "target_speed": 215.28658512523032,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      }
+    ],
+    "WP2501-2561:lap3": [
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.18750000000005684,
+        "cumulative_leaving": -0.17500000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0018264770507698813,
+          "exit_speed": 0.0553779602050497,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.5,
+          "minimum_speed": 0.19847831726075071,
+          "onset_waypoint": 0.5,
+          "raw_ticks": 0.0,
+          "recommended_speed": -3.1663112042303965,
+          "release_waypoint": 0.0,
+          "segment_time": null,
+          "target_speed": -2.927458165229382
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 8171.0,
+          "entry_speed": 257.5242828369141,
+          "exit_progress": 8287.0,
+          "exit_speed": 131.49047241210937,
+          "first_full_throttle_progress": 8260.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 3,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.30911026000977,
+          "onset_progress": 8196.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 237.03407296265067,
+          "release_progress": 8258.0,
+          "release_waypoint": 2560,
+          "segment_time": null,
+          "target_speed": 209.62983950230176,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.13750000000004547,
+        "cumulative_leaving": -0.125,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0017166137694744066,
+          "exit_speed": 0.06578750610350426,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.5,
+          "minimum_speed": 0.65730171203613,
+          "onset_waypoint": 0.5,
+          "raw_ticks": 0.0,
+          "recommended_speed": -3.0773129559923404,
+          "release_waypoint": 0.0,
+          "segment_time": null,
+          "target_speed": -2.84512302975466
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 8171.0,
+          "entry_speed": 257.5241729736328,
+          "exit_progress": 8287.0,
+          "exit_speed": 131.50088195800782,
+          "first_full_throttle_progress": 8260.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 3,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.76793365478515,
+          "onset_progress": 8196.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 237.12307121088872,
+          "release_progress": 8258.0,
+          "release_waypoint": 2560,
+          "segment_time": null,
+          "target_speed": 209.71217463777649,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.12499999999994316,
+        "cumulative_leaving": -0.12499999999994316,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0012359619141193434,
+          "exit_speed": 0.394058990478527,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 1.264430236816409,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.11091485177519189,
+          "release_waypoint": 0.0,
+          "segment_time": null,
+          "target_speed": 0.10261238065385214
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 8171.0,
+          "entry_speed": 257.5242828369141,
+          "exit_progress": 8287.0,
+          "exit_speed": 131.4973114013672,
+          "first_full_throttle_progress": 8260.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 3,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.74449844360352,
+          "onset_progress": 8196.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 237.07023570639882,
+          "release_progress": 8258.0,
+          "release_waypoint": 2560,
+          "segment_time": null,
+          "target_speed": 209.66329498876127,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.17500000000001137,
+        "cumulative_leaving": -0.17500000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0011260986328238687,
+          "exit_speed": 0.38877182006837074,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 1.173072052001956,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.08653708135915394,
+          "release_waypoint": 0.0,
+          "segment_time": null,
+          "target_speed": 0.08005963300615804
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 8171.0,
+          "entry_speed": 257.5241729736328,
+          "exit_progress": 8287.0,
+          "exit_speed": 131.49202423095704,
+          "first_full_throttle_progress": 8260.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 3,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.65314025878907,
+          "onset_progress": 8196.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 237.04585793598278,
+          "release_progress": 8258.0,
+          "release_waypoint": 2560,
+          "segment_time": null,
+          "target_speed": 209.64074224111357,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      },
+      {
+        "control_regimes": [
+          "41/39",
+          "41/39"
+        ],
+        "cumulative_entering": -0.14999999999997726,
+        "cumulative_leaving": -0.14999999999997726,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.000274658203125,
+          "exit_speed": 0.7891754150390682,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.6094562530517607,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 6.129169553182777,
+          "release_waypoint": 0.0,
+          "segment_time": null,
+          "target_speed": 5.6670718325085545
+        },
+        "treatment": {
+          "applied_ticks": 39,
+          "entry_progress": 8171.0,
+          "entry_speed": 257.5239532470703,
+          "exit_progress": 8287.0,
+          "exit_speed": 132.07325592041016,
+          "first_full_throttle_progress": 8260.0,
+          "first_full_throttle_waypoint": 2562,
+          "lap": 3,
+          "lookahead_waypoint": 2535.0,
+          "minimum_speed": 91.18704528808594,
+          "onset_progress": 8196.0,
+          "onset_waypoint": 2500,
+          "raw_ticks": 41,
+          "recommended_speed": 243.14376659823805,
+          "release_progress": 8258.0,
+          "release_waypoint": 2560,
+          "segment_time": null,
+          "target_speed": 215.27889334539682,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "41/39"
+      }
+    ],
+    "WP391-415:lap1": [
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 0.03333333333333499,
+        "cumulative_leaving": 0.05000000000000071,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.08382568359374432,
+          "exit_speed": -0.2366386413574162,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -1.0477043151855412,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 8.424497808792722,
+          "release_waypoint": -1.0,
+          "segment_time": 0.05000000000000071,
+          "target_speed": 7.812108771857567
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 417.0,
+          "entry_speed": 234.39407958984376,
+          "exit_progress": 473.0,
+          "exit_speed": 200.02769165039064,
+          "first_full_throttle_progress": 462.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 1,
+          "lookahead_waypoint": 421.0,
+          "minimum_speed": 181.08844299316408,
+          "onset_progress": 438.0,
+          "onset_waypoint": 391,
+          "raw_ticks": 16,
+          "recommended_speed": 230.11559032780193,
+          "release_progress": 462.0,
+          "release_waypoint": 414,
+          "segment_time": 2.050000000000029,
+          "target_speed": 203.2248338903167,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": -2.0599365228690658e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -4.806518555255934e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 416.0,
+          "entry_speed": 234.31025390625,
+          "exit_progress": 473.0,
+          "exit_speed": 200.26430969238282,
+          "first_full_throttle_progress": 463.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 1,
+          "lookahead_waypoint": 422.0,
+          "minimum_speed": 182.13609924316407,
+          "onset_progress": 440.0,
+          "onset_waypoint": 392,
+          "raw_ticks": 16,
+          "recommended_speed": 221.6910925190092,
+          "release_progress": 463.0,
+          "release_waypoint": 415,
+          "segment_time": 2.0000000000000284,
+          "target_speed": 195.41272511845912,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 3.552713678800501e-15,
+        "cumulative_leaving": 3.552713678800501e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0,
+          "exit_speed": 4.1198730457381316e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 4.806518555255934e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 416.0,
+          "entry_speed": 234.31025390625,
+          "exit_progress": 473.0,
+          "exit_speed": 200.26430969238282,
+          "first_full_throttle_progress": 463.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 1,
+          "lookahead_waypoint": 422.0,
+          "minimum_speed": 182.13609924316407,
+          "onset_progress": 440.0,
+          "onset_waypoint": 392,
+          "raw_ticks": 16,
+          "recommended_speed": 221.6910925190092,
+          "release_progress": 463.0,
+          "release_waypoint": 415,
+          "segment_time": 2.0000000000000284,
+          "target_speed": 195.41272511845912,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 2.7465820295446974e-05,
+          "exit_speed": 4.1198730457381316e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 2.0599365228690658e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 416.0,
+          "entry_speed": 234.3102813720703,
+          "exit_progress": 473.0,
+          "exit_speed": 200.26430969238282,
+          "first_full_throttle_progress": 463.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 1,
+          "lookahead_waypoint": 422.0,
+          "minimum_speed": 182.13607177734374,
+          "onset_progress": 440.0,
+          "onset_waypoint": 392,
+          "raw_ticks": 16,
+          "recommended_speed": 221.6910925190092,
+          "release_progress": 463.0,
+          "release_waypoint": 415,
+          "segment_time": 2.0000000000000284,
+          "target_speed": 195.41272511845912,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 3.552713678800501e-15,
+        "cumulative_leaving": 3.552713678800501e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 1.3732910161934342e-05,
+          "exit_speed": 6.179809571449368e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 7.553100587642803e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 416.0,
+          "entry_speed": 234.31025390625,
+          "exit_progress": 473.0,
+          "exit_speed": 200.26430969238282,
+          "first_full_throttle_progress": 463.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 1,
+          "lookahead_waypoint": 422.0,
+          "minimum_speed": 182.13611297607423,
+          "onset_progress": 440.0,
+          "onset_waypoint": 392,
+          "raw_ticks": 16,
+          "recommended_speed": 221.6910925190092,
+          "release_progress": 463.0,
+          "release_waypoint": 415,
+          "segment_time": 2.0000000000000284,
+          "target_speed": 195.41272511845912,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      }
+    ],
+    "WP391-415:lap2": [
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.05957336425780113,
+          "exit_speed": 0.05472564697265625,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.034256744384776994,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 3192.0,
+          "entry_speed": 242.23370361328125,
+          "exit_progress": 3248.0,
+          "exit_speed": 206.9937515258789,
+          "first_full_throttle_progress": 3238.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 2,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 188.43657989501955,
+          "onset_progress": 3213.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 16,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 3238.0,
+          "release_waypoint": 414,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": -0.038644409179681816,
+          "exit_speed": -3.4174209594726506,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.049863433837885,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 1.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 17,
+          "entry_progress": 3192.0,
+          "entry_speed": 242.13548583984377,
+          "exit_progress": 3248.0,
+          "exit_speed": 203.5216049194336,
+          "first_full_throttle_progress": 3239.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 2,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 186.3524597167969,
+          "onset_progress": 3212.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 17,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 3239.0,
+          "release_waypoint": 415,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "17/17"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 2.842170943040401e-14,
+        "cumulative_leaving": 2.842170943040401e-14,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": -0.03861694335935795,
+          "exit_speed": -3.4175033569335938,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.049980163574247,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 1.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 17,
+          "entry_progress": 3192.0,
+          "entry_speed": 242.13545837402344,
+          "exit_progress": 3248.0,
+          "exit_speed": 203.52145385742188,
+          "first_full_throttle_progress": 3239.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 2,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 186.35228118896484,
+          "onset_progress": 3212.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 17,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 3239.0,
+          "release_waypoint": 415,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "17/17"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -2.842170943040401e-14,
+        "cumulative_leaving": -2.842170943040401e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.05949096679688637,
+          "exit_speed": 0.054780578613275566,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.034249877929681816,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 3192.0,
+          "entry_speed": 242.2335662841797,
+          "exit_progress": 3248.0,
+          "exit_speed": 206.99373779296874,
+          "first_full_throttle_progress": 3238.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 2,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 188.43651123046877,
+          "onset_progress": 3213.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 16,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 3238.0,
+          "release_waypoint": 414,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": 5.684341886080802e-14,
+        "cumulative_leaving": 5.684341886080802e-14,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": -0.03839721679685226,
+          "exit_speed": -3.417214965820307,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.049712371826189,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 1.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 17,
+          "entry_progress": 3192.0,
+          "entry_speed": 242.1355407714844,
+          "exit_progress": 3248.0,
+          "exit_speed": 203.52157745361328,
+          "first_full_throttle_progress": 3239.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 2,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 186.3524185180664,
+          "onset_progress": 3212.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 17,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 3239.0,
+          "release_waypoint": 415,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "17/17"
+      }
+    ],
+    "WP391-415:lap3": [
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": 0.0016342163085880657,
+          "exit_speed": -3.52935791015625,
+          "first_full_throttle_waypoint": 0.5,
+          "lookahead_waypoint": -0.5,
+          "minimum_speed": -2.7542381286621094,
+          "onset_waypoint": -0.5,
+          "raw_ticks": 1.0,
+          "recommended_speed": 5.128197714508644,
+          "release_waypoint": 0.5,
+          "segment_time": 0.0,
+          "target_speed": 4.746027587521326
+        },
+        "treatment": {
+          "applied_ticks": 17,
+          "entry_progress": 5967.0,
+          "entry_speed": 242.13521118164064,
+          "exit_progress": 6023.0,
+          "exit_speed": 203.52128906250002,
+          "first_full_throttle_progress": 6014.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 3,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 186.35218505859376,
+          "onset_progress": 5987.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 17,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 6014.0,
+          "release_waypoint": 415,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "17/17"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.011906433105451697,
+          "exit_speed": -0.13826293945314205,
+          "first_full_throttle_waypoint": -0.5,
+          "lookahead_waypoint": -0.5,
+          "minimum_speed": -0.7289497375488452,
+          "onset_waypoint": -0.5,
+          "raw_ticks": 0.0,
+          "recommended_speed": 5.128197714508644,
+          "release_waypoint": -0.5,
+          "segment_time": 0.0,
+          "target_speed": 4.746027587521326
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 5967.0,
+          "entry_speed": 242.1454833984375,
+          "exit_progress": 6023.0,
+          "exit_speed": 206.91238403320312,
+          "first_full_throttle_progress": 6012.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 3,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 188.37747344970703,
+          "onset_progress": 5987.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 16,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 6012.0,
+          "release_waypoint": 414,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.03257446289063637,
+          "exit_speed": -0.030315399169921875,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0265045166015625,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 5967.0,
+          "entry_speed": 242.14556579589845,
+          "exit_progress": 6023.0,
+          "exit_speed": 206.9124252319336,
+          "first_full_throttle_progress": 6012.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 3,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 188.3775833129883,
+          "onset_progress": 5987.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 16,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 6012.0,
+          "release_waypoint": 414,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -0.10000000000005116,
+        "cumulative_leaving": -0.10000000000005116,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": -0.04270935058596592,
+          "exit_speed": -3.421341705322277,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.0518615722656364,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 1.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 17,
+          "entry_progress": 5967.0,
+          "entry_speed": 242.13543090820312,
+          "exit_progress": 6023.0,
+          "exit_speed": 203.52139892578126,
+          "first_full_throttle_progress": 6014.0,
+          "first_full_throttle_waypoint": 415,
+          "lap": 3,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 186.35222625732422,
+          "onset_progress": 5987.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 17,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 6014.0,
+          "release_waypoint": 415,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "17/17"
+      },
+      {
+        "control_regimes": [
+          "16/16",
+          "16/16"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.02831726074219887,
+          "exit_speed": -0.026538848876953125,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.024794769287098006,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 16,
+          "entry_progress": 5967.0,
+          "entry_speed": 242.14559326171874,
+          "exit_progress": 6023.0,
+          "exit_speed": 206.91234283447267,
+          "first_full_throttle_progress": 6012.0,
+          "first_full_throttle_waypoint": 414,
+          "lap": 3,
+          "lookahead_waypoint": 420.0,
+          "minimum_speed": 188.3774597167969,
+          "onset_progress": 5987.0,
+          "onset_waypoint": 390,
+          "raw_ticks": 16,
+          "recommended_speed": 240.37198575681919,
+          "release_progress": 6012.0,
+          "release_waypoint": 414,
+          "segment_time": 1.900000000000432,
+          "target_speed": 212.71688906535934,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "16/16"
+      }
+    ],
+    "WP427-441:lap1": [
+      {
+        "control_regimes": [
+          "11/11",
+          "11/11"
+        ],
+        "cumulative_entering": 0.05000000000000071,
+        "cumulative_leaving": 0.049999999999993605,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.8113746643066406,
+          "exit_speed": 0.004840850830078125,
+          "first_full_throttle_waypoint": 2.0,
+          "lookahead_waypoint": -3.0,
+          "minimum_speed": -3.886777496337885,
+          "onset_waypoint": 1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.5088760230254934,
+          "release_waypoint": 2.0,
+          "segment_time": 0.14999999999998082,
+          "target_speed": 2.3664835420493375
+        },
+        "treatment": {
+          "applied_ticks": 11,
+          "entry_progress": 475.0,
+          "entry_speed": 180.4194305419922,
+          "exit_progress": 517.0,
+          "exit_speed": 155.52458953857422,
+          "first_full_throttle_progress": 490.0,
+          "first_full_throttle_waypoint": 442,
+          "lap": 1,
+          "lookahead_waypoint": 451.0,
+          "minimum_speed": 121.6583953857422,
+          "onset_progress": 477.0,
+          "onset_waypoint": 429,
+          "raw_ticks": 11,
+          "recommended_speed": 176.71710465312842,
+          "release_progress": 490.0,
+          "release_waypoint": 442,
+          "segment_time": 9.949999999999562,
+          "target_speed": 153.38170321511407,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "11/11"
+      },
+      {
+        "control_regimes": [
+          "11/11",
+          "11/11"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 3.552713678800501e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -4.806518555255934e-05,
+          "exit_speed": 6.866455095178026e-06,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 7.553100586221717e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 7.105427357601002e-15,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 11,
+          "entry_progress": 475.0,
+          "entry_speed": 181.2307571411133,
+          "exit_progress": 518.0,
+          "exit_speed": 155.51975555419924,
+          "first_full_throttle_progress": 488.0,
+          "first_full_throttle_waypoint": 440,
+          "lap": 1,
+          "lookahead_waypoint": 454.0,
+          "minimum_speed": 125.54524841308594,
+          "onset_progress": 476.0,
+          "onset_waypoint": 428,
+          "raw_ticks": 11,
+          "recommended_speed": 174.20822863010292,
+          "release_progress": 488.0,
+          "release_waypoint": 440,
+          "segment_time": 9.799999999999589,
+          "target_speed": 151.01521967306473,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "11/11"
+      },
+      {
+        "control_regimes": [
+          "11/11",
+          "11/11"
+        ],
+        "cumulative_entering": 3.552713678800501e-15,
+        "cumulative_leaving": -1.0658141036401503e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 4.806518555255934e-05,
+          "exit_speed": 6.866455078125e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.000171661376953125,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": -1.0658141036401503e-14,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 11,
+          "entry_progress": 475.0,
+          "entry_speed": 181.2307571411133,
+          "exit_progress": 518.0,
+          "exit_speed": 155.51974182128907,
+          "first_full_throttle_progress": 488.0,
+          "first_full_throttle_waypoint": 440,
+          "lap": 1,
+          "lookahead_waypoint": 454.0,
+          "minimum_speed": 125.54526214599609,
+          "onset_progress": 476.0,
+          "onset_waypoint": 428,
+          "raw_ticks": 11,
+          "recommended_speed": 174.20822863010292,
+          "release_progress": 488.0,
+          "release_waypoint": 440,
+          "segment_time": 9.79999999999957,
+          "target_speed": 151.01521967306473,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "11/11"
+      },
+      {
+        "control_regimes": [
+          "11/11",
+          "11/11"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 3.552713678800501e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -6.866455066756316e-06,
+          "exit_speed": -5.493164061931566e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0004188537597542563,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 7.105427357601002e-15,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 11,
+          "entry_progress": 475.0,
+          "entry_speed": 181.23070220947267,
+          "exit_progress": 518.0,
+          "exit_speed": 155.51961822509767,
+          "first_full_throttle_progress": 488.0,
+          "first_full_throttle_waypoint": 440,
+          "lap": 1,
+          "lookahead_waypoint": 454.0,
+          "minimum_speed": 125.54467163085938,
+          "onset_progress": 476.0,
+          "onset_waypoint": 428,
+          "raw_ticks": 11,
+          "recommended_speed": 174.20822863010292,
+          "release_progress": 488.0,
+          "release_waypoint": 440,
+          "segment_time": 9.799999999999589,
+          "target_speed": 151.01521967306473,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "11/11"
+      },
+      {
+        "control_regimes": [
+          "11/11",
+          "11/11"
+        ],
+        "cumulative_entering": 3.552713678800501e-15,
+        "cumulative_leaving": -1.7763568394002505e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 6.179809571449368e-05,
+          "exit_speed": 0.00015106201172443434,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.00024719238281534217,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": -2.4868995751603507e-14,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 11,
+          "entry_progress": 475.0,
+          "entry_speed": 181.2307571411133,
+          "exit_progress": 518.0,
+          "exit_speed": 155.51976928710937,
+          "first_full_throttle_progress": 488.0,
+          "first_full_throttle_waypoint": 440,
+          "lap": 1,
+          "lookahead_waypoint": 454.0,
+          "minimum_speed": 125.545166015625,
+          "onset_progress": 476.0,
+          "onset_waypoint": 428,
+          "raw_ticks": 11,
+          "recommended_speed": 174.20822863010292,
+          "release_progress": 488.0,
+          "release_waypoint": 440,
+          "segment_time": 9.799999999999557,
+          "target_speed": 151.01521967306473,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "11/11"
+      }
+    ],
+    "WP427-441:lap2": [
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": -0.05000000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.024272918701200297,
+          "exit_speed": -0.11850814819334232,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.0099967956543026,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -3.385595935389887,
+          "release_waypoint": 1.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": -3.1874339636586626
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 3249.0,
+          "entry_speed": 187.43098754882814,
+          "exit_progress": 3292.0,
+          "exit_speed": 157.42593841552736,
+          "first_full_throttle_progress": 3265.0,
+          "first_full_throttle_waypoint": 442,
+          "lap": 2,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 120.56172637939453,
+          "onset_progress": 3251.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 177.6891551479155,
+          "release_progress": 3265.0,
+          "release_waypoint": 442,
+          "segment_time": 9.900000000002251,
+          "target_speed": 154.29780023018648,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": 0.0,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.3223518371581804,
+          "exit_speed": -3.0037925720214673,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 2.1302696228027287,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.28830825712265096,
+          "release_waypoint": 0.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 0.27120455672221055
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 3249.0,
+          "entry_speed": 185.08436279296876,
+          "exit_progress": 3293.0,
+          "exit_speed": 154.54065399169923,
+          "first_full_throttle_progress": 3264.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 2,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 124.70199279785156,
+          "onset_progress": 3250.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.36305934042804,
+          "release_progress": 3264.0,
+          "release_waypoint": 441,
+          "segment_time": 9.750000000002217,
+          "target_speed": 157.75643875056736,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": 2.842170943040401e-14,
+        "cumulative_leaving": 2.842170943040401e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.3224685668945426,
+          "exit_speed": -3.0037170410156193,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 2.1327621459960966,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.31647117781773204,
+          "release_waypoint": 0.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 0.29769133626192
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 3249.0,
+          "entry_speed": 185.0841842651367,
+          "exit_progress": 3293.0,
+          "exit_speed": 154.54073638916017,
+          "first_full_throttle_progress": 3264.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 2,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 124.70377807617187,
+          "onset_progress": 3250.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.4164155904965,
+          "release_progress": 3264.0,
+          "release_waypoint": 441,
+          "segment_time": 9.750000000002217,
+          "target_speed": 157.80662580032842,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -2.842170943040401e-14,
+        "cumulative_leaving": -0.05000000000003979,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.02427978515623863,
+          "exit_speed": -0.11858367919921875,
+          "first_full_throttle_waypoint": 1.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -2.0084243774414006,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -3.3736022227399474,
+          "release_waypoint": 1.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": -3.1760962763198393
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 3249.0,
+          "entry_speed": 187.4309326171875,
+          "exit_progress": 3292.0,
+          "exit_speed": 157.42586975097657,
+          "first_full_throttle_progress": 3265.0,
+          "first_full_throttle_waypoint": 442,
+          "lap": 2,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 120.56259155273438,
+          "onset_progress": 3251.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 177.72634218993883,
+          "release_progress": 3265.0,
+          "release_waypoint": 442,
+          "segment_time": 9.900000000002251,
+          "target_speed": 154.33283818774666,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": 5.684341886080802e-14,
+        "cumulative_leaving": 5.684341886080802e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.322200775146513,
+          "exit_speed": -3.003462982177723,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 2.132068634033203,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.2638629641014063,
+          "release_waypoint": 0.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 0.24820781588579166
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 3249.0,
+          "entry_speed": 185.08432159423828,
+          "exit_progress": 3293.0,
+          "exit_speed": 154.54090118408203,
+          "first_full_throttle_progress": 3264.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 2,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 124.70347595214844,
+          "onset_progress": 3250.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.3645603893867,
+          "release_progress": 3264.0,
+          "release_waypoint": 441,
+          "segment_time": 9.750000000002217,
+          "target_speed": 157.75785065816405,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      }
+    ],
+    "WP427-441:lap3": [
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.886946105957037,
+          "exit_speed": -3.0023231506347656,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 1.8975791931152344,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.31619629227645873,
+          "release_waypoint": 0.0,
+          "segment_time": -0.07500000000001705,
+          "target_speed": 0.2974399368732179
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 6024.0,
+          "entry_speed": 185.0841018676758,
+          "exit_progress": 6068.0,
+          "exit_speed": 154.54098358154297,
+          "first_full_throttle_progress": 6039.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 3,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 124.70718383789062,
+          "onset_progress": 6025.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.3690634611972,
+          "release_progress": 6039.0,
+          "release_waypoint": 441,
+          "segment_time": 9.750000000002217,
+          "target_speed": 157.76208630464188,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -0.12500000000002842,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.5887710571289233,
+          "exit_speed": -0.019013214111339494,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.20328140258789062,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.02002489470979185,
+          "release_waypoint": 0.0,
+          "segment_time": 0.025000000000005684,
+          "target_speed": 0.0188391048313008
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 6024.0,
+          "entry_speed": 187.3822769165039,
+          "exit_progress": 6067.0,
+          "exit_speed": 157.5242935180664,
+          "first_full_throttle_progress": 6039.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 3,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 122.6063232421875,
+          "onset_progress": 6025.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.07289206363052,
+          "release_progress": 6039.0,
+          "release_waypoint": 441,
+          "segment_time": 9.85000000000224,
+          "target_speed": 157.48348547259997,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.025570678710920447,
+          "exit_speed": -0.020201110839849434,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.03512878417967613,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0820932688807261,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.07722837344999789
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 6024.0,
+          "entry_speed": 187.38237304687502,
+          "exit_progress": 6067.0,
+          "exit_speed": 157.5247055053711,
+          "first_full_throttle_progress": 6039.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 3,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 122.61064910888672,
+          "onset_progress": 6025.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.12780372255855,
+          "release_progress": 6039.0,
+          "release_waypoint": 441,
+          "segment_time": 9.85000000000224,
+          "target_speed": 157.53514226477714,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -0.10000000000005116,
+        "cumulative_leaving": -0.10000000000005116,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.3238143920898438,
+          "exit_speed": -3.0040603637695256,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 2.129672241210926,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.37220666228100185,
+          "release_waypoint": 0.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 0.3501242310114776
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 6024.0,
+          "entry_speed": 185.0841293334961,
+          "exit_progress": 6068.0,
+          "exit_speed": 154.5408462524414,
+          "first_full_throttle_progress": 6039.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 3,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 124.70519256591797,
+          "onset_progress": 6025.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.41791711595883,
+          "release_progress": 6039.0,
+          "release_waypoint": 441,
+          "segment_time": 9.750000000002217,
+          "target_speed": 157.80803812233862,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      },
+      {
+        "control_regimes": [
+          "12/12",
+          "12/12"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.024389648437505684,
+          "exit_speed": -0.020043182373029822,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.03686599731445028,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.02630074892587686,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": -0.024741908435146343
+        },
+        "treatment": {
+          "applied_ticks": 12,
+          "entry_progress": 6024.0,
+          "entry_speed": 187.3822494506836,
+          "exit_progress": 6067.0,
+          "exit_speed": 157.5244857788086,
+          "first_full_throttle_progress": 6039.0,
+          "first_full_throttle_waypoint": 441,
+          "lap": 3,
+          "lookahead_waypoint": 453.0,
+          "minimum_speed": 122.60998992919922,
+          "onset_progress": 6025.0,
+          "onset_waypoint": 427,
+          "raw_ticks": 12,
+          "recommended_speed": 181.0759026889592,
+          "release_progress": 6039.0,
+          "release_waypoint": 441,
+          "segment_time": 9.85000000000224,
+          "target_speed": 157.48631767743933,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "12/12"
+      }
+    ],
+    "WP627-633:lap1": [
+      {
+        "control_regimes": [
+          "5/5",
+          "5/5"
+        ],
+        "cumulative_entering": 0.14999999999998437,
+        "cumulative_leaving": 0.19999999999998153,
+        "deltas": {
+          "applied_ticks": -1.0,
+          "entry_speed": -1.339109802246071,
+          "exit_speed": 1.2694084167480355,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": 1.0,
+          "minimum_speed": 3.6749748229980526,
+          "onset_waypoint": 1.0,
+          "raw_ticks": -1.0,
+          "recommended_speed": -1.2706295946323394,
+          "release_waypoint": -1.0,
+          "segment_time": -0.04999999999999716,
+          "target_speed": -1.194106421759244
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 665.0,
+          "entry_speed": 183.59825592041017,
+          "exit_progress": 714.0,
+          "exit_speed": 182.4196975708008,
+          "first_full_throttle_progress": 687.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 1,
+          "lookahead_waypoint": 654.0,
+          "minimum_speed": 149.60917968750002,
+          "onset_progress": 682.0,
+          "onset_waypoint": 628,
+          "raw_ticks": 4,
+          "recommended_speed": 182.75268779914006,
+          "release_progress": 687.0,
+          "release_waypoint": 633,
+          "segment_time": 8.249999999999531,
+          "target_speed": 159.06313900183548,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      },
+      {
+        "control_regimes": [
+          "5/5",
+          "5/5"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.000453186035173303,
+          "exit_speed": 0.0003501892089730063,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.0005699157714786907,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.019974931123812212,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.01876680306520484
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 665.0,
+          "entry_speed": 184.9378189086914,
+          "exit_progress": 715.0,
+          "exit_speed": 181.15063934326173,
+          "first_full_throttle_progress": 687.0,
+          "first_full_throttle_waypoint": 634,
+          "lap": 1,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 145.9336349487305,
+          "onset_progress": 681.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 184.0432923248962,
+          "release_progress": 687.0,
+          "release_waypoint": 634,
+          "segment_time": 8.299999999999528,
+          "target_speed": 160.27601222665993,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "5/5",
+          "5/5"
+        ],
+        "cumulative_entering": -7.105427357601002e-15,
+        "cumulative_leaving": -7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 1.3732910161934342e-05,
+          "exit_speed": -2.7465820295446974e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -4.806518555255934e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 665.0,
+          "entry_speed": 184.9369674682617,
+          "exit_progress": 715.0,
+          "exit_speed": 181.15000762939454,
+          "first_full_throttle_progress": 687.0,
+          "first_full_throttle_waypoint": 634,
+          "lap": 1,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 145.9348159790039,
+          "onset_progress": 681.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 184.00334246264862,
+          "release_progress": 687.0,
+          "release_waypoint": 634,
+          "segment_time": 8.299999999999528,
+          "target_speed": 160.2384786205295,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "5/5",
+          "5/5"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.000508117675764197,
+          "exit_speed": -0.000370788574201697,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.000762176513688928,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.001532418623810372,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0014397464034061613
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 665.0,
+          "entry_speed": 184.9364456176758,
+          "exit_progress": 715.0,
+          "exit_speed": 181.14966430664063,
+          "first_full_throttle_progress": 687.0,
+          "first_full_throttle_waypoint": 634,
+          "lap": 1,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 145.93562622070314,
+          "onset_progress": 681.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 184.00487488127243,
+          "release_progress": 687.0,
+          "release_waypoint": 634,
+          "segment_time": 8.299999999999528,
+          "target_speed": 160.2399183669329,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "5/5",
+          "5/5"
+        ],
+        "cumulative_entering": -2.1316282072803006e-14,
+        "cumulative_leaving": -2.1316282072803006e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.00011672973630538763,
+          "exit_speed": -6.866455078125e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.00029525756835369066,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.043015547245630614,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.04041384517330471
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 665.0,
+          "entry_speed": 184.93680267333986,
+          "exit_progress": 715.0,
+          "exit_speed": 181.14999389648438,
+          "first_full_throttle_progress": 687.0,
+          "first_full_throttle_waypoint": 634,
+          "lap": 1,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 145.93521423339845,
+          "onset_progress": 681.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 184.04635800989425,
+          "release_progress": 687.0,
+          "release_waypoint": 634,
+          "segment_time": 8.299999999999528,
+          "target_speed": 160.2788924657028,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      }
+    ],
+    "WP627-633:lap2": [
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": 0.05000000000001137,
+        "cumulative_leaving": 0.05000000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.772263336181652,
+          "exit_speed": -0.6887329101562614,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -0.21548309326172443,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.7226471235858867,
+          "release_waypoint": 0.0,
+          "segment_time": -0.05000000000001137,
+          "target_speed": 0.6790731387441156
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 3440.0,
+          "entry_speed": 184.2357650756836,
+          "exit_progress": 3490.0,
+          "exit_speed": 182.86615447998048,
+          "first_full_throttle_progress": 3461.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 2,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 149.53656005859375,
+          "onset_progress": 3456.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 4,
+          "recommended_speed": 183.92861351685093,
+          "release_progress": 3461.0,
+          "release_waypoint": 633,
+          "segment_time": 8.200000000001864,
+          "target_speed": 160.16826772096448,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.05000000000001137,
+        "cumulative_leaving": -0.05000000000001137,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": 0.4988822937011719,
+          "exit_speed": -1.6039215087890852,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -3.231710815429693,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 2.3980002276373966,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": 2.2526007214835033
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 3439.0,
+          "entry_speed": 185.5069107055664,
+          "exit_progress": 3490.0,
+          "exit_speed": 181.95096588134766,
+          "first_full_throttle_progress": 3462.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 2,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 146.52033233642578,
+          "onset_progress": 3455.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 185.60396662090244,
+          "release_progress": 3462.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001887,
+          "target_speed": 161.74179530370387,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.04999999999998295,
+        "cumulative_leaving": -0.04999999999998295,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": 0.5011825561523153,
+          "exit_speed": -1.6129852294922102,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -3.1779396057128793,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 2.391187306086607,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": 2.246201984254327
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 3439.0,
+          "entry_speed": 185.50853118896484,
+          "exit_progress": 3490.0,
+          "exit_speed": 181.95205078125,
+          "first_full_throttle_progress": 3462.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 2,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 146.51707763671877,
+          "onset_progress": 3455.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 185.59938971844198,
+          "release_progress": 3462.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001887,
+          "target_speed": 161.73749809061343,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": 0.04999999999998295,
+        "cumulative_leaving": 0.04999999999998295,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.7704711914062727,
+          "exit_speed": -0.6980575561523494,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -0.160874176025402,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.7158026790758925,
+          "release_waypoint": 0.0,
+          "segment_time": -0.05000000000001137,
+          "target_speed": 0.672641736843957
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 3440.0,
+          "entry_speed": 184.23687744140625,
+          "exit_progress": 3490.0,
+          "exit_speed": 182.86697845458986,
+          "first_full_throttle_progress": 3461.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 2,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 149.53414306640624,
+          "onset_progress": 3456.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 4,
+          "recommended_speed": 183.92400509143127,
+          "release_progress": 3461.0,
+          "release_waypoint": 633,
+          "segment_time": 8.200000000001864,
+          "target_speed": 160.16393784320306,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.049999999999954525,
+        "cumulative_leaving": -0.049999999999954525,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": 0.5005783081054744,
+          "exit_speed": -1.6133972167968977,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -3.176683044433588,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 2.393423233633399,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": 2.248303415549941
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 3439.0,
+          "entry_speed": 185.50857238769532,
+          "exit_progress": 3490.0,
+          "exit_speed": 181.95205078125,
+          "first_full_throttle_progress": 3462.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 2,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 146.51699523925782,
+          "onset_progress": 3455.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 185.59938971844198,
+          "release_progress": 3462.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001887,
+          "target_speed": 161.73749809061343,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      }
+    ],
+    "WP627-633:lap3": [
+      {
+        "control_regimes": [
+          "5/5",
+          "4/4"
+        ],
+        "cumulative_entering": -0.1500000000000341,
+        "cumulative_leaving": -0.1750000000000398,
+        "deltas": {
+          "applied_ticks": 0.5,
+          "entry_speed": 0.5185409545898381,
+          "exit_speed": -0.5106101989746037,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -0.5,
+          "minimum_speed": -1.2827362060546932,
+          "onset_waypoint": -0.5,
+          "raw_ticks": 0.5,
+          "recommended_speed": 1.6629442508191232,
+          "release_waypoint": 0.0,
+          "segment_time": 0.025000000000005684,
+          "target_speed": 1.5619741455139433
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6214.0,
+          "entry_speed": 185.51123657226563,
+          "exit_progress": 6265.0,
+          "exit_speed": 181.95420684814454,
+          "first_full_throttle_progress": 6237.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 3,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 146.51121368408204,
+          "onset_progress": 6230.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 185.59176129586444,
+          "release_progress": 6237.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001859,
+          "target_speed": 161.730335814143,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "5/5",
+          "4/4"
+        ],
+        "cumulative_entering": -0.10000000000002274,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": -0.5,
+          "entry_speed": -0.2920166015624943,
+          "exit_speed": 1.0989280700683537,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.5,
+          "minimum_speed": 2.0031234741210824,
+          "onset_waypoint": 0.5,
+          "raw_ticks": -0.5,
+          "recommended_speed": -0.8354147005788377,
+          "release_waypoint": 0.0,
+          "segment_time": 0.025000000000005684,
+          "target_speed": -0.7849628985124184
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 6214.0,
+          "entry_speed": 184.7006790161133,
+          "exit_progress": 6264.0,
+          "exit_speed": 183.5637451171875,
+          "first_full_throttle_progress": 6236.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 3,
+          "lookahead_waypoint": 654.0,
+          "minimum_speed": 149.7970733642578,
+          "onset_progress": 6232.0,
+          "onset_waypoint": 628,
+          "raw_ticks": 4,
+          "recommended_speed": 183.09340234446648,
+          "release_progress": 6236.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001859,
+          "target_speed": 159.38339877011663,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.09999999999999432,
+        "cumulative_leaving": -0.09999999999999432,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.275633239746071,
+          "exit_speed": 0.016973876953130684,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.16947784423828693,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.13414384364793364,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000003979,
+          "target_speed": -0.12607799015759724
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 6214.0,
+          "entry_speed": 184.70383758544924,
+          "exit_progress": 6264.0,
+          "exit_speed": 183.56551666259767,
+          "first_full_throttle_progress": 6236.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 3,
+          "lookahead_waypoint": 654.0,
+          "minimum_speed": 149.79078369140626,
+          "onset_progress": 6232.0,
+          "onset_waypoint": 628,
+          "raw_ticks": 4,
+          "recommended_speed": 183.08295622884495,
+          "release_progress": 6236.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001887,
+          "target_speed": 159.37358049376783,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.15000000000006253,
+        "cumulative_leaving": -0.15000000000006253,
+        "deltas": {
+          "applied_ticks": 1.0,
+          "entry_speed": 0.5306671142578239,
+          "exit_speed": -1.5953521728515625,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -3.1076202392578125,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 1.0,
+          "recommended_speed": 2.3777126301759495,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000003979,
+          "target_speed": 2.233542279005718
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6214.0,
+          "entry_speed": 185.51013793945313,
+          "exit_progress": 6265.0,
+          "exit_speed": 181.95319061279298,
+          "first_full_throttle_progress": 6237.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 3,
+          "lookahead_waypoint": 653.0,
+          "minimum_speed": 146.51368560791016,
+          "onset_progress": 6230.0,
+          "onset_waypoint": 627,
+          "raw_ticks": 5,
+          "recommended_speed": 185.59481270266883,
+          "release_progress": 6237.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001887,
+          "target_speed": 161.73320076293115,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "5/5"
+      },
+      {
+        "control_regimes": [
+          "4/4",
+          "4/4"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.3066627502441577,
+          "exit_speed": 0.019651794433599434,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.01515426635742756,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.11555522994893863,
+          "release_waypoint": 0.0,
+          "segment_time": 0.05000000000001137,
+          "target_speed": -0.10860749971610062
+        },
+        "treatment": {
+          "applied_ticks": 4,
+          "entry_progress": 6214.0,
+          "entry_speed": 184.70343933105468,
+          "exit_progress": 6264.0,
+          "exit_speed": 183.5653793334961,
+          "first_full_throttle_progress": 6236.0,
+          "first_full_throttle_waypoint": 633,
+          "lap": 3,
+          "lookahead_waypoint": 654.0,
+          "minimum_speed": 149.79151153564453,
+          "onset_progress": 6232.0,
+          "onset_waypoint": 628,
+          "raw_ticks": 4,
+          "recommended_speed": 183.08444856780065,
+          "release_progress": 6236.0,
+          "release_waypoint": 633,
+          "segment_time": 8.300000000001859,
+          "target_speed": 159.3749831419259,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "4/4"
+      }
+    ],
+    "WP794-801:lap1": [
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": 0.14999999999998437,
+        "cumulative_leaving": 0.14999999999998437,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.3657073974609375,
+          "exit_speed": 1.3750968933105412,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": 1.8947433471679744,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 4.416477866900863,
+          "release_waypoint": -1.0,
+          "segment_time": -0.14999999999999147,
+          "target_speed": 4.144085318307873
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 836.0,
+          "entry_speed": 188.66817169189454,
+          "exit_progress": 876.0,
+          "exit_speed": 184.46822204589844,
+          "first_full_throttle_progress": 856.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 1,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 154.70870361328124,
+          "onset_progress": 848.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 189.29184231961702,
+          "release_progress": 856.0,
+          "release_waypoint": 801,
+          "segment_time": 16.949999999999037,
+          "target_speed": 165.20169879128548,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.0003707885742301187,
+          "exit_speed": -0.00036392211913494066,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.00012359619140056566,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 836.0,
+          "entry_speed": 188.30209350585938,
+          "exit_progress": 876.0,
+          "exit_speed": 183.09276123046877,
+          "first_full_throttle_progress": 857.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 1,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 152.81383666992187,
+          "onset_progress": 849.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 184.87536445271616,
+          "release_progress": 857.0,
+          "release_waypoint": 802,
+          "segment_time": 17.099999999999028,
+          "target_speed": 161.0576134729776,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": -7.105427357601002e-15,
+        "cumulative_leaving": -7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -2.7465820323868684e-05,
+          "exit_speed": 1.3732910161934342e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -1.3732910133512632e-05,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 836.0,
+          "entry_speed": 188.3028350830078,
+          "exit_progress": 876.0,
+          "exit_speed": 183.0934616088867,
+          "first_full_throttle_progress": 857.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 1,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 152.8140838623047,
+          "onset_progress": 849.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 184.87536445271616,
+          "release_progress": 857.0,
+          "release_waypoint": 802,
+          "segment_time": 17.099999999999028,
+          "target_speed": 161.0576134729776,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": 7.105427357601002e-15,
+        "cumulative_leaving": 7.105427357601002e-15,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0003845214843636313,
+          "exit_speed": 0.0004806518554971717,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.0006317138671931843,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 836.0,
+          "entry_speed": 188.3032470703125,
+          "exit_progress": 876.0,
+          "exit_speed": 183.09392852783205,
+          "first_full_throttle_progress": 857.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 1,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 152.81472930908203,
+          "onset_progress": 849.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 184.87536445271616,
+          "release_progress": 857.0,
+          "release_waypoint": 802,
+          "segment_time": 17.099999999999028,
+          "target_speed": 161.0576134729776,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": -2.1316282072803006e-14,
+        "cumulative_leaving": -2.1316282072803006e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 5.493164061931566e-05,
+          "exit_speed": 7.553100584800632e-05,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -6.866455066756316e-06,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 0.0,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": 0.0
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 836.0,
+          "entry_speed": 188.30295867919924,
+          "exit_progress": 876.0,
+          "exit_speed": 183.0935302734375,
+          "first_full_throttle_progress": 857.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 1,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 152.81415252685548,
+          "onset_progress": 849.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 184.87536445271616,
+          "release_progress": 857.0,
+          "release_waypoint": 802,
+          "segment_time": 17.099999999999028,
+          "target_speed": 161.0576134729776,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      }
+    ],
+    "WP794-801:lap2": [
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": 0.037499999999994316,
+        "cumulative_leaving": 0.0,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.3611961364746037,
+          "exit_speed": 1.3670219421386776,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": 3.3051956176757926,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 4.657595987334332,
+          "release_waypoint": -1.0,
+          "segment_time": -0.1500000000000341,
+          "target_speed": 4.369447051453733
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 3611.0,
+          "entry_speed": 188.7531509399414,
+          "exit_progress": 3651.0,
+          "exit_speed": 184.61936645507814,
+          "first_full_throttle_progress": 3631.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 2,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 155.02722473144533,
+          "onset_progress": 3623.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 189.914534697705,
+          "release_progress": 3631.0,
+          "release_waypoint": 801,
+          "segment_time": 16.950000000003854,
+          "target_speed": 165.7853964412515,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": -0.012500000000017053,
+        "cumulative_leaving": -0.05000000000001137,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.3557853698730469,
+          "exit_speed": 1.1476524353027457,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": 2.0611587524414006,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.442034329112289,
+          "release_waypoint": -1.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 2.2919779799511844
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 3611.0,
+          "entry_speed": 188.74774017333985,
+          "exit_progress": 3651.0,
+          "exit_speed": 184.3999969482422,
+          "first_full_throttle_progress": 3631.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 2,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 153.78318786621094,
+          "onset_progress": 3624.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 187.69897303948295,
+          "release_progress": 3631.0,
+          "release_waypoint": 801,
+          "segment_time": 17.000000000003865,
+          "target_speed": 163.70792736974894,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": -0.024999999999977263,
+        "cumulative_leaving": -0.024999999999977263,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.37943344116212074,
+          "exit_speed": 0.5957748413085824,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": 0.5865875244140568,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.3845542275421394,
+          "release_waypoint": -1.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 2.2379993006923655
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 3611.0,
+          "entry_speed": 188.74607849121094,
+          "exit_progress": 3651.0,
+          "exit_speed": 184.39878845214844,
+          "first_full_throttle_progress": 3631.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 2,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 153.78284454345703,
+          "onset_progress": 3624.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 187.7020946267374,
+          "release_progress": 3631.0,
+          "release_waypoint": 801,
+          "segment_time": 17.000000000003865,
+          "target_speed": 163.71085568086806,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": 0.024999999999977263,
+        "cumulative_leaving": 0.024999999999977263,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.3842536926269702,
+          "exit_speed": 0.8144439697265682,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": 1.8310363769531364,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 4.600109439168989,
+          "release_waypoint": -1.0,
+          "segment_time": -0.1500000000000341,
+          "target_speed": 4.3154597672942145
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 3611.0,
+          "entry_speed": 188.7508987426758,
+          "exit_progress": 3651.0,
+          "exit_speed": 184.61745758056642,
+          "first_full_throttle_progress": 3631.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 2,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 155.0272933959961,
+          "onset_progress": 3623.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 189.91764983836424,
+          "release_progress": 3631.0,
+          "release_waypoint": 801,
+          "segment_time": 16.950000000003854,
+          "target_speed": 165.7883161474699,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      },
+      {
+        "control_regimes": [
+          "6/6",
+          "6/6"
+        ],
+        "cumulative_entering": -0.02499999999994884,
+        "cumulative_leaving": 5.684341886080802e-14,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.38092346191405113,
+          "exit_speed": 0.040917205810558244,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -0.6709625244140796,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.403465110472297,
+          "release_waypoint": -1.0,
+          "segment_time": -0.10000000000002274,
+          "target_speed": 2.255756687146288
+        },
+        "treatment": {
+          "applied_ticks": 6,
+          "entry_progress": 3611.0,
+          "entry_speed": 188.7463806152344,
+          "exit_progress": 3651.0,
+          "exit_speed": 184.39892578125,
+          "first_full_throttle_progress": 3631.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 2,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 153.78262481689453,
+          "onset_progress": 3624.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 187.7020946267374,
+          "release_progress": 3631.0,
+          "release_waypoint": 801,
+          "segment_time": 17.000000000003865,
+          "target_speed": 163.71085568086806,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/6"
+      }
+    ],
+    "WP794-801:lap3": [
+      {
+        "control_regimes": [
+          "6/5",
+          "6/5"
+        ],
+        "cumulative_entering": -0.1500000000000341,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.2705589294433537,
+          "exit_speed": 0.1051528930663892,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -0.977309417724598,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.1653537019576277,
+          "release_waypoint": 0.0,
+          "segment_time": -0.025000000000005684,
+          "target_speed": 2.0321727295317373
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6386.0,
+          "entry_speed": 188.74271392822266,
+          "exit_progress": 6426.0,
+          "exit_speed": 186.94629821777343,
+          "first_full_throttle_progress": 6406.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 3,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 154.8189926147461,
+          "onset_progress": 6399.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 187.70989836529782,
+          "release_progress": 6405.0,
+          "release_waypoint": 800,
+          "segment_time": 16.950000000003854,
+          "target_speed": 163.71817622720783,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/5"
+      },
+      {
+        "control_regimes": [
+          "6/5",
+          "6/5"
+        ],
+        "cumulative_entering": -0.1500000000000341,
+        "cumulative_leaving": -0.12500000000002842,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": -0.041576385498046875,
+          "exit_speed": -0.9195693969726619,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -1.628524017333973,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.47401140653951757,
+          "release_waypoint": 1.0,
+          "segment_time": 0.07500000000001705,
+          "target_speed": -0.44509944989334826
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6386.0,
+          "entry_speed": 188.43057861328126,
+          "exit_progress": 6426.0,
+          "exit_speed": 185.92157592773438,
+          "first_full_throttle_progress": 6407.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 3,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 154.16777801513672,
+          "onset_progress": 6399.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 185.07053325680067,
+          "release_progress": 6405.0,
+          "release_waypoint": 801,
+          "segment_time": 17.050000000003877,
+          "target_speed": 161.24090404778275,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/5"
+      },
+      {
+        "control_regimes": [
+          "6/5",
+          "6/5"
+        ],
+        "cumulative_entering": -0.11249999999995453,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.0627182006835767,
+          "exit_speed": -0.4950164794921932,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": -0.7295883178711051,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.279758448202557,
+          "release_waypoint": 0.5,
+          "segment_time": 0.025000000000005684,
+          "target_speed": -0.2627009376764988
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6386.0,
+          "entry_speed": 188.4244400024414,
+          "exit_progress": 6426.0,
+          "exit_speed": 185.91619262695312,
+          "first_full_throttle_progress": 6407.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 3,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 154.16748962402343,
+          "onset_progress": 6399.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 185.07971069602442,
+          "release_progress": 6405.0,
+          "release_waypoint": 801,
+          "segment_time": 17.050000000003877,
+          "target_speed": 161.2495225650203,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/5"
+      },
+      {
+        "control_regimes": [
+          "6/5",
+          "6/5"
+        ],
+        "cumulative_entering": -0.11250000000001137,
+        "cumulative_leaving": -0.10000000000002274,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.38198089599609375,
+          "exit_speed": 0.5359817504882756,
+          "first_full_throttle_waypoint": -1.0,
+          "lookahead_waypoint": -1.0,
+          "minimum_speed": -0.07849731445313068,
+          "onset_waypoint": -1.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": 2.347307765000835,
+          "release_waypoint": -0.5,
+          "segment_time": -0.07500000000001705,
+          "target_speed": 2.203024545651857
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6386.0,
+          "entry_speed": 188.74370269775392,
+          "exit_progress": 6426.0,
+          "exit_speed": 186.9471908569336,
+          "first_full_throttle_progress": 6406.0,
+          "first_full_throttle_waypoint": 801,
+          "lap": 3,
+          "lookahead_waypoint": 819.0,
+          "minimum_speed": 154.8185806274414,
+          "onset_progress": 6399.0,
+          "onset_waypoint": 793,
+          "raw_ticks": 6,
+          "recommended_speed": 187.7067769092278,
+          "release_progress": 6405.0,
+          "release_waypoint": 800,
+          "segment_time": 16.950000000003854,
+          "target_speed": 163.71524804834866,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/5"
+      },
+      {
+        "control_regimes": [
+          "6/5",
+          "6/5"
+        ],
+        "cumulative_entering": -0.0999999999999659,
+        "cumulative_leaving": -0.0999999999999659,
+        "deltas": {
+          "applied_ticks": 0.0,
+          "entry_speed": 0.01007308959961506,
+          "exit_speed": -0.0190887451171875,
+          "first_full_throttle_waypoint": 0.0,
+          "lookahead_waypoint": 0.0,
+          "minimum_speed": 0.1910247802734375,
+          "onset_waypoint": 0.0,
+          "raw_ticks": 0.0,
+          "recommended_speed": -0.1841690495238879,
+          "release_waypoint": 0.0,
+          "segment_time": 0.0,
+          "target_speed": -0.1729488930446621
+        },
+        "treatment": {
+          "applied_ticks": 5,
+          "entry_progress": 6386.0,
+          "entry_speed": 188.42496185302736,
+          "exit_progress": 6426.0,
+          "exit_speed": 185.9166458129883,
+          "first_full_throttle_progress": 6407.0,
+          "first_full_throttle_waypoint": 802,
+          "lap": 3,
+          "lookahead_waypoint": 820.0,
+          "minimum_speed": 154.16739349365236,
+          "onset_progress": 6399.0,
+          "onset_waypoint": 794,
+          "raw_ticks": 6,
+          "recommended_speed": 185.03724062939395,
+          "release_progress": 6405.0,
+          "release_waypoint": 801,
+          "segment_time": 17.050000000003877,
+          "target_speed": 161.20963871974624,
+          "wp1232_behavior": null
+        },
+        "treatment_regime": "6/5"
+      }
+    ]
+  }
+}
