@@ -1,0 +1,5 @@
+Submission entry point: competition_code/submission.py
+
+Use the standard ROAR Summer 2026 competition environment. No additional
+controller-specific packages, environment variables, or setup steps are
+required. Evaluate with the official competition infrastructure.

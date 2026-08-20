@@ -189,6 +189,21 @@ class RoarCompetitionSolution:
                 }
             )
 
+        from qualifying_brake_combination import apply_combined_brake_override
+        throttle, brake, gear = apply_combined_brake_override(
+            self, throttle, brake, gear, current_speed_kmh
+        )
+
+        from qualifying_brake_wp2501_left_foot import apply_wp2501_left_foot_braking
+        throttle, brake, gear = apply_wp2501_left_foot_braking(
+            self, throttle, brake, gear, 10 / 100.0
+        )
+
+        from qualifying_brake_wp794_lap3 import apply_wp794_lap3_override
+        throttle, brake, gear = apply_wp794_lap3_override(
+            self, throttle, brake, gear, current_speed_kmh
+        )
+
         steerMultiplier = round((current_speed_kmh + 0.001) / 120, 3)
         
         if self.current_section == 2:
